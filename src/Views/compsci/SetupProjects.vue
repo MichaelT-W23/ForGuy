@@ -31,6 +31,9 @@
                 <span v-if="point.Code">
                     <CodeBlock :codeInfo="point.Code" style="margin-bottom: 20px;"></CodeBlock>
                 </span>
+                <span v-if="point.Table">
+                    <CmdTable tableName="" :items="point.Table" class="cmd-table"></CmdTable>
+                </span>
             </div>
         </div>
 
@@ -44,6 +47,7 @@ import { computed, ref, nextTick, onMounted, onUnmounted, watch } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { createHyperLink, createRouterLink, highlightLinkText, createDownloadLink, createRouterLinkWithProps } from "../../utils/Markdown.vue";
 import CodeBlock from '../../components/Code/CodeBlock.vue';
+import CmdTable from "../../components/CommandTable.vue";
 import AllData from '../../data/CompSci/Instructions/DisplayLinks.json';
 import { AllSets } from '../../data/CompSci/Instructions/InstructionSets.vue';
 
@@ -289,6 +293,14 @@ onUnmounted(() => {
 .gh-header-two {
     text-align: left;
     width: 690px;
+}
+
+.cmd-table {
+    margin-top: -40px;
+    margin-bottom: 40px;
+    max-width: 400px; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .description-two {
