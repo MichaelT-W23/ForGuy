@@ -1,0 +1,325 @@
+{
+    "Text": [
+        {
+            "scrollToTop": "Scroll To Top"
+        },
+        {
+            "title": "Setup Projects",
+            "desc": "This page contains information about setting up various projects."
+        }
+    ],
+    "DisplayLinks": {
+        "FrameworkProjects": {
+            "title": "Display Links", 
+            "desc": "Use these links to display different instruction sets.",
+            "links": [
+                {
+                    "id": 1,
+                    "name": "How to Setup Node.js",
+                    "ref": "node",
+                    "ScrollTo": "NodeLink"
+                },
+                {
+                    "id": 2,
+                    "name": "How to Setup a Vue Project",
+                    "ref": "vue",
+                    "ScrollTo": "VueLink"
+                },
+                {
+                    "id": 3,
+                    "name": "How to Setup a React Project",
+                    "ref": "react",
+                    "ScrollTo": "ReactLink"
+                },
+                {
+                    "id": 4,
+                    "name": "How to Setup an Angular Project",
+                    "ref": "angular",
+                    "ScrollTo": "AngularLink"
+                },
+                {
+                    "id": 5,
+                    "name": "Create a Project Templates Folder",
+                    "ref": "templates",
+                    "ScrollTo": "TemplatesLink"
+                }
+            ]
+        },
+        "Pages": {
+            "title": "Deploy Projects to GitHub Pages", 
+            "desc": "These explain how to deploy Vanilla or Vite project to GitHub pages.",
+            "links": [
+                {
+                    "id": 1,
+                    "name": "Deploy a Vanilla JS Project to GitHub Pages",
+                    "ref": "gh-pages",
+                    "ScrollTo": "GHPagesLink"
+                },
+                {
+                    "id": 2,
+                    "name": "Deploy a Vite Project to GitHub Pages",
+                    "ref": "vite-gh-pages",
+                    "ScrollTo": "ViteGHPagesLink"
+                }
+            ]
+        },
+        "REST": {
+            "title": "How to Setup REST Apis with Frontends",
+            "desc": "These explain how to use AWS, Docker, REST Apis, etc. for full-stack applications.",
+            "links": [
+                {
+                    "id": 1,
+                    "name": "How to Setup an Amazon Web Services Account",
+                    "ref": "aws",
+                    "ScrollTo": "AWSLink"
+                },
+                {
+                    "id": 2,
+                    "name": "How to Install and Setup Docker",
+                    "ref": "docker",
+                    "ScrollTo": "DockerLink"
+                },
+                {
+                    "id": 3,
+                    "name": "How to Make a Simple REST Api using Vue, Flask and SQLite3",
+                    "ref": "flask-sqlite3",
+                    "ScrollTo": "FlaskSqliteLink"
+                },
+                {
+                    "id": 4,
+                    "name": "Deploy the Vue, Flask and SQLite3 app to PythonAnywhere",
+                    "ref": "deploy-sqlite",
+                    "ScrollTo": "DeploySqliteLink"
+                },
+                {
+                    "id": 5,
+                    "name": "How to Make a Complex Rest API using Vue, Flask and PostgreSQL",
+                    "ref": "flask-PostgreSQL",
+                    "ScrollTo": "FlaskPostLink"
+                },
+                {
+                    "id": 6,
+                    "name": "Deploy the Vue, Flask and PostgreSQL app to Amazon Web Services",
+                    "ref": "deploy-PostgreSQL",
+                    "ScrollTo": "DeployPostLink"
+                },
+                {
+                    "id": 7,
+                    "name": "How to Make a Simple REST Api using React, Spring Boot and H2",
+                    "ref": "react-spring",
+                    "ScrollTo": "ReactH2Link"
+                },
+                {
+                    "id": 8,
+                    "name": "Deploy the React, Spring Boot and H2 app to Heroku",
+                    "ref": "deploy-spring",
+                    "ScrollTo": "DeploySpringLink"
+                },
+                {
+                    "id": 9,
+                    "name": "How to Make a Complex REST Api using React, Spring Boot and MySQL",
+                    "ref": "complex-mysql",
+                    "ScrollTo": "ComplexMySqlLink"
+                },
+                {
+                    "id": 10,
+                    "name": "Deploy the React, Spring Boot and MySQL app to Amazon Web Services",
+                    "ref": "deploy-mysql",
+                    "ScrollTo": "DeployMySqlLink"
+                }
+            ] 
+        },
+        "UNCW": {
+            "title": "How to Setup UNCW School Projects", 
+            "desc": "These explain how to setup a JavaFX Project, Cisco Secure Client, and a PHP project.",
+            "links": [
+                {
+                    "id": 1,
+                    "name": "How to Setup a JavaFX Project (Intellij IDEA)",
+                    "ref": "intellij",
+                    "ScrollTo": "IntellijLink"
+                },
+                {
+                    "id": 2,
+                    "name": "How to Setup a JavaFX Project (Eclipse)",
+                    "ref": "eclipse",
+                    "ScrollTo": "EclipseLink"
+                },
+                {
+                    "id": 3,
+                    "name": "How to Setup Cisco Secure Client and a VPN",
+                    "ref": "cisco",
+                    "ScrollTo": "CiscoLink"
+                },
+                {
+                    "id": 4,
+                    "name": "How to Setup a PHP and MySQL Project for UNCW",
+                    "ref": "php",
+                    "ScrollTo": "PhpLink"
+                }
+            ] 
+        },
+        "Downloaders": {
+            "title": "How to Setup TikTok and YouTube Downloaders", 
+            "desc": "These explain how to setup and use TikTok and Youtube CLI tools.",
+            "links": [
+                {
+                    "id": 1,
+                    "name": "How to Setup TikTok Downloader",
+                    "ref": "tiktok",
+                    "ScrollTo": "TikTokLink"
+                },
+                {
+                    "id": 2,
+                    "name": "How to Setup YouTube Downloader",
+                    "ref": "youtube",
+                    "ScrollTo": "YoutubeLink"
+                }
+            ] 
+        },
+        "API": {
+            "title": "How to Setup Projects that Utilize API's", 
+            "desc": "These explain how to setup project that utilize APIs.",
+            "links": [
+                {
+                    "id": 1,
+                    "name": "How to Setup a Google/Youtube API Project",
+                    "ref": "google-api",
+                    "ScrollTo": "GoogleApiLink"
+                },
+                {
+                    "id": 2,
+                    "name": "How to Setup a Reddit API Project",
+                    "ref": "reddit-api",
+                    "ScrollTo": "RedditApiLink"
+                },
+                {
+                    "id": 3,
+                    "name": "How to Setup a Spotify API Project (w/ Flask)",
+                    "ref": "spotify-api",
+                    "ScrollTo": "SpotifyApiLink"
+                },
+                {
+                    "id": 4,
+                    "name": "How to Setup an OpenAI API Project",
+                    "ref": "openai-api",
+                    "ScrollTo": "OpenaiLink"
+                },
+                {
+                    "id": 5,
+                    "name": "How to Setup a LinkedIn API Project",
+                    "ref": "linkedin-api",
+                    "ScrollTo": "LinkedInLink"
+                },
+                {
+                    "id": 6,
+                    "name": "How to Create a Reddit Bot",
+                    "ref": "reddit-bot",
+                    "ScrollTo": "RedditBotLink"
+                },
+                {
+                    "id": 7,
+                    "name": "How to Deploy a Reddit Bot on AWS",
+                    "ref": "reddit-bot-aws",
+                    "ScrollTo": "RedditBotAWSLink"
+                }
+            ] 
+        },
+        "IOS": {
+            "title": "How to Setup an iOS App", 
+            "desc": "These explain how to setup an iOS app with Firebase and run it in developer mode.",
+            "links": [
+                {
+                    "id": 1,
+                    "name": "How to Setup an iOS app with SwiftUI and Firebase",
+                    "ref": "swift-firebase",
+                    "ScrollTo": "SwiftFirebaseLink"
+                },
+                {
+                    "id": 2,
+                    "name": "How to Setup SwiftData in a SwiftUI project",
+                    "ref": "swift-data",
+                    "ScrollTo": "SwiftDataLink"
+                },
+                {
+                    "id": 3,
+                    "name": "How to Run an iOS app in Developer Mode",
+                    "ref": "developer-mode",
+                    "ScrollTo": "DeveloperModeLink"
+                }
+            ] 
+        },
+        "Other": {
+            "title": "How to Setup Miscellaneous Projects", 
+            "desc": "These explain how to setup miscellaneous projects.",
+            "links": [
+                {
+                    "id": 1,
+                    "name": "How to Setup and Use Postman",
+                    "ref": "postman",
+                    "ScrollTo": "PostmanLink"
+                },
+                {
+                    "id": 2,
+                    "name": "Interact with a Flash Drive Using Python",
+                    "ref": "flash-drive",
+                    "ScrollTo": "FlashDriveLink"
+                },
+                {
+                    "id": 3,
+                    "name": "How to Setup a Python Server",
+                    "ref": "python-server",
+                    "ScrollTo": "PythonServerLink"
+                },
+                {
+                    "id": 4,
+                    "name": "How to Setup a Node Server",
+                    "ref": "node-server",
+                    "ScrollTo": "NodeServerLink"
+                },
+                {
+                    "id": 5,
+                    "name": "How to Setup Email.js in a Project",
+                    "ref": "emailjs",
+                    "ScrollTo": "EmailJSLink"
+                },
+                {
+                    "id": 6,
+                    "name": "How to Interact with iCloud using Python",
+                    "ref": "pyicloud",
+                    "ScrollTo": "PyiCloudLink"
+                },
+                {
+                    "id": 7,
+                    "name": "How to Setup OAuth Authentication",
+                    "ref": "oauth",
+                    "ScrollTo": "OAuthLink"
+                },
+                {
+                    "id": 8,
+                    "name": "How to Populate and Query a SQLite3 Database",
+                    "ref": "basic-sqlite",
+                    "ScrollTo": "BasicSqliteLink"
+                },
+                {
+                    "id": 9,
+                    "name": "How to Use Excel with Python",
+                    "ref": "excel",
+                    "ScrollTo": "ExcelLink"
+                },
+                {
+                    "id": 10,
+                    "name": "How to Add a Language to the Prism Library",
+                    "ref": "prism",
+                    "ScrollTo": "PrismLink"
+                },
+                {
+                    "id": 11,
+                    "name": "How to Setup an Executable Python Script",
+                    "ref": "executable-python",
+                    "ScrollTo": "ExecPythonLink"
+                }
+            ] 
+        }
+    }
+}

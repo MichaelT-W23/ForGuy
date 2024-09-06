@@ -1,0 +1,177 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup a LinkedIn API Project",
+            "desc": "Explains how to setup a LinkedIn API project.",
+            "ref": "linkedin-api"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Before you do anything you'll need to create a company website on LinkedIn. You can't use the LinkedIn api without doing this first. Go to this [link](https://www.linkedin.com/company/setup/new/) to sign up. Click on the \"Company\" card and enter the following values into the fields. Setting up a LinkedIn page is completely free. It also won't notify your network because it's built on a separate set of users than those that follow your regular profile.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Values",
+                "FormatCode": "Name: Choose a unique company name\nIndustry: Software Development\nOrganization Size: 0-1 employees\nOrganization type: Self-employed\n\nVerify that you're an authorized representative\n\nPress the blue \"Create Page\" button",
+                "CopyCode": "Name: Choose a unique company name\nIndustry: Software Development\nOrganization Size: 0-1 employees\nOrganization type: Self-employed\n\nVerify that you're an authorized representative\n\nPress the blue \"Create Page\" button"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "If you want to deactivate the company page after you're done writing your python script, do the following. Don't do this until after you're completely done with using your api script. <br><br>step 1: Go to [linkedin.com](https://www.linkedin.com/feed/) on desktop.<br>step 2: Click on your profile picture in the top-right<br>step 3: In the drop down menu under \"Manage\" click on \"company: your-company name\"<br>step 4: Scroll down and click \"Settings\" in the left-hand bar.<br>step 5: Click \"Deactivate page\" in the \"Settings\" section.<br>step 6: Scroll down in the pop-up window and check the confirm deactivation box. Then press \"Deactivate\".<br><br>"
+        },
+        {
+            "id": 3,
+            "instruction": "After you've completed step 2, click on this [link](https://developer.linkedin.com/) to start creating your app."
+        },
+        {
+            "id": 4,
+            "instruction": "Click the blue \"Create app\" button and you'll be taken to a new page. In the \"Create an app\" form enter the following values. For the App logo you can use any picture but I'd recommend using the UNCW logo. You can download it &here&(/download/UNCW.jpg).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Values",
+                "FormatCode": "App name: Get UNCW Alumni info\nLinkedIn Page: The name of your company page from step 2\nApp Logo: Literally any picture\n\nCheck I have read and agree to these terms\n\nPress the \"Create app\" button at the bottom",
+                "CopyCode": "App name: Get UNCW Alumni info\nLinkedIn Page: The name of your company page from step 2\nApp Logo: Literally any picture\n\nCheck I have read and agree to these terms\n\nPress the \"Create app\" button at the bottom"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "You'll be taken to your dashboard. Click on the \"Auth\" tab and copy and record your \"Client ID\" and \"Primary Client Secret\". You'll need them in later steps."
+        },
+        {
+            "id": 6,
+            "instruction": "In the \"Auth\" tab scroll down to \"OAuth 2.0 settings\" and add the following URL as the value for \"Authorized redirect URLs for your app\".",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Link",
+                "FormatCode": "https://api-university.com",
+                "CopyCode": "https://api-university.com"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "Now click on the \"Settings\" tab. In \"App Settings\" click the \"Verify\" button next to your company name. In the pop-up scroll down and press \"Generate URL\". Then copy the URL and open it in a broswer. You'll see a card titled \"Verify responsibility for an app\". Click the \"Verify\" button.  Then click the \"Continue to LinkedIn Developers\" link. Go to \"My apps\" in the top-right corner. Click on the app you're currently working on."
+        },
+        {
+            "id": 8,
+            "instruction": "Now click on the \"Products\" tab. Scroll down and press \"Request access\" for \"Sign In with LinkedIn using OpenID Connect\". Check the confirmation box then click \"Request access\". Do the same thing for the \"Share on LinkedIn\" option. This will grant your app access to certain \"OAuth 2.0 scopes\". You can see these scopes going to the \"auth\" tab and scrolling down to the \"OAuth 2.0 scopes\" section. You might need to refresh the page. We'll use these scopes in the auth_url in get_auth_code.py."
+        },
+        {
+            "id": 9,
+            "instruction": "In the \"Products\" tab, you can click on the \"View endpoints\" link in the cards to see what endpoints you can call and what data they return. This information would be helpful to modify the script below."
+        },
+        {
+            "id": 10,
+            "instruction": "Now open your terminal and run the following commands.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "pip3 install requests python-dotenv\nmkdir linkedin-api-project\ncd linkedin-api-project\ntouch .env\ntouch get_info.py\ntouch get_auth_code.py",
+                "CopyCode": "pip3 install requests python-dotenv\nmkdir linkedin-api-project\ncd linkedin-api-project\ntouch .env\ntouch get_info.py\ntouch get_auth_code.py"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "Open your \"linkedin-api-project\" folder in VSCode. Paste the following code in your \".env\" file. Change the \"client_id\" and \"client_Secret\" to be your actual credentials. You do NOT need to change the value of \"auth_code\" yet.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "fxml",
+                "DisplayLang": "Env",
+                "FormatCode": "CLIENT_ID=your_client_id\nCLIENT_SECRET=your_client_secret\nREDIRECT_URI=https://api-university.com\nAUTH_CODE=your_auth_code",
+                "CopyCode": "CLIENT_ID=your_client_id\nCLIENT_SECRET=your_client_secret\nREDIRECT_URI=https://api-university.com\nAUTH_CODE=your_auth_code"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "Now open \"get_auth_code.py\" file and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from dotenv import load_dotenv\nimport os\n\nload_dotenv()\n\nCLIENT_ID = os.getenv('CLIENT_ID')\nREDIRECT_URI = os.getenv('REDIRECT_URI')\n\nauth_url = (\n    \"https://www.linkedin.com/oauth/v2/authorization?response_type=code\"\n    f\"&client_id={CLIENT_ID}&redirect_uri={REDIRECT_URI}&scope=openid%20profile%20w_member_social%20email\"\n)\n\nprint(f\"\\nGo to this URL and authorize the app: \", end=\"\")\n\nprint(f\"\\033[34m{auth_url}\\033[0m\\n\")",
+                "CopyCode": "from dotenv import load_dotenv\nimport os\n\nload_dotenv()\n\nCLIENT_ID = os.getenv('CLIENT_ID')\nREDIRECT_URI = os.getenv('REDIRECT_URI')\n\nauth_url = (\n\t\"https://www.linkedin.com/oauth/v2/authorization?response_type=code\"\n\tf\"&client_id={CLIENT_ID}&redirect_uri={REDIRECT_URI}&scope=openid%20profile%20w_member_social%20email\"\n)\n\nprint(f\"\\nGo to this URL and authorize the app: \", end=\"\")\n\nprint(f\"\\033[34m{auth_url}\\033[0m\\n\")"
+            }
+        },
+        {
+            "id": 13,
+            "instruction": "Open your \"get_info.py\" file and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "import requests\nimport json\nfrom dotenv import load_dotenv\nimport os\n\nload_dotenv()\n\nCLIENT_ID = os.getenv('CLIENT_ID')\nCLIENT_SECRET = os.getenv('CLIENT_SECRET')\nREDIRECT_URI = os.getenv('REDIRECT_URI')\nAUTH_CODE = os.getenv('AUTH_CODE')\n\n\ndef get_access_token(authorization_code):\n    token_url = \"https://www.linkedin.com/oauth/v2/accessToken\"\n    payload = {\n\t'grant_type': 'authorization_code',\n\t'code': authorization_code,\n\t'redirect_uri': REDIRECT_URI,\n\t'client_id': CLIENT_ID,\n\t'client_secret': CLIENT_SECRET\n    }\n    response = requests.post(token_url, data=payload)\n    access_token = response.json().get('access_token')\n    return access_token\n\n\ndef get_profile_data(access_token):\n    profile_url = \"https://api.linkedin.com/v2/userinfo\"\n    headers = {\n\t\"Authorization\": f\"Bearer {access_token}\"\n    }\n    response = requests.get(profile_url, headers=headers)\n    profile_data = response.json()\n    return profile_data\n\n\ndef main():\n    access_token = get_access_token(AUTH_CODE)\n    profile_data = get_profile_data(access_token)\n    print(\"Your account information\")\n    print(json.dumps(profile_data, indent=2))\n\nif __name__ == \"__main__\":\n    main()",
+                "CopyCode": "import requests\nimport json\nfrom dotenv import load_dotenv\nimport os\n\nload_dotenv()\n\nCLIENT_ID = os.getenv('CLIENT_ID')\nCLIENT_SECRET = os.getenv('CLIENT_SECRET')\nREDIRECT_URI = os.getenv('REDIRECT_URI')\nAUTH_CODE = os.getenv('AUTH_CODE')\n\n\ndef get_access_token(authorization_code):\n\ttoken_url = \"https://www.linkedin.com/oauth/v2/accessToken\"\n\tpayload = {\n\t\t'grant_type': 'authorization_code',\n\t\t'code': authorization_code,\n\t\t'redirect_uri': REDIRECT_URI,\n\t\t'client_id': CLIENT_ID,\n\t\t'client_secret': CLIENT_SECRET\n\t}\n\tresponse = requests.post(token_url, data=payload)\n\taccess_token = response.json().get('access_token')\n\treturn access_token\n\n\ndef get_profile_data(access_token):\n\tprofile_url = \"https://api.linkedin.com/v2/userinfo\"\n\theaders = {\n\t\t\"Authorization\": f\"Bearer {access_token}\"\n\t}\n\tresponse = requests.get(profile_url, headers=headers)\n\tprofile_data = response.json()\n\treturn profile_data\n\n\ndef main():\n\taccess_token = get_access_token(AUTH_CODE)\n\tprofile_data = get_profile_data(access_token)\n\tprint(\"Your account information\")\n\tprint(json.dumps(profile_data, indent=2))\n\nif __name__ == \"__main__\":\n\tmain()"
+            }
+        },
+        {
+            "id": 14,
+            "instruction": "Now go to your terminal and run the following commands.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd linkedin-api-project\npython3 get_auth_code.py",
+                "CopyCode": "cd linkedin-api-project\npython3 get_auth_code.py"
+            }
+        },
+        {
+            "id": 15,
+            "instruction": "The command above will output a blue website link. Open the link in your browser. You'll be prompted to sign into LinkedIn two times. After you sign in you'll be taken to the api-university website. Look at the URL of the api-university website, it should end in \"?code=YOUR_AUTH_CODE\". Copy everything after the equals sign, that will be your AUTH_CODE.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Code From Link",
+                "FormatCode": "\"?code=YOUR_AUTH_CODE\"",
+                "CopyCode": "?code=YOUR_AUTH_CODE\""
+            }
+        },
+        {
+            "id": 16,
+            "instruction": "Now go back to your \".env\" file and replace \"your_auth_code\" with the code from the link you just copied. Don't delete any of the other contents of the file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "fxml",
+                "DisplayLang": "Env",
+                "FormatCode": "AUTH_CODE=your_auth_code",
+                "CopyCode": "AUTH_CODE=your_auth_code"
+            }
+        },
+        {
+            "id": 17,
+            "instruction": "Now run the \"get_info.py\" file using the following command. This will display some of your LinkedIns account information.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "python3 get_info.py",
+                "CopyCode": "python3 get_info.py"
+            }
+        },
+        {
+            "id": 18,
+            "instruction": "If that worked you can delete the \"get_auth_code.py\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "rm get_auth_code.py",
+                "CopyCode": "rm get_auth_code.py"
+            }
+        },
+        {
+            "id": 19,
+            "instruction": "I'm aware that my script doesn't really do that much. This was mainly to help you through the somewhat complicated setup for a LinkedIn api project. You can test some of the endpoints found in the \"Products\" tab if you want to make HTTP requests to endpoints that return other LinkedIn data."
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "Text": [
+        {
+            "page": "Apps To Download",
+            "desc": "These are phone apps that I'd recommend doing. I chose them based on how useful and enjoyable they are to use.",
+            "header2": "Apps To Download",
+            "desc2": "These are apps that I think would be worth downloading. ",
+            "email": "Email yourself all these download links.",
+            "header3": "Apps You've Probably Already Downloaded",
+            "desc3": "These are popular apps that you have probably already downloaded."
+        }
+    ],
+    "AppsToDownload": [
+        {
+            "Name": "Genius Scan",
+            "Description": "Used to Scan papers using your camera and turn them into pdfs. Recommended by one of my old math professors at UNCW. I found it extremely useful when I was in college. Would highly recommend.",
+            "Link": "https://apps.apple.com/us/app/scanner-app-genius-scan/id377672876"
+        },
+        {
+            "Name": "LinkedIn",
+            "Description": "I think it's good to use the app to see notifications, job alerts, etc. I also feel like the app is a little easier to use than the website.",
+            "Link": "https://apps.apple.com/us/app/linkedin-network-job-finder/id288429040"
+        },
+        {
+            "Name": "ChatGPT",
+            "Description": "Super useful for obvious reasons.",
+            "Link": "https://apps.apple.com/us/app/chatgpt/id6448311069"
+        },
+        {
+            "Name": "Handshake",
+            "Description": "This is the app UNCW uses for job searching. It's like their version of linkedin.",
+            "Link": "https://apps.apple.com/us/app/handshake-jobs-careers/id1220620171"
+        },
+        {
+            "Name": "Alarmy",
+            "Description": "This is the alarm app I use. I really like the UI, the sound it uses, and the overall features.",
+            "Link": "https://apps.apple.com/us/app/alarmy-alarm-clock-sleep/id1163786766"
+        },
+        {
+            "Name": "Coursicle",
+            "Description": "Allows you to track the open status of courses. Will send you a notification when a class goes from closed to open.",
+            "Link": "https://apps.apple.com/us/app/coursicle/id1187418307"
+        },
+        {
+            "Name": "Waze",
+            "Description": "This is the GPS app I use. It's extremely useful when driving. It can calculate the most optimal routes and redirect you if you go the wrong way.",
+            "Link": "https://apps.apple.com/us/app/waze-navigation-live-traffic/id323229106"
+        },
+        {
+            "Name": "SafeZone",
+            "Description": "This is the new app UNCW uses to send out alerts about hurricanes and stuff as of August 2024.",
+            "Link": "https://apps.apple.com/us/app/safezone/id533054756"
+        },
+        {
+            "Name": "Google Maps",
+            "Description": "I feel like this is a good app to use a Walking GPS. I prefer Waze for driving though.",
+            "Link": "https://apps.apple.com/us/app/google-maps/id585027354"
+        },
+        {
+            "Name": "GitHub",
+            "Description": "Can be used to help with authentication and allows you to access your repositories on your phone.",
+            "Link": "https://apps.apple.com/us/app/github/id1477376905"
+        },
+        {
+            "Name": "Microsoft Teams",
+            "Description": "My CSC 450 used this app to communicate during the class in a similar way to Slack.",
+            "Link": "https://apps.apple.com/us/app/microsoft-teams/id1113153706"
+        },
+        {
+            "Name": "Uber",
+            "Description": "You probably already know what this is, but I'll describe it anyway. It's basically a taxi service app. You can order an uber/taxi at basically ANY location and it will come pick you up and drive you around. This was very helpful when I needed to get a drug test for my job when I was in Wilmington and didn't have a car. I also think the UI is super cool which is a bonus. Would definitely recommend it.",
+            "Link": "https://apps.apple.com/us/app/uber-request-a-ride/id368677368"
+        },
+        {
+            "Name": "AllTrails",
+            "Description": "This is a search tool to find hiking trails in your area. You can find trails and leave reviews.",
+            "Link": "https://apps.apple.com/us/app/alltrails-hike-bike-run/id405075943"
+        },
+        {
+            "Name": "PayByPhone Parking",
+            "Description": "If you ever go somewhere that has paid parking, this is a really good app to have. It seems to be the most widely used app for paid parking.",
+            "Link": "https://apps.apple.com/us/app/paybyphone-parking/id448474183"
+        },
+        {
+            "Name": "AWS Console",
+            "Description": "Allows you to easily see billing and information about running services.",
+            "Link": "https://apps.apple.com/us/app/aws-console/id580990573"
+        },
+        {
+            "Name": "Amtrak",
+            "Description": "This is an app for finding trains. While I wouldn't find it useful if I lived in Wilmington, I do find it very useful in RTP. You can sometimes get places faster, cheaper, safer, etc. than in an uber. I use it to get from Durham to Charlotte.",
+            "Link": "https://apps.apple.com/us/app/amtrak/id405074003"
+        }
+    ],
+    "Kinda Obviously": [
+        {
+            "Name": "Canvas",
+            "Description": "Manage your UNCW assignments, view grades, future assignments, etc.",
+            "Link": "https://apps.apple.com/us/app/canvas-student/id480883488"
+        },
+        {
+            "Name": "Duo Mobile",
+            "Description": "Used for two-factor authentication at UNCW and many other places.",
+            "Link": "https://apps.apple.com/us/app/duo-mobile/id422663827"
+        },
+        {
+            "Name": "Microsoft Outlook",
+            "Description": "Manage your UNCW email and other outlook emails",
+            "Link": "https://apps.apple.com/us/app/microsoft-outlook/id951937596"
+        }
+    ]
+}

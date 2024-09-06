@@ -1,0 +1,120 @@
+{
+    "Text": [
+        {
+            "page": "Class Recommendations",
+            "desc1": "These are classes and professors I really enjoyed taking or have heard good things about.",
+            "header2": "Class Recommendations",
+            "desc2": "These are classes I would recommend taking for various reasons.",
+            "header3": "Professor Recommendations",
+            "desc3": "These are Professors I would recommend taking whenever possible."
+        }
+    ],
+    "Classes": [
+        {
+            "Name": "HST 101: Western Civilization I",
+            "Number": "HST 101",
+            "Title": "Western Civilization I",
+            "Professor": "Corey Ellithorpe",
+            "Format": "In-Person",
+            "Description": "This class was incredible. It was basically just the professor telling us stories about ancient history the entire time. The periods covered were predominantly Ancient Mesopotamia, Egypt, Greece, Rome, Muslim Empire, Viking, and Old England. The class was 3 super easy essays, 4 tests (all the same length), and a couple quizzes throughout. Tragically, it seems like Dr. Ellithorpe is now teaching at the [University of South Florida](https://www.usf.edu/arts-sciences/departments/history/people/corey-ellithorpe.aspx). However, I'd definitely watch out to see if he comes back and take it with him if possible."
+        },
+        {
+            "Name": "CSC 351: Applied Software Security",
+            "Number": "CSC 351",
+            "Title": "Applied Software Security",
+            "Professor": "Lucas Layman",
+            "Format": "In-Person",
+            "Description": "This class is SUPER easy, I ended with a 100. The grades are 4 short/relatively easy coding assignments, a take home coding exam for the final you have a week to finish, and online take home quizzes throughout. The topics covered are super relevant to real world software engineering. The information I learned from this class came up a lot in job interviews so I’d definitely recommend it. Super easy A. Also Dr. Layman gives very generous extra credit."
+        },
+        {
+            "Name": "CSC 498: Internship in Computer Science",
+            "Number": "CSC 498",
+            "Title": "Internship in Computer Science",
+            "Professor": "Shauna White",
+            "Format": "Basically Remote",
+            "Contact": "turners@uncw.edu",
+            "Description": "This class is a great and easy way to get 3 credit hours. You can take this \"class\" if you get a computer science internship. All you have to do in this class is write one paragraph a week about what you did in your internship and at the end you present your poster at the computing showcase. The \"presentation\" is extremely easy and you just stand by your poster. I only had like two people come up to me the entire time to ask me about my poster. You don't present in front of a group. The class is pass/fail and you can't sign for it using seanet. Email Mrs. White (turners@uncw.edu) to express your interest and she'll help you sign up. Note that your internship supervisor should say you're working 15 hours a week to get the full 3 credit hours. Here's a picture of my @computing showcase poster@[{ 'name': 'ImageView', 'params': { 'Name': 'Amotions Poster', 'Description': 'This was my CSC 498 poster for the computing showcase. I got a 100 on it.', 'Pic': 'AmotionsPoster.png'} }]."
+        },
+        {
+            "Name": "MUS 115: Music in Society",
+            "Number": "MUS 115",
+            "Title": "Music in Society",
+            "Professor": "Nicholas Fife",
+            "Format": "Synchronous Remote",
+            "Description": "This is the easiest class I've taken since like 1st grade. All we would do is open note quizzes that's questions just were copied and pasted facts directly from the slides with a word left out. The quizzes were open notes/internet as well. We also did 2 extremely short easy concert review papers. You could tell he seriously didn't care about grading stuff or making the class hard.  Unfortunately Dr. Fife seems to now be teaching at [Winthrop University](https://www.winthrop.edu/cvpa/faculty-staff/bios/fife-nicholas.aspx). I'd still keep an eye out, maybe he'll come back. Also I'm sure this class would be pretty easy no matter the format or professor."
+        },
+        {
+            "Name": "ARH 201: Ancient Art and Archaeology",
+            "Number": "ARH 201",
+            "Title": "Ancient Art and Archaeology",
+            "Professor": "Nicholas Hudson",
+            "Format": "Technically In-Person",
+            "Description": "This is overall a pretty easy class. There are like 8 quizzes you can do as many times as you want at home. There are also like 4 online tests you take at home. While this class is technically in-person, attendance isn't mandatory and you can just do all the exams online."
+        },
+        {
+            "Name": "PSY 105: General Psychology",
+            "Number": "PSY 105",
+            "Title": "General Psychology",
+            "Professor": "Idk",
+            "Format": "In-Person",
+            "Description": "I never took this class, but I feel having a good, basic understanding of psychology would help with any degree."
+        },
+        {
+            "Name": "EBD 380: Entrepreneurship",
+            "Number": "EBD 380",
+            "Title": "Entrepreneurship",
+            "Professor": "Idk",
+            "Format": "In-Person",
+            "Description": "I never took this class, but I feel like it would be good to have some level of knowledge on entrepreneurship. Also, I think this class is required for a Business Administration degree."
+        },
+        {
+            "Name": "PED 150: Beginning Sailing",
+            "Number": "PED 150",
+            "Title": "Beginning Sailing",
+            "Professor": "Idk",
+            "Format": "In-Person",
+            "Description": "I never took this class, but it teaches the theory, navigation rules, equipment, and basic skills of sailing. I thought you might find that enjoyable as an elective."
+        }
+    ],
+    "Professors": [
+        {
+            "Name": "Dr. Xiaojie Hou",
+            "Professor": "Dr. Xiaojie Hou",
+            "Website": "https://uncw.edu/academics/colleges/cse/departments/math-statistics/about/faculty-staff/",
+            "Class": "MAT 162",
+            "Description": "As a computer science major at UNCW you have to take calculus II. Dr. Hou makes it extremely easy to pass/get a good grade in his class. Despite the class being in person, he lets you take all the quizzes and tests at home/online. Also the questions from the quizzes are basically pulled directly from the homework. The tests are also basically the exact same as the study guide. I got an A- in this class because of him. 10/10 would recommend."
+        },
+        {
+            "Name": "Dr. Lucas Layman",
+            "Professor": "Dr. Lucas Layman",
+            "Website": "https://llayman.github.io/",
+            "Classes": [
+                "CSC 231",
+                "CSC 315",
+                "CSC 351",
+                "CSC 450"
+            ],
+            "Description": "Dr. Layman's classes are lit. They are typically very easy and he gives a LOT of extra credit. He also teaches a lot of information that's useful in the real world. He's also pretty funny and friendly."
+        },
+        {
+            "Name": "Dr. Corey Ellithorpe",
+            "Professor": "Dr. Corey Ellithorpe",
+            "Website": "https://www.usf.edu/arts-sciences/departments/history/people/corey-ellithorpe.aspx",
+            "Classes": "HST 101",
+            "Description": "Dr. Ellithorpe GOATED. He's a god-tier story teller and teaches history in a very theatrical way. There were times I was literally borderline shaking cause of how exciting some of the stories were. He would also sometimes end the class on a cliff-hanger which was always fun. Tragically, it seems like now he's teaching at the University of South Florida. @Hopefully he'll come back@[{ 'name': 'ImageView', 'params': { 'Name': 'Dr. Corey Ellithorpe 🐐', 'Description': '\\\\\\\"I think I&&&&ll miss you forever, like the stars miss the sun in the morning sky\\\\\\\" - Lana Del Rey', 'Pic': 'Ellithorpe.png'} }]."
+        },
+        {
+            "Name": "Dr. Curry Guinn",
+            "Professor": "Dr. Curry Guinn",
+            "Website": "https://people.uncw.edu/guinnc/",
+            "Classes": [
+                "CSC 360",
+                "CSC 380"
+            ],
+            "Description": "UPDATE: tragically Dr. Guinn has moved to the [University of Colorado](https://www.linkedin.com/posts/activity-7224778886478213120-Mnww?utm_source=share&utm_medium=member_desktop), so you'll have to take the class with another professor. Dr. Guinn is a great professor and very nice wholesome person. I went to his office hours once and he acted like I was his childhood best friend who he hadn't seen in like 30 years. He's also more than happy to help you out if you needed it. Would recommend."
+        }
+    ]
+}
+
+
+

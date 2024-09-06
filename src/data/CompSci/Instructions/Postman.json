@@ -1,0 +1,133 @@
+{
+    "MultiSet": [
+        {
+            "Info": [
+                {
+                    "title": "How to Setup and Use Postman",
+                    "desc": "How to setup Postman and use it to ping endpoints. Also explains how to ping endpoints using the terminal.",
+                    "ref": "postman"
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Using Postman is a great way to test Rest API endpoints using a GUI. If you want to ping endpoints using your terminal, see the instruction set below."
+                },
+                {
+                    "id": 2,
+                    "instruction": "First download Postman using this [link](https://www.postman.com/downloads/). Click the orange \"Mac Intel Chip\" or \"Mac Apple Chip\". Run the command below to determine which one to press. If it outputs \"x86_64\" use Mac Intel. If it outputs \"arm64\" use Mac Apple.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "uname -m",
+                        "CopyCode": "uname -m"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Follow the installation prompts after you press the download button."
+                },
+                {
+                    "id": 4,
+                    "instruction": "Open the Postman app you just downloaded. Sign up for an account. Where it says \"Work email\" you can just put your personal email address."
+                },
+                {
+                    "id": 5,
+                    "instruction": "Once you get to the main page, click the \"New\" button next to the \"import\" button near the left-hand side."
+                },
+                {
+                    "id": 6,
+                    "instruction": "Click \"HTTP\" in the pop-up box. Then paste the following link in the input field. Then press the blue \"Send\" button. You should see the data appear in the \"Body\" section. We will be using data from [jsonplaceholder.com](https://jsonplaceholder.typicode.com/) for this example.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLink": "Endpoint",
+                        "FormatCode": "https://jsonplaceholder.typicode.com/posts",
+                        "CopyCode": "https://jsonplaceholder.typicode.com/posts"
+                    }
+                },
+                {
+                    "id": 7,
+                    "instruction": "Now change the method from GET to POST and paste in the following link. Do NOT press send yet.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLink": "Endpoint",
+                        "FormatCode": "https://jsonplaceholder.typicode.com/posts",
+                        "CopyCode": "https://jsonplaceholder.typicode.com/posts"
+                    }
+                },
+                {
+                    "id": 8,
+                    "instruction": "Directly under the input bar you should see tabs. Next to \"Authorization\" click on \"Headers\". Then add a add a new header with the key 'Content-Type' and the value 'application/json'. Make sure the key-value pair has a check mark on the left side to show it's selected.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLink": "Key-Value Pair",
+                        "FormatCode": "Content-Type : application/json",
+                        "CopyCode": "Content-Type : application/json"
+                    }
+                },
+                {
+                    "id": 9,
+                    "instruction": "Now go to the \"Body\" tab to the right of the Headers tab. Select the \"raw\" option and make sure JSON is displayed in the list. Then paste the following data into the input box.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "JSON",
+                        "FormatCode": "{\n    \"title\": \"foo\",\n    \"body\": \"bar\",\n    \"userId\": 1\n}",
+                        "CopyCode": "{\n\t\"title\": \"foo\",\n\t\"body\": \"bar\",\n\t\"userId\": 1\n}"
+                    }
+                },
+                {
+                    "id": 10,
+                    "instruction": "Click the send button. You should get a single object response with the id 101."
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "How to Call API Endpoints in Terminal",
+                    "desc": "Explains how to call and API endpoint using your terminal."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "For this example we will be using data from [jsonplaceholder.com](https://jsonplaceholder.typicode.com/)."
+                },
+                {
+                    "id": 2,
+                    "instruction": "Open your terminal and run the following command to make a GET request.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command/HTTP Request",
+                        "FormatCode": "curl -X GET https://jsonplaceholder.typicode.com/posts",
+                        "CopyCode": "curl -X GET https://jsonplaceholder.typicode.com/posts"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Run the following command to make a POST request. It should print a single JSON object with an \"id\" of 101.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command/HTTP Request",
+                        "FormatCode": "curl -X POST https://jsonplaceholder.typicode.com/posts \\\n-H \"Content-Type: application/json\" \\\n-d '{\"title\":\"foo\",\"body\":\"bar\",\"userId\":1}'",
+                        "CopyCode": "curl -X POST https://jsonplaceholder.typicode.com/posts \\\n-H \"Content-Type: application/json\" \\\n-d '{\"title\":\"foo\",\"body\":\"bar\",\"userId\":1}'"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "Using the terminal is a great way to test api links."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,214 @@
+code {
+    color: #ABB2BF;
+}
+
+.token.keyword,
+.token.operator,
+.token.purple-js,
+.token.fxml-purple,
+.token.always-purple,
+.token.sh-purple,
+.token.sql-purple {
+    color: #C678DD;
+}
+
+.token.punctuation,
+.token.constant,
+.token.always-gray,
+.token.gray-js,
+.token.fxml-gray {
+    color: #ABB2BF;
+}
+
+.token.property,
+.token.self-red,
+.token.red-js,
+.token.py-red,
+.token.red-js-two,
+.token.tag,
+.token.doctype-tag,
+.token.fxml-red,
+.token.sh-red,
+.token.red-highlight,
+span.token.selector {
+    color: #E06C75;
+}
+
+
+.token.number,
+.token.self-orange, 
+.token.orange-js,
+.token.prop-orange {
+    color: #D19A66;
+}
+
+/* Teal */
+.token.builtin,
+.token.teal-highlight,
+.token.teal-js,
+.token.regex-source,
+.token.regex-delimiter,
+.token.fxml-teal, 
+.token.sh-teal {
+    color: #56B6C2;
+}
+
+.token.boolean {
+  color: #D19A66;
+}
+
+/* Java class name and primitive types*/
+.token.class-name,
+.token.primitive-type,
+.token.yellow-js,
+.token.always-yellow {
+    color: #E5C07B
+}
+
+/* Python print */
+.token.python-print-stmt {
+    color: #56B6C2;
+}
+
+/* "file" variable name in Python*/
+.token.file-name {
+    color: #ABB2BF;
+}
+
+.token.comment,
+.token.html-comment {
+    color: #5C6370
+}
+
+:root {
+    --token-operator-background: #282C34;
+}
+
+.token.operator {
+	background: var(--token-operator-background);
+}
+
+/* JavaScript function */
+.token.function,
+.token.function-variable.function,
+.token.always-blue,
+.token.blue-js,
+.token.always-blue-two,
+.token.fxml-blue,
+.token.sh-blue {
+    color: #61AFEF;
+}
+
+/* JavaScript Variable */
+.token.literal-property.property {
+    color: #61AFEF;
+}
+
+/* Swift nil */
+.token.nil.constant,
+.token.fxml-orange,
+.token.sh-orange,
+.token.attr-name,
+.token.name {
+    color: #D19A66;
+}
+
+.token.string,
+.token.green-js,
+.token.fxml-green,
+.token.attr-value,
+.token.sh-green, 
+.token.prop-green,
+.token.sql-green {
+    color: #98C379;
+}
+
+
+.token.json-colon {
+    color: #ABB2BF;
+}
+
+
+.swift-class-name {
+    color: #DEC1FF;
+}
+
+.swift-purple {
+    color: #C08AFF;
+}
+
+.swift-keyword,
+.swift-nil.constant,
+.swift-pink {
+    color: #FC6BAA;
+}
+
+
+.swift-teal {
+    color: #42B8E0;
+}
+
+.swift-green {
+    color: #72BFAE;
+}
+
+.swift-white {
+    color: white;
+}
+
+.swift-operator,
+.swift-punctuation {
+    color: white;
+}
+
+.swift-string {
+    color: #FC7467;
+}
+
+.cust-swift-light-purple,
+.cust-swift-light-purple-other {
+    color: #DEC1FF;
+}
+
+.cust-swift-comment {
+    color: #7CB554;
+}
+
+.cust-swift-pink {
+    color: #FC6BAA;
+}
+
+.cust-swift-string {
+    color: #FC7467;
+}
+
+.cust-swift-purple, 
+.cust-swift-purple-other {
+    color: #C08AFF
+}
+
+.cust-swift-light-blue {
+    color: #5DD8FF
+}
+
+.cust-swift-blue {
+    color: #42B8E0
+}
+
+.cust-swift-green,
+.cust-swift-green-other {
+    color: #72BFAE
+}
+
+.cust-swift-light-green {
+    color: #A4FBE6
+}
+
+.cust-swift-dark-yellow {
+    color: #D0BC56
+}
+
+.cust-swift-white, 
+.cust-swift-white-other {
+    color: white;
+}

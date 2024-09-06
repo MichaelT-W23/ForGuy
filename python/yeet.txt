@@ -1,0 +1,321 @@
+{
+
+    /**
+        How to Open this settings json file
+
+        1. Open Visual Studio code
+
+        2. Press command + shift + p
+
+        3. Lookup and click on the "Preferences: Open Settings (JSON)" option
+           in the drop down menu.
+    */
+    "security.workspace.trust.untrustedFiles": "open",
+    //"python.defaultInterpreterPath": "/usr/bin/python3",
+
+    //My Default python path for vs code
+    "python.defaultInterpreterPath": "~/.pyenv/versions/3.10.6/bin/python",
+
+    //Work bench color theme
+    "workbench.colorTheme": "Atom One Dark",
+
+    //Sets Tab Size to 4 spaces
+    "editor.tabSize": 4,
+
+    //Disables Run | Debug text
+    "editor.codeLens": false,
+
+    //Turns off weird coloring of Java brackets
+    "editor.bracketPairColorization.enabled": false,
+
+    //Sets the maximum number of items in a json file to 50,000 without
+    //warning about performance issues. Was originally 5,000.
+    "json.maxItemsComputed": 50000,
+
+    //Disables yellow underline for reportMissingModuleSource
+    //reportMissingImports and errors in Python.
+    // "python.analysis.diagnosticSeverityOverrides" : {
+    //     "reportMissingModuleSource" : "none",
+    //     "reportMissingImports": "none"
+    // },
+
+    //Opens Live Server in Chrome by Default
+    "liveServer.settings.CustomBrowser": "chrome",
+
+    //Turns off the warning about unusual characters in a txt file.
+    "editor.unusualLineTerminators" : "off",
+
+    /** Gets rid of autofill parameter suggestions in method calls in java */
+    "editor.inlayHints.enabled": "off",
+
+    //Changes font size to 13.5
+    "editor.fontSize": 13.5,
+
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+
+    // Set to false to show .git folder
+    "files.exclude": {
+        "**/.git": false,
+    },
+
+    /**
+        How to change a color
+     1. hover over the keyword whose color you want changed
+     2. Press command + shift + p on mac
+     3. Seach and click "Developer: Inspect Editor Tokens and Scopes"
+     4. In the box that opens next to "textmate scopes" copy the first line
+        and paste it under the scope keyword that's above the color you want
+        to change the keyword too. If it doesn't work try the other lines.
+     5. To stop inspecting the tokens press command + shift + p
+        then press enter
+    */
+  "editor.tokenColorCustomizations": {
+
+
+    "[Atom One Dark]": {
+        "textMateRules": [
+
+            //Changes function calls to blue ,
+            {
+                "scope": [
+                    /** Changes function calls to blue */
+                    "meta.function-call.generic.python",
+                ],
+                "settings": {
+                    "foreground": "#61AFEF" //Blue
+                }
+            },
+
+            //Changes colors to gray.
+            {
+                "scope": [
+                    /** Changes function parameters to gray */
+                    "variable.parameter.function.language.python",
+                    "meta.function.parameters.python",
+                    "meta.function.python",
+                    "source.python",
+
+                    /** Changes __name__ to gray. */
+                    "support.variable.magic.python",
+
+                    /** Changes variables to gray in java */
+                    "variable.other.definition.java",
+
+                    /** Changes out keyword to gray */
+                    "variable.other.object.property.java",
+
+                    /** The console in console.close() gets turned to gray in java */
+                    "variable.other.object.java",
+
+                    // "meta.try.body.java"
+
+                    /** Changes brackets in array declaration to gray. String[] */
+                    "punctuation.bracket.square.java",
+
+                    /** Makes imports in java gray */
+                    "storage.modifier.import.java",
+
+                    /** Changes certain functions from library pink in python */
+                    "meta.indexed-name.python",
+
+                    /** Changes the file keyword to gray" */
+                    "variable.legacy.builtin.python",
+
+                    /** Make C# static class variables gray */
+                    "entity.name.variable.field.cs",
+
+                    /** Makes const variables in Javascript gray */
+                    "variable.other.constant.js"
+                ],
+                "settings": {
+                    "foreground": "#ABB2BF" //Gray
+                }
+            },
+
+            //Changes f in f string to green
+            {
+                "scope": [
+                    /** Changes f in f string to green */
+                    "storage.type.string.python",
+
+                    /** Changes escape characters to green */
+                    "constant.character.escape.java",
+
+                    "string.quoted.single.python",
+                ],
+                "settings": {
+                    "foreground": "#98C379" //Green
+                }
+            },
+
+            //Changes colors to red
+            {
+                "scope": [
+                    /** Changes object attributes to red */
+                    "meta.attribute.python",
+                    /** Changes brackets to red */
+                    "constant.character.format.placeholder.other.python",
+                    //Changes attribute to red in C#. Example song.Instrument. Instrument is red
+                    "variable.other.object.property.cs",
+                    //Changes The "<" character in List<string> to red.
+                    "punctuation.definition.typeparameters.begin.cs",
+                    //Changes The ">" character in List<string> to red.
+                    "punctuation.definition.typeparameters.end.cs"
+                ],
+                "settings": {
+                    "foreground": "#E06C75"
+                }
+            },
+
+            //Changes certain functions from library such as testbed.devices[devivces] to pink.
+            // {
+            //     "scope": [
+            //         /** Changes certain functions from library pink in python */
+            //         "meta.indexed-name.python",
+            //     ],
+            //     "settings": {
+            //         "foreground": "#F3D0F7"
+            //     }
+            // },
+
+            //Changes certain keywords to yellow in Java.
+            {
+                "scope": [
+
+                    /** Changes System keyword to yellow */
+                    "variable.other.object.java",
+
+                    /** Changes parameter type to yellow and return type. */
+                    "storage.type.primitive.java",
+
+                    //"entity.name.function.java"
+
+                ],
+                "settings": {
+                    "foreground": "#E5C07B"
+                }
+            },
+
+            //Changes colors to dark gray.
+            {
+                "scope": [
+                    /** Makes keywords in comments in java dark gray" */
+                    "keyword.other.documentation.javadoc.java",
+
+                    /** Changes parameter to dark gray in java*/
+                    "variable.parameter.java",
+
+                    /** Makes descriptions in comments dark gray */
+                    "comment.block.javadoc.java",
+
+                ],
+                "settings": {
+                    "foreground": "#5C6370"
+                }
+            },
+            {
+                "scope": [
+                    //Changes new keyword in C#
+                    "keyword.operator.expression.new.cs",
+                    //Changes !, &&, etc. in C#
+                    "keyword.operator.logical.cs",
+                    //Makes ++ in C# purple
+                    "keyword.operator.increment.cs",
+                    //Makes = in C# purple
+                    "keyword.operator.assignment.cs",
+                    // Makes + in C# purple
+                    "keyword.operator.arithmetic.cs",
+                    //Makes += in C# purple
+                    "keyword.operator.assignment.compound.cs",
+                    //Makes == in C# purple
+                    "keyword.operator.comparison.cs",
+                    //Makes => in C# purple
+                    "keyword.operator.arrow.cs",
+                    //Makes ?? in C# purple
+                    "keyword.operator.null-coalescing.cs",
+                    //Makes ternary ? in C# purple
+                    "keyword.operator.conditional.question-mark.cs",
+                    //Makes ternary : in C# purple
+                    "keyword.operator.conditional.colon.cs",
+                    //Makes > in C# purple
+                    "keyword.operator.relational.cs"
+                ],
+                "settings": {
+                    "foreground": "#C678DD" // purple
+                }
+            }
+
+        ],
+    }, //End of Atom One Dark
+
+    "[Eclipse Dark]": {
+        "textMateRules": [
+            {
+                "scope": [
+                    /** Changes the colors of the periods in the import statements */
+                    "punctuation.separator.java"
+                ],
+                "settings": {
+                    "foreground": "#DAE8F7"
+                }
+            },
+            {
+                "scope": [
+                    /** Changes the package name color to blue.
+                    Note that the import names cannot change color */
+                    "storage.modifier.package.java"
+                ],
+                "settings": {
+                    "foreground": "#4A99C3"
+                }
+            },
+
+
+            {
+                "scope": [
+                    /** Changes the top and bottom of comments */
+                    "punctuation.definition.comment.java",
+                    /** Changes the color of the * character in body comments.
+                    Also changes the tag descriptions in comments */
+                    "comment.block.javadoc.java",
+                    /** Changes @ tags to gray */
+                    "punctuation.definition.annotation.java"
+
+
+                ],
+                "settings": {
+                    "foreground": "#939393"
+                }
+            }
+        ],
+
+    },
+},
+
+"[python]": {
+},
+"json.schemas": [
+],
+"editor.codeActionsOnSave": {
+},
+
+//Helps work with JSON while using Java
+"java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "json-20230618.jar"
+],
+
+"liveServer.settings.donotShowInfoMsg": true,
+
+"workbench.editorAssociations": {
+    "*.db": "sqlite-viewer.option"
+},
+
+"yaml.schemas": {
+    "Kubernetes": "*.yaml"
+}
+
+}

@@ -1,0 +1,22 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup OAuth Authentication",
+            "desc": "Explains how to setup and use OAuth authentication in a Vue.js app.",
+            "ref": "oauth"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "",
+                "FormatCode": "",
+                "CopyCode": ""
+            }
+        }
+    ]
+}

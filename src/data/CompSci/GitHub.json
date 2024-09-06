@@ -1,0 +1,1532 @@
+{
+    "ScrollLinks": [
+        {
+            "id": 1,
+            "name": "How to Create a GitHub Account",
+            "ref": "createGHAccount"
+        },
+        {
+            "id": 2,
+            "name": "How to Create a GitHub Repository",
+            "ref": "createGHRepo"
+        },
+        {
+            "id": 3,
+            "name": "How to Create Multiple GitHub Accounts",
+            "ref": "multipleGHAccounts"
+        },
+        {
+            "id": 4,
+            "name": "How to Create a GitHub Repository Using a Second Account",
+            "ref": "multipleDifferentAccount"
+        },
+        {
+            "id": 5,
+            "name": "Git Commands",
+            "ref": "GitCommands"
+        },
+        {
+            "id": 6,
+            "name": "General Tips",
+            "ref": "GeneralTips"
+        },
+        {
+            "id": 7,
+            "name": "Three Main Git Commands",
+            "ref": "ThreeCommands"
+        },
+        {
+            "id": 8,
+            "name": "How to Fork a Repository",
+            "ref": "ForkRepo"
+        },
+        {
+            "id": 9,
+            "name": "Reset To Previous Commit",
+            "ref": "resetBranch"
+        },
+        {
+            "id": 10,
+            "name": "Revert a Single File To Previous Commit",
+            "ref": "ResetSingleFile"
+        },
+        {
+            "id": 11,
+            "name": "Add Existing Folder To GitHub",
+            "ref": "ExistingCmds"
+        },
+        {
+            "id": 12,
+            "name": "CSC 450 Workflow",
+            "ref": "CSC450Workflow"
+        },
+        {
+            "id": 13,
+            "name": "My Old Amotions Workflow",
+            "ref": "AmotionsWorkflow"
+        },
+        {
+            "id": 14,
+            "name": "How to Merge Changes from Main into Your Branch",
+            "ref": "MergeMain"
+        },
+        {
+            "id": 15,
+            "name": "How to Resolve Merge Conflicts",
+            "ref": "MergeConflicts"
+        },
+        {
+            "id": 16,
+            "name": "Remove a File from Git History",
+            "ref": "RemoveFile"
+        }
+    ],
+    "SetupGitHub": [
+        {
+            "id": 1,
+            "instruction": "If you have any issues with anything definitely feel free to contact me. Note that some of these commands will be different if you're using windows."
+        },
+        {
+            "id": 2,
+            "instruction": "To get started, download git. I'd recommend installing git using Homebrew. Install the Homebrew package manager using the following two commands. Then check that it's installed by using the --version command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "xcode-select --install\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\nbrew --version",
+                "CopyCode": "xcode-select --install\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\nbrew --version"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Now install git via Homebrew. Note that this might take a while. Be patient.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "brew install git",
+                "CopyCode": "brew install git"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Configure Git. Replace the values in quotations with your name and email address. I'd recommend using the same email address you used to setup your Github account. I'd recommend just setting your username to \"John Doe\" (Your name).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git config --global user.name \"Your Name\"\ngit config --global user.email \"youremail@example.com\"",
+                "CopyCode": "git config --global user.name \"Your Name\"\ngit config --global user.email \"youremail@example.com\""
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Now generate a new SSH key. Run the following command in your terminal with the same email you used in the previous step. Replace youremail@example.com with your actual email address.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "ssh-keygen -t ed25519 -b 4096 -C \"youremail@example.com\"",
+                "CopyCode": "ssh-keygen -t ed25519 -b 4096 -C \"youremail@example.com\""
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "It will then ask you questions and prompt you for answers. Just press return/enter for all of them. Different for multiple accounts(secondSix).",
+            "ref": "normalSix"
+        },
+        {
+            "id": 7,
+            "instruction": "Run the following two commands (one at a  time) to add the SSH key to the ssh-agent. Different for multiple accounts(secondSeven).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "eval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519",
+                "CopyCode": "eval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519"
+            },
+            "ref": "normalSeven"
+        },
+        {
+            "id": 8,
+            "instruction": "Run the following to ensure you have git installed. If it says something like \"git version 2.39.3\", you're good.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git --version",
+                "CopyCode": "git --version"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "9. Now we're going to create an SSH key to add to GitHub. Run the two following commands. The second command will print and copy the ssh key to your clipboard. Different for multiple accounts(secondNine).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd ~/.ssh\ncat id_ed25519.pub | tee >(pbcopy)",
+                "CopyCode": "cd ~/.ssh\ncat id_ed25519.pub | tee >(pbcopy)"
+            },
+            "ref": "normalNine"
+        },
+        {
+            "id": 10,
+            "instruction": "Your SSH key should now be copied to your keyboard. Now go back to your Github account at [github.com](https://github.com/)."
+        },
+        {
+            "id": 11,
+            "instruction": "On GitHub, in the top-right corner click on the circular profile picture. A sidebar should appear."
+        },
+        {
+            "id": 12,
+            "instruction": "In the sidebar click \"settings\"."
+        },
+        {
+            "id": 13,
+            "instruction": "You should now be taken to a new page. On the left-hand side click \"SSH and GPG\" keys."
+        },
+        {
+            "id": 14,
+            "instruction": "Click the green \"New SSH key\" button. Create a title for the key, it doesn't have to be anything special. You could just call it \"John's key\" (your name key)."
+        },
+        {
+            "id": 15,
+            "instruction": "Paste the SSH key in the box. It should already be copied to your clipboard."
+        },
+        {
+            "id": 16,
+            "instruction": "Click \"Add SSH key\" at the bottom. It should then take you back to the old page with a light blue bar that says \"You have successfully added the key 'John's Key'\"."
+        },
+        {
+            "id": 17,
+            "instruction": "Now generate a person access token by going to this [GitHub link](https://github.com/settings/tokens). To get this page manually you would go to the GitHub main page -> side bar -> settings -> (Scroll down left-hand side) Developer settings -> Personal access tokens."
+        },
+        {
+            "id": 18,
+            "instruction": "Click the gray \"Generate new token\" drop-down button. In the drop-down menu select \"Generate new token (classic)\"."
+        },
+        {
+            "id": 19,
+            "instruction": "You'll be taken to a new page with multiple fields titled \"New personal access token (classic)\". In the \"Note\" field just type something like \"John's Personal Access Token\". Then select 90 days for the expiration. Then check ALL the boxes below. Then select the green \"Generate token\" button at the bottom once you're done."
+        },
+        {
+            "id": 20,
+            "instruction": "A new personal access token should have been generated. Copy it, and keep it somewhere safe. You will NOT be able to see it again. It should look like ghp_followed by a bunch random characters."
+        },
+        {
+            "id": 21,
+            "instruction": "Add a nano config file by running the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "nano .config",
+                "CopyCode": "nano .config"
+            }
+        },
+        {
+            "id": 22,
+            "instruction": "Now run the following command to open your nano file. This is where you'll add your personal access token information.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "nano ~/.ssh/config",
+                "CopyCode": "nano ~/.ssh/config"
+            }
+        },
+        {
+            "id": 23,
+            "instruction": "In the file that's open in your terminal paste the following. Note change \"NameForThisAccount\" in the first line with basically any name for this new account. I'd recommend something like \"main\" or \"personal\". Different for multiple accounts(secondTwentyThree).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "# Main account\nHost github.com-NameForThisAccount\nHostName github.com\nUser git\nIdentityFile ~/.ssh/id_ed25519\nIdentitiesOnly yes",
+                "CopyCode": "# Main account\nHost github.com-NameForThisAccount\nHostName github.com\nUser git\nIdentityFile ~/.ssh/id_ed25519\nIdentitiesOnly yes"
+            },
+            "ref": "normalTwentyThree"
+        },
+        {
+            "id": 24,
+            "instruction": "To save the file do the following. Press control + o. Then press return/enter. Then press control + x."
+        },
+        {
+            "id": 25,
+            "instruction": "Run the following command again to verify the changes were saved. Then press control + x to exit.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "nano ~/.ssh/config",
+                "CopyCode": "nano ~/.ssh/config"
+            }
+        }
+    ],
+    "CreateGitHubRepo": [
+        {
+            "id": 1,
+            "instruction": "Go to [github.com](https://github.com/)."
+        },
+        {
+            "id": 2,
+            "instruction": "On the left-hand side click the green \"New\" button."
+        },
+        {
+            "id": 3,
+            "instruction": "In the \"Repository name *\" field enter a name for your repository. It can be basically anything."
+        },
+        {
+            "id": 4,
+            "instruction": "Decide if you want to make the repo \"private\" or \"public\". Select the corresponding radio button. I'd recommend \"public\" for this example."
+        },
+        {
+            "id": 5,
+            "instruction": "I'd recommend checking the \"Add a README file\" button."
+        },
+        {
+            "id": 6,
+            "instruction": "Select the green \"Create repository\" button at the bottom."
+        },
+        {
+            "id": 7,
+            "instruction": "In the light blue section titled \"Quick setup — if you've done this kind of thing before\". Select https or ssh, either one works but I\"d recommend selecting ssh. Then copy the link next to it that looks like \"git@github.com:Michael-W23/Wind.git\" if you selected ssh. Different for multiple accounts(secondGitHubSeven).",
+            "ref": "normalGitHubSeven"
+        },
+        {
+            "id": 8,
+            "instruction": "Run the following command to create a local clone. Note the link should be whatever you just copied. Replace the \"git@github.com:John-Smith/PacMan.git\" with the actual link. Different for multiple accounts(secondGitHubEight)",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git clone git@github.com:John-Smith/PacMan.git",
+                "CopyCode": "git clone git@github.com:John-Smith/PacMan.git"
+            },
+            "ref": "normalGitHubEight"
+        },
+        {
+            "id": 9,
+            "instruction": "Change into the cloned repository. Using the \"cd\" command. Note you should cd into whatever the repos name is. Different for multiple accounts(secondGitHubNine)",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd PacMan",
+                "CopyCode": "cd PacMan"
+            },
+             "ref": "normalGitHubNine"
+        },
+        {
+            "id": 10,
+            "instruction": "Add files and make your changes. You can just run the following command for this example.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "touch \"test.py\"",
+                "CopyCode": "touch \"test.py\""
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "Add all your changes.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git add .",
+                "CopyCode": "git add ."
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "Commit your changes with a message about your changes in quotations.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git commit -m \"Added blank test file\"",
+                "CopyCode": "git commit -m \"Added blank test file\""
+            }
+        },
+        {
+            "id": 13,
+            "instruction": "Push your changes.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git push",
+                "CopyCode": "git push"
+            }
+        },
+        {
+            "id": 14,
+            "instruction": "Go back to your repository on GitHub and you should see that the \"test.py\" file has been added."
+        },
+        {
+            "id": 15,
+            "instruction": "Note that commands 11-13 are how you will add, commit, and push all your future changes."
+        }
+    ],
+    "SetupSecondGitHub": [
+        {
+            "id": 6,
+            "instruction": "After you enter the command from step 5 you'll be asked the following question, \"Enter file in which to save the key (/Users/johndoe/.ssh/id_ed25519):\". Write the name of the file where you want to save the new SSH key without an extension.  For this example lets call it \"id_ed25519_two\", then press return/enter. Scroll back up to original step(normalSix).",
+            "ref": "secondSix"
+        },
+        {
+            "id": 7,
+            "instruction": "This is basically but the same as the regular step 7, but with a changed file name. Run the following two commands (one at a  time) to add the SSH key to the ssh-agent. Again, note the file name is different (\"id_ed25519_two\"). Scroll back up to original step(normalSeven).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "eval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519_two",
+                "CopyCode": "eval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519_two"
+            },
+            "ref": "secondSeven"
+        },
+        {
+            "id": 9,
+            "instruction": "This is basically but the same as the regular step 9, but with a changed file name. Run the following two commands (one at a  time) to copy the ssh key to your clipboard. The second command will print and copy the ssh key to your clipboard. Again, note the file name is different (\"id_ed25519_two\"). Scroll back up to original step(normalNine).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd ~/.ssh\ncat id_ed25519_two.pub | tee >(pbcopy)",
+                "CopyCode": "cd ~/.ssh\ncat id_ed25519_two.pub | tee >(pbcopy)"
+            },
+            "ref": "secondNine"
+        },
+        {
+            "id": 23,
+            "instruction": "This is basically the same as regular step 23. Change \"NameForThisAccount\" to something other than your other account's name. Also the IdentityFile has been updated. Scroll back up to original step(normalTwentyThree).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "# Main account\nHost github.com-NameForThisAccount\nHostName github.com\nUser git\nIdentityFile ~/.ssh/id_ed25519_two\nIdentitiesOnly yes",
+                "CopyCode": "# Main account\nHost github.com-NameForThisAccount\nHostName github.com\nUser git\nIdentityFile ~/.ssh/id_ed25519_two\nIdentitiesOnly yes"
+            },
+            "ref": "secondTwentyThree"
+        }
+    ],
+    "CreateSecondGitHubRepo": [
+        {
+            "id": 7,
+            "instruction": "In the light blue section titled \"Quick setup — if you've done this kind of thing before\". Select the \"ssh\" button. Note that you HAVE to select \"ssh\" for this to work with a second account. Then copy the link next to it that looks like \"git clone git@github.com:John-Smith/PacMan.git\". Scroll back up to original step(normalGitHubSeven).",
+            "ref": "secondGitHubSeven"
+        },
+        {
+            "id": 8,
+            "instruction": "Open your ~/.ssh/config file using the following command. Copy and record the \"-NameForThisAccount\". It should look something like \"Host github.com-NameForThisAccount\" in the file. You'll need it for step 9. Scroll back up to original step(normalGitHubEight).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "nano ~/.ssh/config\n\n* \"control + x\" to exit *",
+                "CopyCode": "nano ~/.ssh/config\n\n* \"control + x\" to exit *"
+            },
+            "ref": "secondGitHubEight"
+        },
+        {
+            "id": 9,
+            "instruction": "Change into the repository and then set the user email to the email of your second github account. Also set the username to the username of your second account.Your commits will probably be linked to your main account if you don't do this.<br><br>If you can't find you're email go to [github.com](https://github.com/). Click on your profile picture in the top-left then click \"Settings\" in the menu. Then on the left-hand side look for \"Emails\". Click on it and you should see your accounts email address.<br><br>Note that when you add the remote origin it should use the SSH link from GitHub, not the HTTPS link. You should also add \"-NameForThisAccount\" after the \"github.com\" part of the link. Make sure to configure your email and username before adding the remote origin. I showed this in the commands below. <br><br> When you're done you can Scroll back up to original step(normalGitHubNine).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "mkdir PacMan\ncd PacMan\n\ngit init\ngit config user.email \"your-second-accounts-email\"\ngit config user.name \"your-second-accounts-username\"\n\ngit add .\ngit commit -m \"Initial Commit\"\ngit branch -M main\ngit remote add origin git@github.com-NameForThisAccount:John-Smith/PacMan.git\ngit push -u origin main",
+                "CopyCode": "mkdir PacMan\ncd PacMan\n\ngit init\ngit config user.email \"your-second-accounts-email\"\ngit config user.name \"your-second-accounts-username\"\n\ngit add .\ngit commit -m \"Initial Commit\"\ngit branch -M main\ngit remote add origin git@github.com-NameForThisAccount:John-Smith/PacMan.git\ngit push -u origin main"
+            },
+            "ref": "secondGitHubNine"
+        }
+    ],
+    "CSC450WorkflowPtsOne": [
+        {
+            "id": 1,
+            "instruction": "Create a feature branch when you start work on a new user story or feature."
+        }
+    ],
+    "CSC450WorkflowOne": [
+        {
+            "Command": "git checkout main",
+            "Description": "Ensure you are in the main branch.",
+            "Example": "git checkout main"
+        },
+        {
+            "Command": "git pull",
+            "Description": "Fetch all changes from the remote main branch and merge them into your local copy.",
+            "Example": "git pull"
+        },
+        {
+            "Command": "git checkout -b my_feature",
+            "Description": "Create a feature branch off the main branch. Replace \"my_feature\" with a name related to the user story.",
+            "Example": "git checkout -b my_feature"
+        },
+        {
+            "Command": "git push -u origin my_feature",
+            "Description": "Share your feature branch to the remote (GitHub).",
+            "Example": "git push -u origin my_feature"
+        }
+    ],
+    "CSC450WorkflowPtsTwo": [
+        {
+            "id": 2,
+            "instruction": "Now make sure that all file changes in your working directory are either discarded or saved, committed, and pushed."
+        },
+        {
+            "id": 3,
+            "instruction": "Change into your branch, pull changes, then start writing you code."
+        }
+    ],
+    "CSC450WorkflowTwo": [
+        {
+            "Command": "git checkout my_feature",
+            "Description": "Ensure you are in your feature branch.",
+            "Example": "git checkout my_feature"
+        },
+        {
+            "Command": "git pull",
+            "Description": "Ensure that you have the latest changes from the remote. If there are any merge conflicts resolve them before continuing.",
+            "Example": "git pull"
+        }
+    ],
+    "CSC450WorkflowPtsThree": [
+        {
+            "id": 4,
+            "instruction": "Once you've written your code and gotten to a natural stopping point you'll want to push your changes."
+        },
+        {
+            "id": 5,
+            "instruction": "Before running these commands, ensure that your project builds without errors."
+        }
+    ],
+    "CSC450WorkflowThree": [
+        {
+            "Command": "git status",
+            "Description": "Ensure you're on the branch you've been working on.",
+            "Example": "git status"
+        },
+        {
+            "Command": "git add .",
+            "Description": "Stage all your working directory changes to be saved.",
+            "Example": "git add ."
+        },
+        {
+            "Command": "git commit -m \"A concise description of changes\"",
+            "Description": "Create a new version of your feature branch.",
+            "Example": "git commit -m \"Added user cards\""
+        },
+        {
+            "Command": "git push",
+            "Description": "Share your new commits to the remote. You can add and commit multiple versions before pushing.",
+            "Example": "git push"
+        }
+    ],
+    "CSC450WorkflowPtsFour": [
+        {
+            "id": 6,
+            "instruction": "The following steps explain how to merge a branch into main when you're ready."
+        },
+        {
+            "id": 7,
+            "instruction": "Before doing any of this make sure the changes from your branch are committed. Running the \"git status\" command should output \"nothing to commit, working tree clean\"."
+        }
+    ],
+    "CSC450WorkflowFour": [
+        {
+            "Command": "git status",
+            "Description": "Check that you're on your branch and that all changed files have been committed.",
+            "Example": "git status"
+        },
+        {
+            "Command": "git checkout main",
+            "Description": "Switch to the main branch.",
+            "Example": "git checkout main"
+        },
+        {
+            "Command": "git pull",
+            "Description": "Ensure that your local main is up to date with the remote. Resolve any merge conflicts before continuing.",
+            "Example": "git pull"
+        },
+        {
+            "Command": "git checkout my_feature",
+            "Description": "Switch back to your my_feature branch",
+            "Example": "git checkout my_feature"
+        },
+        {
+            "Command": "git merge main",
+            "Description": "Merge the changes from the main branch into the my_feature branch. This ensures that your feature incorporates new versions of main. Resolve any merge conflicts before continuing.",
+            "Example": "git merge main"
+        },
+        {
+            "Command": "git add .",
+            "Description": "Stage all changes you have made to resolve the merge. (This step may not be necessary and will have no effect)",
+            "Example": "git add ."
+        },
+        {
+            "Command": "git commit -m \"A concise description of changes\"",
+            "Description": "Create a new version of your feature branch.",
+            "Example": "git commit -m \"Added user cards\""
+        },
+        {
+            "Command": "git push",
+            "Description": "Send the merged version of your feature branch to the remote.",
+            "Example": "git push"
+        }
+    ],
+    "CSC450WorkflowPtsFive": [
+        {
+            "id": 8,
+            "instruction": "Go to the Github repository you just pushed changes to. At the top you should see a green \"Compare & pull request\" button next to \"your-branch-name\" had recent changes. Click on the button. On the new page make sure the \"compare\" drop down menu has your branch name next to it. Then in the \"Add a description\" text-box write a description of all the changes you made in your branch. Then click the \"Create pull request\" button."
+        },
+        {
+            "id": 9,
+            "instruction": "Do NOT push the green \"Pull merge request\" button. Instead, copy the link to your pull request and send it to your dev lead. Ask them to review the PR and merge it into main if it looks good."
+        },
+        {
+            "id": 10,
+            "instruction": "If your reviewer requests changes, go into your feature branch, make code changes, add, commit, and push to update."
+        }
+    ],
+    "AmotionsWorkflowOne": [
+        {
+            "Command": "cd amotions-web",
+            "Description": "Get into Amotions directory",
+            "Example": "cd amotions-web"
+        },
+        {
+            "Command": "git status",
+            "Description": "Check what branch you're on",
+            "Example": "git status"
+        },
+        {
+            "Command": "git checkout dev",
+            "Description": "Get out of the main/former branch into your own branch",
+            "Example": "git checkout dev"
+        },
+        {
+            "Command": "git checkout -b <branchName>",
+            "Description": "Create a new branch",
+            "Example": "git checkout -b create-assessment"
+        },
+        {
+            "Command": "git pull origin dev",
+            "Description": "Pull changes from dev before making modifications",
+            "Example": "git pull origin dev"
+        },
+        {
+            "Command": "git status",
+            "Description": "Check that you're on the correct branch and that the steps worked.",
+            "Example": "git status"
+        }
+    ],
+    "AmotionsWorkflowTwo": [
+        {
+            "Command": "cd amotions-web",
+            "Description": "Get into Amotions directory",
+            "Example": "cd amotions-web"
+        },
+        {
+            "Command": "git add .",
+            "Description": "Add changes to GitHub",
+            "Example": "git add ."
+        },
+        {
+            "Command": "git commit -m \"Add Message\"",
+            "Description": "Commit your changes to GitHub.",
+            "Example": "git commit -m \"Add Message\""
+        },
+        {
+            "Command": "git status",
+            "Description": "Will display the branch name so you can copy and paste it.",
+            "Example": "git status"
+        },
+        {
+            "Command": "git push origin <branchName>",
+            "Description": "Push branch to the GitHub origin",
+            "Example": "git push origin create-assessment"
+        }
+    ],
+    "AmotionsPts": [
+        {
+            "id": 1,
+            "instruction": "Go to GitHub, go to the Amotions repo, click \"branches\", and click \"create a pull request\" on the branch."
+        },
+        {
+            "id": 2,
+            "instruction": "Select \"dev\" for the base branch in the top left corner, write a comment about your pull request, then click the green \"Create pull request\" button. If you click the \"Create pull request\" button before you select the \"dev\" base branch, just follow the steps in this page to refactor -> [Link](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-base-branch-of-a-pull-request)."
+        },
+        {
+            "id": 3,
+            "instruction": "On GitHub a bot will generate a netlify bot will generate a preview link, next to the text that says Deploy Preview. Wait like 5 minutes for all changes to be made, then click on the link to see changes."
+        },
+        {
+            "id": 4,
+            "instruction": "Go to \"Slack\" and in the \"#engineering\" section ask someone to review and test the pull request before merging. In your post include the Github PR link and the preview link."
+        },
+        {
+            "id": 5,
+            "instruction": "Once your changes are approved click the green \"Merge pull request\" button. Then click \"Confirm merge\". Do not delete the branch yet."
+        }
+    ],
+    "AmotionsPtsTwo": [
+        {
+            "id": 1,
+            "instruction": "Go to the \"code tab\", than go back to the \"pull request\" tab and click the green \"New pull request\" button (On the right, near the top). You're going to merge your branch with main now."
+        },
+        {
+            "id": 2,
+            "instruction": "Select the branch you want to merge in the \"compare:\" drop down. Base should be main. Click the green \"Create pull request\" button (On the right, near the top)."
+        },
+        {
+            "id": 3,
+            "instruction": "Write your commit message then click the green \"Create pull request\" button."
+        },
+        {
+            "id": 4,
+            "instruction": "Wait for the automatic tests to finish, then click the green \"Merge pull request\" button. Then click \"Confirm merge\". "
+        },
+        {
+            "id": 5,
+            "instruction": "Wait like 5 minutes, check that it's working of the production website, then report on Slack in \"#general\"."
+        },
+        {
+            "id": 6,
+            "instruction": "Delete your branch"
+        }
+    ],
+    "AmotionsWorkflowThree": [
+        {
+            "Command": "git push origin --delete <remote-branch-name>",
+            "Description": "Delete remote branch",
+            "Example": "git push origin --delete create-assessment"
+        },
+        {
+            "Command": "git checkout main",
+            "Description": "Get into main branch before deleting local branch",
+            "Example": "git checkout main"
+        },
+        {
+            "Command": "git branch -d <local-branch-name>",
+            "Description": "Delete local branch",
+            "Example": "git branch -d create-assessment"
+        },
+        {
+            "Command": "git branch -D <local-branch-name>",
+            "Description": "Confirm deletion of local branch. Note the capital 'D'.",
+            "Example": "git branch -D create-assessment"
+        }
+    ],
+    "ThreeCommands": [
+        {
+            "Command": "git add .",
+            "Description": "Stage all changes",
+            "Example": "git add ."
+        },
+        {
+            "Command": "git commit -m \"Message\"",
+            "Description": "Stage all changes. Add a commit message.",
+            "Example": "git commit -m \"Added assessment exam\""
+        },
+        {
+            "Command": "git push",
+            "Description": "Push changes to your remote repository.",
+            "Example": "git push"
+        }
+    ],
+    "GeneralTips": [
+        {
+            "id": 1,
+            "instruction": "Install homebrew. Homebrew is a great package manager for git and other software.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "xcode-select --install\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\nbrew --version",
+                "CopyCode": "xcode-select --install\n\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\nbrew --version"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "Include a ReadMe. ReadMes are a great way to add a description about your project as well as other information."
+        },
+        {
+            "id": 3,
+            "instruction": "Don't edit ReadMes on GitHub do it in a local repo/md file. Editing ReadMe's on git can cause your local and remote repository changes to be out of sync. If you do make changes on GitHub do a \"git pull\" before editing locally. If you already made changes locally use the following commands to pull your ReadMe changes.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git fetch origin\ngit commit -m \"Pulled changes\"",
+                "CopyCode": "git fetch origin\ngit commit -m \"Pulled changes\""
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "If you want to remove git from a folder/directory use the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "rm -rf .git",
+                "CopyCode": "rm -rf .git"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Learn markdown. Markdown is how you add styling to ReadMe's. You can also use HTML to style an md file. This [website](https://www.markdownguide.org/basic-syntax/) is a good source to learn markdown."
+        },
+        {
+            "id": 6,
+            "instruction": "Pull remote changes to your local repo before you start working. It's usually a good idea to pull changes from the same branch into your local repo before you start making changes."
+        },
+        {
+            "id": 7,
+            "instruction": "Check issues GitHub. If you see something wrong with a repo, check the \"issues\" tab. Someone before you might have asked about the issue and got a response. You can also open an issue if you want to add something or you're having trouble with something."
+        },
+        {
+            "id": 8,
+            "instruction": "Store personal access tokens somewhere safe. You only see your personal access token, once when it's first generated. Store it somewhere safe in case you need it again."
+        },
+        {
+            "id": 9,
+            "instruction": "Make git commit messages short. They don't have to be long. Give a very brief overview of the problem, so it doesn't run off screen. A person at IBM gave me this advice."
+        }
+    ],
+    "GitCommands": [
+        {
+            "Command": "git add .",
+            "Description": "Stage all changes",
+            "Example": "git add ."
+        },
+        {
+            "Command": "git commit -m \"Message\"",
+            "Description": "Stage all changes. Add a commit message.",
+            "Example": "git commit -m \"Added search functionality to Home page\""
+        },
+        {
+            "Command": "git push",
+            "Description": "Push changes to your remote repository.",
+            "Example": "git push"
+        },
+        {
+            "Command": "git status",
+            "Description": "See what branch you're currently on",
+            "Example": "git status"
+        },
+        {
+            "Command": "git checkout -b <branch-name>",
+            "Description": "Create a new branch and switch to it immediately",
+            "Example": "git checkout -b create-review-page"
+        },
+        {
+            "Command": "git branch <branch-name>",
+            "Description": "create a new branch without switching to it",
+            "Example": "git branch create-review-page"
+        },
+        {
+            "Command": "git push -u origin <branch-name>",
+            "Description": "Push the new branch to the remote repository",
+            "Example": "git push -u origin create-review-page"
+        },
+        {
+            "Command": "git push --set-upstream origin <branch-name>",
+            "Description": "Pushes the local branch's commits to a remote branch on the origin. Do once when pushing a new branch.",
+            "Example": "git push --set-upstream origin create-assessment"
+        },
+        {
+            "Command": "git stash",
+            "Description": "Takes all staged and unstaged changes and saves them for later. Then reverts your working directory to the last commit state.",
+            "Example": "git stash"
+        },
+        {
+            "Command": "git diff",
+            "Description": "Show differences between commits, branches, files, etc.",
+            "Example": "git diff"
+        },
+        {
+            "Command": "git reset",
+            "Description": "Unstage all changes (undo git add .)",
+            "Example": "git reset"
+        },
+        {
+            "Command": "git restore .",
+            "Description": "Reverts all unstaged changes in the working directory.",
+            "Example": "git restore ."
+        },
+        {
+            "Command": "git stash list",
+            "Description": "List all stashed changes",
+            "Example": "git stash list"
+        },
+        {
+            "Command": "git stash list --date=local",
+            "Description": "List all stashes with dates",
+            "Example": "git stash list --date=local"
+        },
+        {
+            "Command": "git stash apply",
+            "Description": "Apply all stashed changes",
+            "Example": "git stash apply"
+        },
+        {
+            "Command": "git stash apply stash@{index}",
+            "Description": "Apply a stash by index ",
+            "Example": "git stash apply stash@{1}"
+        },
+        {
+            "Command": "git stash show -p stash@{index}",
+            "Description": "Show changes from a certain stash",
+            "Example": "git stash show -p stash@{1}"
+        },
+        {
+            "Command": "git stash drop stash@{index}",
+            "Description": "Delete a stash by index",
+            "Example": "git stash drop stash@{1}"
+        },
+        {
+            "Command": "git reset --hard HEAD",
+            "Description": "Undo stash apply if you didn't make any other changes.",
+            "Example": "git reset --hard HEAD"
+        }
+
+    ],
+    "CreateFork": [
+        {
+            "id": 1,
+            "instruction": "Go to the Github repository you want to fork. "
+        },
+        {
+            "id": 2,
+            "instruction": "Click the \"fork\" button on the right-hand side."
+        },
+        {
+            "id": 3,
+            "instruction": "In the drop down click \"Create a new fork\"."
+        },
+        {
+            "id": 4,
+            "instruction": "You should be taken to a new page. Change the name/description if you want. Then click the green \"Create fork\" button."
+        },
+        {
+            "id": 5,
+            "instruction": "There should now be a fork on your GitHub page."
+        },
+        {
+            "id": 6,
+            "instruction": "To make changes locally clone the repo. First go the green \"Code\" button, in the drop down select the \"SSH\" tab and copy the url. Then clone it using the following command. Change the SSH link in the command to be the actual forked repo link. Make sure to add the \"-NameForThisAccount\" after the github.com if you're using a Github account other than your main one.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git clone git@github.com:John-Smith/PacMan.git",
+                "CopyCode": "git clone git@github.com:John-Smith/PacMan.git"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "Change into the local repo using the cd command. Replace with the actual name of the repo.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd PacMan",
+                "CopyCode": "cd PacMan"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "Make changes to your local repository that you want to add."
+        },
+        {
+            "id": 9,
+            "instruction": "Run the following three commands like any other project to push your changes.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git add .\ngit commit -m \"Made changes\"\ngit push",
+                "CopyCode": "git add .\ngit commit -m \"Made changes\"\ngit push"
+            }
+        }
+    ],
+    "ResetBranch": [
+        {
+            "id": 1,
+            "instruction": "Run \"git log\" and find the hash of the commit you want to revert back to. Copy the hash then press 'q' to exit.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git log",
+                "CopyCode": "git log"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "Run the command below with the hash you just copied to revert back to that commit.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git reset --hard <hash-you-copied>",
+                "CopyCode": "git reset --hard"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Add new changes to your local repo."
+        },
+        {
+            "id": 4,
+            "instruction": "Add your changes, like usual.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git add .",
+                "CopyCode": "git add ."
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Commit your changes, like usual.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git commit -m \"Message\"",
+                "CopyCode": "git commit -m \"Message\""
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Push your changes to main with the \"--force\" tag.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git push origin main --force",
+                "CopyCode": "git push origin main --force"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "If you get an error that says \"error: src refspec main does not match any\" the repo might not have a main branch. Try master instead.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git push origin master --force",
+                "CopyCode": "git push origin master --force"
+            }
+        }
+    ],
+    "ExistingFolderPts": [
+        {
+            "id": 1,
+            "instruction": "Go to [GitHub](https://github.com/) and create a new empty repository."
+        },
+        {
+            "id": 2,
+            "instruction": "Go to your terminal."
+        },
+        {
+            "id": 3,
+            "instruction": "cd into the folder you want to upload."
+        },
+        {
+            "id": 4,
+            "instruction": "Run the following commands in your terminal."
+        }
+    ],
+    "ExistingFolder": [
+        {
+            "Command": "git init",
+            "Description": "Initialize a git repository",
+            "Example": "git init"
+        },
+        {
+            "Command": "git add .",
+            "Description": "Add all files to the remote repository",
+            "Example": "git add ."
+        },
+        {
+            "Command": "git commit -m \"Message\"",
+            "Description": "Commit all files to GitHub",
+            "Example": "git commit -m \"Initial Commit\""
+        },
+        {
+            "Command": "git branch -M main",
+            "Description": "Moves changes to the main branch",
+            "Example": "git branch -M main"
+        },
+        {
+            "Command": "git remote add origin <repo-http-link>",
+            "Description": "Add remote https GitHub origin link. Can be found under \"Quick setup — if you've done this kind of thing before\".",
+            "Example": "git remote add origin https://github.com/John-Smith/PacMan.git"
+        },
+        {
+            "Command": "git push -u origin main",
+            "Description": "Push changes to the main branch.",
+            "Example": "git push -u origin main"
+        }
+    ],
+    "ExistingFolderPtsTwo": [
+        {
+            "id": 5,
+            "instruction": "If the repository you're adding as a remote origin already has changes like a readme.md file, run the following commands to add the changes."
+        },
+        {
+            "id": 6,
+            "instruction": "Run these commands after you've ran the \"git remote add origin https://github.com/John-Smith/PacMan.git\" command."
+        }
+    ],
+    "ExistingFolderTwo": [
+        {
+            "Command": "git pull origin main --no-rebase --allow-unrelated-histories",
+            "Description": "Pull current changes from the repository. Fix any merge conflicts in your text editor.",
+            "Example": "git pull origin main --no-rebase --allow-unrelated-histories"
+        },
+        {
+            "Command": "git add .",
+            "Description": "Add changes after you fix merge conflicts.",
+            "Example": "git add ."
+        },
+        {
+            "Command": "git commit -m \"Fixed merge conflicts\"",
+            "Description": "Commit fixed conflicts.",
+            "Example": "git commit -m \"Fixed merge conflicts\""
+        },
+        {
+            "Command": "git push -u origin main",
+            "Description": "Push changes to the main branch.",
+            "Example": "git push -u origin main"
+        }
+    ],
+    "RevertSingleFile": [
+        {
+            "id": 1,
+            "instruction": "Make sure you're converting back to the commit with the right changes. For instance, if you broke it in commit e2f7f8c, you'll want to convert it to an earlier commit before you made the changes to the file."
+        },
+        {
+            "id": 2,
+            "instruction": "Run \"git log\" to find your previous commits hash. The hash comes is the long string after the word \"commit\". Press 'q' to exit.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git log",
+                "CopyCode": "git log"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Copy and record the hash of the commit you want to revert back to. You can run the following command to check the contents of the file in the command line. Replace<br> the hash and file path.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git show e2f7f8c2b6346c5b7db569c3f3a5b7f18ebde44e:src/Home.js",
+                "CopyCode": "git show e2f7f8c2b6346c5b7db569c3f3a5b7f18ebde44e:src/Home.js"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Checkout your previous commit. Replace the hash and path.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git checkout e2f7f8c2b6346c5b7db569c3f3a5b7f18ebde44e -- src/Home.js",
+                "CopyCode": "git checkout e2f7f8c2b6346c5b7db569c3f3a5b7f18ebde44e -- src/Home.js"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Add the previous commit. Replace the path.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git add src/Home.js",
+                "CopyCode": "git add src/Home.js"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Commit your reverted file. I'd recommend adding the hash in the commit message.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git commit -m \"Reverted Home.js to commit e2f7f8c\"",
+                "CopyCode": "git commit -m \"Reverted Home.js to commit e2f7f8c\""
+            }
+        }
+    ],
+    "PullChangesFromMain": [
+        {
+            "id": 1,
+            "instruction": "Change into your branch. Replace \"your-branch-name\" with your actual branch name.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git checkout your-branch-name",
+                "CopyCode": "git checkout your-branch-name"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "Merge changes from main into current branch",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git merge main",
+                "CopyCode": "git merge main"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "You should now see all changes from main in your current branch. Review the files to determine what changes you want to keep."
+        },
+        {
+            "id": 4,
+            "instruction": "See the paths of all the files you changed in your current branch that varies from main.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git diff --name-only main",
+                "CopyCode": "git diff --name-only main"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "See the changes for a specific file. Change the path to your actual path",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git diff path/to/your/specific-file",
+                "CopyCode": "git diff path/to/your/specific-file"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Run this command to keep the current version of a file in the branch you're on. Replace the path with your actual path. For example, if you're on a branch called \"update-code\" and you run this command, all changes from your \"update-code\" branch will be kept NOT the changes from the main branch.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git checkout --ours path/to/your/specific-file",
+                "CopyCode": "git checkout --ours path/to/your/specific-file"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "Run this command to keep all incoming changes from main for a specific file. Replace the path with your actual path. For example if you're on a branch called update-code and you run this command all changes from main will be kept.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git checkout --theirs path/to/your/specific-file",
+                "CopyCode": "git checkout --theirs path/to/your/specific-file"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "If you're trying to pull changes from a different branch into main use the following command. This command will override the contents of the file in main with the contents of the incoming file. Replace \"BRANCH-NAME\" with the actual name of your branch. This will stage the file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git checkout BRANCH-NAME -- path/to/your/specific-file",
+                "CopyCode": "git checkout BRANCH-NAME -- path/to/your/specific-file"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "This does the exact same thing as the command in step 8 but it doesn't stage the file",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git show BRANCH-NAME:path/to/your/specific-file > path/to/your/specific-file",
+                "CopyCode": "git show BRANCH-NAME:path/to/your/specific-file > path/to/your/specific-file"
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Once you've resolved conflicts in your file run the following command to stage your change. Note that if you kept the changes from your current branch there might be a red exclamation mark next to your file name in VSCode. If that's the case you only need to stage your file, but you don't need to commit or push it. Replace the path with your actual path.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git add path/to/your/specific-file",
+                "CopyCode": "git add path/to/your/specific-file"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "In VScode, once you no longer have any files under Merge Changes and that all of your files are under \"Staged Changes\", then commit and push your changes to your remote branch. Replace your-branch-name with your actual branch name.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git commit -m \"Merged in changes from main\"\ngit push origin your-branch-name",
+                "CopyCode": "git commit -m \"Merged in changes from main\"\ngit push origin your-branch-name"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "If you don't have a remote branch and all your files are under \"staged changes\" just run the following command to pull them into your current branch.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git commit -m \"Pulled from main\"",
+                "CopyCode": "git commit -m \"Pulled from main\""
+            }
+        },
+        {
+            "id": 13,
+            "instruction": "To see what files in your branch differ from main run the following commands.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git checkout your-branch-name\ngit diff --name-only main...HEAD",
+                "CopyCode": "git checkout your-branch-name\ngit diff --name-only main...HEAD"
+            }
+        }
+    ],
+    "ResolveMergeConflicts": [
+        {
+            "id": 1,
+            "instruction": "This is your first instruction."
+        }
+    ],
+    "RemoveFileFromGitHistory": [
+        {
+            "id": 1,
+            "instruction": "Install this python library to help with the process. Source code [here](https://github.com/newren/git-filter-repo) if you're interested. Then (optionally) upgrade pip. Note that this third-party add-on is recommended by the official git team. Then check that's it's installed running the third command. If it outputs a version, you're good.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "pip3 install git-filter-repo\npip3 install --upgrade pip\ngit filter-repo --version\n",
+                "CopyCode": "pip3 install git-filter-repo\npip3 install --upgrade pip\ngit filter-repo --version\n"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "If you pushed a file that contains secrets change them immediately. Reset or delete any password, secret, key, etc. that was pushed."
+        },
+        {
+            "id": 3,
+            "instruction": "Before you do the following process, I'd recommend making a copy of your repository just in-case something goes wrong.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cp -r your-folder your-folder-two",
+                "CopyCode": "cp -r your-folder your-folder-two"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Before deleting the branch from your git history you'll want to remove it from your local and remote repository. First remove it from your main branch.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd your-folder\nrm path/to/your/file \ngit add .\ngit commit -m \"Removed file\"\ngit push \n",
+                "CopyCode": "cd your-folder\nrm path/to/your/file \ngit add .\ngit commit -m \"Removed file\"\ngit push \n"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Go through your local branches and delete the file from all of them. Make pull requests as necessary.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd your-folder\ngit checkout your-branch \nrm path/to/your/file \ngit add .\ngit commit -m \"Removed file\"\ngit push origin \n",
+                "CopyCode": "cd your-folder\ngit checkout your-branch \nrm path/to/your/file \ngit add .\ngit commit -m \"Removed file\"\ngit push origin \n"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "I'd strongly recommend going to your Github account and checking all your remote branches to ensure it's been deleted from all of them. Make pull requests as necessary."
+        },
+        {
+            "id": 7,
+            "instruction": "After the file has been completely removed from your local and remote repository, you should delete it from your git history. Replace the path/to/your/file with your actual path.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd your-folder\ngit checkout main\ngit filter-repo --force --invert-paths --path path/to/your/file",
+                "CopyCode": "cd your-folder\ngit checkout main\ngit filter-repo --force --invert-paths --path path/to/your/file"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "Run git log and look for the name of the file. It shouldn't appear anywhere. Replace your_filename with the actual name of your file in the command. The command shouldn't output anything.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git log --name-only --pretty=format: | grep -w 'your_filename'",
+                "CopyCode": "git log --name-only --pretty=format: | grep -w 'your_filename'"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "Now back to your git repository. Press the green \"Code\" button. Copy and record the HTTPS link."
+        },
+        {
+            "id": 10,
+            "instruction": "To add a remote origin and push your rewritten history to GitHub, run the following commands in your terminal. Replace \"HTTPS-LINK\" in the second command with the link you copied in step 9.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd your-folder\ngit remote add origin HTTPS-LINK\ngit push -f origin main\ngit branch --set-upstream-to=origin/main main",
+                "CopyCode": "cd your-folder\ngit remote add origin HTTPS-LINK\ngit push -f origin main\ngit branch --set-upstream-to=origin/main main"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "If you get a \"fatal: The remote end hung up unexpectedly\" at the end of your git push message, try the following.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git config http.postBuffer 524288000\ngit push -f origin main\ngit branch --set-upstream-to=origin/main main",
+                "CopyCode": "git config http.postBuffer 524288000\ngit push -f origin main\ngit branch --set-upstream-to=origin/main main"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "If you go back to your GitHub repository you should probably see that the number of commits decreased."
+        },
+        {
+            "id": 13,
+            "instruction": "If you run into errors, contact me/use ChatGPT."
+        },
+        {
+            "id": 14,
+            "instruction": "If you made a copy of your folder earlier and nothing went wrong when you ran the command, you can delete the copied folder.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "rm -rf your-folder-two",
+                "CopyCode": "rm -rf your-folder-two"
+            }
+        }
+    ],
+    "Text": [
+        {
+            "title": "GitHub",
+            "desc": "This page contains information related to Git and GitHub."
+        },
+        {
+            "title": "What is GitHub and Git?",
+            "desc": "GitHub is a website that uses git to help with collaboration and version control of coding projects. In simple terms, it's a place to upload your code and modify it in a controlled way. Git is version control system that allows you to add, revert, commit, push, etc. code to your repository."
+        },
+        {
+            "title": "Scroll Links",
+            "desc": "Use these links to scroll to different parts of the page."
+        },
+        {
+            "title": "How to Create a GitHub Account",
+            "desc": "These are instructions to setup Git and create a GitHub account."
+        },
+        {
+            "title": "How to Create a GitHub Repository",
+            "desc": "This is how you create a GitHub repo and set it up locally."
+        },
+        {
+            "title": "How to Create Another GitHub Account",
+            "desc": "To add another GitHub account to your computer do the original 5-25 steps with these modified steps."
+        },
+        {
+            "title": "How to Create a GitHub Repository Using a Second Account",
+            "desc": "This is how you create a GitHub repository for an account other than your main one"
+        },
+        {
+            "title": "Git Commands",
+            "desc": "These are frequently used Git commands."
+        },
+        {
+            "title": "General Tips",
+            "desc": "These are general tips for working with GitHub."
+        },
+        {
+            "title": "Three Main Git Commands",
+            "desc": "These are the three main git commands to push changes to your repo."
+        },
+        {
+            "title": "How to Fork a Repository",
+            "desc": "How to create a fork of a repository on GitHub. A fork is copying another persons repository onto your account, so you can modify it without changing theirs."
+        },
+        {
+            "title": "Reset To Previous Commit",
+            "desc": "Reset your current working directory to a previous commit."
+        },
+        {
+            "title": "Revert a Single File To Previous Commit",
+            "desc": "Explains how to reset a single file to a previous commit."
+        },
+        {
+            "title": "Existing Folder Commands",
+            "desc": "How to get an existing folder onto GitHub."
+        },
+        {
+            "title": "CSC 450 Workflow",
+            "desc": "This was the standard git workflow when I was in CSC 450 with Dr. Layman. You can download the CSC 450 pdf this information comes from &here&(/download/git_workflow.pdf)."
+        },
+        {
+            "title": "Amotions Workflow",
+            "desc": "This was my git workflow at Amotions. It's a little more extensive than your average workflow since we pushed to production so fast."
+        },
+        {
+            "amotions": "* Make changes/additions to code. Close terminal *"
+        },
+        {
+            "amotions": "Make a pull request on github."
+        },
+        {
+            "amotions": "Once branch is merged into dev. Merge into Main."
+        },
+        {
+            "amotions": "Git Deletion Commands"
+        },
+        {
+            "scrollToTop": "Scroll To Top",
+            "scrollToLinks": "Scroll back to links(scrollLinksRef)"
+        },
+        {
+            "title": "How to Merge Changes from Main into Your Branch",
+            "desc": "Explains how to merge changes from main into your current branch and handle merge conflicts."
+        },
+        {
+            "title": "How to Resolve Merge Conflicts",
+            "desc": "Useful commands for resolving merge conflicts and an explanation of how to handle them."
+        },
+        {
+            "title": "Remove a File from Git History",
+            "desc": "Explains how to completely remove a file from your git history."
+        }
+    ]
+}

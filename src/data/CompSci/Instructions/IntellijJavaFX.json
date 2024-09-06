@@ -1,0 +1,146 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup a JavaFX Project (Intellij IDEA)",
+            "desc": "This is how to setup a basic JavaFX project in Intellij IDEA.",
+            "ref": "intellij"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "To download Intellij Idea go this [page](https://www.jetbrains.com/idea/download/?section=mac). Scroll down to the section titled \"IntelliJ IDEA Community Edition\"."
+        },
+        {
+            "id": 2,
+            "instruction": "Download JavaFX. Scroll down and select the one that says \"x64\" and \"SDK\" or run the following command to determine your architecture, then decide accordingly. Also make sure you select the right OS. You can download it [here](https://gluonhq.com/products/javafx/).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "uname -m",
+                "CopyCode": "uname -m"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "When you download the JavaFX SDK, note where it is downloaded and what version it is. You'll need this information later."
+        },
+        {
+            "id": 4,
+            "instruction": "Open Intellij IDEA and in the top-most Apple bar select File -> New -> Project."
+        },
+        {
+            "id": 5,
+            "instruction": "In the pop-up window on the left-hand side under the \"Generators\" header select \"JavaFX\"."
+        },
+        {
+            "id": 6,
+            "instruction": "In the \"Name\" field type \"Counter\". The language should be Java. The build system should be Maven."
+        },
+        {
+            "id": 7,
+            "instruction": "For the \"JDK\" field select \"Download JDK\" in the drop-down menu. If the fields are filled out you should be good. Just press \"Download\". Then wait for it to download."
+        },
+        {
+            "id": 8,
+            "instruction": "Once the JDK is done installing, press the \"Next\" button. Then on the next screen just press \"Create\" without checking any of the boxes."
+        },
+        {
+            "id": 9,
+            "instruction": "You should now have a JavaFX project created and be in the text editor view."
+        },
+        {
+            "id": 10,
+            "instruction": "In the \"src\" file go to main -> java -> com.example.counter. Delete the HelloApplication and HelloController java files in the folder. You can delete them by right-clicking the files and pressing \"Delete\" in the menu. Leave the checked boxes as they are and click \"Ok\" when the pop-up window appears. Click \"Delete Anyway\" if the \"Usages Detected\" pop-up window appears."
+        },
+        {
+            "id": 11,
+            "instruction": "Now select the src -> main -> java -> com.example.counter folder. Right click and select new -> JavaFX Application. Name it \"Main\" then click ok. Then do new -> Java Class and call it \"ExampleController\" then press enter/return to create it."
+        },
+        {
+            "id": 12,
+            "instruction": "Now in the src -> main -> resources -> com.example.counter folder, right click on the hello-view.fxml code. Click \"Delete\" in the menu bar. Click \"Ok\" in a confirmation window pops up. Don't uncheck anything."
+        },
+        {
+            "id": 13,
+            "instruction": "Now in right-click the com.example.counter folder and do New -> FXML File. In the input field type \"Counter\" and press return/enter."
+        },
+        {
+            "id": 14,
+            "instruction": "In the \"Counter.fxml\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "fxml",
+                "FormatCode": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?import javafx.geometry.Insets?>\n<?import javafx.scene.control.*?>\n<?import javafx.scene.layout.*?>\n\n<VBox alignment=\"CENTER\" spacing=\"20.0\" prefWidth=\"300\" prefHeight=\"200\" xmlns=\"http://javafx.com/javafx/8.0.171\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.counter.ExampleController\" fx:id=\"UniqueId\">\n    <Label fx:id=\"numberLabel\" text=\"0\" style=\"-fx-font-size: 9em; -fx-text-fill: blue;\"/>\n    <Button text=\"Increment\" onAction=\"#handleIncrement\" prefWidth=\"125\"/>\n    <Button text=\"Decrement\" onAction=\"#handleDecrement\" prefWidth=\"125\">\n\t<VBox.margin>\n\t    <Insets bottom=\"20\"/>\n\t</VBox.margin>\n    </Button>\n</VBox>",
+                "CopyCode": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?import javafx.geometry.Insets?>\n<?import javafx.scene.control.*?>\n<?import javafx.scene.layout.*?>\n\n<VBox alignment=\"CENTER\" spacing=\"20.0\" prefWidth=\"300\" prefHeight=\"200\" xmlns=\"http://javafx.com/javafx/8.0.171\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.counter.ExampleController\" fx:id=\"UniqueId\">\n\t<Label fx:id=\"numberLabel\" text=\"0\" style=\"-fx-font-size: 9em; -fx-text-fill: blue;\"/>\n\t<Button text=\"Increment\" onAction=\"#handleIncrement\" prefWidth=\"125\"/>\n\t<Button text=\"Decrement\" onAction=\"#handleDecrement\" prefWidth=\"125\">\n\t\t<VBox.margin>\n\t\t\t<Insets bottom=\"20\"/>\n\t\t</VBox.margin>\n\t</Button>\n</VBox>"
+            }
+        },
+        {
+            "id": 15,
+            "instruction": "Now go back to src -> main -> java -> com.example.counter. In the \"Main.java\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Java",
+                "FormatCode": "package com.example.counter;\n\nimport javafx.application.Application;\n\nimport javafx.fxml.FXMLLoader;\nimport javafx.scene.Parent;\nimport javafx.scene.Scene;\nimport javafx.stage.Stage;\n\nimport java.net.URL;\n\n/**\n * @author John Doe\n * @date 4/25/2024\n * @section CSC 331-002\n * @purpose Sets up and launches the Counter application\n */\npublic class Main extends Application {\n\n    /**\n     * Sets up the stage for the Counter app.\n     * @param stage The stage (window) of the application\n     */\n    @Override\n    public void start(Stage stage) throws Exception {\n\tURL page = Main.class.getResource(\"Counter.fxml\");\n\n\tParent root = FXMLLoader.load(page);\n\tScene scene = new Scene(root);\n\tstage.setTitle(\"Counter\");\n\tstage.setScene(scene);\n\tstage.show();\n    }\n\n    /**\n     * Launches the Application\n     * @param args Unused command line arguments\n     */\n    public static void main(String[] args) {\n\tlaunch(args);\n    }\n}",
+                "CopyCode": "package package com.example.counter;\n\nimport javafx.application.Application;\n\nimport javafx.fxml.FXMLLoader;\nimport javafx.scene.Parent;\nimport javafx.scene.Scene;\nimport javafx.stage.Stage;\n\n/**\n * @author John Doe\n * @date 4/25/2024\n * @section CSC 331-002\n * @purpose Sets up and launches the Counter application\n */\npublic class Main extends Application {\n\n\t/**\n\t * Sets up the stage for the Counter app.\n\t * @param stage The stage (window) of the application\n\t */\n\t@Override\n\tpublic void start(Stage stage) throws Exception {\n\t\tParent root = FXMLLoader.load(Main.class.getResource(\"Counter.fxml\"));\n\n\t\tScene scene = new Scene(root);\n\t\tstage.setTitle(\"Counter\");\n\t\tstage.setScene(scene);\n\t\tstage.show();\n\t}\n\n\t/**\n\t * Launches the Application\n\t * @param args Unused command line arguments\n\t */\n\tpublic static void main(String[] args) {\n\t\tlaunch(args);\n\t}\n}"
+            }
+        },
+        {
+            "id": 16,
+            "instruction": "Now in the same folder open the \"ExampleController.java\" file. Paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Java",
+                "FormatCode": "package com.example.counter;\n\nimport javafx.fxml.FXML;\nimport javafx.scene.control.Label;\n\npublic class ExampleController {\n\n    @FXML\n    private Label numberLabel;\n\n    private int number = 0;\n\n    @FXML\n    private void handleIncrement() {\n\tnumber++;\n\tnumberLabel.setText(String.valueOf(number));\n    }\n\n    @FXML\n    private void handleDecrement() {\n\tnumber--;\n\tnumberLabel.setText(String.valueOf(number));\n    }\n}\n",
+                "CopyCode": "package com.example.counter;\n\nimport javafx.fxml.FXML;\nimport javafx.scene.control.Label;\n\npublic class ExampleController {\n\n\t@FXML\n\tprivate Label numberLabel;\n\n\tprivate int number = 0;\n\n\t@FXML\n\tprivate void handleIncrement() {\n\t\tnumber++;\n\t\tnumberLabel.setText(String.valueOf(number));\n\t}\n\n\t@FXML\n\tprivate void handleDecrement() {\n\t\tnumber--;\n\t\tnumberLabel.setText(String.valueOf(number));\n\t}\n}"
+            }
+        },
+        {
+            "id": 17,
+            "instruction": "Now select the project \"Counter\" then right-click and in the menu select \"Open Module Settings\" near the bottom of the menu."
+        },
+        {
+            "id": 18,
+            "instruction": "In the pop-up window under \"Platform Settings\" on the left-hand side select \"Global Libraries\"."
+        },
+        {
+            "id": 19,
+            "instruction": "Click the Plus sign at the top that says \"New Global Library\" when hovered over. Select \"Java\" then try to find your Java SDK folder you downloaded in step 2. It should look like \"javafx-sdk-22.01\" and will probably be in your downloads folder. Once you find it go into the \"lib\" folder and select all files that have a \".jar\" extension. You can select multiple files by holding down \"command\". Once done press \"Open\". Click OK when the pop-up window appears."
+        },
+        {
+            "id": 20,
+            "instruction": "In the \"Name\" field at the top, delete the current name, then type \"JavaFX-22\" or \"JavaFX-whatever version you're using\". Then click OK."
+        },
+        {
+            "id": 21,
+            "instruction": "Now right-click the Counter folder again. Go back down to \"Open Module Settings\" and click \"Global Libraries\"."
+        },
+        {
+            "id": 22,
+            "instruction": "Under the + sign you should now see \"JavaFX-22\". Right-click it, then press \"Add to Modules\" in the menu. Click \"Ok\" in the pop-up window. Then click \"Apply\" in the bottom right. Then click \"OK\"."
+        },
+        {
+            "id": 23,
+            "instruction": "Now right click the src -> main -> java folder and do New -> File. Type \"module-info.java\" in the input field then press return/enter. The file should appear in your \"java\" folder."
+        },
+        {
+            "id": 24,
+            "instruction": "Paste the following code In the \"module-info.java\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Java",
+                "FormatCode": "module Counter {\n    requires javafx.fxml;\n    requires javafx.controls;\n\n    opens com.example.counter;\n}",
+                "CopyCode": "module Counter {\n\trequires javafx.fxml;\n\trequires javafx.controls;\n\n\topens com.example.counter;\n}"
+            }
+        },
+        {
+            "id": 25,
+            "instruction": "Now go back to your Main.java file in the src -> main -> java -> com.example.counter folder. Click the green arrow button at the top-right to run your application. After you do that you should be able to run the app but select any folder and pressing the run button in the future."
+        }
+    ]
+}

@@ -1,0 +1,150 @@
+{
+    "Text": [
+        {
+            "Title": "Keyboard Shortcuts",
+            "Description": "These are keyboard shortcuts for MacOS. If you aren't currently using linux you probably will in a future job. Also these can easily be converted to windows shortcuts using ChatGPT."
+        }
+    ],
+    "Shortcuts": [
+        {
+            "id": 1,
+            "Shortcut": "command + z",
+            "Action": "Undo an action"
+        },
+        {
+            "id": 2,
+            "Shortcut": "command + shift + z",
+            "Action": "Redo an action"
+        },
+        {
+            "id": 3,
+            "Shortcut": "command + s",
+            "Action": "Save changes in a file"
+        },
+        {
+            "id": 4,
+            "Shortcut": "command + option + s",
+            "Action": "Save all changed files in a folder"
+        },
+        {
+            "id": 5,
+            "Shortcut": "command + k ",
+            "Action": "Clear a terminal"
+        },
+        {
+            "id": 6,
+            "Shortcut": "command + up arrow",
+            "Action": "Go to top of document"
+        },
+        {
+            "id": 7,
+            "Shortcut": "command + down arrow",
+            "Action": "Go to bottom of document"
+        },
+        {
+            "id": 8,
+            "Shortcut": "command + shift + 3",
+            "Action": "Screenshot on mac"
+        },
+        {
+            "id": 9,
+            "Shortcut": "command + shift + 5 + Press Record Entire Screen",
+            "Action": "Screen record on a mac."
+        },
+        {
+            "id": 10,
+            "Shortcut": "Highlight text + command + k",
+            "Action": "Hyperlink Text"
+        },
+        {
+            "id": 11,
+            "Shortcut": "command + f",
+            "Action": "Search for a word in a webpage."
+        },
+        {
+            "id": 12,
+            "Shortcut": "control + up arrow",
+            "Action": "Show all open windows on mac"
+        },
+        {
+            "id": 13,
+            "Shortcut": "command + c, command + v",
+            "Action": "Copy and paste an item"
+        },
+        {
+            "id": 14,
+            "Shortcut": "Command + shift + . ",
+            "Action": "Show hidden files in a folder/directory."
+        },
+        {
+            "id": 15,
+            "Shortcut": "control + c",
+            "Action": "Cancel an operation in terminal"
+        },
+        {
+            "id": 16,
+            "Shortcut": "control + z",
+            "Action": "Suspend an operation in terminal (I use this if control + c isn't working)"
+        },
+        {
+            "id": 17,
+            "Shortcut": "control + u",
+            "Action": "Deletes the entire line you’re typing in the terminal"
+        },
+        {
+            "id": 18,
+            "Shortcut": "command + o",
+            "Action": "Open Finder (with the open button, so you can open files without having to double click)"
+        },
+        {
+            "id": 19,
+            "Shortcut": "control + command + space bar",
+            "Action": "Open emoji keyboard menu"
+        },
+        {
+            "id": 20,
+            "Shortcut": "control + command + space bar, then click keyboard",
+            "Action": "Gets math and other special characters by first opening emoji keyboard menu, then in the upper right hand corner click on the little keyboard icon"
+        },
+        {
+            "id": 21,
+            "Shortcut": "control + right click google doc table Table Properties -> Color -> Table Border -> Select White ",
+            "Action": "Make the columns of a google doc table invisible. This will be helpful for the CSC 385 final paper."
+        },
+        {
+            "id": 22,
+            "Shortcut": "command + .",
+            "Action": "Create a superscript in google doc"
+        },
+        {
+            "id": 23,
+            "Shortcut": "command + ,",
+            "Action": "Create a subscript in google doc"
+        },
+        {
+            "id": 24,
+            "Shortcut": "command + n",
+            "Action": "Create a new terminal/command prompt"
+        },
+        {
+            "id": 25,
+            "Shortcut": "command + t",
+            "Action": "Create new window in terminal"
+        },
+        {
+            "id": 26,
+            "Shortcut": "command + a",
+            "Action": "Select all files in a directory in Finder"
+        },
+        {
+            "id": 27,
+            "Shortcut": "Control + k ",
+            "Action": "Press to start and save crop of a screenshot on mac"
+        },
+        {
+            "id": 28,
+            "Shortcut": "highlight, command + b",
+            "Action": "Bold/unbold text in TextEdit on mac"
+        }
+    ]
+}

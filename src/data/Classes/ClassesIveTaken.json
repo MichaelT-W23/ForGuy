@@ -1,0 +1,639 @@
+{
+    "Text": [
+        {
+            "page": "Classes I've Taken",
+            "desc": "What information does this page contain?",
+            "pageDescription": "These are all the classes I've taken at UNCW and information about them. I graduated in December 2023 with a 3.50 gpa.",
+            "searchText": "Search Courses By Key Term...",
+            "grad": "🎉 Graduated Early in December 2023 🎉"
+        }
+    ],
+    "Freshman": {
+        "First": [
+            {
+                "Name": "UNI 101: First-Year Seminar",
+                "Number": "UNI 101",
+                "Title": "First-Year Seminar",
+                "Format": "Synchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Lucy Holman",
+                "Description": "I took this class online during Covid, so it's probably changed a lot. Also you probably have already taken this class.",
+                "Grading": "",
+                "Tips": ""
+            },
+            {
+                "Name": "MAT 111: College Algebra",
+                "Number": "MAT 111",
+                "Title": "College Algebra",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Bailey Hall",
+                "Description": "I took this class online during Covid, so it's probably changed a lot. Also you probably have already taken this class.",
+                "Grading": "",
+                "Tips": ""
+            },
+            {
+                "Name": "ENG 101: College Writing and Reading I",
+                "Number": "ENG 101",
+                "Title": "College Writing and Reading I",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Christa Weaver",
+                "Description": "I took this class online during Covid, so it's probably changed a lot. The entire class is like 4 easy essays.",
+                "Grading": "",
+                "Tips": ""
+            },
+            {
+                "Name": "SPN 101: Introductory Spanish I",
+                "Number": "SPN 101",
+                "Title": "Introductory Spanish I",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Sergi Rivero-Navarro",
+                "Description": "I took this class online during Covid, so it's probably changed a lot. It's like paragraphs and video calls.",
+                "Grading": "",
+                "Tips": ""
+            },
+            {
+                "Name": "STT 215: Introduction to Statistics",
+                "Number": "STT 215",
+                "Title": "Introduction to Statistics",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Allen Phelps",
+                "Description": "I took this class online during Covid, so it's probably changed a lot.",
+                "Grading": "",
+                "Tips": ""
+            }
+        ],
+        "Second": [
+            {
+                "Name": "CSC 131: Introduction to Computer Science",
+                "Number": "CSC 131",
+                "Title": "Introduction to Computer Science - Python",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Gulustan Dogan",
+                "Description": "I took this class online during Covid, so it's probably changed a lot. Basic python coding questions and syntax.",
+                "Grading": "",
+                "Tips": "",
+                "Skills": "Python"
+
+            },
+            {
+                "Name": "MAT 112: Trigonometry",
+                "Number": "MAT 112",
+                "Title": "Trigonometry",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Allison Toney",
+                "Description": "I took this class online during Covid, so it's probably changed a lot.",
+                "Grading": "",
+                "Tips": ""
+            },
+            {
+                "Name": "ENG 201: College Writing and Reading II",
+                "Number": "ENG 201",
+                "Title": "College Writing and Reading II",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Noelle Cameron Parker",
+                "Description": "I took this class online during Covid, so it's probably changed a lot.",
+                "Grading": "",
+                "Tips": ""
+            },
+            {
+                "Name": "SPN 102: Introductory Spanish II",
+                "Number": "SPN 102",
+                "Title": "Introductory Spanish II",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Tanesha Parker",
+                "Description": "I took this class online during Covid, so it's probably changed a lot.",
+                "Grading": "",
+                "Tips": ""
+            },
+            {
+                "Name": "ECN 221: Principles of Economics-Micro",
+                "Number": "ECN 221",
+                "Title": "Principles of Economics-Micro",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Christian Beer",
+                "Description": "I took this class online during Covid, so it's probably changed a lot.",
+                "Grading": "",
+                "Tips": ""
+            }
+        ]
+    },
+    "Sophomore": {
+        "First": [
+            {
+                "Name": "CSC 133: Discrete Mathematical Structures",
+                "Number": "CSC 133",
+                "Title": "Discrete Mathematical Structures",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Kevin Carlin",
+                "Description": "Overall I remember this being a pretty easy class. It's like fun easy puzzles. 2 tests, a final exam, and like 10 short easy homeworks. Take notes during class and study the homework and the tests should be easy.",
+                "Skills": "A very small amount of Python",
+                "Tips": "Study the homework before tests and take good notes in class.",
+                "Grading": [
+                    "Homework - 10%",
+                    "Quizzes - 15%",
+                    "3 Tests - 60%",
+                    "Final Exam - 15%"
+                ]
+            },
+            {
+                "Name": "MAT 161: Calculus with Analytical Geometry I",
+                "Number": "MAT 161",
+                "Title": "Calculus with Analytical Geometry I",
+                "Format": "In-Person",
+                "Credit Hours": "4",
+                "Professor": "Erik Slivken",
+                "Description": "Like 5 difficult homeworks you can work on in a group. Also Cengage completion homework. 2 tests and a final exam. He lets you have like 2 pages of notes on the tests and like 5 on the final exam (I think). While that sounds good I'd still recommend taking Dr. Xiajoue Hou instead.",
+                "Skills": "Python and Jupyter",
+                "Tips": "",
+                "Grading": [
+                    "Exam 1 - 20%",
+                    "Exam 2 - 20%",
+                    "Final Exam - 30%",
+                    "All Homework - 25%",
+                    "Participation - 5%"
+                ]
+            },
+            {
+                "Name": "CHM 101: General Chemistry I",
+                "Number": "CHM 101",
+                "Title": "General Chemistry I",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "S. Bart Jones",
+                "Description": "Standard chemistry class. You do a ton of Aleks homework worth like 30% of your final grade. There are 3 tests and a final exam. The final exam can replace all 3 test grades.",
+                "Grading": [
+                    "Exam 1 - 15%",
+                    "Exam 2 - 15%",
+                    "Exam 3 - 15%",
+                    "Online Homework - 30%",
+                    "Final Exam - 25%"
+                ],
+                "Tips": ""
+            },
+            {
+                "Name": "CHML 101: General Chemistry Laboratory I",
+                "Number": "CHML 101",
+                "Title": "General Chemistry Laboratory I",
+                "Format": "In-Person",
+                "Credit Hours": "1",
+                "Professor": "The TA at the time",
+                "Description": "Lab sessions are typically 2 hours and not that hard. You have lab once a week.",
+                "Grading": "Like 10 labs lowest gets dropped.",
+                "Tips": ""
+            }
+        ],
+        "Second": [
+            {
+                "Name": "MAT 162: Calculus with Analytical Geometry II",
+                "Number": "MAT 162",
+                "Title": "Calculus with Analytical Geometry II",
+                "Format": "In-Person",
+                "Credit Hours": "4",
+                "Professor": "Xiaojie Hou",
+                "Description": "GOATED professor. Despite the class being in-person he lets you take all exams/quizzes at home online. I think there are 3 tests and 1 final exam. The study guides are EXACTLY like the tests. Also large amounts of cengage completion homework. I would strongly recommend this professor.",
+                "Grading": "He has a weird point system, not percentages. 3 exams, a final, and homework.",
+                "Tips": ""
+            },
+            {
+                "Name": "PHY 201: General Physics I",
+                "Number": "PHY 201",
+                "Title": "General Physics I",
+                "Format": "In-Person",
+                "Credit Hours": "4",
+                "Professor": "Timothy Daniels",
+                "Description": "Like 3 regular tests and online completion homework, and a final exam. Dr. Daniel's GOATED and gave me a C for basically no reason. I definitely wouldn't recommend taking physics if you don't have to. I liked the part of this class where he described how airpods cancel noise though, it's pretty cool imo.",
+                "Grading": [
+                    "Exam 1 - 15%",
+                    "Exam 2 - 15%",
+                    "Exam 3 - 15%",
+                    "Homework - 15%",
+                    "Labs - 15%",
+                    "Final Exam - 25%",
+                    "NOTE: Lowest of 3 exam grades is dropped."
+                ],
+                "Tips": ""
+            },
+            {
+                "Name": "WPA 101: Individual Physical Activity and Wellness",
+                "Number": "WPA 101",
+                "Title": "Individual Physical Activity and Wellness ONLINE LECTURE",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "1",
+                "Professor": "Marsha Todd",
+                "Description": "Both the lecture and lab are only 1 credit hour. This is an extremely easy lecture with minimal work. I don't really remember the specifics.",
+                "Grading": "Weird point system. It's extremely easy, just do the work and you'll almost definitely get an A",
+                "Tips": ""
+            },
+            {
+                "Name": "WPAL 101: Power Yoga",
+                "Number": "WPAL 101",
+                "Title": "Power Yoga ONLINE LAB",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "1",
+                "Professor": "Rachael McLoud",
+                "Description": "The entire grade was just watching one video a week and listing 2 new exercises from the video. Super easy class. Both the lecture and lab are only 1 credit hour.",
+                "Grading": "Like 1 lab a week. Just do the work and you'll almost definitely get an A",
+                "Tips": ""
+            }
+        ]
+    },
+    "Junior": {
+        "First": [
+            {
+                "Name": "CSC 231: Introduction to Data Structures",
+                "Number": "CSC 231",
+                "Title": "Introduction to Data Structures",
+                "Format": "In-Person",
+                "Credit Hours": "4",
+                "Professor": "Toni Pence",
+                "Description": "You learn about important data structures such as stacks, queues, linked-lists, binary search trees, etc. You also learn about algorithms like Binary Search, Merge sort, etc. and their time complexities. The tests are easy as long as you study, the labs are typically a bit more difficult.",
+                "Skills": "Python, Data structures, algorithms",
+                "Tips": "Learn how to use debug mode in PyCharm. It can very helpful when debugging data structures.",
+                "Grading": [
+                    "Quizzes - 15%",
+                    "Labs - 10% (Like 10 labs)",
+                    "Take Home Programming Assignments - 15% (Like 3 assignments)",
+                    "Test 1 - 20%",
+                    "Test 2 - 20%",
+                    "Final Exam - 20%"
+                ]
+            },
+            {
+                "Name": "CSC 242: Computer Organization",
+                "Number": "CSC 242",
+                "Title": "Computer Organization",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Gulustan Dogan",
+                "Description": "This was definitely one of my least favorite classes taken at UNCW. It's like converting hexadecimal and binary numbers in the beginning and then assembly code. Like 10 homeworks, 3 exams, and a final exam. She replaced our lowest test grade with the final exam grade. The final exam is pulled straight from the homework. For the tests study the homework and know how everything works.",
+                "Skills": "Assembly",
+                "Grading": [
+                    "NOTE: I couldn't find the syllabus. This is from memory.",
+                    "3 tests",
+                    "Like 8 homeworks",
+                    "Final Exam"
+                ],
+                "Tips": ""
+            },
+            {
+                "Name": "CSC 302: Introduction to Artificial Intelligence",
+                "Number": "CSC 302",
+                "Title": "Introduction to Artificial Intelligence",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Yang Song",
+                "Description": "I wouldn't recommend taking this class unless you really want to have an Artificial Intelligence concentration. The class is mostly just graphs other than the 5 python coding assignments. The professor talks extremely fast and it can be difficult to get all the necessary information. The tests are also very hard and don't have much information from the slides, but you can use a cheat sheet. Overall the amount of work and difficulty of this class isn't worth it for an elective class. This class is mostly just graphs and python search algorithms. If you want to learn more about actual artificial intelligence, I'd recommend you get a certification. Also, he made us use Python version 3.6 or below in this class and it was kind of a hassle switching between the newer and older versions.",
+                "Skills": "Python and algorithms",
+                "Tips": "Go to his office hours",
+                "Grading": [
+                    "Midterm Exam - 20%",
+                    "Final Exam - 35%",
+                    "Programming assignments - 25% (5 assignments total)",
+                    "Written assignments - 20% (5 assignments total)"
+                ]
+            },
+            {
+                "Name": "HST 101: Europe in the World I",
+                "Number": "HST 101",
+                "Title": "Europe in the World I",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Corey Ellithorpe",
+                "Description": "This class was easily one my favorite classes I've ever taken. The title \"Europe in the World I\" is not a super accurate name for what you learn about in this class. Dr. Ellithorpe is an amazing professor and teaches history in a super entertaining story-telling way. There were times I was on edge of my seat borderline shaking at how exciting the stories were. Dr. Ellithorpe also understands that people are taking the class as an elective and aren't history majors, so he makes it relatively easy and fun. The grades are just quizzes, 3 easy essays, and 4 tests of the same length. The historical periods covered are the Ancient Near East and Egypt, Greece, Rome, and Medieval Europe. Tragically, Dr. Ellithorpe appears to now be working at the [University of South Florida](https://www.usf.edu/arts-sciences/departments/history/people/corey-ellithorpe.aspx). Hopefully he'll come back to UNCW someday.",
+                "Grading": [
+                    "Quizzes - 15% (10 Quizzes, 1.5 each)",
+                    "Essays - 30% (3 Essays total)",
+                    "Tests - 50% (4 total, 12.5 each)",
+                    "Attendance - 5%"
+                ],
+                "Tips": "This class is now called HST 101: Western Civilization I, even though that's not really what we covered in class. Take a ton of notes during class."
+            },
+            {
+                "Name": "OCN 250: Coasts and Society",
+                "Number": "OCN 250",
+                "Title": "Coasts and Society",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Andrea Hawkes",
+                "Description": "Overall this class isn't too bad. There are two exams which contains questions that you haven't really seen before, but they still aren't too bad. The assignments are relatively short and easy. The quizzes are typically pretty straight-forward and multiple choice. At the end you have a relatively easy presentation. I think this is only online, so for the presentation I just made like a 7 slide presentation describing an Oceanography issue around the globe (Overfishing in Thailand/Marine fisheries in Thailand). I just recorded my voice speaking for a minute on each slide and I got a 100 on the project. This class is kinda mid tbh. It's easy enough for the credit it can get you, so I guess I'd recommend it.",
+                "Grading": [
+                    "Exams - 32% (2 exams)",
+                    "Assignments - 24% (6 Assignments)",
+                    "Quizzes - 24% (Roughly 8)",
+                    "Coasts of the World Project - 20%"
+                ],
+                "Tips": ""
+            },
+            {
+                "Name": "CHM 102: General Chemistry II",
+                "Number": "CHM 102",
+                "Title": "General Chemistry II",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Winifred Johnson",
+                "Description": "Standard chemistry class TWO. You do a ton of Aleks homework worth like 30% of your final grade. There are 3 tests and a final exam. The final exam can replace all 3 test grades.",
+                "Grading": [
+                    "Exam 1 - 15%",
+                    "Exam 2 - 15%",
+                    "Exam 3 - 15%",
+                    "Online Homework - 30%",
+                    "Final Exam - 25%"
+                ],
+                "Tips": ""
+            },
+            {
+                "Name": "CHML 102: General Chemistry Laboratory II",
+                "Number": "CHML 102",
+                "Title": "General Chemistry Laboratory II",
+                "Format": "In-Person",
+                "Credit Hours": "1",
+                "Professor": "The TA at the time",
+                "Description": "",
+                "Grading": "Like 10 labs lowest gets dropped.",
+                "Tips": ""
+            }
+        ],
+        "Second": [
+            {
+                "Name": "CSC 331: Object-Oriented Programming and Design",
+                "Number": "CSC 331",
+                "Title": "Object-Oriented Programming and Design",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Shauna White",
+                "Description": "This class is easy if you have any experience whatsoever with Java. It's like CSC 131 for Java instead of python. The labs are pretty easy as well as the tests. She lets you have a cheat sheet for the tests. For one lab you work in a group of 3. At the end you work in a group of 5 for a 10-minute long project presentation. The project is a JavaFx project written using Java, JavaFx, FXML, and SceneBuilder. JavaFx is a framework for building GUI's for Java. It adds logic to your FXML code, and you can use it to build UI components programmatically in your project, I did both in ours. I personally really like the framework and the end project was definitely my favorite programming project I did for UNCW.",
+                "Skills": "Java, JavaFx, SceneBuilder",
+                "Tips": "",
+                "Grading": [
+                    "Homework - 10%",
+                    "Test 1 - 10%",
+                    "Test 2 - 10%",
+                    "Final Project - 10%",
+                    "Labs - 25%",
+                    "Final Exam - 25%",
+                    "Attendance - 5%"
+                ]
+            },
+            {
+                "Name": "CSC 340: Scientific Computing",
+                "Number": "CSC 340",
+                "Title": "Scientific Computing",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Brittany Morago",
+                "Description": "I feel like this class varies a lot, based on what professor you take. I talked to people who took it with other professors and it sounded like a different class entirely. However, I took it online with Dr. Brittany Morago, so that's what I'll describe. There are no tests or quizzes in this class which I really liked. It's just programming assignments and math assignments. The math is like more simple calculus concepts and written mathematical computing problems. It typically explains how to do the problems in the videos so definitely watch them. The programming assignments can be challenging at times. I basically lived in her office hours that semester to ensure that I got a good grade in this class. The programming assignments are in Python and involve most image analysis algorithms using opencv and numpy. If you're struggling definitely watch her videos and go to her office hours. She helps you a lot if you go to her virtual office hours.",
+                "Skills": "Python and Algorithms",
+                "Tips": "Go to her office hours and watch the videos she posts.",
+                "Grading": [
+                    "Homework - 40% (Roughly 16, but they're pretty short)",
+                    "Programming assignments - 60% (6, but they're pretty big)"
+                ]
+            },
+            {
+                "Name": "CSC 360: Formal Languages and Computability",
+                "Number": "CSC 360",
+                "Title": "Formal Languages and Computability",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Curry Guinn",
+                "Description": "I found this class somewhat difficult. It's like a harder a version of discrete math/history of modern computing class. Topics include finite-state machines, regex, turing machines, etc. It's like mathematical puzzles and graphs. You do basically no coding in this class except briefly using python to test regex. I also liked when the professor would discuss the history of computing, future of artificial intelligence, and other stuff like that. I would HIGHLY recommend taking this class with Dr. Curry Guinn. He's more then happy to help you with stuff and is a good teacher/nice person. Also at the end you do a writing assignment on a book about [Alan Turing's life](https://www.amazon.com/Alan-Turing-Enigma-Inspired-Imitation/dp/069116472X/ref=asc_df_069116472X/?tag=hyprod-20&linkCode=df0&hvadid=312045876164&hvpos=&hvnetw=g&hvrand=9784359152110339481&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009703&hvtargid=pla-395340046790&psc=1&mcid=37fdbb254d6e30e4ba9d009104adadde&gclid=CjwKCAiAi6uvBhADEiwAWiyRdiagAK0FsLs-0VK2R8ZZGxNhy7EJ4UCefSRx319-5tF1r6TzVZME3xoCN58QAvD_BwE). While I would always do my work in college, I didn't read a single page of the book and still got a 100% on the assignment. I just skimmed parts of it online and used chatGPT. It's not a difficult writing assignment. Also, you take the quizzes online at home. UPDATE: tragically Dr. Guinn has moved to the [University of Colorado](https://www.linkedin.com/posts/activity-7224778886478213120-Mnww?utm_source=share&utm_medium=member_desktop), so you'll have to take the class with another professor.",
+                "Skills":"A very small amount of Python",
+                "Tips": "Study the homework a lot before the tests and take good notes during class. Don't rely on the slides",
+                "Grading": [
+                    "Quizzes - 10% (Roughly 8)",
+                    "Homework Assignments - 25% (Roughly 8 assignments)",
+                    "Test 1 - 15%",
+                    "Test 2 - 15%",
+                    "Final Exam - 35%"
+                ]
+            },
+            {
+                "Name": "CSC 385: Professional and Ethical Issues in Computing",
+                "Number": "CSC 385",
+                "Title": "Professional and Ethical Issues in Computing",
+                "Format": "Synchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Jasmine Gaston",
+                "Description": "This class is overall extremely easy until the end. You do basically nothing but listen to her lecture the entire semester. You have two short exams which contain questions basically directly from the slides. At the end you have a 5-10 minute (I think, mine was 6 minutes) long solo presentation about an ethical issue in computing. You also have a 5 page single spaced paper due on an ethical issue. But other than those two last assignments I found the class super easy. If you do the work you'll probably get an A with no issues.",
+                "Skills": "You don't code at all this class",
+                "Tips": "Start early on the presentation and Research Paper. Don't wait.",
+                "Grading": [
+                    "Attendance & Participation - 20%",
+                    "Presentations - 20%",
+                    "Writing Assignments - 20%",
+                    "Exams - 20%",
+                    "Research Paper - 20%"
+                ]
+            },
+            {
+                "Name": "CSC 498: Internship in Computer Science",
+                "Number": "CSC 498",
+                "Title": "Internship in Computer Science",
+                "Format": "Mostly Remote",
+                "Credit Hours": "3",
+                "Professor": "Shauna White",
+                "Description": "This is a 3 credit hour class that's pass/fail. All you do is write 1 paragraph a week summarizing what you did at your internship and at the end you create a poster presentation demonstrating what you did during your internship. Note that you don't present the poster in-front of a group. You just hang it up in Congdon Hall and stand by it the entire time. I only had like 2 people come up to ask me about it during the 2-hour showcase. Also, it's just a completion grade, so it's pretty low-stress. The computing showcase is a great place to meet and talk to employers in the Wilmington area. @This was my poster@[{ 'name': 'ImageView', 'params': { 'Name': 'Amotions Poster', 'Description': 'This was my CSC 498 poster for the computing showcase. I got a 100 on it.', 'Pic': 'AmotionsPoster.png'} }]. I got a 100 on it.",
+                "Skills": "Whatever skills your internship uses.",
+                "Tips": "You can't sign up for this class via Seanet. Contact Shauna White (turners@uncw.edu) if you're interested.",
+                "Grading": [
+                    "Weekly Paragraphs - 50%",
+                    "Poster presentation - 50%"
+                ]
+            },
+            {
+                "Name": "MUS 115: Music in Society",
+                "Number": "MUS 115",
+                "Title": "Music in Society",
+                "Format": "Synchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Nicholas Fife",
+                "Description": "This is the easiest class I've taken since Elementary school. The only grades were open-note/slides tests and quizzes and like 2 one-page papers. The open notes tests and quizzes are just questions taken directly from the slides with a word left out. You were allowed to use the slides during the tests. The papers we're an extremely easy completion grade and were like 1 page long. It was a concert review and he let you just watch youtube concerts. Tragically, Dr. Fife now works at [Winthrop University](https://www.winthrop.edu/cvpa/faculty-staff/bios/fife-nicholas.aspx). Hopefully he'll come back someday.",
+                "Grading": [
+                    "Weekly quizzes - 40%",
+                    "Virtual Concert Reports - 20%",
+                    "Midterm - 20%",
+                    "Final Exam - 20%"
+                ],
+                "Tips": ""
+            },
+            {
+                "Name": "ARH 201: Ancient Art and Archaeology",
+                "Number": "ARH 201",
+                "Title": "Ancient Art and Archaeology",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Nicholas Hudson",
+                "Description": "Overall this class isn't bad. While this class is technically in-person, all the quizzes and tests are taken at home online. Also, attendance isn't required and usually like half the class doesn't show up. Some questions are the tests and quizzes are a pretty obscure, but overall it's a decent easy elective. You can also retake the quizzes as many times as you want.",
+                "Grading": [
+                    "Quizzes - 25% (7 total)",
+                    "Exams - 75% (4 total)"
+                ],
+                "Tips": ""
+            }
+        ]
+    },
+    "Senior": {
+        "First": [
+            {
+                "Name": "CSC 351: Applied Software Security",
+                "Number": "CSC 351",
+                "Title": "Applied Software Security",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Lucas Layman",
+                "Description": "This class teaches a lot of helpful information. A lot of these topics came up in job interviews and is just helpful to know for coding. The class itself is very easy and I found it's content interesting. You do 4 easy python programming assignments throughout and a couple easy multiple-choice online quizzes. The final-exam is an online taken-home coding assessment. In class Layman, shows many real life examples of things, and demonstrates concepts using JavaScript, html, C, Python, SQL, etc. While you don't have to write in these languages (except Python) just seeing them in use would probably be helpful in learning the basics of them. Overall an extremely easy class without that much work. Would highly recommend.",
+                "Skills": "Python and SQLite3",
+                "Tips": "Dr. Layman offers very generous extra credit, take advantage of it.",
+                "Grading": [
+                    "Assignments - 40% (4 coding assignments)",
+                    "Quizzes - 45% (7 total)",
+                    "Final Exam - 15%"
+                ]
+            },
+            {
+                "Name": "CSC 342: Operating Systems",
+                "Number": "CSC 342",
+                "Title": "Operating Systems",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Clayton Ferner",
+                "Description": "This class is decent overall. The programming assignments are building various parts of python operating systems simulator. The labs are practice problems for the tests and a review of what you learned in class. While they're just graded as completion, definitely still try on them to prepare yourself for the tests and have something to study beforehand.",
+                "Skills": "Python",
+                "Tips": "The tests problems draw heavily from the labs, so make sure to study the labs beforehand and not just focus on the slides.",
+                "Grading": [
+                    "Programming assignments - 30% (5 assignments total)",
+                    "Exam 1 - 10%",
+                    "Exam 2 - 10%",
+                    "Exam 3 - 10%",
+                    "Labs - 10%",
+                    "Final Exam - 30%"
+                ]
+            },
+            {
+                "Name": "CSC 380: Design and Analysis of Algorithms",
+                "Number": "CSC 380",
+                "Title": "Design and Analysis of Algorithms",
+                "Format": "Synchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Gur Adhar",
+                "Description": "You don't code at all in this class. It's just graph problems related to algorithms. While this class is technically synchronous, attendance to the lectures isn't required and he records them. The homeworks draw heavily from the lectures, so make sure to watch the recordings. The tests also draw heavily from the homework so make sure you know what you're doing in that regard. Unfortunately, the tests are worth a lot, so if you get something wrong on the test it will have a somewhat large impact on your grade.",
+                "Skills":"You don't code at all this class",  
+                "Tips": "Take this class with Dr. Guinn if possible. Also try and understand the homeworks and watch the lecture recordings. UPDATE: tragically Dr. Guinn has moved to the [University of Colorado](https://www.linkedin.com/posts/activity-7224778886478213120-Mnww?utm_source=share&utm_medium=member_desktop), so you'll have to take the class with another professor.",              
+                "Grading": [
+                    "Homework - 30% (6 Assignments)",
+                    "Midterm 1 - 20%",
+                    "Midterm 2 - 20%",
+                    "Final Exam - 30%"
+                ]
+            },
+            {
+                "Name": "CSC 434: Programming Languages",
+                "Number": "CSC 434",
+                "Title": "Programming Languages",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Sridhar Narayan",
+                "Description": "This was definitely one of my least favorite classes in the UNCW comp sci curriculum. At the beginning of the class you write parts of made-up UNCW programming language called \"Jiffy\" using Java. After that you work with mostly [SML](https://cs.lmu.edu/~ray/notes/introml/) and [Prolog](https://www.tutorialspoint.com/prolog/prolog_basic_programs.htm). I don't think there's any real reason to know these languages and found that large part of the class kind of pointless. The more useful parts of the class include learning about memory-management, compilers, and other programming language concepts. There are 3 tests throughout each worth 17% of your final grade. The tests are infamously difficult and I'd recommend studying your notes from class, slides, and homeworks. At the end there is a 20-minute long group presentation on a programming language. Most groups have 3 members and my group was assigned Kotlin. We got a 100 on the project and he basically said it was a \"give me\" completion grade. However, I consider us lucky as Kotlin was one of the more well-known languages he assigned. Some obscure ones I saw included Erlang, Clojure, F#, Groovy, etc. More well-known ones included C#, Kotlin, and Ruby.",
+                "Skills": "SML, Prolog, Java, Skippy",
+                "Tips": "He sometimes asks obscure questions about stuff you only learned in class on tests, so take notes.",
+                "Grading": [
+                    "Assignments - 39%",
+                    "Programming Language Presentation - 10%",
+                    "Test 1 - 17%",
+                    "Test 2 - 17%",
+                    "Final Exam - 17%"
+                ]
+            },
+            {
+                "Name": "CSC 450: Software Engineering",
+                "Number": "CSC 450",
+                "Title": "Software Engineering",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Lucas Layman",
+                "Description": "This class is pretty straight forward. You're basically assigned to a group of 5 people at the beginning and work on a software engineering project the entire time. The project must have a backend and frontend. There are like 3 quizzes you take online at home. The rest of the grade is just milestones and attendance. Milestones are basically progress points in the project. At the end you have a 20 minute presentation. Note that for the presentation not everyone has to speak.",
+                "Skills": "Whatever tech-stack your team decides to use.",
+                "Tips": "I'd recommend using the following tech stack: Vue.js (Composition Api/Script Setup), python and flask for the backend. It's just the most beginner friendly and easiest to work with for a small project. Also definitely take advantage of the extra credit opportunities.",
+                "Grading": [
+                    "Attendance and Completing Peer Evaluations - 30%",
+                    "Term Project Deliverables (Milestones/Presentation) - 55%",
+                    "Quizzes - 15% (Like 3 quizzes)"
+                ]
+            },
+            {
+                "Name": "CSC 455: Database Design and Implementation",
+                "Number": "CSC 455",
+                "Title": "Database Design and Implementation",
+                "Note": "This class in now called \"CSC 355\". Which I think is appropriate. It's an easy class and I thinks it's good preparation CSC 450.",
+                "Format": "In-Person",
+                "Credit Hours": "3",
+                "Professor": "Marni Ferner",
+                "Description": "Overall I liked this class. I've always been curious about how database work and how SQL is tied into their functionality. The first part of this class is just like databases graphs and showing how the keys are connected to each other or whatever. The second part is SQL and writing queries for a database. The last part is php and a group project. I enjoyed the group project and you don't present it. You don't present it because everyone basically does the same thing. Also, the labs you do throughout are completion grades and the Final Exam is the same format as the first two tests.",
+                "Skills": "SQL, PHP, HTML",
+                "Grading": [
+                    "Labs - 20% (lowest two dropped)",
+                    "Quizzes and homework - 20%",
+                    "Group project - 24%",
+                    "Test 1 - 12%",
+                    "Test 2 - 12%",
+                    "Final Exam - 12%"
+                ],
+                "Tips": ""
+            },
+            {
+                "Name": "ANT 207: Archaeology",
+                "Number": "ANT 207",
+                "Title": "Archaeology",
+                "Format": "Asynchronous Remote",
+                "Credit Hours": "3",
+                "Professor": "Cynthia Bellacero",
+                "Description": "This class had more work than I thought there would be. It's very easy though and not that bad. You basically have a 1-page double spaced writing assignment a week and sometimes a CTE. A CTE is a discussion forum post where you make your initial post, than respond to two people. The final observation project seriously isn't that bad. It's just a 2-3 page, 1.5 spaced, 12 font essay observing some human behavior on Television,Youtube, Facetime a friend, etc.",
+                "Grading": [
+                    "CTE's - 140 (~18.7%, 7 total assignments)",
+                    "Assignments - 300 (40%, 10 total assignments)",
+                    "Quizzes - 150 (20%, 10 total assignments)",
+                    "Final Observation Project - 160 (~21.3%)",
+                    "NOTE: Theres a total of 750 points."
+                ],
+                "Tips": ""
+            }
+        ]
+    },
+    "Ap Classes": [
+        {
+            "High School Name": "AP Computer Science Principles",
+            "AP Exam Score": "4",
+            "College Credit Received": "",
+            "Credit Hours Received": ""
+        },
+        {
+            "High School Name": "AP Computer Science Principles",
+            "AP Exam Score": "4",
+            "College Credit Received": "CSC 131",
+            "Credit Hours Received": "0",
+            "Explanation": "I don't recommend skipping CSC 131, even though you'vd definitely already taken it. Ap Comp Sci principles definitely isn't a good replacement for that class. Despite getting credit I still took CSC 131. It's essential if you don't know python programming."
+        },
+        {
+            "High School Name": "AP European History",
+            "AP Exam Score": "3",
+            "College Credit Received": "HST 001",
+            "Credit Hours Received": "3"
+        },
+        {
+            "High School Name": "AP Government and Politics - US",
+            "AP Exam Score": "3",
+            "College Credit Received": "PLS 101",
+            "Credit Hours Received": "3"
+        }
+    ]
+}

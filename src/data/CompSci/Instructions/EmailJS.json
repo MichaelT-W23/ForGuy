@@ -1,0 +1,273 @@
+{
+    "MultiSet": [
+        {
+            "Info": [
+                {
+                    "title": "How to Setup Email.js in a Project",
+                    "desc": "Explains how to send emails using JavaScript.",
+                    "ref": "emailjs"
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Basically all these instructions come from this [video](https://youtu.be/x7Ewtay0Q78?si=14CwbqmtI6mC8BuA)."
+                },
+                {
+                    "id": 2,
+                    "instruction": "Go to [emailjs.com](https://www.emailjs.com/) and press the orange \"Create Free Account\" button."
+                },
+                {
+                    "id": 3,
+                    "instruction": "Enter your information in the fields, then press \"Sign Up\"."
+                },
+                {
+                    "id": 4,
+                    "instruction": "Then sign in and confirm your email when prompted. Go to your email and click the confirmation link within it."
+                },
+                {
+                    "id": 5,
+                    "instruction": "After you've done that you should be on the main \"Email Services\" page."
+                },
+                {
+                    "id": 6,
+                    "instruction": "On the \"Email Services\" page, click the \"Add New Service\" button."
+                },
+                {
+                    "id": 7,
+                    "instruction": "Under \"Personal Services\" select the email service you want to use to send emails on the behalf on EmailJS. For example if you want to send the emails from your Gmail account, select \"Gmail\" in the options."
+                },
+                {
+                    "id": 8,
+                    "instruction": "For this example we'll use Gmail. Click on the \"Gmail\" option."
+                },
+                {
+                    "id": 9,
+                    "instruction": "In the \"Name\" field put \"Test-Email-Service\". The \"Service ID\" field should already be filled out. If it isn't, click the key icon on the right."
+                },
+                {
+                    "id": 10,
+                    "instruction": "Copy and record the \"Service ID\". You'll need it later on."
+                },
+                {
+                    "id": 11,
+                    "instruction": "Click \"Connect Account\". Choose the Gmail account you want to use. Click \"Continue\" when prompted to \"Sign in to EmailJS\". Click \"Continue\" again after that. Your Gmail account should be connected after that."
+                },
+                {
+                    "id": 12,
+                    "instruction": "Make sure the \"Send test email to verify configuration\" box is selected, then press \"Create Service\". You should receive a test confirmation email in your Gmail account."
+                },
+                {
+                    "id": 13,
+                    "instruction": "After you do that, click \"Email Templates\" in the left-hand bar."
+                },
+                {
+                    "id": 14,
+                    "instruction": "Click the \"Create New Template\" button."
+                },
+                {
+                    "id": 15,
+                    "instruction": "There's a ton of customization you can do here, but we'll it keep simple for this example."
+                },
+                {
+                    "id": 16,
+                    "instruction": "In the \"My Default Template\" page.<br><br>Subject: \"Message sent from EmailJS\".<br><br>Then press Edit Content -> Code Editor -> Delete the code in the field -> Paste the code below into the field.<br><br>Replace \"TYPE_YOUR_NAME_HERE\" with your actual name. After you're done, scroll to the bottom and click the \"Apply Changes\" button. Don't just press the 'X' at the top.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "HTML",
+                        "FormatCode": "<p>Hello TYPE_YOUR_NAME_HERE,</p>\n<p>You got a new message from Example Website</p>\n<p style=\"padding: 12px;\n\t  border-left: 4px solid #d0d0d0;\n\t  font-style: italic;\n\t  font-size: 18px;\">{{message}}</p>\n<p>Regards,<br>{{ from_name }}</p>\n<p style=\"margin-top: -5px;\">Email: {{ from_email }}</p>",
+                        "CopyCode": "<p>Hello TYPE_YOUR_NAME_HERE,</p>\n<p>You got a new message from Example Website</p>\n<p style=\"padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic; font-size: 18px;\">{{message}}</p>\n<p>Regards,<br>{{ from_name }}</p>\n<p style=\"margin-top: -5px;\">Email: {{ from_email }}</p>"
+                    }
+                },
+                {
+                    "id": 17,
+                    "instruction": "On the right-hand side you should see a section with multiple fields. Enter the following values in to the fields.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Values",
+                        "FormatCode": "To Email: Use same Gmail Address that you're sending the email from.\nFrom Name: Your full name\nFrom Email: Make sure \"Use Default Email Address\" is selected\nReply To: {{reply_to}}\n\n*Leave other fields blank*\n",
+                        "CopyCode": "To Email: Use same Gmail Address that you're sending the email from.\nFrom Name: Your full name\nFrom Email: Make sure \"Use Default Email Address\" is selected\nReply To: {{reply_to}}\n\n*Leave other fields blank*\n"
+                    }
+                },
+                {
+                    "id": 18,
+                    "instruction": "Now, stay in \"My Default Template\" but click on the \"Settings\" tab on the right. Copy and record the value in the \"Template ID\" field. You can also name your template by replacing the value in the \"Name\" field and then pressing the purple \"Save\" button in the top-right."
+                },
+                {
+                    "id": 19,
+                    "instruction": "Click the \"Save\" button in the top-right when you're done."
+                },
+                {
+                    "id": 20,
+                    "instruction": "Now click on \"Account\" in the left-hand bar."
+                },
+                {
+                    "id": 21,
+                    "instruction": "In the \"API keys\" section in the \"General\" tab, copy the value in the public \"Public Key\" field. Copy and record this for later use."
+                },
+                {
+                    "id": 22,
+                    "instruction": "In the left-hand bar click \"Personal Settings\" at the bottom."
+                },
+                {
+                    "id": 23,
+                    "instruction": "Click the \"Security\" tab next to profile. After that follow the steps to setup Multi-Factor Authentication."
+                },
+                {
+                    "id": 24,
+                    "instruction": "You should now have everything you need to setup EmailJS in your project."
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "How to Use Emailjs with Vanilla Javascript",
+                    "desc": "Explains how to setup your Emailjs service in vanilla Html/JavaScript code."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Open your terminal and run the following commands.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "mkdir emailjs-example\ncd emailjs-example\ntouch index.html",
+                        "CopyCode": "mkdir emailjs-example\ncd emailjs-example\ntouch index.html"
+                    }
+                },
+                {
+                    "id": 2,
+                    "instruction": "If you don't already have it installed, download the VSCode [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension."
+                },
+                {
+                    "id": 3,
+                    "instruction": "Now open your \"emailjs-example\" folder in VSCode. Paste the following code into the \"index.html\" file. Note that you can find the configuration parameters for Swal.fire in the [Sweetalert2 documentation](https://sweetalert2.github.io/#configuration). Note that some of these parameters require you to remove the style tag \"scoped\" attribute to work. Explanation on why [here](https://github.com/sweetalert2/ngx-sweetalert2/issues/153#issuecomment-598780253)",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "HTML",
+                        "FormatCode": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Contact Form</title>\n  <script src=\"https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js\"></script>\n  <script src=\"https://cdn.jsdelivr.net/npm/sweetalert2@11\"></script>\n</head>\n<body>\n  <div id=\"app\">\n    <h2 id=\"title\">Contact Form</h2>\n\n    <div>\n      <label for=\"name\" id=\"nameLabel\">Name:</label>\n      <input type=\"text\" id=\"name\" name=\"name_12345\" placeholder=\"\" autocomplete=\"false\"/>\n    </div>\n\n    <div>\n      <label for=\"email\" id=\"emailLabel\">Email:</label>\n      <input type=\"email\" id=\"email\" name=\"email_6789112\" placeholder=\"\" autocomplete=\"false\"/>\n    </div>\n\n    <div>\n      <label for=\"message\" id=\"messageLabel\">Message:</label>\n      <textarea id=\"message\" name=\"message_9071908\" placeholder=\"\" autocomplete=\"false\"></textarea>\n    </div>\n\n    <button type=\"submit\" id=\"submitBtn\">Submit</button>\n  </div>\n\n  <script>\n    document.addEventListener('DOMContentLoaded', function () {\n\n        // EmailJS initialization\n        emailjs.init('YOUR_PUBLIC_KEY');\n\n        // Submit button event listener\n        document.getElementById('submitBtn').addEventListener('click', function () {\n        const userName = document.getElementById('name').value.trim();\n        const userEmail = document.getElementById('email').value.trim();\n        const userMessage = document.getElementById('message').value.trim();\n\n        if (!userName || !userEmail || !userMessage) return;\n\n        document.getElementById('submitBtn').innerText = 'Sending...';\n\n        const templateParams = {\n            from_name: userName,\n            from_email: userEmail,\n            message: userMessage,\n        };\n\n        const serviceID = 'YOUR_SERVICE_ID';\n        const templateID = 'YOUR_TEMPLATE_ID';\n\n        emailjs.send(serviceID, templateID, templateParams)\n            .then(response => {\n                Swal.fire('Sent!', 'Your message has been sent successfully!', 'success');\n                    document.getElementById('name').value = '';\n                    document.getElementById('email').value = '';\n                    document.getElementById('message').value = '';\n                })\n                .catch(err => {\n                    Swal.fire('Error!', 'Something went wrong when sending your message! See console.', 'error');\n                    console.error('Failed to send email:', err);\n                })\n                .finally(() => {\n                    document.getElementById('submitBtn').innerText = 'Submit';\n                });\n            });\n        });\n  </script>\n</body>\n</html>",
+                        "CopyCode": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Contact Form</title>\n  <script src=\"https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js\"></script>\n  <script src=\"https://cdn.jsdelivr.net/npm/sweetalert2@11\"></script>\n</head>\n<body>\n  <div id=\"app\">\n    <h2 id=\"title\">Contact Form</h2>\n\n    <div>\n      <label for=\"name\" id=\"nameLabel\">Name:</label>\n      <input type=\"text\" id=\"name\" name=\"name_12345\" placeholder=\"\" autocomplete=\"false\"/>\n    </div>\n\n    <div>\n      <label for=\"email\" id=\"emailLabel\">Email:</label>\n      <input type=\"email\" id=\"email\" name=\"email_6789112\" placeholder=\"\" autocomplete=\"false\"/>\n    </div>\n\n    <div>\n      <label for=\"message\" id=\"messageLabel\">Message:</label>\n      <textarea id=\"message\" name=\"message_9071908\" placeholder=\"\" autocomplete=\"false\"></textarea>\n    </div>\n\n    <button type=\"submit\" id=\"submitBtn\">Submit</button>\n  </div>\n\n  <script>\n    document.addEventListener('DOMContentLoaded', function () {\n\n        // EmailJS initialization\n        emailjs.init('YOUR_PUBLIC_KEY');\n\n        // Submit button event listener\n        document.getElementById('submitBtn').addEventListener('click', function () {\n        const userName = document.getElementById('name').value.trim();\n        const userEmail = document.getElementById('email').value.trim();\n        const userMessage = document.getElementById('message').value.trim();\n\n        if (!userName || !userEmail || !userMessage) return;\n\n        document.getElementById('submitBtn').innerText = 'Sending...';\n\n        const templateParams = {\n            from_name: userName,\n            from_email: userEmail,\n            message: userMessage,\n        };\n\n        const serviceID = 'YOUR_SERVICE_ID';\n        const templateID = 'YOUR_TEMPLATE_ID';\n\n        emailjs.send(serviceID, templateID, templateParams)\n            .then(response => {\n                Swal.fire('Sent!', 'Your message has been sent successfully!', 'success');\n                    document.getElementById('name').value = '';\n                    document.getElementById('email').value = '';\n                    document.getElementById('message').value = '';\n                })\n                .catch(err => {\n                    Swal.fire('Error!', 'Something went wrong when sending your message! See console.', 'error');\n                    console.error('Failed to send email:', err);\n                })\n                .finally(() => {\n                    document.getElementById('submitBtn').innerText = 'Submit';\n                });\n            });\n        });\n  </script>\n</body>\n</html>"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "In the code you just pasted into the \"index.html\" file, you'll need to replace some of the values. Do the following<br><br>Replace \"YOUR_SERVICE_ID\" with the value you copied in step 10. It should look like \"service_ubqeik9\".</br><br>Replace \"YOUR_TEMPLATE_ID\" with the value you copied in step 18. It should look like \"template_ubqeik9\".</br><br>Replace \"YOUR_PUBLIC_KEY\" with the value you copied in step 21.</br></br></br>"
+                },
+                {
+                    "id": 5,
+                    "instruction": "Now press \"Go Live\" at the bottom of VSCode to run live server."
+                },
+                {
+                    "id": 6,
+                    "instruction": "In the Contact Form fields enter the following values. Then press the \"Submit\" button. Note that the email is just an example and is not being used to send the email. Your email.js service is what's sending the email.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Values",
+                        "FormatCode": "Name: James Smith\nEmail: jamessmith@example.com\nMessage: This was sent from Emailjs Vanilla html/js example website.",
+                        "CopyCode": "Name: James Smith\nEmail: jamessmith@example.com\nMessage: This was sent from Emailjs Vanilla html/js example website."
+                    }
+                },
+                {
+                    "id": 7,
+                    "instruction": "After you get the confirmation pop-up, go to your email and check that the email was actually sent."
+                },
+                {
+                    "id": 8,
+                    "instruction": "If all these steps worked, then you Emailjs service should be setup correctly."
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "How to Use Emailjs with a Javascript Framework",
+                    "desc": "Explains how to setup Emailjs in your Vue code."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Before you do any of this &Go to Setup Vue Project&[VueLink] and complete the instructions. Name your project \"emailjs-example\". Run the following command when you're done.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cp -R templates/vue-project /path/to/destination/emailjs-example",
+                        "CopyCode": "cp -R templates/vue-project /path/to/destination/emailjs-example"
+                    }
+                },
+                {
+                    "id": 2,
+                    "instruction": "Run the following commands to install the necessary libraries via command line",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd emailjs-example\nnpm install @emailjs/browser\nnpm install sweetalert2",
+                        "CopyCode": "cd emailjs-example\nnpm install @emailjs/browser\nnpm install sweetalert2"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Now open your \"emailjs-example\" folder in VSCode. Go to src -> views. Open \"Home.vue\" and delete its contents. Then paste in the following code. Note that you can find the configuration parameters for Swal.fire in the [Sweetalert2 documentation](https://sweetalert2.github.io/#configuration). Note that some of these parameters require you to remove the style tag \"scoped\" attribute to work. Explanation on why [here](https://github.com/sweetalert2/ngx-sweetalert2/issues/153#issuecomment-598780253)",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "HTML",
+                        "DisplayLang": "Vue",
+                        "FormatCode": "<template>\n    <div id=\"app\">\n      <h2 id=\"title\">Contact Form</h2>\n\n      <div>\n        <label for=\"name\" id=\"nameLabel\">Name:</label>\n        <input v-model=\"userName\" type=\"text\" id=\"name\" name=\"name_12345\" placeholder=\"\" autocomplete=\"off\" />\n      </div>\n\n      <div>\n        <label for=\"email\" id=\"emailLabel\">Email:</label>\n        <input v-model=\"userEmail\" type=\"email\" id=\"email\" name=\"email_6789112\" placeholder=\"\" autocomplete=\"off\" />\n      </div>\n\n      <div>\n        <label for=\"message\" id=\"messageLabel\">Message:</label>\n        <textarea v-model=\"userMessage\" id=\"message\" name=\"message_9071908\" placeholder=\"\" autocomplete=\"off\"></textarea>\n      </div>\n\n      <button type=\"submit\" @click=\"sendEmail\" :disabled=\"isSending\">{{ buttonText }}</button>\n    </div>\n</template>\n\n\n<script setup>\nimport { ref } from 'vue';\nimport emailjs from '@emailjs/browser';\nimport Swal from 'sweetalert2';\n\nconst userName = ref('');\nconst userEmail = ref('');\nconst userMessage = ref('');\nconst isSending = ref(false);\nconst buttonText = ref('Submit');\n\n// Initialize EmailJS\nemailjs.init('YOUR_PUBLIC_KEY');\n\n// Send email function\nconst sendEmail = () => {\nif (!userName.value.trim() || !userEmail.value.trim() || !userMessage.value.trim()) return;\n\nbuttonText.value = 'Sending...';\nisSending.value = true;\n\nconst templateParams = {\n    from_name: userName.value,\n    from_email: userEmail.value,\n    message: userMessage.value,\n};\n\nconst serviceID = 'YOUR_SERVICE_ID';\nconst templateID = 'YOUR_TEMPLATE_ID';\n\nemailjs.send(serviceID, templateID, templateParams)\n    .then(response => {\n\tSwal.fire('Sent!', 'Your message has been sent successfully!', 'success');\n\t    userName.value = '';\n\t    userEmail.value = '';\n\t    userMessage.value = '';\n\t})\n    .catch(err => {\n\tSwal.fire('Error!', 'Something went wrong when sending your message! See console.', 'error');\n\t    console.error('Failed to send email:', err);\n\t})\n    .finally(() => {\n\tbuttonText.value = 'Submit';\n\tisSending.value = false;\n    });\n};\n\n</script>",
+                        "CopyCode": "<template>\n    <div id=\"app\">\n      <h2 id=\"title\">Contact Form</h2>\n\n      <div>\n        <label for=\"name\" id=\"nameLabel\">Name:</label>\n        <input v-model=\"userName\" type=\"text\" id=\"name\" name=\"name_12345\" placeholder=\"\" autocomplete=\"off\" />\n      </div>\n\n      <div>\n        <label for=\"email\" id=\"emailLabel\">Email:</label>\n        <input v-model=\"userEmail\" type=\"email\" id=\"email\" name=\"email_6789112\" placeholder=\"\" autocomplete=\"off\" />\n      </div>\n\n      <div>\n        <label for=\"message\" id=\"messageLabel\">Message:</label>\n        <textarea v-model=\"userMessage\" id=\"message\" name=\"message_9071908\" placeholder=\"\" autocomplete=\"off\"></textarea>\n      </div>\n\n      <button type=\"submit\" @click=\"sendEmail\" :disabled=\"isSending\">{{ buttonText }}</button>\n    </div>\n</template>\n\n\n<script setup>\nimport { ref } from 'vue';\nimport emailjs from '@emailjs/browser';\nimport Swal from 'sweetalert2';\n\nconst userName = ref('');\nconst userEmail = ref('');\nconst userMessage = ref('');\nconst isSending = ref(false);\nconst buttonText = ref('Submit');\n\n// Initialize EmailJS\nemailjs.init('YOUR_PUBLIC_KEY');\n\n// Send email function\nconst sendEmail = () => {\nif (!userName.value.trim() || !userEmail.value.trim() || !userMessage.value.trim()) return;\n\nbuttonText.value = 'Sending...';\nisSending.value = true;\n\nconst templateParams = {\n    from_name: userName.value,\n    from_email: userEmail.value,\n    message: userMessage.value,\n};\n\nconst serviceID = 'YOUR_SERVICE_ID';\nconst templateID = 'YOUR_TEMPLATE_ID';\n\nemailjs.send(serviceID, templateID, templateParams)\n\t.then(response => {\n\t\tSwal.fire('Sent!', 'Your message has been sent successfully!', 'success');\n\t\t\tuserName.value = '';\n\t\t\tuserEmail.value = '';\n\t\t\tuserMessage.value = '';\n\t\t})\n\t.catch(err => {\n\t\tSwal.fire('Error!', 'Something went wrong when sending your message! See console.', 'error');\n\t\t\tconsole.error('Failed to send email:', err);\n\t\t})\n\t.finally(() => {\n\t\tbuttonText.value = 'Submit';\n\t\tisSending.value = false;\n\t});\n};\n\n</script>"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "In the code you just pasted into the \"Home.vue\" file, you'll need to replace some of the values. Do the following<br><br>Replace \"YOUR_SERVICE_ID\" with the value you copied in step 10. It should look like \"service_ubqeik9\".</br><br>Replace \"YOUR_TEMPLATE_ID\" with the value you copied in step 18. It should look like \"template_ubqeik9\".</br><br>Replace \"YOUR_PUBLIC_KEY\" with the value you copied in step 21.</br></br></br>"
+                },
+                {
+                    "id": 5,
+                    "instruction": "This is optional, but go to the src folder and open \"App.vue\". Delete the paragraph tag to get rid of the large \"TEST WEBSITE\" header."
+                },
+                {
+                    "id": 6,
+                    "instruction": "Run your code using the following commands. Open the link in the output",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd emailjs-example\nnpm run dev",
+                        "CopyCode": "cd emailjs-example\nnpm run dev"
+                    }
+                },
+                {
+                    "id": 7,
+                    "instruction": "In the Contact Form fields enter the following values. Then press the \"Submit\" button. Note that the email is just an example and is not being used to send the email. Your email.js service is what's sending the email.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Values",
+                        "FormatCode": "Name: John Doe\nEmail: johndoe@example.com\nMessage: This was sent from Emailjs Vue example website.",
+                        "CopyCode": "Name: John Doe\nEmail: johndoe@example.com\nMessage: This was sent from Emailjs Vue example website."
+                    }
+                },
+                {
+                    "id": 8,
+                    "instruction": "After you get the confirmation pop-up, go to your email and check that the email was actually sent."
+                },
+                {
+                    "id": 9,
+                    "instruction": "If all these steps worked, then you Emailjs service should be setup correctly."
+                }
+            ]
+        }
+    ]
+}

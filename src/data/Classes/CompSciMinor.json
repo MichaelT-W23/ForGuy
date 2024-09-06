@@ -1,0 +1,156 @@
+{
+    "Text": [
+        {
+            "Minor": "Computer Science Minor",
+            "Description": "I've recently learned that you're a Business Administration major, not a Computer Science major. I think a computer science minor could still be very helpful and enhance your degree. Basically all modern businesses use and rely on Software, so it'd be useful to have a basic understanding of it. It can also help automate excel tasks. Learn more about the minor [here](https://uncw.edu/academics/majors-programs/cse/computer-science-minor/?gad_source=1&gclid=CjwKCAjwzN-vBhAkEiwAYiO7oBoInQTdiPLGK78yFVc886jh_agnyvdVbJTZ-M2EyOmiGyhkvMwxaRoCP-MQAvD_BwE). For the minor you need to take CSC 131, CSC 133, CSC 231, CSC 331, and two 3-credit hour CSC electives. These are descriptions of those classes and two possible electives.",
+            "Major": "Computer Science Major",
+            "DescriptionTwo": "It's probably not too late to become a computer science major with a business concentration and still graduate in 4 years. I've listed coursework below. To learn more about the degree run a \"What-If\" analysis in [Seanet](https://degreeworks-respdashboard.uncw.edu/RespDashboard/worksheets/WEB31). If you're interested and have questions feel free to reach out."
+        }
+    ],
+    "Classes": [
+        {
+            "Name": "CSC 131: Introduction to Computer Science",
+            "Number": "CSC 131",
+            "Title": "Introduction to Computer Science - Python",
+            "Format": "Asynchronous Remote",
+            "Credit Hours": "3",
+            "Professor": "Gulustan Dogan",
+            "Description": "I took this class online during Covid, so it's probably changed a lot. Basic python coding questions and syntax.",
+            "Grading": "",
+            "Tips": "",
+            "Skills": "Python",
+            "Text Editor": "Idle"
+        },
+        {
+            "Name": "CSC 133: Discrete Mathematical Structures",
+            "Number": "CSC 133",
+            "Title": "Discrete Mathematical Structures",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Professor": "Kevin Carlin",
+            "Description": "Overall I remember this being a pretty easy class. It's like fun easy puzzles. 2 tests, a final exam, and like 10 short easy homeworks. Take notes during class and study the homework and the tests should be easy.",
+            "Skills": "A very small amount of Python",
+            "Tips": "Study the homework before tests and take good notes in class.",
+            "Grading": [
+                "Homework - 10%",
+                "Quizzes - 15%",
+                "3 Tests - 60%",
+                "Final Exam - 15%"
+            ]
+        },
+        {
+            "Name": "CSC 231: Introduction to Data Structures",
+            "Number": "CSC 231",
+            "Title": "Introduction to Data Structures",
+            "Format": "In-Person",
+            "Credit Hours": "4",
+            "Professor": "Toni Pence",
+            "Description": "You learn about important data structures such as stacks, queues, linked-lists, binary search trees, etc. You also learn about algorithms like Binary Search, Merge sort, etc. and their time complexities. The tests are easy as long as you study, the labs are typically a bit more difficult.",
+            "Skills": "Python, Data structures, algorithms",
+            "Tips": "Learn how to use debug mode in PyCharm. It can very helpful when debugging data structures.",
+            "Text Editor": "PyCharm",
+            "Grading": [
+                "Quizzes - 15%",
+                "Labs - 10% (Like 10 labs)",
+                "Take Home Programming Assignments - 15% (Like 3 assignments)",
+                "Test 1 - 20%",
+                "Test 2 - 20%",
+                "Final Exam - 20%"
+            ]
+        },
+        {
+            "Name": "CSC 331: Object-Oriented Programming and Design",
+            "Number": "CSC 331",
+            "Title": "Object-Oriented Programming and Design",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Professor": "Shauna White",
+            "Description": "This class is easy if you have any experience whatsoever with Java. It's like CSC 131 for Java instead of python. The labs are pretty easy as well as the tests. She lets you have a cheat sheet for the tests. For one lab you work in a group of 3. At the end you work in a group of 5 for a 10-minute long project presentation. The project is a JavaFx project written using Java, JavaFx, FXML, and SceneBuilder. JavaFx is a framework for building GUI's for Java. It adds logic to your FXML code, and you can use it to build UI components programmatically in your project, I did both in ours. I personally really like the framework and the end project was definitely my favorite programming project I did for UNCW.",
+            "Skills": "Java, JavaFx, SceneBuilder",
+            "Text Editor": "Intellij IDEA or PyCharm",
+            "Tips": "",
+            "Grading": [
+                "Homework - 10%",
+                "Test 1 - 10%",
+                "Test 2 - 10%",
+                "Final Project - 10%",
+                "Labs - 25%",
+                "Final Exam - 25%",
+                "Attendance - 5%"
+            ]
+        },
+        {
+            "Name": "CSC 351: Applied Software Security",
+            "Number": "CSC 351",
+            "Title": "Applied Software Security",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Elective": "(Possible Elective #1)",
+            "Professor": "Lucas Layman",
+            "Description": "This class teaches a lot of helpful information. A lot of these topics came up in job interviews and is just helpful to know for coding. The class itself is very easy and I found it's content interesting. You do 4 easy python programming assignments throughout and a couple easy multiple-choice online quizzes. The final-exam is an online taken-home coding assessment. In class Layman, shows many real life examples of things, and demonstrates concepts using JavaScript, html, C, Python, SQL, etc. While you don't have to write in these languages (except Python) just seeing them in use would probably be helpful in learning the basics of them. Overall an extremely easy class without that much work. Would highly recommend.",
+            "Skills": "Python and SQLite3",
+            "Text Editor": "Visual Studio Code and PyCharm",
+            "Tips": "Dr. Layman offers very generous extra credit, take advantage of it.",
+            "Grading": [
+                "Assignments - 40% (4 coding assignments)",
+                "Quizzes - 45% (7 total)",
+                "Final Exam - 15%"
+            ]
+        },
+        {
+            "Name": "CSC 498: Internship in Computer Science",
+            "Number": "CSC 498",
+            "Title": "Internship in Computer Science",
+            "Format": "Mostly Remote",
+            "Credit Hours": "3",
+            "Elective": "(Possible Elective #2)",
+            "Professor": "Shauna White",
+            "Description": "This is a 3 credit hour class that's pass/fail. All you do is write 1 paragraph a week summarizing what you did at your internship and at the end you create a poster presentation demonstrating what you did during your internship. Note that you don't present the poster in-front of a group. You just hang it up in Congdon Hall and stand by it the entire time. I only had like 2 people come up to ask me about it during the 2-hour showcase. Also, it's just a completion grade, so it's pretty low-stress. The computing showcase is a great place to meet and talk to employers in the Wilmington area. @This was my poster@[{ 'name': 'ImageView', 'params': { 'Name': 'Amotions Poster', 'Description': 'This was my CSC 498 poster for the computing showcase. I got a 100 on it.', 'Pic': 'AmotionsPoster.png'} }]. I got a 100 on it.",
+            "Skills": "Whatever skills your internship uses.",
+            "Tips": "You can't sign up for this class via Seanet. Contact Shauna White (turners@uncw.edu) if you're interested.",
+            "Grading": [
+                "Weekly Paragraphs - 50%",
+                "Poster presentation - 50%"
+            ]
+        }
+    ],
+    "SemesterClasses": [
+        {
+            "Name": "Junior Year - 1st Semester",
+            "Classes": [
+                "CSC 131: Introduction to Computer Science",
+                "CSC 133: Discrete Mathematical Structures"
+            ]
+        },
+        {
+            "Name": "Junior Year - 2nd Semester",
+            "Classes": [
+                "CSC 231: Introduction to Computer Science",
+                "CSC 242: Computer Organization",
+                "CSC 498: Internship in Computer Science/CSC Elective",
+                "CSC 344: Computer Networks"
+            ]
+        },
+        {
+            "Name": "Senior Year - 1st Semester",
+            "Classes": [
+                "CSC 331: Object-Oriented Programming and Design",
+                "CSC 340: Scientific Computing",
+                "CSC 342: Operating Systems",
+                "CSC 385: Professional and Ethical Issues in Computing",
+                "CSC 355: Database Design and Implementation",
+                "CSC 360: Formal Languages and Computability"
+            ] 
+        },
+        {
+            "Name": "Senior Year - 2nd Semester",
+            "Classes": [
+                "CSC 380: Design and Analysis of Algorithms",
+                "CSC 351: Applied Software Security",
+                "CSC 434: Programming Languages",
+                "CSC 450: Software Engineering",
+                "Another CSC Elective?"
+            ] 
+        }
+    ]
+}

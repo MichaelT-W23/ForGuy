@@ -1,0 +1,82 @@
+{
+    "Text": [
+        {
+            "page": "Interview Tips",
+            "desc": "These are tips I have for preparing for and participating in an interview. These are mostly common software engineering topics I was asked about in interviews."
+        }
+    ],
+    "Tips": [
+        {
+            "id": 1,
+            "tip": "Study the 4 concepts of OOP. Polymorphism, Abstraction, Inheritance, Encapsulation"
+        },
+        {
+            "id": 2,
+            "tip": "Study basic algorithms and data structures. You don't need to memorize them. But know the basics of how they work."
+        },
+        {
+            "id": 3,
+            "tip": "You probably won't have to code them, but know the basics of stacks, linked-lists, binary search, queues, etc."
+        },
+        {
+            "id": 4,
+            "tip": "Prepare to discuss your previous programming/software engineering experience. Even it's just school, discuss the topics you've learned and projects you've worked on."
+        },
+        {
+            "id": 5,
+            "tip": "Know the basics of GitHub and Git. At least be able to explain the general idea of those concepts."
+        },
+        {
+            "id": 6,
+            "tip": "Gain a super basic understanding of Kubernetes, docker, pods, and containers. (Look into certifications)[/Classes/Certifications]. It would be very good to learn."
+        },
+        {
+            "id": 7,
+            "tip": "Know the super basic concepts of Amazon Web Services and Cloud computing. An AWS certification would probably look good."
+        },
+        {
+            "id": 8,
+            "tip": "Know basic security practices (I'd strongly recommend taking CSC 351)."
+        },
+        {
+            "id": 9,
+            "tip": "Know what HTTP and HTTPS are. CSC 351 discusses this concept which is another reason I'd recommend taking it."
+        },
+        {
+            "id": 10,
+            "tip": "Know the basics of databases. Like what's MongoDB, NoSQL, relational databases, etc."
+        },
+        {
+            "id": 11,
+            "tip": "Know the basics of Memory management in Java and C++. Particularly Garbage collection."
+        },
+        {
+            "id": 12,
+            "tip": "Know basic testing testing practices. Know the basics of the following: Unit tests, White box testing, Black box testing, JUnit, etc."
+        },
+        {
+            "id": 13,
+            "tip": "Have a basic understanding of C pointers and reference operators"
+        },
+        {
+            "id": 14,
+            "tip": "Look at the job description and see what skills are listed. Study those as well."
+        },
+        {
+            "id": 15,
+            "tip": "Obviously come on time and don't be late."
+        },
+        {
+            "id": 16,
+            "tip": "Appear enthusiastic to be there and about what's being discussed"
+        },
+        {
+            "id": 17,
+            "tip": "Come well-groomed and act professional."
+        },
+        {
+            "id": 18,
+            "tip": "Come prepared with follow up questions for the interviewer. This will help demonstrate your interest and knowledge."
+        }
+    ]
+}

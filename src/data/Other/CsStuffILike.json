@@ -1,0 +1,135 @@
+{
+    "Text": [
+        {
+            "page": "CS Stuff I like",
+            "desc": "These are various computer science and programming-related things I like.",
+            "header2": "Comp Sci Stuff I like",
+            "desc2": "These are various computer science related things I like.",
+            "header3": "Goated Syntax",
+            "desc3": "These are code snippets that show syntax and functionality I like.",
+            "scrollToTop": "Scroll To Top"
+        }
+    ],
+    "CsStuff": [
+        {
+            "id": 1,
+            "description": "A project called \"plane-notify\" created by Jack Sweeney. This [video](https://youtu.be/bJUl3OAIT0k?si=UYgUxgV7gaWCYgkN) does a really good job describing what it is. It's basically a bot that tracks Elon Musks jet. It's written python and you can see the source code [here](https://github.com/Jxck-S/plane-notify). Also, Jack Sweeney accepted my connect request on Linkedin which is pretty cool."
+        },
+        {
+            "id": 2,
+            "description": "Search bars. Ever since I started coding I've had a somewhat strange fascination with search bars. It seems like they're everywhere but people still have difficulty implementing them in their projects. That's why I made sure not to \"cheat\" the search bar functionality in this project (it was originally supposed to be a box pop-up thing). Search bars can be extremely useful in your project and I'd recommend implementing them wherever you think they'd be helpful."
+        },
+        {
+            "id": 3,
+            "description": "Steve Jobs talking about programming. In this [video](https://youtu.be/BRTOlPdyPYU?si=bHpOkJwOGw70NRpz) Steve Jobs talks about how he thinks everyone should learn to code. I like the point he makes about how programming teaches you how to think in the real world. I often find myself using Java syntax to describe real-life events in my head."
+        },
+        {
+            "id": 4,
+            "description": "GitHub pages. I love GitHub pages and it's where this website is currently being hosted. It allows you to host any static website for free which I find very convenient as my websites usually don't use databases or dynamic rendering."
+        },
+        {
+            "id": 5,
+            "description": "Pushing to GitHub. I like the feeling of pushing code to GitHub and have it successfully working. I find it satisfying."
+        },
+        {
+            "id": 6,
+            "description": "Visual Studio Code is the main text editor I use. I find it very versatile and I use it in basically all my programming tasks. I'd strongly recommend [downloading it](https://code.visualstudio.com/download) and trying it out."
+        },
+        {
+            "id": 7,
+            "description": "The UNCW Computer Science curriculum. I think UNCW has a great CS curriculum that allows for a lot of creativity and flexibility. It also teaches you a diverse spectrum of skills which will help prepare you for the real world."
+        },
+        {
+            "id": 8,
+            "description": "Markdown. I really like markdowns syntax and I find it convenient when creating ReadMes. I took inspiration from markdowns syntax for the hyperlinks in this project."
+        },
+        {
+            "id": 9,
+            "description": "Emailjs. This is a JavaScript library that allows you send emails for free. I used it in the \"Contact Me\" page in this project. Here's the [link](https://www.emailjs.com/) to set it up."
+        },
+        {
+            "id": 10,
+            "description": "The \"termcolor\" library. This is a Python library that allows you to color the text in your terminal output. I find it very useful to differentiate between messages and I think it looks nice."
+        }
+    ],
+    "Code": [
+        {
+            "Name": "List Comprehension",
+            "Description": "This is a great way to create and populate a list in Python.",
+            "Language": "Python",
+            "FormatCode": "increment_list = [x + 1 for x in range(len(4))]",
+            "CopyCode": "increment_list = [x + 1 for x in range(len(4))]"
+        },
+        {
+            "Name": "Ternary Operator",
+            "Description": "Condensed if-else statement. Appears in Java, JavaScript, C++, Swift, etc.",
+            "Language": "Java",
+            "FormatCode": "String cool = (5 % 2 == 0) ? \"Hello\" : \"Cool\";",
+            "CopyCode": "String cool = (5 % 2 == 0) ? \"Hello\" : \"Cool\";"
+        },
+        {
+            "Name": "ForEach Loops/Arrow Functions",
+            "Description": "ForEach loops act like a regular for loop. Arrow functions have concise syntax",
+            "Language": "JavaScript",
+            "FormatCode": "const myFunction = () => {\n  animals = [\"Dog\", \"Cat\", \"Fish\", \"Deer\"];\n  animals.forEach(animal => {\n      console.log(animal);\n  });\n}\n",
+            "CopyCode": "const myFunction = () => {\n\tanimals = [\"Dog\", \"Cat\", \"Fish\", \"Deer\"];\n\tanimals.forEach(animal => {\n\t\tconsole.log(animal);\n\t});\n}"
+        },
+        {
+            "Name": "Nil-Coalescing Operator",
+            "Description": "If name isn't null, set \"unwrappedValue\" to that value. If name is null set to \"Anonymous\". Appears in JavaScript, TypeScript, Swift. Note it's called \"nullish\" in JavaScript and TypeScript.",
+            "Language": "Swift",
+            "FormatCode": "let name: String? = nil\nlet unwrappedName = name ?? \"Anonymous\"\n\nlet ternaryEquivalent = (name != nil) ? name : \"Anonymous\"",
+            "CopyCode": "let name: String? = nil\nlet unwrappedName = name ?? \"Anonymous\"\n\nlet ternaryEquivalent = (name != nil) ? name : \"Anonymous\"\n"
+        },
+        {
+            "Name": "File Reading",
+            "Description": "Python's file reading syntax is easily my favorite part of the language. So simple and useful.",
+            "Language": "Python",
+            "FormatCode": "with open(\"cool.txt\", \"r\") as file:\n    for line in file:\n        print(line)",
+            "CopyCode": "with open(\"cool.txt\", \"r\") as file:\n\tfor line in file:\n\t\tprint(line)"
+        },
+        {
+            "Name": "JavaScript Object Notation",
+            "Description": "JSON Objects are extremely useful for transferring data around. It's like a simplified class. YAML and XML are too jank in my opinion. You can think of a json file as a list of Python dictionaries or strings.",
+            "Language": "JSON",
+            "FormatCode": "{\n   \"Car\": \"Honda\",\n   \"Color\": \"Gray\",\n   \"Miles\": 12400,\n   \"Year\": \"2015\"\n}",
+            "CopyCode": "{\n\t\"Car\": \"Honda\",\n\t\"Color\": \"Gray\",\n\t\"Miles\": 12400,\n\t\"Year\": \"2015\"\n}"
+        },
+        {
+            "Name": "Try/Catch Block",
+            "Description": "I *LOVE* the try/catch/throw syntax in Java. It's just a vibe. I use this syntax to describe real life events in my head all the time.",
+            "Language": "Java",
+            "FormatCode": "try {\n    schedule.get(i).checkConflict(theEvent);\n} catch (ConflictException e) {\n    throw new IllegalArgumentException(\"Can't be added due to a conflict.\");\n} ",
+            "CopyCode": "try {\n\tschedule.get(i).checkConflict(theEvent);\n} catch (ConflictException e) {\n\tthrow new IllegalArgumentException(\"The event cannot be added due to a conflict.\");\n} "
+        },
+        {
+            "Name": "Dictionaries and F-Strings",
+            "Description": "Python dictionaries are basically the same as JSON objects but I still love them. Also, they're very fast and you can look items up in O(1) time. F-strings are great way to format strings with variables in them and add values of different data types to a string. I also really like the for-loop syntax to iterate over a dictionary/JSON object.",
+            "Language": "Python",
+            "FormatCode": "peoples_college = {\n   \"Gillian\": \"UNC\",\n   \"Carleigh\": \"NCSU\",\n   \"Michael\": \"Harvard\",\n   \"Hudson\": \"UTD\",\n   \"Charlie\": \"USC\",\n   \"Mom\": \"NYU\"\n}\n\nfor key, value in peoples_college.items():\n    print(f\"{key}: went to {value}\")\n    print(f\"Michael: went to {'Michael'}\")",
+            "CopyCode": "peoples_college = {\n\t\"Gillian\": \"UNC\",\n\t\"Carleigh\": \"NCSU\",\n\t\"Michael\": \"Harvard\",\n\t\"Hudson\": \"UTD\",\n\t\"Charlie\": \"USC\",\n\t\"Mom\": \"NYU\"\n}\n\nfor key, value in peoples_college.items():  \n\tprint(f\"{key}: went to {value}\")\n\tprint(f\"Michael: went to {'Michael'}\")\n"
+        },
+        {
+            "Name": "ForEach UI Loops",
+            "Description": "ForEach loops are used to help build user interfaces in SwiftUI.",
+            "Language": "Swift",
+            "FormatCode": "ForEach(menu) { menuItem in\n   NavigationLink(destination: menuItem.destination) {\n       Label {\n\t  Text(menuItem.text)\n       } icon: {\n\t  Image(systemName: menuItem.picture)\n\t       .foregroundColor(shakyPaleRed)\n\t  }\n       }\n   }\n}",
+            "CopyCode": "ForEach(menu) { menuItem in\n\tNavigationLink(destination: menuItem.destination) {\n\t\tLabel {\n\t\t\tText(menuItem.text)\n\t\t} icon: {\n\t\t\tImage(systemName: menuItem.picture)\n\t\t\t\t.foregroundColor(shakyPaleRed)\n\t\t\t}\n\t\t}\n\t}\n}"
+        },
+        {
+            "Name": "Markdown Links",
+            "Description": "This is the syntax to hyperlink text in a markdown file.",
+            "Language": "Markdown",
+            "FormatCode": "[Uncw Link](https://uncw.edu/)",
+            "CopyCode": "[Uncw Link](https://uncw.edu/)"
+        },
+        {
+            "Name": "String Formatting",
+            "Description": "Formats a string into left-aligned columns in python. The formatted string in this example is what's being returned from the function. They're great for displaying data. Can also be right/center-aligned.",
+            "Language": "Python",
+            "FormatCode": "def format_line(p1, p2, p3, p4):\n    return \"{:<25}{:<20}{:<20}{:<15}\".format(p1, p2, p3, p4)\n\naccounts = [\n    {\n\t\"bank\": \"Bank of America\",\n\t\"account_number\": 8748978914,\n\t\"account_holder\": \"Matthew\",\n\t\"balance\": 359.67\n    },\n    {\n\t\"bank\": \"USAA\",\n\t\"account_number\": 6124567421,\n\t\"account_holder\": \"Alex\",\n\t\"balance\": 50871.23\n    },\n    {\n\t\"bank\": \"Ally Financial\",\n\t\"account_number\": 1348932019,\n\t\"account_holder\": \"Charlotte\",\n\t\"balance\": 2081.24\n    }\n]\n\nprint(format_line(\"Bank\", \"Acct Number\", \"Acct Holder\", \"Balance\"))\n\nfor acct in accounts:\n    print(format_line(acct[\"bank\"], acct[\"account_number\"], acct[\"account_holder\"], acct[\"balance\"]))",
+            "CopyCode": "def format_line(p1, p2, p3, p4):\n\treturn \"{:<25}{:<20}{:<20}{:<15}\".format(p1, p2, p3, p4)\n\naccounts = [\n\t{\n\t\t\"bank\": \"Bank of America\",\n\t\t\"account_number\": 8748978914,\n\t\t\"account_holder\": \"Matthew\",\n\t\t\"balance\": 359.67\n\t},\n\t{\n\t\t\"bank\": \"USAA\",\n\t\t\"account_number\": 6124567421,\n\t\t\"account_holder\": \"Alex\",\n\t\t\"balance\": 50871.23\n\t},\n\t{\n\t\t\"bank\": \"Ally Financial\",\n\t\t\"account_number\": 1348932019,\n\t\t\"account_holder\": \"Charlotte\",\n\t\t\"balance\": 2081.24\n\t}\n]\n\nprint(format_line(\"Bank\", \"Acct Number\", \"Acct Holder\", \"Balance\"))\n\nfor acct in accounts:\n\tprint(format_line(acct[\"bank\"], acct[\"account_number\"], acct[\"account_holder\"], acct[\"balance\"]))"
+        }
+    ]
+}
+

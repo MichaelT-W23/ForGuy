@@ -1,0 +1,227 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup a Spotify API Project",
+            "desc": "Explains how to setup a a project that utilizes the Spotify API.",
+            "ref": "spotify-api"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Before you start, make sure you have a regular Spotify account."
+        },
+        {
+            "id": 2,
+            "instruction": "Go to this [link](https://developer.spotify.com/) to start your project. Click \"Log in\" in the top-right corner and sign-in using your regular spotify credentials."
+        },
+        {
+            "id": 3,
+            "instruction": "Now go to the [dashboard](https://developer.spotify.com/dashboard). Accept the terms of service by checking the box and then pressing the purple button."
+        },
+        {
+            "id": 4,
+            "instruction": "In the new page press the \"Create app\" button."
+        },
+        {
+            "id": 5,
+            "instruction": "In the fields enter the following Values. You can change the Redirect URI later if you want. Check the Terms of service box and press \"Save\" when you're done.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Values",
+                "FormatCode": "App name: TitleDisplayer\nApp description: Prints all song titles from an album.\nRedirect URI: https://developer.spotify.com/documentation/web-api\nWhich API/SDKs are you planning to use?: Select \"Web API\"",
+                "CopyCode": "App name: TitleDisplayer\nApp description: Prints all song titles from an album.\nRedirect URI: https://developer.spotify.com/documentation/web-api\nWhich API/SDKs are you planning to use?: Select \"Web API\""
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Once you've pressed the save button you'll be taken to the \"Home\" page. Click the settings button on the left hand-side."
+        },
+        {
+            "id": 7,
+            "instruction": "Copy and record the Client ID, then click the \"View client secret\" link. Copy and record the Client Secret."
+        },
+        {
+            "id": 8,
+            "instruction": "Now go to your terminal and download the following libraries.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "pip3 install requests python-dotenv flask virtualenv",
+                "CopyCode": "pip3 install requests python-dotenv flask virtualenv"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "Now setup your project folder",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "mkdir spotify_api_flask;\ncd spotify_api_flask;\ntouch app.py;\ntouch config.py;\ntouch get_access_token.py;\nroutes.py;\nmkdir templates;\ncd templates;\ntouch index.html\ncd ..",
+                "CopyCode": "mkdir spotify_api_flask;\ncd spotify_api_flask;\ntouch app.py;\ntouch config.py;\ntouch get_access_token.py;\nroutes.py;\nmkdir templates;\ncd templates;\ntouch index.html\ncd .."
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "In your .env file paste the following code. Replace the placeholders with your actual credentials. You can change the \"REDIRECT_URI\" later if you want.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "fxml",
+                "DisplayLang": "Env",
+                "FormatCode": "SPOTIFY_CLIENT_ID=your_client_id_here\nSPOTIFY_CLIENT_SECRET=your_client_secret_here\nREDIRECT_URI=https://developer.spotify.com/documentation/web-api",
+                "CopyCode": "SPOTIFY_CLIENT_ID=your_client_id_here\nSPOTIFY_CLIENT_SECRET=your_client_secret_here\nREDIRECT_URI=https://developer.spotify.com/documentation/web-api"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "In the \"app.py\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from flask import Flask, render_template\nfrom routes import routes_blueprint\n\napp = Flask(__name__)\n\napp.register_blueprint(routes_blueprint)\n\n@app.route('/', methods=['GET'])\ndef index():\n    return render_template('index.html')\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+                "CopyCode": "from flask import Flask, render_template\nfrom routes import routes_blueprint\n\napp = Flask(__name__)\n\napp.register_blueprint(routes_blueprint)\n\n@app.route('/', methods=['GET'])\ndef index():\n\treturn render_template('index.html')\n\nif __name__ == '__main__':\n\tapp.run(debug=True)"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "In the \"config.py\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "import os\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nCLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')\nCLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')",
+                "CopyCode": "import os\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nCLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')\nCLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')"
+            }
+        },
+        {
+            "id": 13,
+            "instruction": "In the \"get_access_token.py\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "import base64\nimport requests\n\ndef get_access_token(client_id, client_secret):\n    client_creds = f\"{client_id}:{client_secret}\"\n    client_creds_b64 = base64.b64encode(client_creds.encode())\n\n    token_url = \"https://accounts.spotify.com/api/token\"\n    token_data = {\"grant_type\": \"client_credentials\"}\n\n    creds = client_creds_b64.decode()\n    token_headers = {\"Authorization\": f\"Basic {creds}\"}\n\n    r = requests.post(token_url, data=token_data, headers=token_headers)\n    token_response_data = r.json()\n    return token_response_data.get(\"access_token\")",
+                "CopyCode": "import base64\nimport requests\n\ndef get_access_token(client_id, client_secret):\n\tclient_creds = f\"{client_id}:{client_secret}\"\n\tclient_creds_b64 = base64.b64encode(client_creds.encode())\n\n\ttoken_url = \"https://accounts.spotify.com/api/token\"\n\ttoken_data = {\"grant_type\": \"client_credentials\"}\n\ttoken_headers = {\"Authorization\": f\"Basic {client_creds_b64.decode()}\"}\n\n\tr = requests.post(token_url, data=token_data, headers=token_headers)\n\ttoken_response_data = r.json()\n\treturn token_response_data.get(\"access_token\")"
+            }
+        },
+        {
+            "id": 14,
+            "instruction": "In the \"routes.py\" file paste the following code. ",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from flask import Blueprint, jsonify, request\nimport requests\nfrom config import CLIENT_ID, CLIENT_SECRET\nfrom get_access_token import get_access_token\n\nroutes_blueprint = Blueprint('routes', __name__)\n\n@routes_blueprint.route('/search', methods=['POST'])\ndef search():\n    album_title = request.form.get('album_title')\n    access_token = get_access_token(CLIENT_ID, CLIENT_SECRET)\n    headers = {\"Authorization\": f\"Bearer {access_token}\"}\n    search_url = \"https://api.spotify.com/v1/search\"\n    search_params = {\"q\": album_title, \"type\": \"album\", \"limit\": 1}\n\n    try:\n\tsearch_resp = requests.get(search_url, headers=headers, params=search_params)\n\tsearch_resp.raise_for_status()\n\tsearch_results = search_resp.json()\n\talbums = search_results.get('albums', {}).get('items', [])\n\n\tif not albums:\n\t    msg = \"No albums found with that title.\"\n\t    return jsonify({\"error\": msg}), 404\n\n\tselected_album = albums[0]\n\talb_id = selected_album['id']\n\talbum_name = selected_album['name']\n\n\ttracks_url = f\"https://api.spotify.com/v1/albums/{alb_id}/tracks\"\n\ttracks_resp = requests.get(tracks_url, headers=headers)\n\ttracks_resp.raise_for_status()\n\ttracks_data = tracks_resp.json()\n\ttracks = [track['name'] for track in tracks_data['items']]\n\n\treturn jsonify({\"album_name\": album_name, \"tracks\": tracks})\n    except requests.exceptions.RequestException as e:\n\treturn jsonify({\"error\": \"Failed to fetch API data.\"}), 500",
+                "CopyCode": "from flask import Blueprint, jsonify, request\nimport requests\nfrom config import CLIENT_ID, CLIENT_SECRET\nfrom get_access_token import get_access_token\n\nroutes_blueprint = Blueprint('routes', __name__)\n\n@routes_blueprint.route('/search', methods=['POST'])\ndef search():\n\talbum_title = request.form.get('album_title')\n\taccess_token = get_access_token(CLIENT_ID, CLIENT_SECRET)\n\theaders = {\"Authorization\": f\"Bearer {access_token}\"}\n\tsearch_url = \"https://api.spotify.com/v1/search\"\n\tsearch_params = {\"q\": album_title, \"type\": \"album\", \"limit\": 1}\n\n\ttry:\n\t\tsearch_resp = requests.get(search_url, headers=headers, params=search_params)\n\t\tsearch_resp.raise_for_status()\n\t\tsearch_results = search_resp.json()\n\t\talbums = search_results.get('albums', {}).get('items', [])\n\n\t\tif not albums:\n\t\t\treturn jsonify({\"error\": \"No albums found with that title.\"}), 404\n\n\t\tselected_album = albums[0]\n\t\talbum_id = selected_album['id']\n\t\talbum_name = selected_album['name']\n\n\t\ttracks_url = f\"https://api.spotify.com/v1/albums/{album_id}/tracks\"\n\t\ttracks_resp = requests.get(tracks_url, headers=headers)\n\t\ttracks_resp.raise_for_status()\n\t\ttracks_data = tracks_resp.json()\n\t\ttracks = [track['name'] for track in tracks_data['items']]\n\n\t\treturn jsonify({\"album_name\": album_name, \"tracks\": tracks})\n\texcept requests.exceptions.RequestException as e:\n\t\treturn jsonify({\"error\": \"Failed to fetch data from Spotify API.\"}), 500"
+            }
+        },
+        {
+            "id": 15,
+            "instruction": "In your templates folder paste the following code in the \"index.html\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "HTML",
+                "FormatCode": "<!DOCTYPE html>\n<html>\n<head>\n    <title>Search Album</title>\n</head>\n<body>\n    <h1>Search for an Album</h1>\n    <form id=\"searchForm\">\n        <input type=\"text\" name=\"album_title\" \n\t       placeholder=\"Enter album title\" required>\n        <button type=\"submit\">Search</button>\n    </form>\n    <h3 id=\"albumTitle\"></h3>\n    <div id=\"results\"></div>\n\n    <script>\n    document.addEventListener('DOMContentLoaded', () => {\n        var form = document.getElementById('searchForm');\n\n        form.addEventListener('submit', (e) => {\n\t    e.preventDefault();\n\n\t    var formData = new FormData(form);\n\n\t    var xhr = new XMLHttpRequest();\n\t    xhr.open('POST', '/search', true);\n\n\t    xhr.onload = () => {\n\t\tif (xhr.status >= 200 && xhr.status < 300) {\n\t\t    var data = JSON.parse(xhr.responseText);\n\t\t    var albumTitle = data.album_name; \n\n\t\t    document.getElementById('albumTitle').innerHTML = `Showing results for: \"${albumTitle}\"`;\n\n\t\t    var results = '<ul>';\n\n\t\t    data.tracks.forEach(track => {\n\t\t\tresults += '<li>' + track + '</li>';\n\t\t    });\n\n\t\t    results += '</ul>';\n\t\t    document.getElementById('results').innerHTML = results;\n\t\t} else {\n\t\t    document.getElementById('albumTitle').innerHTML = '';\n\t\t    document.getElementById('results').innerHTML = '<p style=\"color: red;\">No albums found matching that title.</p>';\n\t\t}\n\t    };\n\n\t    xhr.onerror = () => {\n\t\tdocument.getElementById('albumTitle').innerHTML = '';\n\t\tdocument.getElementById('results').innerHTML = '<p style=\"color: red;\">Error occurred during the search.</p>';\n\t    };\n\n\t    xhr.send(formData);\n      });\n  });\n  </script>\n</body>\n</html>",
+                "CopyCode": "<!DOCTYPE html>\n<html>\n<head>\n    <title>Search Album</title>\n</head>\n<body>\n    <h1>Search for an Album</h1>\n    <form id=\"searchForm\">\n        <input type=\"text\" name=\"album_title\"\n\t\t       placeholder=\"Enter album title\" required>\n        <button type=\"submit\">Search</button>\n    </form>\n    <h3 id=\"albumTitle\"></h3>\n    <div id=\"results\"></div>\n\n    <script>\n    document.addEventListener('DOMContentLoaded', () => {\n        var form = document.getElementById('searchForm');\n\n        form.addEventListener('submit', (e) => {\n            e.preventDefault();\n\n            var formData = new FormData(form);\n\n            var xhr = new XMLHttpRequest();\n            xhr.open('POST', '/search', true);\n\n            xhr.onload = () => {\n                if (xhr.status >= 200 && xhr.status < 300) {\n                    var data = JSON.parse(xhr.responseText);\n                    var albumTitle = data.album_name;\n\n                    document.getElementById('albumTitle').innerHTML = `Showing results for: \"${albumTitle}\"`;\n\n                    var results = '<ul>';\n\n                    data.tracks.forEach(track => {\n                        results += '<li>' + track + '</li>';\n                    });\n\n                    results += '</ul>';\n                    document.getElementById('results').innerHTML = results;\n                } else {\n                    document.getElementById('albumTitle').innerHTML = '';\n                    document.getElementById('results').innerHTML = '<p style=\"color: red;\">No albums found matching that title.</p>';\n                }\n            };\n\n            xhr.onerror = () => {\n                document.getElementById('albumTitle').innerHTML = '';\n                document.getElementById('results').innerHTML = '<p style=\"color: red;\">Error occurred during the search.</p>';\n            };\n\n            xhr.send(formData);\n        });\n    });\n    </script>\n</body>\n</html>"
+            }
+        },
+        {
+            "id": 16,
+            "instruction": "Run your app using the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "python3 app.py",
+                "CopyCode": "python3 app.py"
+            }
+        },
+        {
+            "id": 17,
+            "instruction": "Open the link in your browser to see your app.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Host Link",
+                "FormatCode": "http://127.0.0.1:5000",
+                "CopyCode": "http://127.0.0.1:5000"
+            }
+        },
+        {
+            "id": 18,
+            "instruction": "If you get a 403 error close both your browser and your terminal, then try again."
+        },
+        {
+            "id": 19,
+            "instruction": "Remember to put the .env in gitignore if you want to put this project on GitHub."
+        },
+        {
+            "id": 20,
+            "instruction": "If you want to use a more traditional front-end follow steps 20-24."
+        },
+        {
+            "id": 21,
+            "instruction": "Create a virtual environment using the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "virtualenv venv",
+                "CopyCode": "virtualenv venv"
+            }
+        },
+        {
+            "id": 22,
+            "instruction": "Activate the environment and download dependencies.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "source venv/bin/activate;\npip3 install requests;\npip3 install python-dotenv;\npip3 install flask;\npip3 install virtualenv",
+                "CopyCode": "source venv/bin/activate;\npip3 install requests;\npip3 install python-dotenv;\npip3 install flask;\npip3 install virtualenv"
+            }
+        },
+        {
+            "id": 23,
+            "instruction": "Add the following line to the .env file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Values",
+                "FormatCode": "FLASK_APP=app.py",
+                "CopyCode": "FLASK_APP=app.py"
+            }
+        },
+        {
+            "id": 24,
+            "instruction": "Run the virtual environment.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "source venv/bin/activate",
+                "CopyCode": "source venv/bin/activate"
+            }
+        },
+        {
+            "id": 25,
+            "instruction": "Run the app",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "flask run",
+                "CopyCode": "flask run"
+            }
+        }
+    ]
+}

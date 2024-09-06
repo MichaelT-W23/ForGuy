@@ -1,0 +1,200 @@
+{
+    "MultiSet": [
+        {
+            "Info": [
+                {
+                    "title": "Deploy a Vite Project to GitHub Pages",
+                    "desc": "How to deploy a project that uses Vite and a JS framework to GitHub pages (Vue, React, Etc.). This is a good reference [video](https://youtu.be/yo2bMGnIKE8?si=EpFNOE8JC9Dtyxcz).",
+                    "ref": "vite-gh-pages"
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Ensure that the code for your app is already on GitHub and that you have a local git repository set up for your code. Change into your local folder and run the following \"git status\" command. If it doesn't output something like \"fatal: not a git repository (or any of the parent directories)\" you should be good.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd your-project-name\ngit status\ncd ..",
+                        "CopyCode": "cd your-project-name\ngit status\ncd .."
+                    }
+                },
+                {
+                    "id": 2,
+                    "instruction": "Change into your local Vite project repository and open it in VSCode. You can open it using the \"code .\" command if you have it installed.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd your-project-name\ncode .",
+                        "CopyCode": "cd your-project-name\ncode ."
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Step 3 if you're using Vue. Open the \"vite.config.js\" file in your folder. Delete the contents of the folder and paste in the following code. Change the \"name-of-github-repo\". To the actual name of your GitHub repository. Keep the slashes before and after the name.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Javascript",
+                        "DisplayLang": "Vue",
+                        "FormatCode": "import { defineConfig } from 'vite'\nimport vue from '@vitejs/plugin-vue'\n\n// https://vitejs.dev/config/\nexport default defineConfig({\n  base: '/name-of-github-repo/',\n  plugins: [vue()],\n})",
+                        "CopyCode": "import { defineConfig } from 'vite'\nimport vue from '@vitejs/plugin-vue'\n\n// https://vitejs.dev/config/\nexport default defineConfig({\n\tbase: '/name-of-github-repo/',\n\tplugins: [vue()],\n})"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Step 3 if you're using React. Open the \"vite.config.js\" file in your folder. Delete the contents of the folder and paste in the following code. Change the \"name-of-github-repo\". To the actual name of your GitHub repository. Keep the slashes before and after the name.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Javascript",
+                        "DisplayLang": "React",
+                        "FormatCode": "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\n\n// https://vitejs.dev/config/\nexport default defineConfig({\n  base: '/name-of-github-repo/',\n  plugins: [react()],\n})",
+                        "CopyCode": "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\n\n// https://vitejs.dev/config/\nexport default defineConfig({\n\tbase: '/name-of-github-repo/',\n\tplugins: [react()],\n})"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "Step 4 if you're using Vue router, go to your index.js file in the src/router directory. Where it says \"history: createWebHistory('/')\". Change the createWebHistory parameter to be the name of your GitHub repository starting and ending with slashes. If you're not using Vue-router you can skip this step.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Javascript",
+                        "DisplayLang": "Vue",
+                        "FormatCode": "import { createRouter, createWebHistory } from 'vue-router';\n\nimport Home from '../views/Home.vue';\nimport SecondPage from '../views/SecondPage.vue';\n\nconst routes = [\n    {\n\tpath: '/',\n\tcomponent: Home\n    },\n    {\n\tpath: '/second-page',\n\tcomponent: SecondPage\n    }\n]\n\nconst router = createRouter({\n     history: createWebHistory('/name-of-github-repo/'),\n     routes\n});\n\nexport default router;",
+                        "CopyCode": "import { createRouter, createWebHistory } from 'vue-router';\n\nimport Home from '../views/Home.vue';\nimport SecondPage from '../views/SecondPage.vue';\n\nconst routes = [\n\t{\n\t\tpath: '/',\n\t\tcomponent: Home\n\t},\n\t{\n\t\tpath: '/second-page',\n\t\tcomponent: SecondPage\n\t}\n]\n\nconst router = createRouter({\n\thistory: createWebHistory('/name-of-github-repo/'),\n\troutes\n});\n\nexport default router;"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "Step 4 if you're using React router. Go to your index.js file in the src/router directory. Where it says \"Router\" change it to include a \"basename\" prop and set its value to be the name of your GitHub repository. It should start with a slash. You only need to change that one line. If you're not using React router you can skip this step.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Javascript",
+                        "DisplayLang": "React",
+                        "FormatCode": "import React from 'react'\nimport { BrowserRouter as Router, Routes, Route } from 'react-router-dom'\nimport HomePage from '../views/Home'\nimport SecondPage from '../views/SecondPage'\n\nexport function AppRouter() {\n  return (\n    <Router basename=\"/name-of-github-repo\">\n      <Routes>\n        <Route path=\"/\" element={<HomePage />} />\n        <Route path=\"/second-page\" element={<SecondPage />} />\n      </Routes>\n    </Router>\n  );\n}" ,
+                        "CopyCode": "import React from 'react';\nimport { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\nimport HomePage from '../views/Home';\nimport SecondPage from '../views/SecondPage';\n\nexport function AppRouter() {\n  return (\n    <Router basename=\"/name-of-github-repo\">\n      <Routes>\n        <Route path=\"/\" element={<HomePage />} />\n        <Route path=\"/second-page\" element={<SecondPage />} />\n      </Routes>\n    </Router>\n  );\n}" 
+                    }
+                },
+                {
+                    "id": 5,
+                    "instruction": "Run the following commands in your terminal. Make sure you're still in your local repository using \"pwd\".",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "pwd\nnpm run build\ncp dist/index.html dist/404.html\ngit add dist -f\ngit commit -m \"Adding dist\"\ngit subtree push --prefix dist origin gh-pages",
+                        "CopyCode": "pwd\nnpm run build\ncp dist/index.html dist/404.html\ngit add dist -f\ngit commit -m \"Adding dist\"\ngit subtree push --prefix dist origin gh-pages"
+                    }
+                },
+                {
+                    "id": 6,
+                    "instruction": "Now go to your Github repository, You should see that a new branch named \"gh-pages\" has been added. Now can click on the \"main\" drop-down button right above the code to see your branches."
+                },
+                {
+                    "id": 7,
+                    "instruction": "Click on the \"Settings\" tab in the top-bar near the right-hand side. It has a gear icon next to it."
+                },
+                {
+                    "id": 8,
+                    "instruction": "Now in the \"Code and automation\" section on the left-hand side click on \"Pages\" and wait while it deploys to Github pages. You should eventually see a link there where you can access your site. You should be done now. The following steps are to make changes to your deployed site."
+                },
+                {
+                    "id": 9,
+                    "instruction": "To update the site while working on the main branch run the following commands. These will update both the main branch and gh-pages branch. You could make a python script that uses the \"os\" library to automate this process.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "git add .\ngit commit -m \"Message\"\ngit push origin main\nnpm run build\ncp dist/index.html dist/404.html\ngit add dist -f\ngit commit -m \"Message\"\ngit subtree push --prefix dist origin gh-pages",
+                        "CopyCode": "git add .\ngit commit -m \"Message\"\ngit push origin main\nnpm run build\ncp dist/index.html dist/404.html\ngit add dist -f\ngit commit -m \"Message\"\ngit subtree push --prefix dist origin gh-pages"
+                    }
+                },
+                {
+                    "id": 10,
+                    "instruction": "If the subtree push doesn't work for some reason try the following. ",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "git push origin `git subtree --split prefix dist main`:gh-pages --force ",
+                        "CopyCode": "git push origin `git subtree --split prefix dist main`:gh-pages --force "
+                    }
+                },
+                {
+                    "id": 11,
+                    "instruction": "If you're getting errors on your deployed site make sure you're not using anchor tags for router links."
+                },
+                {
+                    "id": 12,
+                    "instruction": "I've included an automation script in the section below you can use to update your Github pages website."
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Automate Vite Github Pages Update",
+                    "desc": "Explains how to automate uploading changes to Github pages using Python."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Run the following commands in your terminal.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "pip3 install termcolor\ncd your-project-name\ntouch update_github_pages.py",
+                        "CopyCode": "pip3 install termcolor\ncd your-project-name\ntouch update_github_pages.py"
+                    }
+                },
+                {
+                    "id": 2,
+                    "instruction": "Open the update_github_pages.py file in VSCode and paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Python",
+                        "FormatCode": "import os\nimport subprocess\nfrom termcolor import colored as c\n\nprocess = subprocess.run('git status', shell=True, capture_output=True, text=True)\n\noutput = process.stdout\n\nbranch = repr(output).split(\"\\\\n\")[0].replace(\"'On branch \", \"\").strip()\n\nprint('On branch ', end=\"\")\n\nif branch == 'main':\n    print(c(branch, 'green'))\nelse:\n    print(c(branch, 'red'))\n    print('Move changes to the main branch, then switch to the main branch.')\n    print('git stash')\n    print('git checkout main')\n    print('git pull origin main')\n    print(f'git merge {branch}')\n    print('git stash apply')\n    print('git push origin main')\n    exit(0)\n\ncommit_msg = input(\"Enter your commit message: \")\n\nos.system('git add .')\nos.system(f'git commit -m \"{commit_msg}\"')\nos.system('git push origin main')\nos.system('npm run build')\nos.system('cp dist/index.html dist/404.html')\nos.system('git add dist -f')\nos.system(f'git commit -m \"{commit_msg}\"')\nos.system('git subtree push --prefix dist origin gh-pages')",
+                        "CopyCode": "import os\nimport subprocess\nfrom termcolor import colored as c\n\nprocess = subprocess.run('git status', shell=True, capture_output=True, text=True)\n\noutput = process.stdout\n\nbranch = repr(output).split(\"\\\\n\")[0].replace(\"'On branch \", \"\").strip()\n\nprint('On branch ', end=\"\")\n\nif branch == 'main':\n\tprint(c(branch, 'green'))\nelse:\n\tprint(c(branch, 'red'))\n\tprint('Move changes to the main branch, then switch to the main branch.')\n\tprint('git stash')\n\tprint('git checkout main')\n\tprint('git pull origin main')\n\tprint(f'git merge {branch}')\n\tprint('git stash apply')\n\tprint('git push origin main')\n\texit(0)\n\ncommit_msg = input(\"Enter your commit message: \")\n\nos.system('git add .')\nos.system(f'git commit -m \"{commit_msg}\"')\nos.system('git push origin main')\nos.system('npm run build')\nos.system('cp dist/index.html dist/404.html')\nos.system('git add dist -f')\nos.system(f'git commit -m \"{commit_msg}\"')\nos.system('git subtree push --prefix dist origin gh-pages')\n"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Upload the file to github pages. You should only have to do this once.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd your-project-name\ngit add .\ngit commit -m \"Added automation script\"\ngit push",
+                        "CopyCode": "cd your-project-name\ngit add .\ngit commit -m \"Added automation script\"\ngit push"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "Make changes to your websites code."
+                },
+                {
+                    "id": 5,
+                    "instruction": "Upload the changes to your website by running your Python script.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "python3 update_github_pages.py",
+                        "CopyCode": "python3 update_github_pages.py"
+                    }
+                },
+                {
+                    "id": 6,
+                    "instruction": "Wait like two minutes for the changes to appear on the website."
+                }
+            ]
+        }
+    ]
+}

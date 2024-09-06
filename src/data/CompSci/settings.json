@@ -1,0 +1,796 @@
+{
+    "Text": [
+        {
+            "page": "My Visual Studio Code Settings",
+            "desc": "This is my settings file for VSCode. Contains mostly keyword coloring. Read the comments for more details.",
+            "header": "Settings.json",
+            "downloadBtn": "Download JSON",
+            "copyBtn": "Copy JSON"
+        }
+    ],
+    "settings": [
+        {
+            "text": "{"
+        },
+        {
+            "text": "/**"
+        },
+        {
+            "text": "How to Open this settings json file"
+        },
+        {
+            "text": "1. Open Visual Studio code"
+        },
+        {
+            "text": "2. Press command + shift + p"
+        },
+        {
+            "text": "3. Lookup and click on the \"Preferences: Open Settings (JSON)\" option"
+        },
+        {
+            "text": "in the drop down menu."
+        },
+        {
+            "text": "*/"
+        },
+        {
+            "text": "\"security.workspace.trust.untrustedFiles\": \"open\","
+        },
+        {
+            "text": "//\"python.defaultInterpreterPath\": \"/usr/bin/python3\","
+        },
+        {
+            "text": "//My Default python path for vs code"
+        },
+        {
+            "text": "\"python.defaultInterpreterPath\": \"~/.pyenv/versions/3.10.6/bin/python\","
+        },
+        {
+            "text": "//Work bench color theme"
+        },
+        {
+            "text": "\"workbench.colorTheme\": \"Atom One Dark\","
+        },
+        {
+            "text": "//Sets Tab Size to 4 spaces"
+        },
+        {
+            "text": "\"editor.tabSize\": 4,"
+        },
+        {
+            "text": "//Disables Run | Debug text"
+        },
+        {
+            "text": "\"editor.codeLens\": false,"
+        },
+        {
+            "text": "//Turns off weird coloring of Java brackets"
+        },
+        {
+            "text": "\"editor.bracketPairColorization.enabled\": false,"
+        },
+        {
+            "text": "//Sets the maximum number of items in a json file to 50,000 without"
+        },
+        {
+            "text": "//warning about performance issues. Was originally 5,000."
+        },
+        {
+            "text": "\"json.maxItemsComputed\": 50000,"
+        },
+        {
+            "text": "//Disables yellow underline for reportMissingModuleSource"
+        },
+        {
+            "text": "//reportMissingImports and errors in Python."
+        },
+        {
+            "text": "// \"python.analysis.diagnosticSeverityOverrides\" : {"
+        },
+        {
+            "text": "//     \"reportMissingModuleSource\" : \"none\","
+        },
+        {
+            "text": "//     \"reportMissingImports\": \"none\""
+        },
+        {
+            "text": "// },"
+        },
+        {
+            "text": "//Opens Live Server in Chrome by Default"
+        },
+        {
+            "text": "\"liveServer.settings.CustomBrowser\": \"chrome\","
+        },
+        {
+            "text": "//Turns off the warning about unusual characters in a txt file."
+        },
+        {
+            "text": "\"editor.unusualLineTerminators\" : \"off\","
+        },
+        {
+            "text": "/** Gets rid of autofill parameter suggestions in method calls in java */"
+        },
+        {
+            "text": "\"editor.inlayHints.enabled\": \"off\","
+        },
+        {
+            "text": "//Changes font size to 13.5"
+        },
+        {
+            "text": "\"editor.fontSize\": 13.5,"
+        },
+        {
+            "text": "\"launch\": {"
+        },
+        {
+            "text": "\"configurations\": [],"
+        },
+        {
+            "text": "\"compounds\": []"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "// Set to false to show .git folder"
+        },
+        {
+            "text": "\"files.exclude\": {"
+        },
+        {
+            "text": "\"**/.git\": false,"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "/**"
+        },
+        {
+            "text": "How to change a color"
+        },
+        {
+            "text": "1. hover over the keyword whose color you want changed"
+        },
+        {
+            "text": "2. Press command + shift + p on mac"
+        },
+        {
+            "text": "3. Seach and click \"Developer: Inspect Editor Tokens and Scopes\""
+        },
+        {
+            "text": "4. In the box that opens next to \"textmate scopes\" copy the first line"
+        },
+        {
+            "text": "and paste it under the scope keyword that's above the color you want"
+        },
+        {
+            "text": "to change the keyword too. If it doesn't work try the other lines."
+        },
+        {
+            "text": "5. To stop inspecting the tokens press command + shift + p"
+        },
+        {
+            "text": "then press enter"
+        },
+        {
+            "text": "*/"
+        },
+        {
+            "text": "\"editor.tokenColorCustomizations\": {"
+        },
+        {
+            "text": "\"[Atom One Dark]\": {"
+        },
+        {
+            "text": "\"textMateRules\": ["
+        },
+        {
+            "text": "//Changes function calls to blue ,"
+        },
+        {
+            "text": "{"
+        },
+        {
+            "text": "\"scope\": ["
+        },
+        {
+            "text": "/** Changes function calls to blue */"
+        },
+        {
+            "text": "\"meta.function-call.generic.python\","
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"settings\": {"
+        },
+        {
+            "text": "\"foreground\": \"#61AFEF\" //Blue"
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "//Changes colors to gray."
+        },
+        {
+            "text": "{"
+        },
+        {
+            "text": "\"scope\": ["
+        },
+        {
+            "text": "/** Changes function parameters to gray */"
+        },
+        {
+            "text": "\"variable.parameter.function.language.python\","
+        },
+        {
+            "text": "\"meta.function.parameters.python\","
+        },
+        {
+            "text": "\"meta.function.python\","
+        },
+        {
+            "text": "\"source.python\","
+        },
+        {
+            "text": "/** Changes __name__ to gray. */"
+        },
+        {
+            "text": "\"support.variable.magic.python\","
+        },
+        {
+            "text": "/** Changes variables to gray in java */"
+        },
+        {
+            "text": "\"variable.other.definition.java\","
+        },
+        {
+            "text": "/** Changes out keyword to gray */"
+        },
+        {
+            "text": "\"variable.other.object.property.java\","
+        },
+        {
+            "text": "/** The console in console.close() gets turned to gray in java */"
+        },
+        {
+            "text": "\"variable.other.object.java\","
+        },
+        {
+            "text": "// \"meta.try.body.java\""
+        },
+        {
+            "text": "/** Changes brackets in array declaration to gray. String[] */"
+        },
+        {
+            "text": "\"punctuation.bracket.square.java\","
+        },
+        {
+            "text": "/** Makes imports in java gray */"
+        },
+        {
+            "text": "\"storage.modifier.import.java\","
+        },
+        {
+            "text": "/** Changes certain functions from library pink in python */"
+        },
+        {
+            "text": "\"meta.indexed-name.python\","
+        },
+        {
+            "text": "/** Changes the file keyword to gray\" */"
+        },
+        {
+            "text": "\"variable.legacy.builtin.python\","
+        },
+        {
+            "text": "/** Make C# static class variables gray */"
+        },
+        {
+            "text": "\"entity.name.variable.field.cs\","
+        },
+        {
+            "text": "/** Makes const variables in Javascript gray */"
+        },
+        {
+            "text": "\"variable.other.constant.js\""
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"settings\": {"
+        },
+        {
+            "text": "\"foreground\": \"#ABB2BF\" //Gray"
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "//Changes f in f string to green"
+        },
+        {
+            "text": "{"
+        },
+        {
+            "text": "\"scope\": ["
+        },
+        {
+            "text": "/** Changes f in f string to green */"
+        },
+        {
+            "text": "\"storage.type.string.python\","
+        },
+        {
+            "text": "/** Changes escape characters to green */"
+        },
+        {
+            "text": "\"constant.character.escape.java\","
+        },
+        {
+            "text": "\"string.quoted.single.python\","
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"settings\": {"
+        },
+        {
+            "text": "\"foreground\": \"#98C379\" //Green"
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "//Changes colors to red"
+        },
+        {
+            "text": "{"
+        },
+        {
+            "text": "\"scope\": ["
+        },
+        {
+            "text": "/** Changes object attributes to red */"
+        },
+        {
+            "text": "\"meta.attribute.python\","
+        },
+        {
+            "text": "/** Changes brackets to red */"
+        },
+        {
+            "text": "\"constant.character.format.placeholder.other.python\","
+        },
+        {
+            "text": "//Changes attribute to red in C#. Example song.Instrument. Instrument is red"
+        },
+        {
+            "text": "\"variable.other.object.property.cs\","
+        },
+        {
+            "text": "//Changes The \"<\" character in List<string> to red."
+        },
+        {
+            "text": "\"punctuation.definition.typeparameters.begin.cs\","
+        },
+        {
+            "text": "//Changes The \">\" character in List<string> to red."
+        },
+        {
+            "text": "\"punctuation.definition.typeparameters.end.cs\""
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"settings\": {"
+        },
+        {
+            "text": "\"foreground\": \"#E06C75\""
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "//Changes certain functions from library such as testbed.devices[devivces] to pink."
+        },
+        {
+            "text": "// {"
+        },
+        {
+            "text": "//     \"scope\": ["
+        },
+        {
+            "text": "//         /** Changes certain functions from library pink in python */"
+        },
+        {
+            "text": "//         \"meta.indexed-name.python\","
+        },
+        {
+            "text": "//     ],"
+        },
+        {
+            "text": "//     \"settings\": {"
+        },
+        {
+            "text": "//         \"foreground\": \"#F3D0F7\""
+        },
+        {
+            "text": "//     }"
+        },
+        {
+            "text": "// },"
+        },
+        {
+            "text": "//Changes certain keywords to yellow in Java."
+        },
+        {
+            "text": "{"
+        },
+        {
+            "text": "\"scope\": ["
+        },
+        {
+            "text": "/** Changes System keyword to yellow */"
+        },
+        {
+            "text": "\"variable.other.object.java\","
+        },
+        {
+            "text": "/** Changes parameter type to yellow and return type. */"
+        },
+        {
+            "text": "\"storage.type.primitive.java\","
+        },
+        {
+            "text": "//\"entity.name.function.java\""
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"settings\": {"
+        },
+        {
+            "text": "\"foreground\": \"#E5C07B\""
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "//Changes colors to dark gray."
+        },
+        {
+            "text": "{"
+        },
+        {
+            "text": "\"scope\": ["
+        },
+        {
+            "text": "/** Makes keywords in comments in java dark gray\" */"
+        },
+        {
+            "text": "\"keyword.other.documentation.javadoc.java\","
+        },
+        {
+            "text": "/** Changes parameter to dark gray in java*/"
+        },
+        {
+            "text": "\"variable.parameter.java\","
+        },
+        {
+            "text": "/** Makes descriptions in comments dark gray */"
+        },
+        {
+            "text": "\"comment.block.javadoc.java\","
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"settings\": {"
+        },
+        {
+            "text": "\"foreground\": \"#5C6370\""
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "{"
+        },
+        {
+            "text": "\"scope\": ["
+        },
+        {
+            "text": "//Changes new keyword in C#"
+        },
+        {
+            "text": "\"keyword.operator.expression.new.cs\","
+        },
+        {
+            "text": "//Changes !, &&, etc. in C#"
+        },
+        {
+            "text": "\"keyword.operator.logical.cs\","
+        },
+        {
+            "text": "//Makes ++ in C# purple"
+        },
+        {
+            "text": "\"keyword.operator.increment.cs\","
+        },
+        {
+            "text": "//Makes = in C# purple"
+        },
+        {
+            "text": "\"keyword.operator.assignment.cs\","
+        },
+        {
+            "text": "// Makes + in C# purple"
+        },
+        {
+            "text": "\"keyword.operator.arithmetic.cs\","
+        },
+        {
+            "text": "//Makes += in C# purple"
+        },
+        {
+            "text": "\"keyword.operator.assignment.compound.cs\","
+        },
+        {
+            "text": "//Makes == in C# purple"
+        },
+        {
+            "text": "\"keyword.operator.comparison.cs\","
+        },
+        {
+            "text": "//Makes => in C# purple"
+        },
+        {
+            "text": "\"keyword.operator.arrow.cs\","
+        },
+        {
+            "text": "//Makes ?? in C# purple"
+        },
+        {
+            "text": "\"keyword.operator.null-coalescing.cs\","
+        },
+        {
+            "text": "//Makes ternary ? in C# purple"
+        },
+        {
+            "text": "\"keyword.operator.conditional.question-mark.cs\","
+        },
+        {
+            "text": "//Makes ternary : in C# purple"
+        },
+        {
+            "text": "\"keyword.operator.conditional.colon.cs\","
+        },
+        {
+            "text": "//Makes > in C# purple"
+        },
+        {
+            "text": "\"keyword.operator.relational.cs\""
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"settings\": {"
+        },
+        {
+            "text": "\"foreground\": \"#C678DD\" // purple"
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "}, //End of Atom One Dark"
+        },
+        {
+            "text": "\"[Eclipse Dark]\": {"
+        },
+        {
+            "text": "\"textMateRules\": ["
+        },
+        {
+            "text": "{"
+        },
+        {
+            "text": "\"scope\": ["
+        },
+        {
+            "text": "/** Changes the colors of the periods in the import statements */"
+        },
+        {
+            "text": "\"punctuation.separator.java\""
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"settings\": {"
+        },
+        {
+            "text": "\"foreground\": \"#DAE8F7\""
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "{"
+        },
+        {
+            "text": "\"scope\": ["
+        },
+        {
+            "text": "/** Changes the package name color to blue."
+        },
+        {
+            "text": "Note that the import names cannot change color */"
+        },
+        {
+            "text": "\"storage.modifier.package.java\""
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"settings\": {"
+        },
+        {
+            "text": "\"foreground\": \"#4A99C3\""
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "{"
+        },
+        {
+            "text": "\"scope\": ["
+        },
+        {
+            "text": "/** Changes the top and bottom of comments */"
+        },
+        {
+            "text": "\"punctuation.definition.comment.java\","
+        },
+        {
+            "text": "/** Changes the color of the * character in body comments."
+        },
+        {
+            "text": "Also changes the tag descriptions in comments */"
+        },
+        {
+            "text": "\"comment.block.javadoc.java\","
+        },
+        {
+            "text": "/** Changes @ tags to gray */"
+        },
+        {
+            "text": "\"punctuation.definition.annotation.java\""
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"settings\": {"
+        },
+        {
+            "text": "\"foreground\": \"#939393\""
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "\"[python]\": {"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "\"json.schemas\": ["
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"editor.codeActionsOnSave\": {"
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "//Helps work with JSON while using Java"
+        },
+        {
+            "text": "\"java.project.referencedLibraries\": ["
+        },
+        {
+            "text": "\"lib/**/*.jar\","
+        },
+        {
+            "text": "\"json-20230618.jar\""
+        },
+        {
+            "text": "],"
+        },
+        {
+            "text": "\"liveServer.settings.donotShowInfoMsg\": true,"
+        },
+        {
+            "text": "\"workbench.editorAssociations\": {"
+        },
+        {
+            "text": "\"*.db\": \"sqlite-viewer.option\""
+        },
+        {
+            "text": "},"
+        },
+        {
+            "text": "\"yaml.schemas\": {"
+        },
+        {
+            "text": "\"Kubernetes\": \"*.yaml\""
+        },
+        {
+            "text": "}"
+        },
+        {
+            "text": "}"
+        }
+    ]
+}

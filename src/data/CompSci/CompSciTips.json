@@ -1,0 +1,188 @@
+{
+    "Text": [
+        {
+            "page": "Computer Science Tips",
+            "desc": "These are some more general tips I have for computer science.",
+            "scrollToTop": "Scroll To Top"
+        }
+    ],
+    "Tips": [
+        {
+            "id": 1,
+            "Underlined": "Create a shortcut to access your settings.json file in VSCode",
+            "Tip": "This will allow you to easily make changes to the file, without having to find it using a lengthy process. Scroll down(codeBlockRef) to see instructions on making a shortcut."
+        },
+        {
+            "id": 2,
+            "Underlined": "Include search functionality",
+            "Tip": "Having a search functionality will make finding things much easier and faster, and provide an overall better user experience."
+        },
+        {
+            "id": 3,
+            "Underlined": "Make personal projects",
+            "Tip": "Personal projects are a great thing to have on your resume and can help your practice and improve your skills."
+        },
+        {
+            "id": 4,
+            "Underlined": "Format Your Code",
+            "Tip": "Readability and formatting is an important part of creating good code. Formatting your code makes it much easier to read and understand what's going on. It also makes your code look cleaner and more organized. Scroll down(codeBlockTwoRef) using this link to see an example in Java. Scroll down(codeBlockThreeRef) using this link to see an example in Python."
+        },
+        {
+            "id": 5,
+            "Underlined": "Adopt Good Coding Practices",
+            "Tip": "Using things like git version control, organizing your code into classes and components, documentation, testing, etc. can all help improve the quality of your code and software."
+        },
+        {
+            "id": 6,
+            "Underlined": "Pair programming",
+            "Tip": "This is when you program with someone else. We do this all the time at IBM and USAA. Coding with someone else is a great way to learn new things, catch mistakes, and overall improve the quality of your code."
+        },
+        {
+            "id": 7,
+            "Underlined": "Don't repeat yourself",
+            "Tip": "If you see blocks of code frequently repeating, there's probably a better way to write it. The use of for loops, classes, components, etc. are great ways to have reusable and cleaner code."            
+        },
+        {
+            "id": 8,
+            "Underlined": "If it feels weird, it probably is",
+            "Tip": "If something you're doing feels weird and forced, there's probably a better way do it. Run your code through ChatGpt or another person to see if there are other ways you could potentially write it."
+        },
+        {
+            "id": 9,
+            "Underlined": "Install homebrew",
+            "Tip": "This is a really good package manager for MacOS that be used used to download libraries and stuff. Scroll down(codeBlockFourRef) to see the instructions on how to download it."
+        },
+        {
+            "id": 10,
+            "Underlined": "Learn the names of stuff",
+            "Tip": "Learning the names of certain operators, functions, etc. will help when you're trying to explain code. For example, things like knowing what a ternary operator is called. It also help you better understand code when someone else is explaining."
+
+        },
+        {
+            "id": 11,
+            "Underlined": "Spread things out",
+            "Tip": "When creating a UI, try not to overload a single page with too much information. Also when you're coding don't make your files excessively long. Break it into classes, components, other files, etc. Try to keep them relatively short, organized, and simple."
+        },
+        {
+            "id": 12,
+            "Underlined": "Use dark mode",
+            "Tip": "Obviously you're free to do whatever you want, but using dark mode in a text editor typically improves code highlighting and readability. It also won't burn your eyes at night."
+        },
+        {
+            "id": 13,
+            "Underlined": "Download Visual Studio Code",
+            "Tip": "VSCode is an extremely useful text editor with a lot cool features and can be used for basically any language or purpose."
+        },
+        {
+            "id": 14,
+            "Underlined": "Use Python when working with Excel",
+            "Tip": "Obviously you can't use Python to help with all Excel tasks, but I'd definitely look into using Python with Excel."
+        },
+        {
+            "id": 15,
+            "Underlined": "Use debug mode",
+            "Tip": "Debug mode is a great way see the values of the variables you're working with and other helpful information. I feel like debug is particularly useful in CSC 231 and definitely something worth learning."
+        },
+        {
+            "id": 16,
+            "Underlined": "Use JSON files",
+            "Tip": "If all you're data is static, you can use a JSON file instead of setting up a database. That's what I did for this website. Also, if you're websites static you can host it on GitHub pages for free."
+        },
+        {
+            "id": 17,
+            "Underlined": "Try out multiple programming languages",
+            "Tip": "I met a lot of people at UNCW who were biased against basically any language that wasn't Python. Don't be afraid to try out new languages and know that different syntax really isn't that hard to learn. I personally really like certain aspects of Java."
+        },
+        {
+            "id": 18,
+            "Underlined": "Practice",
+            "Tip": "A great way to get good anything is to practice it frequently. Programming is no different."
+        },
+        {
+            "id": 19,
+            "Underlined": "Try new things",
+            "Tip": "This is kind of building on point 17, just try new things and see what you like when programming."
+        },
+        {
+            "id": 20,
+            "Underlined": "Learn how to exit a nano file",
+            "Tip": "When you're editing a file using the nano command press control + o to save, then press enter to write the changes. Then control + x to exit"
+        },
+        {
+            "id": 21,
+            "Underlined": "Use ChatGPT",
+            "Tip": "It's a great a tool for helping you while you're programming. However, I'd strongly recommend trying to learn and understand the code it generates."
+        },
+        {
+            "id": 22,
+            "Underlined": "Learn a JavaScript framework",
+            "Tip": "A framework will make creating a web application much easier. I'd recommend Vue.js (with the Composition API) because it's very beginner friendly. I used Vue.js to create this website."
+        },
+        {
+            "id": 23,
+            "Underlined": "Get an internship",
+            "Tip": "Having a SWE internship during college will definitely help you when searching for a fulltime job."
+        },
+        {
+            "id": 24,
+            "Underlined": "Have a basic understanding of regex",
+            "Tip": "You learn about Regex in CSC 360. It can be a very useful tool and something worth checking out."
+        },
+        {
+            "id": 25,
+            "Underlined": "Do Leetcode problems",
+            "Tip": "They can be a great way to practice your skills and prepare for coding interviews."
+        },
+        {
+            "id": 26,
+            "Underlined": "Automate processes using code",
+            "Tip": "There is usually a way to do things programmatically. Things like operating system commands, key presses, file changes can usually be automated using code."
+        },
+        {
+            "id": 27,
+            "Underlined": "Use \"code .\" to open folders in VSCode",
+            "Tip": "First open VSCode. Then, to install press \"command + shift + p\" then in the search bar results select \"Shell Command: Install code command in PATH\". Now you should be able to 'cd' into a folder and run 'code .' to open it in VSCode. You could also open it by doing 'code project-name'."
+        }
+    ],
+    "ComponentData": [
+        {
+            "Name": "Create a Shortcut to Access VSCode Setting.json",
+            "Description": "\nOpen Visual Studio Code, then press \"command + shift + p\". Then, in the dialogue box type \"Open Keyboard Shortcuts (JSON)\". Click on the matching result. Copy and paste the json below into the file then save it. Now the shortcut \"Command + option + =\" should open settings.json",
+            "Language": "JSON",
+            "FormatCode": "[\n     {\n        \"key\": \"alt+cmd+=\",\n        \"command\": \"workbench.action.openSettingsJson\"\n     }\n  ]",
+            "CopyCode": "//This list should be the only content in the file\n[\n\t{\n\t\t\"key\": \"alt+cmd+=\",\n\t\t\"command\": \"workbench.action.openSettingsJson\"\n\t}\n]"
+        },
+        {
+            "Name": "Properly Formatted Java file",
+            "Description": "This is a properly formatted Java file. Note the use of whitespace, particularly around the equal signs, if-else statements and for-loop blocks. Also note the comments and variable naming conventions and casing. Learn more here -> https://google.github.io/styleguide/javaguide.html.",
+            "Language": "Java",
+            "FormatCode": "/**\n * This class implements an array-based list for a maximum of 20 boats\n *   \n * @author Michael Totaro\n */\npublic class BoatList {\n\n    /** Capacity of the list containing names of Boats */\n    public static final int MAX_BOATS = 20;\n\n    /**\n     * Creates an array-based list of boats, adds some boats, removes a boat,\n     * queries if a boat exists in the list, and prints the list.\n     *\n     * @param args command line arguments (not used)\n     */\n    public static void main(String[] args) {\n        String[] boats = new String[MAX_BOATS];\n\n        int numberOfBoats = 0;\n\n        numberOfBoats = addBoat(boats, numberOfBoats, \"Natalie\");\n        numberOfBoats = addBoat(boats, numberOfBoats, \"Wendell\");\n        numberOfBoats = addBoat(boats, numberOfBoats, \"Lori\");\n        numberOfBoats = addBoat(boats, numberOfBoats, \"Steve\");\n        numberOfBoats = addBoat(boats, numberOfBoats, \"Kevin\");\n\n        System.out.println(\"\\nBoat List:\");\n        printList(boats);\n\n        int index = findBoat(boats, \"Rosa\");\n\n        if (index == -1) {\n            numberOfBoats = addBoat(boats, numberOfBoats, \"Rosa\");\n        } else {\n            System.out.println(boats[index] + \" is located at index \" +\n                               index + \" in the boats list.\");\n        }\n\n        numberOfBoats = removeBoat(boats, numberOfBoats, \"Wendell\");\n\n        System.out.println(\"\\nBoat List:\");\n        printList(boats);\n    }\n\n    /**\n     * Adds a boat to the list.\n     *\n     * @param list the array of boat names\n     * @param numberOfBoats the current number of boats in the list\n     * @param boat the boat to add to the list\n     * @return the new number of boats on the list\n     * @throws IllegalArgumentException if list is full\n     */\n    public static int addBoat(String[] list, int numberOfBoats, String boat) {\n\n        if (numberOfBoats >= list.length) {\n            throw new IllegalArgumentException(\"No room in list\");\n        }\n\n        list[numberOfBoats++] = boat;\n\n        return numberOfBoats;\n    }\n\n    /**\n     * Prints the list with each element on a separate line.\n     *\n     * @param boats the array of boat names\n     */\n    public static void printList(String[] boats) {\n        for (String boatName : boats) {\n            System.out.println(boatName);\n        }\n    }\n\n    /**\n     * Removes a boat from the list.\n     *\n     * @param list the array of boat names\n     * @param numOfBoats the current number of boats in the list\n     * @param boat the boat to remove from the list\n     * @return the new number of boat on the list\n     */\n    public static int removeBoat(String[] list, int numOfBoats, String boat) {\n        boolean found = false;\n\n        for (int i = 0; i < numOfBoats; i++) {\n            if (found) {\n                list[i - 1] = list[i];\n            }\n\n            if (list[i].equals(boat)) {\n                found = true;\n                numOfBoats--;\n            }\n        }\n\n        return numOfBoats;\n    }\n\n    /**\n     * Determines if the given boat is in the list.\n     *\n     * @param list the array of boat names\n     * @param boat the boat to find in the list\n     * @return the index of the list element containing boat\n     *       or -1 if boat does not exist in the list\n     */\n    public static int findBoat(String[] list, String boat) {\n        for (int i = 0; i < list.length; i++) {\n            if (list[i] == boat) {\n                return i;\n            }\n        }\n\n        return -1;\n    }\n}",
+            "CopyCode": "/**\n * This class implements an array-based list for a maximum of 20 boats\n *\n * @author Michael Totaro\n */\n  public class BoatList {\n\n\t/** Capacity of the list containing names of Boats */\n\tpublic static final int MAX_BOATS = 20;\n\n\t/**\n\t * Creates an array-based list of boats, adds some boats, removes a boat,\n\t * queries if a boat exists in the list, and prints the list.\n\t *\n\t * @param args command line arguments (not used)\n\t */\n\tpublic static void main(String[] args) {\n\t\tString[] boats = new String[MAX_BOATS];\n\n\t\tint numberOfBoats = 0;\n\n\t\tnumberOfBoats = addBoat(boats, numberOfBoats, \"Natalie\");\n\t\tnumberOfBoats = addBoat(boats, numberOfBoats, \"Wendell\");\n\t\tnumberOfBoats = addBoat(boats, numberOfBoats, \"Lori\");\n\t\tnumberOfBoats = addBoat(boats, numberOfBoats, \"Steve\");\n\t\tnumberOfBoats = addBoat(boats, numberOfBoats, \"Kevin\");\n\n\t\tSystem.out.println(\"\\nBoat List:\");\n\t\tprintList(boats);\n\n\t\tint index = findBoat(boats, \"Rosa\");\n\n\t\tif (index == -1) {\n\t\t\tnumberOfBoats = addBoat(boats, numberOfBoats, \"Rosa\");\n\t\t} else {\n\t\t\tSystem.out.println(boats[index] + \" is located at index \" +\n\t\t\t\t\t\t\t   index + \" in the boats list.\");\n\t\t}\n\n\t\tnumberOfBoats = removeBoat(boats, numberOfBoats, \"Wendell\");\n\n\t\tSystem.out.println(\"\\nBoat List:\");\n\t\tprintList(boats);\n\t}\n\n\t/**\n\t * Adds a boat to the list.\n\t *\n\t * @param list the array of boat names\n\t * @param numberOfBoats the current number of boats in the list\n\t * @param boat the boat to add to the list\n\t * @return the new number of boats on the list\n\t * @throws IllegalArgumentException (with message \"No room in list\") if list is full\n\t */\n\tpublic static int addBoat(String[] list, int numberOfBoats, String boat) {\n\n\t\tif (numberOfBoats >= list.length) {\n\t\t\tthrow new IllegalArgumentException(\"No room in list\");\n\t\t}\n\n\t\tlist[numberOfBoats++] = boat;\n\n\t\treturn numberOfBoats;\n\t}\n\n\t/**\n\t * Prints the list with each element on a separate line.\n\t *\n\t * @param boats the array of boat names\n\t */\n\tpublic static void printList(String[] boats) {\n\t\tfor (String boatName : boats) {\n\t\t\tSystem.out.println(boatName);\n\t\t}\n\t}\n\n\t/**\n\t * Removes a boat from the list.\n\t *\n\t * @param list the array of boat names\n\t * @param numOfBoats the current number of boats in the list\n\t * @param boat the boat to remove from the list\n\t * @return the new number of boat on the list\n\t */\n\tpublic static int removeBoat(String[] list, int numberOfBoats, String boat) {\n\t\tboolean found = false;\n\n\t\tfor (int i = 0; i < numberOfBoats; i++) {\n\t\t\tif (found) {\n\t\t\t\tlist[i - 1] = list[i];\n\t\t\t}\n\n\t\t\tif (list[i].equals(boat)) {\n\t\t\t\tfound = true;\n\t\t\t\tnumberOfBoats--;\n\t\t\t}\n\t\t}\n\n\t\treturn numberOfBoats;\n\t}\n\n\t/**\n\t * Determines if the given boat is in the list.\n\t *\n\t * @param list the array of boat names\n\t * @param boat the boat to find in the list\n\t * @return the index of the list element containing boat\n\t *         or -1 if boat does not exist in the list\n\t */\n\tpublic static int findBoat(String[] list, String boat) {\n\t\tfor (int i = 0; i < list.length; i++) {\n\t\t\tif (list[i] == boat) {\n\t\t\t\treturn i;\n\t\t\t}\n\t\t}\n\n\t\treturn -1;\n\t}\n}"
+        },
+        {
+            "Name": "Properly Formatted Python file",
+            "Description": "This is a properly formatted Python file. Note the use of whitespace around the if-else and for-loop blocks. Also note the comments. Learn more here -> https://peps.python.org/pep-0008/.",
+            "Language": "Python",
+            "FormatCode": "# Name: Michael Totaro\n# Date: 10/24/2022\n# Purpose: Create and demonstrate CarList class (Not a real assignment).\n# collaborators/resources: None other than Dr. Pence\n\nclass Car:\n    \"\"\" This class is a basic car object. \"\"\"\n    def __init__(self, car_id, company, year, color, miles):\n        \"\"\"\n        Initializer for a Car object.\n        :param id: Id of the car\n        :param company: Maker of the car\n        :param year: Year car was made\n        :param color: Color of the car\n        :param miles: Miles driven by the car\n        \"\"\"\n        self.id = car_id\n        self.company = company\n        self.year = year\n        self.color = color\n        self.miles = miles\n\n    def __str__(self):\n        \"\"\"\n        Creates a string representation of a car object.\n        :return: string representation of a car object.\n        \"\"\"\n        car_str = (f\"\\nCar {self.id}\\n\"\n                   f\"Company: {self.company}\\n\"\n                   f\"Year: {self.year}\\n\"\n                   f\"Color: {self.color}\\n\"\n                   f\"Miles: {self.miles}\")\n\n        return car_str + \"\\n\"\n\n\nclass CarList:\n    \"\"\"\n    This class is data structure of car objects.\n    You can add, remove, and print the list.\n    \"\"\"\n    def __init__(self):\n        \"\"\"\n        Initializes an empty car list\n        \"\"\"\n        self.car_list = []\n\n    def add_car(self, new_car):\n        \"\"\"\n        Adds a car to the car list if conditions are met.\n        :param new_car: Car object to be added to the list\n        :return: True if the car was added successfully else false.\n        :raises ValueError: If parameter is not an instance of a car object\n        \"\"\"\n\n        if not isinstance(new_car, Car):\n            raise ValueError(\"Parameter must be an instance of a car object.\")\n\n        for car in self.car_list:\n            if car.id == new_car.id:\n                print(f\"A car in the list already has the id '{new_car.id}'!\")\n                return False\n\n        self.car_list.append(new_car)\n\n        return True\n\n    def remove_car_by_id(self, car_id):\n        \"\"\"\n        Removes car in the list by id.\n        :param car_id: The id of the car to be removed.\n        :raises ValueError: If parameter is not an int.\n        \"\"\"\n\n        if not isinstance(car_id, int):\n            raise ValueError(\"car_id must be an integer.\")\n\n        for car in self.car_list:\n            if car.id == car_id:\n                self.car_list.remove(car)\n                print(f\"Car {car_id} removed successfully!\")\n                return\n\n        print(f\"No car with the id {car_id} was found!\")\n\n    def __str__(self):\n        \"\"\"\n        Creates a string representation of a CarList object.\n        :return: The cars in the list as a string\n        \"\"\"\n        return \"\\n\" + \" \".join([str(car) for car in self.car_list])\n\n    def __len__(self):\n        \"\"\"\n        Get the length of the car_list\n        :return: The length of the car list\n        \"\"\"\n        return len(self.car_list)\n\n\ndef main():\n    \"\"\"\n    The driver code to test the CarList class.\n    \"\"\"\n    car_list = CarList()\n\n    car_list.add_car(Car(1, \"Honda\", 2012, \"gray\", 12430))\n    car_list.add_car(Car(2, \"Toyota\", 2005, \"black\", 25430))\n    car_list.add_car(Car(3, \"Ford\", 1999, \"red\", 19430))\n\n    try:\n        car_list.add_car(\"This is a string object\")\n    except ValueError as e:\n        print(e)\n\n    car_list.add_car(Car(1, \"Used id\", 1999, \"red\", 19430))\n\n    print(f\"Length of list before you remove a car {len(car_list)}\")\n\n    car_list.remove_car_by_id(1)\n\n    print(f\"Length of list after you remove a car {len(car_list)}\")\n\n    car_list.remove_car_by_id(100000)\n\n    print(car_list)\n\nmain()",
+            "CopyCode": "# Name: Michael Totaro\n# Date: 10/24/2022\n# Purpose: Create and demonstrate CarList class (Not a real assignment).\n# collaborators/resources: None other than Dr. Pence\n\nclass Car:\n\t\"\"\" This class is a basic car object. \"\"\"\n\tdef __init__(self, car_id, company, year, color, miles):\n\t\t\"\"\"\n\t\tInitializer for a Car object.\n\t\t:param id: Id of the car\n\t\t:param company: Maker of the car\n\t\t:param year: Year car was made\n\t\t:param color: Color of the car\n\t\t:param miles: Miles driven by the car\n\t\t\"\"\"\n\t\tself.id = car_id\n\t\tself.company = company\n\t\tself.year = year\n\t\tself.color = color\n\t\tself.miles = miles\n\n\tdef __str__(self):\n\t\t\"\"\"\n\t\tCreates a string representation of a car object.\n\t\t:return: string representation of a car object.\n\t\t\"\"\"\n\t\tcar_str = (f\"\\nCar {self.id}\\n\"\n\t\t\t\t   f\"Company: {self.company}\\n\"\n\t\t\t\t   f\"Year: {self.year}\\n\"\n\t\t\t\t   f\"Color: {self.color}\\n\"\n\t\t\t\t   f\"Miles: {self.miles}\")\n\n\t\treturn car_str + \"\\n\"\n\n\nclass CarList:\n\t\"\"\"\n\tThis class is data structure of car objects.\n\tYou can add, remove, and print the list.\n\t\"\"\"\n\tdef __init__(self):\n\t\t\"\"\"\n\t\tInitializes an empty car list\n\t\t\"\"\"\n\t\tself.car_list = []\n\n\tdef add_car(self, new_car):\n\t\t\"\"\"\n\t\tAdds a car to the car list if conditions are met.\n\t\t:param new_car: Car object to be added to the list\n\t\t:return: True if the car was added successfully else false.\n\t\t:raises ValueError: If parameter is not an instance of a car object\n\t\t\"\"\"\n\n\t\tif not isinstance(new_car, Car):\n\t\t\traise ValueError(\"Parameter must be an instance of a car object.\")\n\n\t\tfor car in self.car_list:\n\t\t\tif car.id == new_car.id:\n\t\t\t\tprint(f\"A car in the list already has the id '{new_car.id}'!\")\n\t\t\t\treturn False\n\n\t\tself.car_list.append(new_car)\n\n\t\treturn True\n\n\tdef remove_car_by_id(self, car_id):\n\t\t\"\"\"\n\t\tRemoves car in the list by id.\n\t\t:param car_id: The id of the car to be removed.\n\t\t:raises ValueError: If parameter is not an int.\n\t\t\"\"\"\n\n\t\tif not isinstance(car_id, int):\n\t\t\traise ValueError(\"car_id must be an integer.\")\n\n\t\tfor car in self.car_list:\n\t\t\tif car.id == car_id:\n\t\t\t\tself.car_list.remove(car)\n\t\t\t\tprint(f\"Car {car_id} removed successfully!\")\n\t\t\t\treturn\n\n\t\tprint(f\"No car with the id {car_id} was found!\")\n\n\tdef __str__(self):\n\t\t\"\"\"\n\t\tCreates a string representation of a CarList object.\n\t\t:return: The cars in the list as a string\n\t\t\"\"\"\n\t\treturn \"\\n\" + \" \".join([str(car) for car in self.car_list])\n\n\tdef __len__(self):\n\t\t\"\"\"\n\t\tGet the length of the car_list\n\t\t:return: The length of the car list\n\t\t\"\"\"\n\t\treturn len(self.car_list)\n\n\ndef main():\n\t\"\"\"\n\tThe driver code to test the CarList class.\n\t\"\"\"\n\tcar_list = CarList()\n\n\tcar_list.add_car(Car(1, \"Honda\", 2012, \"gray\", 12430))\n\tcar_list.add_car(Car(2, \"Toyota\", 2005, \"black\", 25430))\n\tcar_list.add_car(Car(3, \"Ford\", 1999, \"red\", 19430))\n\n\ttry:\n\t\tcar_list.add_car(\"This is a string object\")\n\texcept ValueError as e:\n\t\tprint(e)\n\n\tcar_list.add_car(Car(1, \"Used id\", 1999, \"red\", 19430))\n\n\tprint(f\"Length of list before you remove a car {len(car_list)}\")\n\n\tcar_list.remove_car_by_id(1)\n\n\tprint(f\"Length of list after you remove a car {len(car_list)}\")\n\n\tcar_list.remove_car_by_id(100000)\n\n\tprint(car_list)\n\nmain()"
+        },
+        {
+            "Name": "Install Homebrew on MacOS",
+            "Description": "Run these two commands in your terminal to install homebrew. The first will install XCode Command Line Tools, the second will install homebrew.",
+            "Language": "Command",
+            "FormatCode": "xcode-select --install\n\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/\nHEAD/install.sh)\"",
+            "CopyCode": "xcode-select --install\n\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/\nHEAD/install.sh)\""
+        }
+    ],
+    "CodeLinks": [
+        {
+            "Name": "Python",
+            "link": "https://peps.python.org/pep-0008/"
+        },
+        {
+            "Name": "Java",
+            "link": "https://google.github.io/styleguide/javaguide.html"
+        }
+    ]
+}
+

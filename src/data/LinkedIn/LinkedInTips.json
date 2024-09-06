@@ -1,0 +1,79 @@
+{
+    "Text": [
+        {
+            "page": "LinkedIn Tips",
+            "desc": "These are tips I have for how to use LinkedIn effectively and have a good experience."
+        }
+    ],
+    "LinkedInTips": [
+        {
+            "Tip": "Tip 1",
+            "Name": "Setup Job Alerts",
+            "Explanation": "Job alerts are used to notify you about new job openings. ",
+            "Instructions": [
+                "Open the LinkedIn app",
+                "Search for a company you'd like to work for (Ex. nCino)",
+                "Go to the jobs tab -> https://www.linkedin.com/company/ncino-inc-/Jobs/",
+                "Press the \"Create job alert\" button.",
+                "In the job title field type \"Software Engineer\"",
+                "For job location type \"Wilmington, North Carolina\"",
+                "When you're done click the blue job alert button."
+            ]
+        },
+        {
+            "Tip": "Tip 2",
+            "Name": "Set Viewing Options",
+            "Explanation": "This will determine what people see when you view their profile. I'd recommend private mode.",
+            "Instructions": [
+                "Go to this link -> https://www.linkedin.com/mypreferences/d/profile-viewing-options",
+                "Select \"Private mode\" (or whatever mode you want people to see when you view their profile)",
+                "Click the back button once done."
+            ]
+        },
+        {
+            "Tip": "Tip 3",
+            "Name": "Setup Your Profile",
+            "Explanation": "Set up your profile so recruiters can learn more about you and your work experience. Go to this (page)[/LinkedIn/SetUpProfile] for details."
+        },
+        {
+            "Tip": "Tip 4",
+            "Name": "Setup Notification Settings",
+            "Explanation": "",
+            "Instructions": [
+                "Go to this LinkedIn page -> https://www.linkedin.com/mypreferences/d/categories/notifications. To set up your notification settings",
+                "I'd recommend having all notifications on for job alerts."
+            ]
+        },
+        {
+            "Tip": "Tip 5",
+            "Name": "Connect With People",
+            "Explanation": "",
+            "Instructions": [
+                "To connect with people simply look their name up in the search bar on the [feed page](https://www.linkedin.com/feed/).",
+                "Click their profile in the results.",
+                "Near the top of their profile click the blue \"Connect\" button."
+            ]
+        },
+        {
+            "Tip": "Tip 6",
+            "Name": "Try LinkedIn Premium for Free",
+            "Explanation": "LinkedIn premium isn't worth the money in my opinion. However, LinkedIn does give you one month free, so I'd definitely recommend trying it out and coming to your own conclusions."
+        },
+        {
+            "Tip": "Tip 7",
+            "Name": "Try to Get 500+ Connections on LinkedIn",
+            "Explanation": "Doing this will help boost you in the algorithm, look good to recruiters, and help expand your network."
+        },
+        {
+            "Tip": "Tip 8",
+            "Name": "Use the \"People\" Tab",
+            "Explanation": "If you go to a companies page, and go to the \"People\" tab you can see information about employees who work there. This information includes what employees went to your school, how many work in engineering, etc. That’s how I got a lot of information on this site.",
+            "Instructions": [
+                "For this example lets use nCino, Inc.",
+                "Go to the [People Tab](https://www.linkedin.com/company/ncino-inc-/people/) of the company website.",
+                "Look around the page to learn more about the people from the company.",
+                "Note: In my opinion, the People tab looks better and is more intuitive to use on the mobile app."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,229 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup an Amazon Web Services Account",
+            "desc": "How to setup an Amazon Web Services Account and the CLI tool.",
+            "ref": "aws"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Set up a free tier Amazon Web Services account using this [link](https://aws.amazon.com/free/?gclid=CjwKCAjw3NyxBhBmEiwAyofDYYFQZej0RiT-m46TmesiuBYNA9U1c6Zi1zmORjE_YcZEmIzXp0LkdxoCdZ0QAvD_BwE&trk=7541ebd3-552d-4f98-9357-b542436aa66c&sc_channel=ps&ef_id=CjwKCAjw3NyxBhBmEiwAyofDYYFQZej0RiT-m46TmesiuBYNA9U1c6Zi1zmORjE_YcZEmIzXp0LkdxoCdZ0QAvD_BwE:G:s&s_kwcid=AL!4422!3!651751058790!e!!g!!aws%20free%20account!19852662149!145019243897&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all). Follow the prompts, it's pretty straight forward. When you get to the \"Sign in\" screen choose \"Root User\". Note that a $1 charge will temporarily be placed on your card to prove that it's valid. It might not appear immediately."
+        },
+        {
+            "id": 2,
+            "instruction": "Once you get to \"Console Home\" page click on the region next to your name in the top-right corner. It might say \"Ohio\". Make sure it says \"US East (N. Virginia)\" us-east-1."
+        },
+        {
+            "id": 3,
+            "instruction": "Now click your name in the top-right corner. In the drop down menu click \"Account\". You should be taken to a page that says \"Complete sign-up\". If you don't think you're on the right page try clicking [here](https://us-east-1.console.aws.amazon.com/console/home?region=us-east-1#)."
+        },
+        {
+            "id": 4,
+            "instruction": "On this page click the \"Complete your AWS registration\" button. Then fill out your billing information. Note you will NOT be charged for usage below AWS Free Tier Limits. They might hold $1 until they verify your identity. Press \"Continue\" and do the necessary verifications."
+        },
+        {
+            "id": 5,
+            "instruction": "Once you get to the page titled \"Sign up for AWS\" choose the \"Basic support - Free\" plan. Then press the \"Complete sign up\" button."
+        },
+        {
+            "id": 6,
+            "instruction": "Wait a second to receive the confirmation email. After you receive it briefly read it and continue to the next steps."
+        },
+        {
+            "id": 7,
+            "instruction": "After you read the email go [here](https://us-east-1.console.aws.amazon.com/billing/home#/) account. To see your credentials. We're about to setup the AWS in your terminal and we'll need them."
+        },
+        {
+            "id": 8,
+            "instruction": "Now open your terminal and run the following command to download the installer.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "curl \"https://awscli.amazonaws.com/AWSCLIV2.pkg\" -o \"AWSCLIV2.pkg\"",
+                "CopyCode": "curl \"https://awscli.amazonaws.com/AWSCLIV2.pkg\" -o \"AWSCLIV2.pkg\""
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "Now install the package. When prompted for a password type the password you use to sign on to your computer.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "sudo installer -pkg AWSCLIV2.pkg -target /",
+                "CopyCode": "sudo installer -pkg AWSCLIV2.pkg -target /"
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Confirm it's correctly installed by running the following command. This might take a second to output info.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "aws --version",
+                "CopyCode": "aws --version"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "Now we want to configure the AWS Command Line Interface tool."
+        },
+        {
+            "id": 12,
+            "instruction": "Start by opening this [link](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/security_credentials)."
+        },
+        {
+            "id": 13,
+            "instruction": "If an alert component is being displayed titled \"You don't have MFA assigned\" click on the button titled \"Assign MFA\"."
+        },
+        {
+            "id": 14,
+            "instruction": "Fill out the fields. I'd suggest you use your phones for your MFA Device. Just name it something like \"JohnsPhone\" (your name phone). Note that no spaces are allowed in the name."
+        },
+        {
+            "id": 15,
+            "instruction": "Open duo mobile on your phone then scan the QR code. Click on the link in step 2 to view it."
+        },
+        {
+            "id": 16,
+            "instruction": "In your duo mobile app make the account name something like \"John's AWS\"."
+        },
+        {
+            "id": 17,
+            "instruction": "Fill in the first passcode, then wait for another passcode to generate and fill in the second password field on their website."
+        },
+        {
+            "id": 18,
+            "instruction": "Now go to this [link](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/home). To setup up an IAM user. This part of the [video](https://youtu.be/DOkxFa_r8eo?si=F7h-T--x4QKwblMj&t=557) does a good job demonstrating what we're about to do in steps 19-36."
+        },
+        {
+            "id": 19,
+            "instruction": "Click on \"User groups\" in the left-hand side. Then click \"Create group\"."
+        },
+        {
+            "id": 20,
+            "instruction": "In the \"User group name\" filed type \"administrator\"."
+        },
+        {
+            "id": 21,
+            "instruction": "In the \"Attach permissions policies\" cards search field look up the following. \"AdministratorAccess\" and \"AWSBudgetsActionsWithAWSResourceControlAccess\". Select the boxes on the left-side of the two results. When you're done click \"Create user group\"."
+        },
+        {
+            "id": 22,
+            "instruction": "Now on the left-hand side go to \"Users\" and click \"Create user\"."
+        },
+        {
+            "id": 23,
+            "instruction": "In the \"User name\" field type \"testuser\". Then select \"Provide user access to the AWS Management Console - optional\". Then choose \"I want to create an IAM user\". Click \"custom password\" and create a new password. The unselect \"Users must create a new password at next sign-in - Recommended\" then click \"Next\"."
+        },
+        {
+            "id": 24,
+            "instruction": "Then in the next page, keep \"Add user to group\" selected. In the \"User groups\" table select \"administrator\" then click \"Next\"."
+        },
+        {
+            "id": 25,
+            "instruction": "Scroll down and in the \"Tags - optional\" card press \"Add new tag\". In the \"Key\" field enter \"Name\" and in the \"Value - optional\" field enter \"adminuser\". Then click on \"Create user\"."
+        },
+        {
+            "id": 26,
+            "instruction": "Click \"Download .csv file\", then click \"Return to users list\"."
+        },
+        {
+            "id": 27,
+            "instruction": "In the table click on \"testuser\" in the User Name column."
+        },
+        {
+            "id": 28,
+            "instruction": "In the new page, click on the \"Security credentials\" tab. Scroll down and in the \"Multi-factor authentication (MFA)\" click on the Assign MFA device button."
+        },
+        {
+            "id": 29,
+            "instruction": "Enter the Device name. Something Like \"JohnsPhoneTwo\" (your name phone two). It can't be the same you used earlier. It has to be one word. Make sure \"Authenticator app\" is selected then press \"Next\"."
+        },
+        {
+            "id": 30,
+            "instruction": "Open duo mobile on your phone then scan the QR code. Click on the link in step 2 to view it."
+        },
+        {
+            "id": 31,
+            "instruction": "In your duo mobile app make the account name something like \"John's AWS\" (your name AWS)."
+        },
+        {
+            "id": 32,
+            "instruction": "Fill in the first passcode, then wait for another passcode to generate and fill in the second field on their website. Then click \"Add MFA\"."
+        },
+        {
+            "id": 33,
+            "instruction": "Now click \"Create access key\" under the \"Access keys\" card."
+        },
+        {
+            "id": 34,
+            "instruction": "Then in the new page under \"Use case\" select \"Command Line Interface (CLI)\". Then scroll down under \"Confirmation\" check the box. Then press \"Next\"."
+        },
+        {
+            "id": 35,
+            "instruction": "In the \"Description tag value\" field type \"your_first_name_iam_user_cli_access\". Then click \"Create access key\"."
+        },
+        {
+            "id": 36,
+            "instruction": "In the next page, scroll down and click \"Download .csv file\" and then press \"Done\" next to it."
+        },
+        {
+            "id": 37,
+            "instruction": "Go to this [link](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/users/details/testuser?section=security_credentials) to see your IAM account information."
+        },
+        {
+            "id": 38,
+            "instruction": "Now open your terminal and type the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "aws configure",
+                "CopyCode": "aws configure"
+            }
+        },
+        {
+            "id": 39,
+            "instruction": "Enter your credentials from the \"testuser_accessKeys.csv\" file you just downloaded. \"Default region name [None]\" should be \"us-east-1\". Then when prompted for \"Default output format [None]\" put \"json\"."
+        },
+        {
+            "id": 40,
+            "instruction": "Run the following command to open your bash file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "nano ~/.bash_profile",
+                "CopyCode": "nano ~/.bash_profile"
+            }
+        },
+        {
+            "id": 41,
+            "instruction": "Paste the following line in the bash_profile \"export PATH=~/.local/bin:$PATH\". To exit do \"control + o\". Then \"return\". Then \"control + x\".",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Copy and Paste",
+                "FormatCode": "export PATH=~/.local/bin:$PATH",
+                "CopyCode": "export PATH=~/.local/bin:$PATH"
+            }
+        },
+        {
+            "id": 42,
+            "instruction": "Run the following command",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "source ~/.bash_profile",
+                "CopyCode": "source ~/.bash_profile"
+            }
+        }
+    ]
+}

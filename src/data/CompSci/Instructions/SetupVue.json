@@ -1,0 +1,215 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup a Vue.js Project",
+            "desc": "How to setup a Vue.js project that uses Vite.",
+            "ref": "vue"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Install Vite.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm install -g create-vite",
+                "CopyCode": "npm install -g create-vite"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "Note: You can skip this step if you want to setup your project manually. Go to Create a &Project Templates Folder&[TemplatesLink] and complete the instructions. It will give you a folder you can use to download this Vue project structure. After you're done, copy that folder structure using the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cp -R templates/vue-project /path/to/destination/projects-new-name",
+                "CopyCode": "cp -R templates/vue-project /path/to/destination/projects-new-name"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Create a new Vue.js project. If you're prompted to install packages type \"y\". Note that \"vue-project\" will be the name of your project and you can change it to be whatever you want.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm init vite@latest vue-project -- --template vue",
+                "CopyCode": "npm init vite@latest vue-project -- --template vue"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Change into your project directory.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd vue-project",
+                "CopyCode": "cd vue-project"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Change into your project directory.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm install",
+                "CopyCode": "npm install"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Run the application to make sure everything's working. The page should say Vite + Vue. Press control + c to stop running locally.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm run dev",
+                "CopyCode": "npm run dev"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "Install vue-router while in your new project directory",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm install vue-router@4",
+                "CopyCode": "npm install vue-router@4"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "Change into the src directory.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd src",
+                "CopyCode": "cd src"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "Create the \"views\", \"router\", and \"utils\" directories in the src folder.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "mkdir -p views router utils",
+                "CopyCode": "mkdir -p views router utils"
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Delete unused assets and components.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "rm components/HelloWorld.vue;\nrm assets/vue.svg",
+                "CopyCode": "rm components/HelloWorld.vue;\nrm assets/vue.svg"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "Create the following files in your project.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "touch router/index.js;\ntouch components/RouterBtn.vue;\ntouch views/Home.vue;\ntouch views/SecondPage.vue",
+                "CopyCode": "touch router/index.js;\ntouch components/RouterBtn.vue;\ntouch views/Home.vue;\ntouch views/SecondPage.vue"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "In the \"router\" folder, paste the following code in the \"index.js\" file. Note that \"Home\" and \"SecondPage\" are just variable names. You could write something like \"import home-page from '../views/Home.vue'\" and have it still work. Save the file when you're finished (command + s).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "Vue",
+                "FormatCode": "import { createRouter, createWebHistory } from 'vue-router';\n\nimport Home from '../views/Home.vue';\nimport SecondPage from '../views/SecondPage.vue';\n\nconst routes = [\n    {\n\tpath: '/',\n\tcomponent: Home\n    },\n    {\n\tpath: '/second-page',\n\tcomponent: SecondPage\n    }\n]\n\nconst router = createRouter({\n     history: createWebHistory('/'),\n     routes\n});\n\nexport default router;",
+                "CopyCode": "import { createRouter, createWebHistory } from 'vue-router';\n\nimport Home from '../views/Home.vue';\nimport SecondPage from '../views/SecondPage.vue';\n\nconst routes = [\n\t{\n\t\tpath: '/',\n\t\tcomponent: Home\n\t},\n\t{\n\t\tpath: '/second-page',\n\t\tcomponent: SecondPage\n\t}\n]\n\nconst router = createRouter({\n\thistory: createWebHistory('/'),\n\troutes\n});\n\nexport default router;"
+            }
+        },
+        {
+            "id": 13,
+            "instruction": "Now open the \"main.js\" file in the top-most directory of the src folder. Delete the contents of the file and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "Vue",
+                "FormatCode": "import { createApp } from 'vue'\nimport App from './App.vue'\nimport router from './router'\n\ncreateApp(App).use(router).mount('#app');",
+                "CopyCode": "import { createApp } from 'vue'\nimport App from './App.vue'\nimport router from './router'\n\ncreateApp(App).use(router).mount('#app');"
+            }
+        },
+        {
+            "id": 14,
+            "instruction": "Paste the following code into the \"RouterBtn.vue\" file in your \"components\" folder in your \"src\" directory.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "Vue",
+                "FormatCode": "<template>\n      <router-link :to=\"path\" class=\"button\">\n\t  {{ buttonText }}\n      </router-link>\n</template>\n\n\n<script setup>\n\nconst props = defineProps({\n      path: {\n\t  type: String,\n\t  required: true\n      },\n      buttonText: {\n\t  type: String,\n\t  required: true\n      }\n});\n\n</script>\n\n\n<style scoped>\n\n.button {\n     display: inline-block;\n     padding: 10px 20px;\n     color: white;\n     background-color: #007bff;\n     border: none;\n     border-radius: 4px;\n     text-align: center;\n     text-decoration: none;\n     font-size: 16px;\n}\n\n.button:hover {\n     background-color: #0056b3;\n}\n\n</style>",
+                "CopyCode": "<template>\n\t<router-link :to=\"path\" class=\"button\">\n\t\t{{ buttonText }}\n\t</router-link>\n</template>\n\n\n<script setup>\n\nconst props = defineProps({\n\tpath: {\n\t\ttype: String,\n\t\trequired: true\n\t},\n\tbuttonText: {\n\t\ttype: String,\n\t\trequired: true\n\t}\n});\n\n</script>\n\n\n<style scoped>\n\n.button {\n\tdisplay: inline-block;\n\tpadding: 10px 20px;\n\tcolor: white;\n\tbackground-color: #007bff;\n\tborder: none;\n\tborder-radius: 4px;\n\ttext-align: center;\n\ttext-decoration: none;\n\tfont-size: 16px;\n}\n\n.button:hover {\n\tbackground-color: #0056b3;\n}\n\n</style>"
+            }
+        },
+        {
+            "id": 15,
+            "instruction": "Paste the following code in the \"Home.vue\" file in the \"views\" folder in your \"src\" directory.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "Vue",
+                "FormatCode": "<template>\n    <p class=\"title\">HOME PAGE</p>\n    <LinkBtn\n\t:path=\"'/second-page'\"\n\t:buttonText=\"'Go to 2nd page'\">\n    </LinkBtn>\n</template>\n\n\n<script setup>\nimport LinkBtn from '../components/RouterBtn.vue';\n</script>\n\n\n<style scoped>\n\n.title {\n   color: red;\n   font-family: Arial, sans-serif;\n}\n\n</style>",
+                "CopyCode": "<template>\n\t<p class=\"title\">HOME PAGE</p>\n\t<LinkBtn\n\t\t:path=\"'/second-page'\"\n\t\t:buttonText=\"'Go to 2nd page'\">\n\t</LinkBtn>\n</template>\n\n\n<script setup>\nimport LinkBtn from '../components/RouterBtn.vue';\n</script>\n\n\n<style scoped>\n\n.title {\n\tcolor: red;\n\tfont-family: Arial, sans-serif;\n}\n\n</style>"
+            }
+        },
+        {
+            "id": 16,
+            "instruction": "Paste the following code in the \"SecondPage.vue\" file in the same \"views\" folder.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "Vue",
+                "FormatCode": "<template>\n    <p class=\"title\">Second Page</p>\n    <LinkBtn\n\t:path=\"'/'\"\n\t:buttonText=\"'Go to Home page'\">\n    </LinkBtn>\n</template>\n\n\n<script setup>\nimport LinkBtn from '../components/RouterBtn.vue';\n</script>\n\n\n<style scoped>\n\n.title {\n   color: purple;\n   font-family: Arial, sans-serif;\n}\n\n</style>",
+                "CopyCode": "<template>\n\t<p class=\"title\">Second Page</p>\n\t<LinkBtn\n\t\t:path=\"'/'\"\n\t\t:buttonText=\"'Go to Home page'\">\n\t</LinkBtn>\n</template>\n\n\n<script setup>\nimport LinkBtn from '../components/RouterBtn.vue';\n</script>\n\n\n<style scoped>\n\n.title {\n\tcolor: purple;\n\tfont-family: Arial, sans-serif;\n}\n\n</style>"
+            }
+        },
+        {
+            "id": 17,
+            "instruction": "Go to the \"App.vue\" file in the src directory, then delete all the code in it. Copy and paste the following Vue Code in the file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "Vue",
+                "FormatCode": "<template>\n    <p class=\"test-header\">TEST WEBSITE</p>\n    <router-view />\n</template>\n\n\n<script setup>\n\n</script>\n\n\n<style>\n* {\n   padding: 0;\n   margin: 0;\n   box-sizing: border-box;\n}\n\n.test-header {\n   font-size: 25px;\n}\n\n</style>",
+                "CopyCode": "<template>\n\t<p class=\"test-header\">TEST WEBSITE</p>\n\t<router-view />\n</template>\n\n\n<script setup>\n\n</script>\n\n\n<style>\n* {\n\tpadding: 0;\n\tmargin: 0;\n\tbox-sizing: border-box;\n}\n\n.test-header {\n\tfont-size: 25px;\n}\n\n</style>"
+            }
+        },
+        {
+            "id": 18,
+            "instruction": "After you're done, save your code and run it using \"npm run dev\". I think this should be a good start to your project. Obviously you can delete and modify the files. The example files were just to show you how to set the project up.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm run dev",
+                "CopyCode": "npm run dev"
+            }
+        }
+    ]
+}

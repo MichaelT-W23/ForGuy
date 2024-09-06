@@ -1,0 +1,123 @@
+{
+    "Text": [
+        {
+            "page": "How to Get a Job",
+            "desc": "These are tips I have for getting a software engineering job."
+        }
+    ],
+    "Tips": [
+        {
+            "Name": "Possible Career Path",
+            "Description": "This is a possible career path you could take inspiration from.",
+            "Career Path": [
+                "In summer 2024 try to get a job at Datacor, Inc. or nCino. The job at \"Datacor, inc.\" is remote and pays. If interested contact me using the (form)[/ContactMe], I know a guy.",
+                "During your junior year work as a TAC Student Technician.",
+                "Apply to USAA in early September or Early October for summer 2025. The position is called \"IT Intern\". Look out for the one in Plano, TX.",
+                "Go to the Career fair in September and apply for Pearson as a backup.",
+                "During the second semester of your junior year work as an intern at Amotions, Inc. and get credit for CSC 498.",
+                "Work at USAA in summer 2025 (preferably Plano so I can help you with housing).",
+                "Graduate early in December 2025 and start applying to \"reach\" companies."
+
+            ]
+        },
+        {
+            "Name": "Apply to USAA",
+            "Description": "The application for USAA opens in early September for summer 2025. Keep an eye for it and apply as soon as it comes out. I'll help you through the (very easy) interview process. I helped a guy in the grade above you at UNCW get this internship. I also saw another person in the same grade get this internship. USAA is great company and not too difficult to get into.",
+            "Interview Process": [
+                "You apply in early-mid September or October for the \"IT Intern\" position. It's just a regular software engineering internship. We used Java and React.js mostly",
+                "A couple days after you apply you should get a super easy coding assessment to complete",
+                "After that you should get a short easy phone interview",
+                "About a week later you should get an invitation to a 1 hour zoom interview. It's super easy behavioral questions and like 2 EXTREMELY easy short basic coding questions.",
+                "After your interview you should receive an offer in like 2-3 weeks.",
+                "This probably more long and rigorous than it actually is. It's like 3 relatively short tasks."
+            ]
+        },
+        {
+            "Name": "Apply to Pearson",
+            "Description": "Pearson typically comes to the UNCW Career fair in September. You could apply there if you wanted.",
+            "Interview Process": "Just one super basic interview. They didn't ask me to write any code"
+        },
+        {
+            "Name": "Apply to Amotions",
+            "Description": "Fully remote startup in California. You could use this to get 3 credit hours for CSC 498.",
+            "Interview Process": "Just one interview. We just looked at personal projects I had made, talked about what technologies I was familiar with, and did an EXTREMELY easy coding problem in python."
+        },
+        {
+            "Name": "Do NOT listen to professors",
+            "Description": "I've had multiple comp sci professors basically say they're going to get people in the class an internships and they never follow through on their promises. Don't expect them to help you."
+        },
+        {
+            "Name": "Apply Early",
+            "Description": "If you're applying to jobs in summer 2025 or January 2026, you should start applying in August. Don't wait until the last minute to start applying for jobs."
+        },
+        {
+            "Name": "Set job alerts on LinkedIn and Handshake",
+            "Description": "Job alerts are emails that will be sent to you when a company has new job opportunities. These allow you to know what jobs are open and what companies are hiring. I also believe that the sooner you apply the better. I'd imagine a hiring manager would look mostly the first applications sent in, and not the 1000 others sent in 3 weeks after the job opening was posted."
+        },
+        {
+            "Name": "Be Timely",
+            "Description": "If you see a job posting you're interested in, apply as soon as possible. Don't wait 3 weeks before applying because probably a ton of other people will have applied by then or the posting might've closed."
+        },
+        {
+            "Name": "Be Patient",
+            "Description": "Being patient is key when you're applying for jobs. I have multiple examples.",
+            "Examples": [
+                "I applied for the Software Engineer I position at Cisco on August 2nd, 2023. I didn't hear back until February 14th, 2024 at which point I was already working at IBM.",
+                "It took me about a month to receive an offer from Pearson after my interview. I thought they had ghosted me.",
+                "Completing the USAA interview process took me about a month.",
+                "I did my virtual interview with the NSA on June 26th, 2023. I didn't receive an offer/hear back until September 19th, 2023. Totally out of the blue.",
+                "I got an offer from IBM 2 days after my second interview, so there are exceptions to the rule I guess. IBM's interview process was very fast and easy imo."
+            ]
+        },
+        {
+            "Name": "Be Consistent",
+            "Description": "Apply early and apply frequently. When I was looking for an internship in Fall 2023 for the summer, I would literally just go back to my apartment and apply to jobs for like a hour every single day."
+        },
+        {
+            "Name": "Don't get Discouraged",
+            "Description": "I must have applied to literally like a 1,000 companies when I was looking for internships and full-time jobs. I was rejected countless times, usually by companies much less \"prestigious\" then USAA, the NSA, and IBM."
+        },
+        {
+            "Name": "Don't let rejection get you down",
+            "Description": "Adding to the last point, keep being persistent and trying. Just because you got rejected from a position at a smaller company, doesn't mean a bigger, more prestigious company won't hire you. I got reject by like 1000 small, obscure companies before IBM hired me."
+        },
+        {
+            "Name": "Graduate Early",
+            "Description": "The competition won't be as intense if you start applying to jobs that start in January. If you graduate in May you'll be going up against a much larger applicant pool."
+        },
+        {
+            "Name": "Look for Entry-Level Roles",
+            "Description": "This is pretty intuitive, but looks for jobs that are entry-level, junior, new grad, etc."
+        },
+        {
+            "Name": "Go to the Career Fair",
+            "Description": "The UNCW computer science career fair is typically held in late September and February. I'd recommend going as companies interested in hiring UNCW students will be there."
+        },
+        {
+            "Name": "Make your Resume Look Good",
+            "Description": "Having a clean, well-organized, and professional resume can have a positive impact and help you stand out. I've had hiring managers in the past tell me how much they liked my resume. See (here)[/Jobs/ResumeTemplate] for the template I use."
+        },
+        {
+            "Name": "Check your UNCW Email Frequently",
+            "Description": "People from the UNCW computer science department sometimes send out SWE job opportunities in the Wilmington area. In particularly Ron Vetter and Shauna White."
+        },
+        {
+            "Name": "Visit Professor Websites",
+            "Description": "Professor websites typically have upcoming research opportunities that you can contact them about. An example would be Dr. Layman's [GitHub Pages](https://llayman.github.io/) website."
+        },
+        {
+            "Name": "Let Me Know If You Have Questions",
+            "Description": "If you have any questions about jobs or if you think I can help you in any way, do NOT hesitate to contact me. I'd be more than happy to help."
+        },
+        {
+            "Name": "Helpful Website Links", 
+            "Description": "These are websites I think you'd find helpful in your job search",
+            "Websites": [
+                "[LinkedIn](https://www.linkedin.com/feed/)",
+                "[HandShake](https://uncw.joinhandshake.com/stu/postings)",
+                "[Job Pulse: Internships](https://jobpulse.fyi/Software-Engineer-Internship)",
+                "[Job Pulse: Entry-level Full Time](https://jobpulse.fyi/Software-Engineer-NewGrad)"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "All views": [
+        {
+            "Name": "Where to Apply",
+            "Objects": [
+                {
+                    "Section": 1,
+                    "Fire": "water",
+                    "State": "Illinois"
+                },
+                {
+                    "Location": "Wilmington"
+                }
+            ]
+        },
+        {
+            "Name": "Contacts",
+            "Objects": [
+                {
+                    "Name": "Michael",
+                    "Link": "twenty28",
+                    "Friend": "Will"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,476 @@
+[
+    {
+        "id": 1,
+        "Emoji": "🏠",
+        "MenuName": "Home",
+        "Link": "/"
+    },
+    {
+        "id": 2,
+        "Emoji": "🧳",
+        "MenuName": "Where To Apply",
+        "Link": "/Jobs/WhereToApply"
+    },
+    {
+        "id": 3,
+        "Emoji": "📄",
+        "MenuName": "Resume Template",
+        "Link": "/Jobs/ResumeTemplate"
+    },
+    {
+        "id": 4,
+        "Emoji": "💡",
+        "MenuName": "How To Get a Job",
+        "Link": "/Jobs/HowToGetAJob"
+    },
+    {
+        "id": 5,
+        "Emoji": "🤝🏻",
+        "MenuName": "Offers I've Received",
+        "Link": "/Jobs/OffersReceived"
+    },
+    {
+        "id": 6,
+        "Emoji": "💬",
+        "MenuName": "Interview Tips",
+        "Link": "/jobs/InterviewTips"
+    },
+    {
+        "id": 7,
+        "Emoji": "🧭",
+        "MenuName": "Career Path Advice",
+        "Link": "/Jobs/CareerPathAdvice"
+    },
+    {
+        "id": 8,
+        "Emoji": "🌐",
+        "MenuName": "What Is LinkedIn?",
+        "Link": "/LinkedIn/WhatIsLinkedin"
+    },
+    {
+        "id": 9,
+        "Emoji": "🤳🏻",
+        "MenuName": "Setup a Profile",
+        "Link": "/LinkedIn/SetupProfile"
+    },
+    {
+        "id": 10,
+        "Emoji": "🔔",
+        "MenuName": "Setup Job Alerts",
+        "Link": "/LinkedIn/SetupJobAlerts"
+    },
+    {
+        "id": 11,
+        "Emoji": "🧐",
+        "MenuName": "LinkedIn Tips",
+        "Link": "/LinkedIn/LinkedinTips"
+    },
+    {
+        "id": 12,
+        "Emoji": "👤",
+        "MenuName": "Contacts",
+        "Link": "/LinkedIn/Contacts"
+    },
+    {
+        "id": 13,
+        "Emoji": "👍",
+        "MenuName": "Class Recommendations",
+        "Link": "/Classes/ClassRecommendations"
+    },
+    {
+        "id": 14,
+        "Emoji": "📝",
+        "MenuName": "CSC Descriptions",
+        "Link": "/Classes/CSCDescriptions"
+    },
+    {
+        "id": 15,
+        "Emoji": "👨🏻‍🏫",
+        "MenuName": "Classes I've Taken",
+        "Link": "/Classes/ClassesIveTaken"
+    },
+    {
+        "id": 16,
+        "Emoji": "❌",
+        "MenuName": "Classes To Avoid",
+        "Link": "/Classes/ClassesToAvoid"
+    },
+    {
+        "id": 17,
+        "Emoji": "💻",
+        "MenuName": "Comp Sci Minor",
+        "Link": "/Classes/CompSciMinor"
+    },
+    {
+        "id": 18,
+        "Emoji": "🏆",
+        "MenuName": "Useful Certifications",
+        "Link": "/Classes/Certifications"
+    },
+    {
+        "id": 19,
+        "Emoji": "🎨",
+        "MenuName": "Visual Studio Code",
+        "Link": "/CompSci/VisualStudioCode"
+    },
+    {
+        "id": 20,
+        "Emoji": "🐙",
+        "MenuName": "GitHub",
+        "Link": "/CompSci/GitHub"
+    },
+    {
+        "id": 21,
+        "Emoji": "⚙️",
+        "MenuName": "VSCode Settings",
+        "Link": "/CompSci/VSCodeSettings"
+    },
+    {
+        "id": 22,
+        "Emoji": "🧩",
+        "MenuName": "VSCode Extensions",
+        "Link": "/CompSci/VSCodeExtensions"
+    },
+    {
+        "id": 23,
+        "Emoji": "🚀",
+        "MenuName": "VSCode Shortcuts",
+        "Link": "/CompSci/VSCodeShortcuts"
+    },
+    {
+        "id": 24,
+        "Emoji": "🖼️",
+        "MenuName": "UI/UX Design Tips",
+        "Link": "/CompSci/UIDesignTips"
+    },
+    {
+        "id": 25,
+        "Emoji": "🛠️",
+        "MenuName": "Setup Projects",
+        "Link": "/CompSci/SetupProjects"
+    },
+    {
+        "id": 26,
+        "Emoji": "🌐",
+        "MenuName": "How to Install Node.js",
+        "Link": "/CompSci/SetupProjects/node"
+    },
+    {
+        "id": 27,
+        "Emoji": "🌁",
+        "MenuName": "How to Setup a Vue Project",
+        "Link": "/CompSci/SetupProjects/vue"
+    },
+    {
+        "id": 28,
+        "Emoji": "⚛️",
+        "MenuName": "How to Setup a React Project",
+        "Link": "/CompSci/SetupProjects/react"
+    },
+    {
+        "id": 29,
+        "Emoji": "🔺",
+        "MenuName": "How to Setup an Angular Project",
+        "Link": "/CompSci/SetupProjects/angular"
+    },
+    {
+        "id": 30,
+        "Emoji": "📁",
+        "MenuName": "Create a Project Templates Folder",
+        "Link": "/CompSci/SetupProjects/templates"
+    },
+    {
+        "id": 31,
+        "Emoji": "📜",
+        "MenuName": "Deploy a Vanilla JS Project to GitHub Pages",
+        "Link": "/CompSci/SetupProjects/gh-pages"
+    },
+    {
+        "id": 32,
+        "Emoji": "⚡️",
+        "MenuName": "Deploy a Vite Project to GitHub Pages",
+        "Link": "/CompSci/SetupProjects/vite-gh-pages"
+    },
+    {
+        "id": 33,
+        "Emoji": "☁️",
+        "MenuName": "How to Setup an Amazon Web Services Account",
+        "Link": "/CompSci/SetupProjects/aws"
+    },
+    {
+        "id": 34,
+        "Emoji": "🐳",
+        "MenuName": "How to Install and Setup Docker",
+        "Link": "/CompSci/SetupProjects/docker"
+    },
+    {
+        "id": 35,
+        "Emoji": "🧪",
+        "MenuName": "How to Make a Simple REST Api using Vue, Flask and SQLite3",
+        "Link": "/CompSci/SetupProjects/flask-sqlite3"
+    },
+    {
+        "id": 36,
+        "Emoji": "🐍",
+        "MenuName": "Deploy the Vue, Flask and SQLite3 app to PythonAnywhere",
+        "Link": "/CompSci/SetupProjects/deploy-sqlite"
+    },
+    {
+        "id": 37,
+        "Emoji": "🧰",
+        "MenuName": "How to Make a Complex Rest API using Vue, Flask and PostgreSQL",
+        "Link": "/CompSci/SetupProjects/flask-PostgreSQL"
+    },
+    {
+        "id": 38,
+        "Emoji": "🚀",
+        "MenuName": "Deploy the Vue, Flask and PostgreSQL app to Amazon Web Services",
+        "Link": "/CompSci/SetupProjects/deploy-PostgreSQL"
+    },
+    {
+        "id": 39,
+        "Emoji": "🚀",
+        "MenuName": "Deploy the React, Spring Boot and MySQL app to Amazon Web Services",
+        "Link": "/CompSci/SetupProjects/deploy-mysql"
+    },
+    {
+        "id": 40,
+        "Emoji": "🗄️",
+        "MenuName": "How to Make a Complex REST Api using React, Spring Boot and MySQL",
+        "Link": "/CompSci/SetupProjects/complex-mysql"
+    },
+    {
+        "id": 41,
+        "Emoji": "🍃",
+        "MenuName": "How to Make a Simple REST Api using React, Spring Boot and H2",
+        "Link": "/CompSci/SetupProjects/react-spring"
+    },
+    {
+        "id": 42,
+        "Emoji": "🦸🏻‍♂️",
+        "MenuName": "Deploy the React, Spring Boot and H2 app to Heroku",
+        "Link": "/CompSci/SetupProjects/deploy-spring"
+    },
+    {
+        "id": 43,
+        "Emoji": "✈️",
+        "MenuName": "How to Setup a JavaFX Project (Intellij IDEA)",
+        "Link": "/CompSci/SetupProjects/intellij"
+    },
+    {
+        "id": 44,
+        "Emoji": "🌑",
+        "MenuName": "How to Setup a JavaFX Project (Eclipse)",
+        "Link": "/CompSci/SetupProjects/eclipse"
+    },
+    {
+        "id": 45,
+        "Emoji": "🌎",
+        "MenuName": "How to Setup Cisco Secure Client and a VPN",
+        "Link": "/CompSci/SetupProjects/cisco"
+    },
+    {
+        "id": 46,
+        "Emoji": "🐘",
+        "MenuName": "How to Setup a PHP and MySQL Project for UNCW",
+        "Link": "/CompSci/SetupProjects/php"
+    },
+    {
+        "id": 47,
+        "Emoji": "🎥",
+        "MenuName": "How to Setup TikTok Downloader",
+        "Link": "/CompSci/SetupProjects/tiktok"
+    },
+    {
+        "id": 48,
+        "Emoji": "📺",
+        "MenuName": "How to Setup YouTube Downloader",
+        "Link": "/CompSci/SetupProjects/youtube"
+    },
+    {
+        "id": 49,
+        "Emoji": "🔍",
+        "MenuName": "How to Setup a Google API Project",
+        "Link": "/CompSci/SetupProjects/google-api"
+    },
+    {
+        "id": 50,
+        "Emoji": "📖",
+        "MenuName": "How to Setup a Reddit API Project",
+        "Link": "/CompSci/SetupProjects/reddit-api"
+    },
+    {
+        "id": 51,
+        "Emoji": "🎧",
+        "MenuName": "How to Setup a Spotify API Project",
+        "Link": "/CompSci/SetupProjects/spotify-api"
+    },
+    {
+        "id": 52,
+        "Emoji": "💬",
+        "MenuName": "How to Setup an OpenAI API Project",
+        "Link": "/CompSci/SetupProjects/openai-api"
+    },
+    {
+        "id": 53,
+        "Emoji": "📊",
+        "MenuName": "How to Setup a LinkedIn API Project",
+        "Link": "/CompSci/SetupProjects/linkedin-api"
+    },
+    {
+        "id": 54,
+        "Emoji": "🤖",
+        "MenuName": "How to Create a Reddit Bot",
+        "Link": "/CompSci/SetupProjects/reddit-bot"
+    },
+    {
+        "id": 55,
+        "Emoji": "🚀",
+        "MenuName": "How to Deploy a Reddit Bot on AWS",
+        "Link": "/CompSci/SetupProjects/reddit-bot-aws"
+    },
+    {
+        "id": 56,
+        "Emoji": "🐦",
+        "MenuName": "How to Setup an iOS app with SwiftUI and Firebase",
+        "Link": "/CompSci/SetupProjects/swift-firebase"
+    },
+    {
+        "id": 57,
+        "Emoji": "🏎️",
+        "MenuName": "How to Setup SwiftData in a SwiftUI project",
+        "Link": "/CompSci/SetupProjects/swift-data"
+    },
+    {
+        "id": 58,
+        "Emoji": "📱",
+        "MenuName": "How to Run an iOS app in Developer Mode",
+        "Link": "/CompSci/SetupProjects/developer-mode"
+    },
+    {
+        "id": 59,
+        "Emoji": "🧑🏻‍🚀",
+        "MenuName": "How to Setup and Use Postman",
+        "Link": "/CompSci/SetupProjects/postman"
+    },
+    {
+        "id": 60,
+        "Emoji": "💾",
+        "MenuName": "Interact with a Flash Drive Using Python",
+        "Link": "/CompSci/SetupProjects/flash-drive"
+    },
+    {
+        "id": 61,
+        "Emoji": "📡",
+        "MenuName": "How to Setup a Python Server",
+        "Link": "/CompSci/SetupProjects/python-server"
+    },
+    {
+        "id": 62,
+        "Emoji": "⚙️",
+        "MenuName": "How to Setup a Node Server",
+        "Link": "/CompSci/SetupProjects/node-server"
+    },
+    {
+        "id": 63,
+        "Emoji": "📬",
+        "MenuName": "How to Setup Email.js in a Project",
+        "Link": "/CompSci/SetupProjects/emailjs"
+    },
+    {
+        "id": 64,
+        "Emoji": "🍎",
+        "MenuName": "How to Interact with iCloud using Python",
+        "Link": "/CompSci/SetupProjects/pyicloud"
+    },
+    {
+        "id": 65,
+        "Emoji": "🔐",
+        "MenuName": "How to Setup OAuth Authentication",
+        "Link": "/CompSci/SetupProjects/oauth"
+    },
+    {
+        "id": 66,
+        "Emoji": "📊",
+        "MenuName": "How to Populate a SQLite3 Database",
+        "Link": "/CompSci/SetupProjects/basic-sqlite"
+    },
+    {
+        "id": 67,
+        "Emoji": "📈",
+        "MenuName": "How to Use Excel with Python",
+        "Link": "/CompSci/SetupProjects/excel"
+    },
+    {
+        "id": 68,
+        "Emoji": "🌈",
+        "MenuName": "How to Add a Language to the Prism Library",
+        "Link": "/CompSci/SetupProjects/prism"
+    },
+    {
+        "id": 69,
+        "Emoji": "🐍",
+        "MenuName": "How to Setup an Executable Python Script",
+        "Link": "/CompSci/SetupProjects/executable-python"
+    },
+    {
+        "id": 70,
+        "Emoji": "🖥️",
+        "MenuName": "Comp Sci Tips",
+        "Link": "/CompSci/CompSciTips"
+    },
+    {
+        "id": 71,
+        "Emoji": "🧘🏻",
+        "MenuName": "General Tips",
+        "Link": "/Other/GeneralTips"
+    },
+    {
+        "id": 72,
+        "Emoji": "📲",
+        "MenuName": "Apps To Download",
+        "Link": "/Other/AppsToDownload"
+    },
+    {
+        "id": 73,
+        "Emoji": "❤️",
+        "MenuName": "CS Stuff I Like",
+        "Link": "/Other/CompSciStuff"
+    },
+    {
+        "id": 74,
+        "Emoji": "⌨️",
+        "MenuName": "Terminal Commands",
+        "Link": "/Other/TerminalCommands"
+    },
+    {
+        "id": 75,
+        "Emoji": "⚡️",
+        "MenuName": "Keyboard Shortcuts",
+        "Link": "/Other/KeyboardShortcuts"
+    },
+    {
+        "id": 76,
+        "Emoji": "😂",
+        "MenuName": "Memes",
+        "Link": "/Other/Memes"
+    },
+    {
+        "id": 77,
+        "Emoji": "📸",
+        "MenuName": "UNCW Pictures",
+        "Link": "/Other/UncwPics"
+    },
+    {
+        "id": 78,
+        "Emoji": "✉️",
+        "MenuName": "Contact Me",
+        "Link": "/ContactMe"
+    },
+    {
+        "id": 79,
+        "Emoji": "📜",
+        "MenuName": "Format Code",
+        "Link": "/FormatCode"
+    }
+]

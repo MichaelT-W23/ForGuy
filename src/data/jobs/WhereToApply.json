@@ -1,0 +1,2508 @@
+{
+    "text": [
+        {
+            "page": "Where To Apply",
+            "toggleQuestion": "Why did I choose these companies?",
+            "toggleDescription": "This is basically just a giant compilation of companies where I saw UNCW students/alumni working as Software Engineers.",
+            "searchText": "Search Companies By Location..."
+        }
+    ],
+    "Companies": [
+        {
+            "Name": "USAA",
+            "Location": "Plano, Texas or San Antonio, Texas",
+            "LinkedIn": "https://www.linkedin.com/company/usaa/jobs/",
+            "Handshake": "https://uncw.joinhandshake.com/stu/employers/18568#jobs",
+            "Contact": "",
+            "Tips": "The official name of this SWE position is \"IT Intern\". Set up notifications via handshake for USAA if you're interested. I think the San Antonio summer application comes out in early-mid September. The Plano one comes out in early-mid October. Apply as soon as the application comes out and I think your chances of getting the job will be pretty high. I could help you through the interview process, and if you did your internship in Plano I could help you with housing. You could also set job alerts using this link -> [Here](https://www.usaajobs.com/). Go to the bottom section of the page titled \"Join our talent community\" and enter your information to subscribe to their job alert mailing list. Also the return offer rate for full-time positions at USAA is VERY high (~85%) so keep that in mind through the process. This is a very fun, easy, low-stress internship with lots of great learning and networking opportunities. You'll meet a lot of other college kids in the same boat as you, which I think is good.",
+            "Pay": "$25.75 per hour"
+        },
+        {
+            "Name": "Pearson",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/pearson/jobs/",
+            "Contact": "clarisse.cortez@pearson.com (Clarisse Cortez)",
+            "Tips": "Usually Pearson appears at the UNCW Career fair, so apply there or beforehand online. Also it took around month after my interview to hear back so be patient.",
+            "Pay": "$30.00 an hour"
+        },
+        {
+            "Name": "Datacor, Inc.",
+            "Location": "Florham Park, New Jersey",
+            "LinkedIn": "https://www.linkedin.com/company/datacorinc/jobs/",
+            "Contact": "I know a guy. Email me if interested using the Contact Tab.",
+            "Tips": "This is a remote position.",
+            "Pay": ""
+        },
+        {
+            "Name": "H&R Block",
+            "Location": "Kansas City, Missouri",
+            "LinkedIn": "https://www.linkedin.com/company/h&r-block/jobs/",
+            "Handshake": "https://uncw.joinhandshake.com/stu/employers/43193",
+            "Contact": "mallory.norris@hrblock.com (Mallory Norris)",
+            "Tips": "I got this job through handshake, so set alerts there if you're interested.",
+            "Pay": ""
+        },
+        {
+            "Name": "National Security Agency",
+            "Location": "Fort G. Meade, Maryland",
+            "LinkedIn": "https://www.linkedin.com/company/national-security-agency/jobs/",
+            "Contact": "",
+            "Tips": "Apply way before the job starts so you have enough time to get a security clearance. I went through basically the entire process so I can help you. Mine took roughly 3 months. Also I took like 3 months after I did the video interview to hear back and get an offer, so be patient. Also, UNCW seems to have some sort of connection with the @NSA and DoD@[{ 'name': 'ImageView', 'params': { 'Name': 'NSA Pic', 'Description': 'UNCW is designated as a National Center of Academic Excellence in Cyber Defense Education (CAE-CDE) by the National Security Agency and Department of Homeland Security. Link -> www.uncw.edu/ccde. (I took this picture in Congdon Hall)', 'Pic': 'NSA.png'} }].",
+            "Pay": "The full-time SWE position offer I received paid $81,233 a year."
+        },
+        {
+            "Name": "Department Of Defense",
+            "Location": "Washington DC - Baltimore Area",
+            "LinkedIn": "https://www.linkedin.com/company/deptofdefense/jobs/",
+            "Contact": "",
+            "Tips": "Apply way before the job starts so you have enough time to get a security clearance. I went through basically the entire process so I can help you. Mine took roughly 3 months. Also, UNCW seems to have some sort of connection with the @NSA and DoD@[{ 'name': 'ImageView', 'params': { 'Name': 'NSA Pic', 'Description': 'UNCW is designated as a National Center of Academic Excellence in Cyber Defense Education (CAE-CDE) by the National Security Agency and Department of Homeland Security. Link -> www.uncw.edu/ccde. (I took this picture in Congdon Hall)', 'Pic': 'NSA.png'} }].",
+            "Pay": ""
+        },
+        {
+            "Name": "Department Of State",
+            "Location": "Washington DC - Baltimore Area",
+            "LinkedIn": "https://www.linkedin.com/company/doscareers/jobs/",
+            "Contact": "DOSITRecruitment@state.gov",
+            "Tips": "Apply way before the job starts so you have enough time to get a security clearance. I went through basically the entire process so I can help you. Mine took roughly 3 months",
+            "Pay": ""
+        },
+        {
+            "Name": "nCino, Inc.",
+            "Location": "Wilmington, North Carolina",
+            "Handshake": "",
+            "LinkedIn": "https://www.linkedin.com/company/ncino-inc-/jobs/",
+            "Contact": "ren.yonker@ncino.com (Ren Yonker)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Ally",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/ally/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Truist",
+            "Location": "Charlotte, North Carolina and Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/truistfinancialcorporation/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "UNCW TAC Student Worker Technician",
+            "Location": "Wilmington, North Carolina (UNCW Campus)",
+            "Handshake": "https://uncw.joinhandshake.com/stu/employers/287948",
+            "LinkedIn": "Not Relevant, can't apply through LinkedIn.",
+            "Contact": "tachiring@uncw.edu",
+            "Tips": "TAC hires towards the end of the semester and you can apply on handshake. However, an easier way is to just email, \"tachiring@uncw.edu\" with your resume and class schedule. You don't need any technical background to perform this job and it's on campus. Note I've never had this job, but I know how the process works. I think this would be a great job to have while you're in school.",
+            "Pay": "$12-$14 dollars an hour. You start at $12 and can work your way up to $14."
+        },
+        {
+            "Name": "MarineQuest Summer Instructor 2024",
+            "Location": "Wilmington, North Carolina (UNCW Campus)",
+            "Handshake": "https://uncw.joinhandshake.com/stu/employers/340710",
+            "LinkedIn": "Not Relevant, can't apply through LinkedIn.",
+            "Contact": "Morgan O'Connell via handshake",
+            "Tips": "",
+            "Pay": "$800 per year."
+        },
+        {
+            "Name": "Amotions, Inc.",
+            "Location": "Burlingame, California",
+            "LinkedIn": "https://www.linkedin.com/company/amotions/jobs/",
+            "Contact": "pianpian@amotionsinc.com (Pianpian Xu Guthrie is her full name, she's the CEO)",
+            "Tips": "I'd write you a letter of recommendation and send Pianpian your resume if you want.",
+            "Pay": "This is an unpaid, remote internship. You can use it to get credit for CSC 498 (See the \"Recommendations\" page in the \"Classes\" tab for more info)"
+        },
+        {
+            "Name": "Fidelity Investments",
+            "Location": "Durham, North Carolina (RTP) and Jersey City, New Jersey",
+            "LinkedIn": "https://www.linkedin.com/company/fidelity-investments/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Cisco",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/cisco/jobs/",
+            "Contact": "iejames@cisco.com (Iesha James)",
+            "Tips": "Apply here for full-time jobs after you gain some experience through your internships.",
+            "Pay": ""
+        },
+        {
+            "Name": "IBM",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/fidelity-investments/jobs/",
+            "Contact": "Me. Use the (contact form)[/ContactMe] to express interest.",
+            "Tips": "Apply here for full-time jobs after you gain some experience through your internships.",
+            "Pay": ""
+        },
+        {
+            "Name": "Lenovo",
+            "Location": "Morrisville, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/lenovo/jobs/",
+            "Contact": "arosso@lenovo.com (Alex Rosso)",
+            "Tips": "I'm kind of friends with a hiring manager at Lenovo, which could be another contact. He might be able to write you a letter of recommendation. While that might help you slightly if you get an interview, I seriously wouldn't rely on that. I'll contact him if you want.",
+            "Pay": ""
+        },
+        {
+            "Name": "Bank of America",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/bank-of-america/jobs/",
+            "Contact": "bofajobas@bofa.com",
+            "Tips": "I think the name of the SWE internship is \"Global Technology Analyst\" or \"Technology Analyst\". You can send your resume, job title and requisition to the email above.",
+            "Pay": ""
+        },
+        {
+            "Name": "TIAA",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/tiaa/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "AvidXchange, Inc.",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/avidxchange-inc-/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Regions Bank",
+            "Location": "Charlotte, North Carolina and Atlanta, Georgia",
+            "LinkedIn": "https://www.linkedin.com/company/regions-financial-corporation/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Corning Incorporated",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/corning-incorporated/jobs/",
+            "Contact": "kevincolemanparker@gmail.com (Kevin Parker)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "New Potato Technologies",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/new-potato-technologies/jobs/",
+            "Contact": "tlarocco@newpotatotech.com (Thomas LaRocco)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Ohanafy",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/ohanafy/jobs/",
+            "Contact": "davis@ohanafy.com (Davis Bryson)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "NASA",
+            "Location": "Hampton, Virginia or Huntsville, Alabama or Cape Canaveral, Florida or Pasadena, California.",
+            "LinkedIn": "https://www.linkedin.com/company/nasa/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Lenovo LASR Program",
+            "Location": "Morrisville, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/lenovo/jobs/",
+            "Contact": "",
+            "Tips": "This is NOT a software engineering position. It seems to be a popular technology sales program. I put it here in case that's something you're interested in. I know a couple people from Weddington who did this program.",
+            "Pay": ""
+        },
+        {
+            "Name": "Honeywell",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/honeywell/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Live Oak Bank",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/live-oak-bank/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "New Hanover Regional Medical Center",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/new-hanover-regional-medical-center/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "GE",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/ge/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Garmin",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/garmin/jobs/",
+            "Contact": "Brandon.Bernal@garmin.com (Brandon Bernal)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Lenders Cooperative",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/lenders-cooperative/jobs/",
+            "Contact": "eflowers@lenderscooperative.com (Liz Flowers)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "TriTech Software Systems",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/tritech-software-systems/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Wells Fargo",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/wellsfargo/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Target - Tech Team Member",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/target/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Lapetus Solutions, Inc.",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/lapetus-solutions-inc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "ARA",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/ara/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Infosys",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/infosys/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Center For Marine Science",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/center-for-marine-science/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "HCL Technologies",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/hcltech/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Innovative Financial Group",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/innovative-financial-group-inc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "WillowTree, Inc.",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/willowtree/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Carova Labs",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/carovalabs/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "CommScope",
+            "Location": "Hickory, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/commscope/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Vidterra",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/vidterra/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Glacier Security",
+            "Location": "Annapolis, Maryland",
+            "LinkedIn": "https://www.linkedin.com/company/glacier-security/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Lumos Technologies",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/lumos-data/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Velocity Solutions",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/velocitysolutions/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Corning Credit Union",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/corning-credit-union/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Playerspace",
+            "Location": "Wrightsville Beach, North Carolina. Near Wilmington",
+            "LinkedIn": "https://www.linkedin.com/company/playerspace/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Outlier",
+            "Location": "San Francisco, California",
+            "LinkedIn": "https://www.linkedin.com/company/try-outlier/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "UCSF Center for Intelligent Imaging",
+            "Location": "San Francisco, California",
+            "LinkedIn": "https://www.linkedin.com/company/ucsf-center-for-intelligent-imaging/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "JPMorgan Chase & Co.",
+            "Location": "New York City, New York and Charlotte, North Carolina, etc.",
+            "LinkedIn": "https://www.linkedin.com/company/jpmorganchase/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Liquidnet",
+            "Location": "New York City, New York",
+            "LinkedIn": "https://www.linkedin.com/company/liquidnet/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Kimley-Horn",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/kimley-horn/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "American Express",
+            "Location": "Salt Lake City, Utah",
+            "LinkedIn": "https://www.linkedin.com/company/american-express/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "NetApp",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/netapp/jobs/",
+            "Contact": "",
+            "Tips": "The title of the job was \"AI intern\".",
+            "Pay": ""
+        },
+        {
+            "Name": "Prometheus Group",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/prometheusgroup/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Lockheed Martin",
+            "Location": "Greensboro, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/lockheed-martin/jobs/",
+            "Contact": "",
+            "Tips": "I think this job requires a security clearance, so take that into account if you're interested.",
+            "Pay": ""
+        },
+        {
+            "Name": "Brilliant Sole",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/brilliant-sole/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Green Arrow Labs Inc",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/green-arrow-labs/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Tata Consultancy Services",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/tata-consultancy-services/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Brooksource",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/brooksource/jobs/",
+            "Contact": "(980) 280-9232",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Cerebra Consulting Inc",
+            "Location": "New Brunswick, New Jersey",
+            "LinkedIn": "https://www.linkedin.com/company/cerebra-consulting-inc/jobs/",
+            "Contact": "Sathivada Sitaram (Sitaram.sathivada@cerebra-consulting.com)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Mission Technologies, a division of HII",
+            "Location": "Arlington, Virginia",
+            "LinkedIn": "https://www.linkedin.com/company/mission-technologies-a-division-of-hii/jobs/",
+            "Contact": "Kevin Norton (Kevin.Norton@hii-tsd.com)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Veterans United Home Loans",
+            "Location": "St. Louis, Missouri",
+            "LinkedIn": "https://www.linkedin.com/company/veteransunited/jobs/",
+            "Contact": "Sara Gibson (Sara.Gibson@veteransunited.com)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Deloitte",
+            "Location": "Raleigh, North Carolina (RTP) or Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/deloitte/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Riverbed Technology",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/riverbed-technology/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Elevation Church",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/elevation-church/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Barings",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/barings/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "StackWave",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/stackwave/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Seminaut Inc",
+            "Location": "San Marcos, Texas (Remote)",
+            "LinkedIn": "https://www.linkedin.com/company/seminaut-inc/jobs/",
+            "Contact": "Caleb Barnwell (cmibarnwell@seminautdigital.com)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Syneos Health",
+            "Location": "Morrisville, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/syneos-health/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Sensus",
+            "Location": "Morrisville, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/sensus/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "HMF Express",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/hmf-express/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "EMS LINQ, Inc.",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/linq-inc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Vanguard",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/vanguard/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Tandem",
+            "Location": "Remote, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/madeintandem/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Ekos",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/goekos/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "WEX",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/wexinc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Crown Castle",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/crown-castle/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Cloverhound",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/cloverhound-inc./jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "RVO Health",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/rvohealth/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "TOURtech, Inc.",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/tourtechsupport-inc/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Q2 Solutions",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/q2-solutions/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "lululemon",
+            "Location": "N/A",
+            "LinkedIn": "https://www.linkedin.com/company/lululemon/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Floating Point Group",
+            "Location": "N/A",
+            "LinkedIn": "https://www.linkedin.com/company/floating-point-group/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "JXBX (Jukebox)",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/jkbx/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Smartool.ai",
+            "Location": "N/A",
+            "LinkedIn": "https://www.linkedin.com/company/smartool-ai/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Pixelum.io",
+            "Location": "N/A",
+            "LinkedIn": "https://www.linkedin.com/company/pixelum-io/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "DealCloud, an Intapp Company",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/dealcloud-inc-/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "MicroD",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/microd-inc-/jobs/",
+            "Contact": "",
+            "Tips": "That name is CRAZY",
+            "Pay": ""
+        },
+        {
+            "Name": "Alliance Reservations Network",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/alliance-reservations-network/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Spectrum",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/spectrum/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Amazon Web Services",
+            "Location": "Herndon, Virginia",
+            "LinkedIn": "https://www.linkedin.com/company/spectrum/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Pratt Miller",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/pratt-&-miller-engineering/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "DigitalCrafts",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/school/digitalcrafts/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "theCoderSchool (Coding Instructor)",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/thecoderschool/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Few",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/workwithfew/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Lithios",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/lithios/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Coworks",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/coworks-app/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Vaco",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/vaco/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Go Energies",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/go-energies/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "PCI Energy Solutions",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/pci-energy-solutions/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Haversack",
+            "Location": "Huntersville, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/gohaversack/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "StuFlo",
+            "Location": "Frisco, Texas (Remote)",
+            "LinkedIn": "https://www.linkedin.com/company/stuflo/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "ChristianSteven Software",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/christiansteven-software/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Lovingly",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/lovingly/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Intapp",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/intapp/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Grover Gaming",
+            "Location": "Greenville, North Carolina or Chicago, Illinois",
+            "LinkedIn": "https://www.linkedin.com/company/grovergaming/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Willowview",
+            "Location": "Jacksonville, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/willowview-consulting/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Allscripts",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/allscripts/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Litify",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/litify/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "National Treatment Court Resource Center",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/national-treatment-court-resource-center/jobs/",
+            "Contact": "",
+            "Tips": "The name of the position I saw is Business Applications Tech",
+            "Pay": ""
+        },
+        {
+            "Name": "Tractor Zoom",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/tractor-zoom/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Omnicell",
+            "Location": "Morrisville, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/omnicell/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "SimVentions",
+            "Location": "Fredericksburg, Virginia",
+            "LinkedIn": "https://www.linkedin.com/company/simventions/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Chameleon Consulting Group LLC",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/chameleon-consulting-group-llc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Seam (YC S20)",
+            "Location": "San Francisco, California",
+            "LinkedIn": "https://www.linkedin.com/company/seamapi/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Stateful, Inc",
+            "Location": "Berkeley, California",
+            "LinkedIn": "https://www.linkedin.com/company/stateful/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "MatrixCare",
+            "Location": "Bloomington, Minnesota",
+            "LinkedIn": "https://www.linkedin.com/company/matrixcare/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Reprise",
+            "Location": "Boston, Massachusetts",
+            "LinkedIn": "https://www.linkedin.com/company/getreprise/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Robomatter",
+            "Location": "Pittsburgh, Pennsylvania",
+            "LinkedIn": "https://www.linkedin.com/company/robomatter/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Management Science Associates, Inc",
+            "Location": "Pittsburgh, Pennsylvania",
+            "LinkedIn": "https://www.linkedin.com/company/management-science-associates/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "PerkinElmer",
+            "Location": "Morrisville, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/perkinelmer/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Deutsche Bank",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/deutsche-bank/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Diligent Corporation",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/diligent-board-member-services/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Decision Source",
+            "Location": "Nashville, Tennessee",
+            "LinkedIn": "https://www.linkedin.com/company/decision-source/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Denodo",
+            "Location": "Boise, Idaho",
+            "LinkedIn": "https://www.linkedin.com/company/denodo-technologies/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "NWN Corporation",
+            "Location": "Charlotte, North Carolina and Morrisville, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/nwncarousel/jobs/",
+            "Contact": "",
+            "Tips": "Also known as NWN Carousel",
+            "Pay": ""
+        },
+        {
+            "Name": "Oppia Foundation",
+            "Location": "Mountain View, California (Remote)",
+            "LinkedIn": "https://www.linkedin.com/company/oppia-org/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Allora Consulting",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/allora-consulting/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "C&S Wholesale Grocers",
+            "Location": "Keene, New Hampshire",
+            "LinkedIn": "https://www.linkedin.com/company/c&s-wholesale-grocers/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Progressive Insurance",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/progressive-insurance/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Limited Run Games",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/limited-run-games/jobs/",
+            "Contact": "",
+            "Tips": "Job title was \"Developer Support\"",
+            "Pay": ""
+        },
+        {
+            "Name": "isolved",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/isolved/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Philips",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/philips/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Belcan",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/belcan-engineering/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Tayloe Gray Kristof",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/tayloe-gray/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Rivers Agency",
+            "Location": "Chapel Hill, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/rivers-agency/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "MercuryGate International",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/mercurygate-international/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Edmunds GovTech",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/edmundsgovtech/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "MNTN",
+            "Location": "Durham, North Carolina (RTP) / Remote",
+            "LinkedIn": "https://www.linkedin.com/company/wearemntn/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Launch Consulting Group",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/launch-consulting-group/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "GBF, Inc",
+            "Location": "High Point, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/lazar-industries-llc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Alamance County Government",
+            "Location": "Graham, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/alamance-county-government/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Morvil Advertising + Design Group",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/morvil-advertising---design-group/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Empathic",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/empathic-ai-inc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "DataAnnotation",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/dataannotationtech/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "RTI International",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/rti-international/jobs/",
+            "Contact": "",
+            "Tips": "Virtual Reality Developer was the name of the position.",
+            "Pay": ""
+        },
+        {
+            "Name": "BASF",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/basf/jobs/",
+            "Contact": "",
+            "Tips": "The title of the job was \"Business Systems Intern\".",
+            "Pay": ""
+        },
+        {
+            "Name": "Victra - Verizon Authorized Retailer",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/victra/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "The Remi Group",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/the-remi-group/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "SolarWinds",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/solarwinds/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "SkillStorm",
+            "Location": "Orlando, Florida",
+            "LinkedIn": "https://www.linkedin.com/company/skillstorm/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "The Hartford",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/the-hartford/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Spahr Solutions Group, LLC",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/spahr-solutions-group-llc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Soft Tech Consulting",
+            "Location": "Chantilly, Virginia",
+            "LinkedIn": "https://www.linkedin.com/company/soft-tech-consulting/jobs/",
+            "Contact": "recruitment@softtechconsultingcareers.com",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Apiture",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/apiture/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "CentralSquare Technologies",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/centralsqtech/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "CastleBranch",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/castle-branch-inc-/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Brunswick County",
+            "Location": "Bolivia, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/brunswickcounty/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Apperture Solutions",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/apperture-solutions/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Kyndryl",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/kyndryl/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "PPD",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/ppd/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Insight Global",
+            "Location": "Wilmington, North Carolina or Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/insight-global/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "PharPoint Research, Inc.",
+            "Location": "Wilmington, North Carolina and Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/pharpoint-research-inc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "MegaCorp Logistics",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/megacorp-logistics/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "FORVIS",
+            "Location": "Charlotte, North Carolina and Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/forvis/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Ascendion",
+            "Location": "Basking Ridge, New Jersey",
+            "LinkedIn": "https://www.linkedin.com/company/ascendion/jobs/",
+            "Contact": "tusharmaity@ascendion.com (Tushar Maity)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Motion Recruitment",
+            "Location": "Washington, D.C. and Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/ascendion/jobs/",
+            "Contact": "greg.olsen@motionrecruitment.com (Greg Olsen)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "BoomTown",
+            "Location": "Charleston, South Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/boomtown---real-estate-web-platform/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "DEKA Research & Development",
+            "Location": "Manchester, New Hampshire",
+            "LinkedIn": "https://www.linkedin.com/company/deka-research-&-development/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "insightsoftware",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/outcomes-by-insightsoftware/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "TE Connectivity",
+            "Location": "Fuquay-Varina, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/te-connectivity/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "RWS Group",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/rws-group/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "The John Hopkins University (Undergraduate Research Assistant)",
+            "Location": "Baltimore, Maryland",
+            "LinkedIn": "https://www.linkedin.com/school/johns-hopkins-university/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "MetLife",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/metlife/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Hardee Hunt & Williams",
+            "Location": "Wrightsville Beach, North Carolina. Near Wilmington",
+            "LinkedIn": "https://www.linkedin.com/company/hardee-hunt-&-williams/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Blue Cross NC",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/bluecrossnc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Carolina Cyber Center",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/school/carolina-cyber-center/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Graham Capital Management, L.P.",
+            "Location": "Rowayton, Connecticut",
+            "LinkedIn": "https://www.linkedin.com/company/graham-capital-management/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Credit Suisse",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/credit-suisse/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Actalent",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/actalentservices/jobs/",
+            "Contact": "",
+            "Tips": "The name of the position was \"Solutions Test Engineer\"",
+            "Pay": ""
+        },
+        {
+            "Name": "JupiterOne",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/jupiterone/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Duke Energy Corporation",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/duke-energy-corporation/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Lowe's Companies, Inc.",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/lowe's-home-improvement/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Stream Data Centers",
+            "Location": "Charlotte, North Carolina (Remote)",
+            "LinkedIn": "https://www.linkedin.com/company/stream-data-centers/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "The Bank of London",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/thebankoflondon/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Bank of America Merrill Lynch",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/bank-of-america-merrill-lynch/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Moody's Corporation",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/moodys-corporation/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Uni-SPIRE",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/uni-spire-the-universal-writing-continuum/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "EarneyIT (IT Technician)",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/earneyit/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "eMunah, the Water Crisis Platform",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/emunah-the-water-crisis-platform/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "CACI International Inc",
+            "Location": "High Point, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/caci-international-inc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "U.S. Department of Veterans Affairs",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/department-of-veterans-affairs/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Systems Planning and Analysis, Inc",
+            "Location": "Washington DC-Baltimore Area",
+            "LinkedIn": "https://www.linkedin.com/company/systems-planning-and-analysis-inc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Mecklenburg County",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/mecklenburg-county/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "HyperionD8",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/hyperiond8/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Hyperion Data Solutions",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/hyperion-data-solutions-llc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Inuit",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/intuit/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Kittelson & Associates, Inc.",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/kittelson-&-associates-inc./jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "The Judge Group",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/the-judge-group/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Quintify, Inc.",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/quintify-database-solutions-inc-/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "OCD Tech",
+            "Location": "Braintree, Massachusetts",
+            "LinkedIn": "https://www.linkedin.com/company/ocd-tech/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Flexgen",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/flexgen/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Predictive Equations (Techstars '23)",
+            "Location": "Denver, Colorado",
+            "LinkedIn": "https://www.linkedin.com/company/predictive-equations/jobs/",
+            "Contact": "",
+            "Tips": "I saw a position that was remote and part-time.",
+            "Pay": ""
+        },
+        {
+            "Name": "Second Renaissance",
+            "Location": "Rockville, Maryland",
+            "LinkedIn": "https://www.linkedin.com/company/second-renaissance/jobs/",
+            "Contact": "",
+            "Tips": "This is either also in Wilmington or a remote position.",
+            "Pay": ""
+        },
+        {
+            "Name": "Oshkosh Corporation",
+            "Location": "Oshkosh, Wisconsin",
+            "LinkedIn": "https://www.linkedin.com/company/oshkosh-corporation/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Flywheel Technology, Inc.",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/flywheel-technology-inc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Genpact",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/genpact/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Next Level3",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/next-level3-software/jobs/",
+            "Contact": "",
+            "Tips": "It says \"Wilmington, Delaware\" in the description but it definitely meant NC.",
+            "Pay": ""
+        },
+        {
+            "Name": "Accenture",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/accenture/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "VCU Health",
+            "Location": "Richmond, Virginia",
+            "LinkedIn": "https://www.linkedin.com/company/vcu-health-system/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "State Farm",
+            "Location": "Multiple Locations. Remote",
+            "LinkedIn": "https://www.linkedin.com/company/state_farm/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Ford Motor Company",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/ford-motor-company/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Paragon Application Systems",
+            "Location": "Holly Springs, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/paragon-application-systems/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Raytheon Missiles & Defense",
+            "Location": "St. Petersburg, Florida",
+            "LinkedIn": "https://www.linkedin.com/company/raytheon/jobs/",
+            "Contact": "Jonathan.Richardson2@rtx.com (Jonathan Richardson)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Randstad Digital Americas",
+            "Location": "Raleigh, North Carolina (RTP) and Hallandale Beach, Florida",
+            "LinkedIn": "https://www.linkedin.com/company/randstad-digital-americas/jobs/",
+            "Contact": "patrick.groetzinger@randstadusa.com (Patrick Groetzinger)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "DigiFlight, Inc.",
+            "Location": "Fuquay-Varina, North Carolina and Columbia, Maryland",
+            "LinkedIn": "https://www.linkedin.com/company/digiflight-inc-/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "PwC",
+            "Location": "Hallandale Beach, Florida",
+            "LinkedIn": "https://www.linkedin.com/company/pwc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Revature",
+            "Location": "Charlotte, North Carolina and Reston, Virginia",
+            "LinkedIn": "https://www.linkedin.com/company/revature/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "LexisNexis",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/lexisnexis/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Proverbs 31 Ministries",
+            "Location": "Matthews, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/proverbs-31-ministries/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Queensboro.com",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/queensboro/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "CloudWyze, Inc.",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/cloudwyze-inc-/jobs/",
+            "Contact": "https://www.cloudwyze.com/contact/",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "The Wang Lab - Undergraduate Researcher",
+            "Location": "Wilmington, North Carolina (UNCW Campus)",
+            "LinkedIn": "https://www.linkedin.com/company/target/jobs/",
+            "Contact": "thewanglab.org@gmail.com",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Qualitest",
+            "Location": "Greensboro, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/qualitest/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Filter Folder",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/treevah/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "CISYS LifeSciences",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/cisys-lifesciences/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "ARCS Aviation",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/arcsaviation/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "American Family Insurance",
+            "Location": "Madison, Wisconsin",
+            "LinkedIn": "https://www.linkedin.com/company/american-family-insurance/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "County of Onslow",
+            "Location": "Jacksonville, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/county-of-onslow/jobs/",
+            "Contact": "",
+            "Tips": "UNCW comp sci department sent out an email about jobs here.",
+            "Pay": ""
+        },
+        {
+            "Name": "Onslow County Schools",
+            "Location": "Jacksonville, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/onslow-county-schools/jobs/",
+            "Contact": "",
+            "Tips": "IT Technician job",
+            "Pay": ""
+        },
+        {
+            "Name": "Jfg Business Technology",
+            "Location": "Jacksonville, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/jfg-inc/jobs/",
+            "Contact": "",
+            "Tips": "Network Technician job",
+            "Pay": ""
+        },
+        {
+            "Name": "Tech Nest",
+            "Location": "Madison, Wisconsin",
+            "LinkedIn": "https://www.linkedin.com/company/technestllc/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Red Pill Analytics",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/red-pill-analytics/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Big Rock Sports",
+            "Location": "Morehead City, North Carolina. Near Wilmington",
+            "LinkedIn": "https://www.linkedin.com/company/bigrocksports/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Cognizant",
+            "Location": "Dallas, Texas",
+            "LinkedIn": "https://www.linkedin.com/company/cognizant/jobs/",
+            "Contact": "Daniel Ramos",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "iD Tech Camps (Tutor)",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/id-tech-camps/jobs/",
+            "Contact": "ipchiring@idtech.com",
+            "Tips": "This is a tutoring position.",
+            "Pay": ""
+        },
+        {
+            "Name": "PS Solutions",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/ps-solutions/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Young Scientist Academy",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/young-scientist-academy/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Brightly",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/brightlysoftware/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Hartford Mutual Insurance Group",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/harford-mutual-insurance-group/jobs/",
+            "Contact": "",
+            "Tips": "Sometimes referred to as \"Hartford Mutual Insurance Company\"",
+            "Pay": ""
+        },
+        {
+            "Name": "Veradigm",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/veradigm/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Emmes",
+            "Location": "Hampstead, North Carolina or Rockville, Maryland",
+            "LinkedIn": "https://www.linkedin.com/company/emmes/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "SAS",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/sas/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Tech Wizards",
+            "Location": "Fredericksburg, Virginia",
+            "LinkedIn": "https://www.linkedin.com/company/tech-wizards-inc./jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "General Dynamics Electric Boat",
+            "Location": "New London, Connecticut",
+            "LinkedIn": "https://www.linkedin.com/company/electric-boat/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Qualtrics",
+            "Location": "Provo, Utah and Seattle, Washington",
+            "LinkedIn": "https://www.linkedin.com/company/qualtrics/jobs/",
+            "Contact": "",
+            "Tips": "Not a tip, just a fun fact, a lot of the surveys you see online are done by Qualtrics",
+            "Pay": ""
+        },
+        {
+            "Name": "CGI",
+            "Location": "Many locations (Charlotte, Nashville, etc.)",
+            "LinkedIn": "https://www.linkedin.com/company/cgi/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "HarvesterGear",
+            "Location": "Wrightsville Beach, North Carolina. Near Wilmington.",
+            "LinkedIn": "https://www.linkedin.com/company/harvestergear/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "UNCW Watson College Of Education",
+            "Location": "Wilmington, North Carolina (UNCW Campus)",
+            "LinkedIn": "https://www.linkedin.com/company/uncw-watson-college-of-education/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "RAZR Solutions",
+            "Location": "Washington DC-Baltimore Area",
+            "LinkedIn": "https://www.linkedin.com/company/razr-solutions-llc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Pi Square Technologies",
+            "Location": "Farmington Hills, Michigan",
+            "LinkedIn": "https://www.linkedin.com/company/pi-square-technology/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "PIMSHQ",
+            "Location": "Wilmington, North Carolina or Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/pimshq/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "BlackBerry QNX",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/blackberryqnx/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Helion AI",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/helionai/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "LoanWell.com",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/loanwell/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Vantaca",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/vantaca/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Pentair",
+            "Location": "Remote",
+            "LinkedIn": "https://www.linkedin.com/company/pentair/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Mentra",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/mymentra/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "DefenseStorm",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/defensestorm/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "New Hanover Country Arboretum",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/new-hanover-county-arboretum/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Wide Open Technologies",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/wide-open-technologies/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "FOCUS Broadband",
+            "Location": "Shallotte, North Carolina. Near Wilmington",
+            "LinkedIn": "https://www.linkedin.com/company/focusbroadband/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "WaveRider Design",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/waverider-design/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Thinking Feet (Tutor)",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/thinking-feet/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Sylvan Learning (Tutor)",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/sylvan-learning/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Strategic Staffing Solutions",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/strategic-staffing-solutions/jobs/",
+            "Contact": "emarsek@strategicstaff.com (Erika Marsek)",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "DKW Communications, Inc.",
+            "Location": "Washington, D.C.",
+            "LinkedIn": "https://www.linkedin.com/company/dkw-communications-inc-/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Oak Ridge National Laboratory",
+            "Location": "Oak Ridge, Tennessee",
+            "LinkedIn": "https://www.linkedin.com/company/oak-ridge-national-laboratory/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Viewpoint Construction Software",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/viewpoint-construction-software/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Cirrus Insight",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/cirrusinsight/jobs/",
+            "Contact": "",
+            "Tips": "Used to be called ZynBit",
+            "Pay": ""
+        },
+        {
+            "Name": "IT Jobs at UCPS",
+            "Location": "Charlotte, North Carolina. Weddington",
+            "LinkedIn": "https://www.linkedin.com/company/union-county-public-schools/jobs/",
+            "Contact": "james.parker@ucps.k12.nc.us (Refer to him as Jay Parker)",
+            "Description": "Gi Iyer from Handshake gave me this information",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "CIT Jobs at UCPS",
+            "Location": "Charlotte, North Carolina. Weddington",
+            "LinkedIn": "https://www.linkedin.com/company/union-county-public-schools/jobs/",
+            "Contact": "brian.davis@ucps.k12.nc.us (Brian Davis)",
+            "Description": "Gi Iyer from Handshake gave me this information",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Jobs at UCPS",
+            "Location": "Charlotte, North Carolina. Weddington",
+            "LinkedIn": "https://www.linkedin.com/company/union-county-public-schools/jobs/",
+            "Contact": "girija.iyer@ucps.k12.nc.us (Gi Iyer)",
+            "Description": "This woman reached out to me on Handshake.",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Datavant",
+            "Location": "San Francisco, California",
+            "LinkedIn": "https://www.linkedin.com/company/datavant/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Rocket Mortgage",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/rocketmortgage/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Guilford Mills",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/guilford-mills/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "VisionAIR",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/visionair/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Whisker",
+            "Location": "Plymouth, Michigan",
+            "LinkedIn": "https://www.linkedin.com/company/whisker/jobs/",
+            "Contact": "",
+            "Tips": "Seems to offer remote jobs",
+            "Pay": ""
+        },
+        {
+            "Name": "Axiom Path",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/axiom-path/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Wastequip",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/wastequip/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Insight",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/insight/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Atomized",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/atomizedhq/jobs/",
+            "Contact": "",
+            "Tips": "This company was previously known as \"FrontLine\"",
+            "Pay": ""
+        },
+        {
+            "Name": "Cohen Cognition and Perception Lab",
+            "Location": "Wilmington, North Carolina (UNCW Campus)",
+            "LinkedIn": "https://www.linkedin.com/company/whisker/jobs/",
+            "Contact": "cohend@uncw.edu (Dale Cohen)",
+            "Tips": "My groups CSC 450 project was made for Dr. Cohen. I'm not sure if he does comp-sci projects outside of CSC 450 though.",
+            "Pay": ""
+        },
+        {
+            "Name": "True IP Solutions, LLC",
+            "Location": "Hampstead, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/true-ip-solutions-llc/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Joe Gibbs Human Performance Institute",
+            "Location": "Huntersville, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/jghpi/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "American Tire Distributors",
+            "Location": "Huntersville, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/american-tire-distributors/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "PublicInput",
+            "Location": "Raleigh, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/public-input/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Mediware Information Systems",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/mediware-information-systems/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Mediant",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/mediant-communications/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "AlphaCM, Inc.",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/alphacm/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Bill",
+            "Location": "San Jose, California",
+            "LinkedIn": "https://www.linkedin.com/company/bill/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Liberty Healthcare Management",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/libertyhealth/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "WellSky",
+            "Location": "Overland Park, Kansas",
+            "LinkedIn": "https://www.linkedin.com/company/wellsky/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "IBSS",
+            "Location": "Cary, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/ibsscorp/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Sogeti",
+            "Location": "Atlanta, Georgia",
+            "LinkedIn": "https://www.linkedin.com/company/sogeti/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Symphona",
+            "Location": "Atlanta, Georgia",
+            "LinkedIn": "https://www.linkedin.com/company/symphonallp/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Cox Communications",
+            "Location": "Atlanta, Georgia",
+            "LinkedIn": "https://www.linkedin.com/company/cox-communications/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Consortium Networks",
+            "Location": "Medford, New Jersey",
+            "LinkedIn": "https://www.linkedin.com/company/consortiumnetworks/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Red Ventures",
+            "Location": "Charlotte, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/red-ventures/jobs/",
+            "Contact": "jobs@redventures.com",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "R.E. Mason",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/remason/jobs/",
+            "Contact": "sydney.underwood@remasonco.com",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Capco",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/capco/jobs/",
+            "Contact": "Nikhil@hirekul.com",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Lear Corporation",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/lear-corporation/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Plazabridge Group",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "https://www.linkedin.com/company/plazabridge-group/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Capillary North America",
+            "Location": "Minneapolis, Minnesota",
+            "LinkedIn": "https://www.linkedin.com/company/capillarynorthamerica/jobs/",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Ramona Optics",
+            "Location": "Durham, North Carolina (RTP)",
+            "LinkedIn": "https://www.linkedin.com/company/ramona-optics/",
+            "Contact": "https://www.ramonaoptics.com/contact",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Port Solution Integrators, Inc.",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "No Linkedin",
+            "Contact": "",
+            "Tips": "",
+            "Pay": ""
+        },
+        {
+            "Name": "Biostudy Solutions LLC",
+            "Location": "Wilmington, North Carolina",
+            "LinkedIn": "No Linkedin",
+            "Contact": "",
+            "Tips": "I think this might have been called \"BioMotion Analytics\" in the past.",
+            "Pay": ""
+        }
+    ]
+}

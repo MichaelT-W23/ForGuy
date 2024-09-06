@@ -1,0 +1,198 @@
+{
+    "MultiSet": [
+        {
+            "Info": [
+                {
+                    "title": "How to Populate a SQLite3 Database",
+                    "desc": "This is an extremely basic way to populate a SQLite3 Database with Python and JSON",
+                    "ref": "basic-sqlite"
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Since sqlite3 is included in the standard library of python you don't need to download anything."
+                },
+                {
+                    "id": 2,
+                    "instruction": "Make a folder called test_db. Then create two files to create and populate your table. Also create a json file to store data.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "mkdir test_db\ncd test_db\ntouch create_db.py\ntouch populate_db.py\ntouch cars.json",
+                        "CopyCode": "mkdir test_db\ncd test_db\ntouch create_db.py\ntouch populate_db.py\ntouch cars.json"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Open the \"create_db.py\" file and paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Python",
+                        "FormatCode": "import sqlite3\n\nconn = sqlite3.connect('Cars.db')\n\ncursor = conn.cursor()\n\ncursor.execute('''\n    CREATE TABLE Cars (\n        Maker VARCHAR(20),\n        Color VARCHAR(20),\n        Year INT\n    );\n''')\n\nconn.commit()\nconn.close()\n\nprint(\"\\033[92m\" + \"Cars table successfully created!\" + \"\\033[0m\")",
+                        "CopyCode": "import sqlite3\n\nconn = sqlite3.connect('Cars.db')\n\ncursor = conn.cursor()\n\ncursor.execute('''\n\tCREATE TABLE Cars (\n\t\tMaker VARCHAR(20),\n\t\tColor VARCHAR(20),\n\t\tYear INT\n\t);\n''')\n\nconn.commit()\nconn.close()\n\nprint(\"\\033[92m\" + \"Cars table successfully created!\" + \"\\033[0m\")"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "Open the \"populate_db.py\" file and paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Python",
+                        "FormatCode": "import sqlite3\nimport json\n\nwith open(\"cars.json\", 'r') as file:\n    contents = file.read()\n    data = json.loads(contents)\n\nconn = sqlite3.connect('Cars.db')\n\ncursor = conn.cursor()\n\nfor car in data['Cars']:\n\n    maker = car[\"Maker\"]\n    color = car[\"Color\"]\n    year = car[\"Year\"]\n\n    sql = 'INSERT INTO Cars (maker, color, year) VALUES (?, ?, ?)'\n\n    cursor.execute(sql, (maker, color, year))\n\nconn.commit()\nconn.close()\n\nprint(\"\\033[92m\" + \"Cars table successfully populated!\" + \"\\033[0m\")",
+                        "CopyCode": "import sqlite3\nimport json\n\nwith open(\"cars.json\", 'r') as file:\n\tcontents = file.read()\n\tdata = json.loads(contents)\n\nconn = sqlite3.connect('Cars.db')\n\ncursor = conn.cursor()\n\nfor car in data['Cars']:\n\n\tmaker = car[\"Maker\"]\n\tcolor = car[\"Color\"]\n\tyear = car[\"Year\"]\n\n\tsql = 'INSERT INTO Cars (maker, color, year) VALUES (?, ?, ?)'\n\n\tcursor.execute(sql, (maker, color, year))\n\nconn.commit()\nconn.close()\n\nprint(\"\\033[92m\" + \"Cars table successfully populated!\" + \"\\033[0m\")"
+                    }
+                },
+                {
+                    "id": 5,
+                    "instruction": "Open the \"cars.json\" file and paste in the following data.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "JSON",
+                        "FormatCode": "{\n    \"Cars\": [\n\t{\n\t    \"Maker\": \"Toyota\",\n\t    \"Color\": \"Silver\",\n\t    \"Year\": 2015\n\t},\n\t{\n\t    \"Maker\": \"Honda\",\n\t    \"Color\": \"Red\",\n\t    \"Year\": 2005\n\t},\n\t{\n\t    \"Maker\": \"Ford\",\n\t    \"Color\": \"Blue\",\n\t    \"Year\": 2020\n\t}\n    ]\n}",
+                        "CopyCode": "{\n\t\"Cars\": [\n\t\t{\n\t\t\t\"Maker\": \"Toyota\",\n\t\t\t\"Color\": \"Silver\",\n\t\t\t\"Year\": 2015\n\t\t},\n\t\t{\n\t\t\t\"Maker\": \"Honda\",\n\t\t\t\"Color\": \"Red\",\n\t\t\t\"Year\": 2005\n\t\t},\n\t\t{\n\t\t\t\"Maker\": \"Ford\",\n\t\t\t\"Color\": \"Blue\",\n\t\t\t\"Year\": 2020\n\t\t}\n\t]\n}"
+                    }
+                },
+                {
+                    "id": 6,
+                    "instruction": "Run the files in the following order to create and populate your database.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "python3 create_db.py\npython3 populate_db.py",
+                        "CopyCode": "python3 create_db.py\npython3 populate_db.py"
+                    }
+                },
+                {
+                    "id": 7,
+                    "instruction": "You should now see \"Cars.db\" in your file directory. To view it as a table do the following steps."
+                },
+                {
+                    "id": 8,
+                    "instruction": "In VSCode go to the \"Extensions\" tab on the left-hand side. It should look like 4 squares put together, with the top-right one removed from the rest."
+                },
+                {
+                    "id": 9,
+                    "instruction": "In the search bar type \"SQLite Viewer\". Then click on the first result by \"Florian Klampfer\"."
+                },
+                {
+                    "id": 10,
+                    "instruction": "Press the blue \"Install\" button to install the extension."
+                },
+                {
+                    "id": 11,
+                    "instruction": "In the search bar type \"SQLite\". Then click on the first result by \"alexcvzz\"."
+                },
+                {
+                    "id": 12,
+                    "instruction": "Press the blue \"Install\" button to install the extension."
+                },
+                {
+                    "id": 13,
+                    "instruction": "Now go back to the top \"Explorer\" tab on the left-hand side. It looks like two pieces of paper stacked on top of each other. Click it and you should see your Python files."
+                },
+                {
+                    "id": 14,
+                    "instruction": "Now open your \"Cars.db\" file. It should look like a table now. If it still doesn't look like a table add the following json attribute to your \"settings.json\" VSCode file (if you haven't already) and see if it works.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "JSON",
+                        "FormatCode": "\"workbench.editorAssociations\": {\n    \"*.db\": \"sqlite-viewer.option\"\n},",
+                        "CopyCode": "\"workbench.editorAssociations\": {\n\t\"*.db\": \"sqlite-viewer.option\"\n},"
+                    }
+                },
+                {
+                    "id": 15,
+                    "instruction": "The following two options will explain different ways you can query your \"Cars.db\" database file."
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Option 1: Query the database using Python",
+                    "desc": "How to query the database using Python code."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Go back to your terminal and run the following commands.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd test_db\ntouch query.py",
+                        "CopyCode": "cd test_db\ntouch query.py"
+                    }
+                },
+                {
+                    "id": 2,
+                    "instruction": "Open your \"query.py\" file and paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Python",
+                        "FormatCode": "import sqlite3\n\nwith sqlite3.connect('Cars.db') as conn:\n    cursor = conn.cursor()\n\n    sql = (\n        'SELECT DISTINCT Maker, Year ' +\n        'FROM Cars ' +\n        'WHERE Year > 2005;'\n    )   \n\n    results = cursor.execute(sql).fetchall()\n\n    for row in results:\n\tprint(row)",
+                        "CopyCode": "import sqlite3\n\n\nwith sqlite3.connect('Cars.db') as conn:\n\tcursor = conn.cursor()\n\n\tsql = (\n\t\t'SELECT DISTINCT Maker, Year ' +\n\t\t'FROM Cars ' +\n\t\t'WHERE Year > 2005;'\n\t)\n\n\tresults = cursor.execute(sql).fetchall()\n\n\tfor row in results:\n\t\tprint(row)"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Run your \"query.py\" file to see the results of your SQL statement.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "python3 query.py",
+                        "CopyCode": "python3 query.py"
+                    }
+                }
+
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Option 2: Query the database using SQL",
+                    "desc": "How to query your database using the SQLite extension by alexcvzz"
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Open your \"Cars.db\" file and press \"command + shift + p\" to open the command palette. Type \"SQLite: New Query\" in the search bar and click on it."
+                },
+                {
+                    "id": 2,
+                    "instruction": "In the --SQLite file. Paste the following SQL query.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "fxml",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "SELECT DISTINCT Maker, Year\nFROM Cars\nWHERE Year > 2005;",
+                        "CopyCode": "SELECT DISTINCT Maker, Year\nFROM Cars\nWHERE Year > 2005;"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Run the SQL query by right-clicking in the --SQLite file and pressing \"Run query\". Choose the \"Cars.db\" file in the results."
+                },
+                {
+                    "id": 4,
+                    "instruction": "You should now see the result table of your query."
+                }
+            ]
+        }
+    ]
+}
+
+
+

@@ -1,0 +1,38 @@
+{
+    "Text": [
+        {
+            "page": "Career Path Advice",
+            "desc": "This is a possible career path you could consider taking."
+        }
+    ],
+    "CareerPathAdvice": [
+        {
+            "id": 1,
+            "advice": "In summer 2024 try to get a job at Datacor, Inc. or nCino. The job at \"Datacor, inc.\" is remote and pays. If interested, tell me using the (form)[/ContactMe], I know a guy."
+        },
+        {
+            "id": 2,
+            "advice": "In September and October 2024, start applying for jobs in Summer 2025. Apply at companies such as USAA, Pearson, etc."
+        },
+        {
+            "id": 3,
+            "advice": "Your junior year you could work as a TAC Student Worker Technician while on campus. See the (Where To Apply)[/Jobs/WhereToApply] page for more details."
+        },
+        {
+            "id": 4,
+            "advice": "Your second semester junior year you could work as a SWE intern at Amotions, Inc. and get credit for CSC 498."
+        },
+        {
+            "id": 5,
+            "advice": "In Summer 2025 you could work at USAA or some other bigger company after you've gained more experience."
+        },
+        {
+            "id": 6,
+            "advice": "You could graduate in December 2025 and look for jobs that start in the winter when it's less competitive."
+        },
+        {
+            "id": 7,
+            "advice": "This is just a possible path. Obviously you can do whatever you want."
+        }
+    ]
+}

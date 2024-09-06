@@ -1,0 +1,739 @@
+{
+    "MultiSet": [
+        {
+            "Info": [
+                {
+                    "title": "How to Make a Simple REST Api using React, Spring Boot and H2",
+                    "desc": "The first part explains how to initialize a Spring Boot project in VSCode.",
+                    "ref": "react-spring"
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "BEFORE YOU DO ANY OF THIS, go to the &Create a Project Templates Folder&[TemplatesLink] link above and complete all the instructions if you haven't done so already. After you do that, run the following command in your terminal to create new vue project. It will be named \"react-spring-frontend\" and will be created in your top-most directory.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cp -R templates/react-project react-spring-frontend",
+                        "CopyCode": "cp -R templates/react-project react-spring-frontend"
+                    }
+                },
+                {
+                    "id": 2,
+                    "instruction": "First, make sure you have all the following programs installed by running the following commands. If the commands output a version, you're good.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "java --version\nbrew --version\nmvn --version\nls /Applications | grep \"Visual Studio Code\"",
+                        "CopyCode": "java --version\nbrew --version\nmvn --version\nls /Applications | grep \"Visual Studio Code\""
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Make sure the \"java --version\" command outputs version 17-something. You can download it [here](https://www.oracle.com/java/technologies/downloads/#jdk17-mac) if you don't already installed. Make sure to choose the right version for your OS and architecture. Run the following command to determine your architecture. When you're back on the site, choose the DMG installer. Then click on the download button and then follow the prompts.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "uname -m",
+                        "CopyCode": "uname -m"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "Now go to your terminal and run the following command. We're going to set your Java version to 17. Note that this process is different for bash.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "nano ~/.zshrc",
+                        "CopyCode": "nano ~/.zshrc"
+                    }
+                },
+                {
+                    "id": 5,
+                    "instruction": "In your nano file paste the two following lines. You shouldn't have to modify them.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Values",
+                        "FormatCode": "export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home\nexport PATH=$JAVA_HOME/bin:$PATH",
+                        "CopyCode": "export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home\nexport PATH=$JAVA_HOME/bin:$PATH"
+                    }
+                },
+                {
+                    "id": 6,
+                    "instruction": "To save the changes, press control + o. Then press return/enter. Then press control + x."
+                },
+                {
+                    "id": 7,
+                    "instruction": "Open a completely new terminal and run the following command. It should output Java 17.0.6 (Or 17 something).",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "java --version",
+                        "CopyCode": "java --version"
+                    }
+                },
+                {
+                    "id": 8,
+                    "instruction": "After you have Java 17 installed, delete the archive that contains the installation files.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "rm -rf Downloads/jdk-17_macos-aarch64_bin.tar.gz",
+                        "CopyCode": "rm -rf Downloads/jdk-17_macos-aarch64_bin.tar.gz"
+                    }
+                },
+                {
+                    "id": 9,
+                    "instruction": "If you don't already have Visual Studio Code downloaded, install it by going to this [link](https://code.visualstudio.com/download). Make sure to choose the correct version for your OS."
+                },
+                {
+                    "id": 10,
+                    "instruction": "If you don't already have homebrew installed, run the following commands.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "xcode-select --install\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\nbrew --version",
+                        "CopyCode": "xcode-select --install\n\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n\nbrew --version"
+                    }
+                },
+                {
+                    "id": 11,
+                    "instruction": "If you don't have maven installed, run the following command. Then check that it was installed properly using the \"mvn --version\" command. NOTE: This may take a minute or two.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "brew install maven\nmvn --version",
+                        "CopyCode": "brew install maven\nmvn --version"
+                    }
+                },
+                {
+                    "id": 12,
+                    "instruction": "Most of the following steps come from this [video](https://youtu.be/L5QXRoTtPr4?si=yvs4scL-HG2y1R0Z&t=115). You might find watching what's happening to be helpful."
+                },
+                {
+                    "id": 13,
+                    "instruction": "First install the necessary VSCode extensions using the following links. Press the green \"Install\" button, then when it takes you to VSCode press the blue \"Install\" button.<br><br>Ext 1: [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)<br>Ext 2: [Spring Initializr Java Support](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-spring-initializr)<br>Ext 3: [Spring Boot Dashboard](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-spring-boot-dashboard)<br>Ext 4: [Spring Boot Tools](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-spring-boot)<br>Ext 5: [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack)<br><br>"
+                },
+                {
+                    "id": 14,
+                    "instruction": "After you've installed those extensions, do the following steps in VSCode.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Instructions",
+                        "FormatCode": "Steps\n 1. command + shift + p (Open command pallette)\n 2. Search and press on \"Welcome: Open Walkthrough...\"\n 3. Then search/press on \"Getting Started with Spring Boot in VS Code\"\n 4. You should be taken to a new tab after that.",
+                        "CopyCode": "Steps\n1. command + shift + p (Open command pallette)\n2. Search and press on \"Welcome: Open Walkthrough...\"\n3. Then search and press on \"Getting Started with Spring Boot in VS Code\"\n4. You should be taken to a new tab after that."
+                    }
+                },
+                {
+                    "id": 15,
+                    "instruction": "Under \"Start with a Spring Boot project\" press on the blue \"Create New Project\" button. A command pallette should then open. If you need to close it later use the \"esc\" key."
+                },
+                {
+                    "id": 16,
+                    "instruction": "In the new command pallette, search and press on the following options in the following order.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Command Pallette Values",
+                        "FormatCode": "Spring Boot Version: 3.3.1 (Or First Option/Does NOT include \"Snapshot\")\nProject Language: Java\nGroup Id: com.springbackend\nArtifact Id: demo\nPackaging Type: Jar\nJava Version: 17\nDependendices: Spring Web and Lombok (Search separately)\n\nPress Enter/Return\nPress \"Generate into this folder\"\nPress \"Open\" in the VSCode pop-up\nSay \"Yes, I trust the authors\" if prompted",
+                        "CopyCode": "Spring Boot Version: 3.3.1 (Or First Option/Does NOT include \"Snapshot\")\nProject Language: Java\nGroup Id: com.springbackend\nArtifact Id: demo\nPackaging Type: Jar\nJava Version: 17\nDependendices: Spring Web and Lombok (Search separately)\n\nPress Enter/Return\nPress \"Generate into this folder\"\nPress \"Open\" in the VSCode pop-up\nSay \"Yes, I trust the authors\" if prompted"
+                    }
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Create the REST API for this project",
+                    "desc": "Explains how to write the code for the Rest API and then run it."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Now open a new terminal and run the following command. It will rename your project to be \"spring-boot-h2\". You should be in your root directory when you run this command.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "mv demo spring-boot-h2",
+                        "CopyCode": "mv demo spring-boot-h2"
+                    }
+                },
+                {
+                    "id": 2,
+                    "instruction": "Run the following commands to crate new folders/files in your project. Instead of using the \"touch\" commands, I'd recommend just right clicking on folders in VSCode and press \"New file\" for Java files. It will auto-generate packages and boiler-plate code for the file. I just included the \"touch\" commands because I thought they'd be convenient and I've included the necessary code below.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd spring-boot-h2/src/main/java/com/springbackend/demo\n\nmkdir config\nmkdir controllers\nmkdir models\nmkdir repositories\nmkdir services\n\ntouch config/WebConfig.java\ntouch config/H2ServerConfiguration.java\ntouch controllers/UserController.java\ntouch models/User.java\ntouch repositories/UserRepository.java\ntouch services/UserService.java\n\ncd ~/spring-boot-h2\ntouch system.properties\ntouch .env\nclear",
+                        "CopyCode": "cd spring-boot-h2/src/main/java/com/springbackend/demo\n\nmkdir config\nmkdir controllers\nmkdir models\nmkdir repositories\nmkdir services\n\ntouch config/WebConfig.java\ntouch config/H2ServerConfiguration.java\ntouch controllers/UserController.java\ntouch models/User.java\ntouch repositories/UserRepository.java\ntouch services/UserService.java\n\ncd ~/spring-boot-h2\ntouch system.properties\ntouch .env\nclear"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Just for future reference, you can go to [Maven Central](https://central.sonatype.com/?smo=true) to search for new Maven dependencies or to verify that the dependencies you're using actually exist."
+                },
+                {
+                    "id": 4,
+                    "instruction": "Now open your \"spring-boot-h2\" folder in VSCode. Then open \"pom.xml\" and paste the following data in between the &lt;dependencies&gt; tags. Paste the data at the end of the section, which should be around line 47. Make sure to paste it above the last &lt;/dependencies&gt; tag. Put your cursor at the very beginning of the line, then paste the data to make it align with the other objects (it will still work if the alignment is off). @Relevant Meme@[{ 'name': 'ImageView', 'params': { 'Name': 'Pom.xml CLI tool when? 👀', 'Description': 'Do you have any idea how lit it would be if you could actually do this', 'Pic': 'pom.jpg'} }].",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "html",
+                        "DisplayLang": "XML",
+                        "FormatCode": "<!-- New Dependencies -->\n<dependency>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-data-jpa</artifactId>\n</dependency>\n<dependency>\n    <groupId>com.h2database</groupId>\n    <artifactId>h2</artifactId>\n    <version>2.1.214</version>\n</dependency>\n<dependency>\n    <groupId>me.paulschwarz</groupId>\n    <artifactId>spring-dotenv</artifactId>\n    <version>4.0.0</version>\n</dependency>",
+                        "CopyCode": "\t    <!-- New Dependencies -->\n\t    <dependency>\n\t\t    <groupId>org.springframework.boot</groupId>\n\t\t    <artifactId>spring-boot-starter-data-jpa</artifactId>\n\t    </dependency>\n\t    <dependency>\n\t\t    <groupId>com.h2database</groupId>\n\t\t    <artifactId>h2</artifactId>\n\t\t    <version>2.1.214</version>\n\t    </dependency>\n\t\t<dependency>\n\t\t\t<groupId>me.paulschwarz</groupId>\n\t\t\t<artifactId>spring-dotenv</artifactId>\n\t\t\t<version>4.0.0</version>\n\t\t</dependency>"
+                    }
+                },
+                {
+                    "id": 5,
+                    "instruction": "Now press \"command + p\". Search for and press on \"application.properties\". Delete the files contents and paste the following values into the file. If you can't find \"application.properties\" it can be found in src -> main -> resources.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "customproperties",
+                        "DisplayLang": "Properties",
+                        "FormatCode": "spring.application.name=demo\nlogging.level.root=OFF\nlogging.level.org.springframework.boot=ERROR\nlogging.level.org.springframework.web=ERROR\nspring.main.banner-mode=OFF\nspring.datasource.driverClassName=org.h2.Driver\nspring.datasource.url=${DB_URL}\nspring.datasource.username=${DB_USERNAME}\nspring.datasource.password=${DB_PASSWORD}\nspring.jpa.database-platform=org.hibernate.dialect.H2Dialect\nspring.h2.console.enabled=true\nspring.jpa.show-sql=true\nspring.jpa.hibernate.ddl-auto=update",
+                        "CopyCode": "spring.application.name=demo\nlogging.level.root=OFF\nlogging.level.org.springframework.boot=ERROR\nlogging.level.org.springframework.web=ERROR\nspring.main.banner-mode=OFF\nspring.datasource.driverClassName=org.h2.Driver\nspring.datasource.url=${DB_URL}\nspring.datasource.username=${DB_USERNAME}\nspring.datasource.password=${DB_PASSWORD}\nspring.jpa.database-platform=org.hibernate.dialect.H2Dialect\nspring.h2.console.enabled=true\nspring.jpa.show-sql=true\nspring.jpa.hibernate.ddl-auto=update"
+                    }
+                },
+                {
+                    "id": 6,
+                    "instruction": "Open your \".env\" file in your top-most directory. Note that earlier we added dependencies in the \"pom.xml\" fle to make the .env file work. Spring Boot doesn't have built-in support for .env files. These credentials are for your H2 database. We're putting them in a .env file so that your secrets don't get pushed to GitHub. <br><br>  • Replace \"YOUR_USERNAME_HERE\" with the username you want to use.<br>• Replace \"YOUR_PASSWORD_HERE\" with the password you want to use.<br><br>I'd recommend keeping them simple. Also if part of your \"DB_URL\" variable is grayed out it's fine.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "fxml",
+                        "DisplayLang": "Env",
+                        "FormatCode": "DB_URL=jdbc:h2:file:./data/demo_db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE\nDB_USERNAME=YOUR_USERNAME_HERE\nDB_PASSWORD=YOUR_PASSWORD_HERE",
+                        "CopyCode": "DB_URL=jdbc:h2:file:./data/demo_db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE\nDB_USERNAME=YOUR_USERNAME_HERE\nDB_PASSWORD=YOUR_PASSWORD_HERE"
+                    }
+                },
+                {
+                    "id": 7,
+                    "instruction": "This step is completely optional and I do NOT recommend doing it this way. But if you don't want your data to persist between sessions change the \"DB_URL\" line in the \".env\" file to be the following value. This will clear your table everytime you rerun your API. If you choose to do this, remember to use \"jdbc:h2:mem:testdb\" as your JDBC URL when you login to your h2-console later on.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "fxml",
+                        "DisplayLang": "Env",
+                        "FormatCode": "DB_URL=jdbc:h2:mem:testdb",
+                        "CopyCode": "DB_URL=jdbc:h2:mem:testdb"
+                    }
+                },
+                {
+                    "id": 8,
+                    "instruction": "Now open your \".gitignore\" file that's found in the top-most directory of your project. At the very bottom of the file add the following comment and path.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "File Path",
+                        "FormatCode": "### Environment Variables ###\n.env",
+                        "CopyCode": "### Environment Variables ###\n.env"
+                    }
+                },
+                {
+                    "id": 9,
+                    "instruction": "Open your \"system.properties\" file in the top-most directory of your project. Paste the following line into the file.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "customproperties",
+                        "DisplayLang": "Properties",
+                        "FormatCode": "java.runtime.version=17",
+                        "CopyCode": "java.runtime.version=17"
+                    }
+                },
+                {
+                    "id": 10,
+                    "instruction": "Go to src -> main -> java/com/springbackend/demo -> models and then open the \"User.java\" file. Paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Java",
+                        "FormatCode": "package com.springbackend.demo.models;\n\nimport jakarta.persistence.*;\nimport lombok.Getter;\nimport lombok.Setter;\n\n@Entity\n@Getter\n@Setter\n@Table(name = \"users\", uniqueConstraints = {@UniqueConstraint(columnNames = \"firstname\")})\npublic class User {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n\n    @Column(nullable = false, unique = true)\n    private String firstname;\n\n    @Column(nullable = false)\n    private String lastname;\n}",
+                        "CopyCode": "package com.springbackend.demo.models;\n\nimport jakarta.persistence.*;\nimport lombok.Getter;\nimport lombok.Setter;\n\n@Entity\n@Getter\n@Setter\n@Table(name = \"users\", uniqueConstraints = {@UniqueConstraint(columnNames = \"firstname\")})\npublic class User {\n\n\t@Id\n\t@GeneratedValue(strategy = GenerationType.IDENTITY)\n\tprivate Long id;\n\n\t@Column(nullable = false, unique = true)\n\tprivate String firstname;\n\n\t@Column(nullable = false)\n\tprivate String lastname;\n}"
+                    }
+                },
+                {
+                    "id": 11,
+                    "instruction": "Go to src -> main -> java/com/springbackend/demo -> repositories and then open the \"UserRepository.java\" file. Paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Java",
+                        "FormatCode": "package com.springbackend.demo.repositories;\n\nimport org.springframework.data.jpa.repository.JpaRepository;\nimport org.springframework.stereotype.Repository;\nimport com.springbackend.demo.models.User;\n\n@Repository\npublic interface UserRepository extends JpaRepository<User, Long> {\n    User findByFirstname(String firstname);\n}",
+                        "CopyCode": "package com.springbackend.demo.repositories;\n\nimport org.springframework.data.jpa.repository.JpaRepository;\nimport org.springframework.stereotype.Repository;\nimport com.springbackend.demo.models.User;\n\n@Repository\npublic interface UserRepository extends JpaRepository<User, Long> {\n\tUser findByFirstname(String firstname);\n}"
+                    }
+                },
+                {
+                    "id": 12,
+                    "instruction": "Go to src -> main -> java/com/springbackend/demo -> services and then open the \"UserService.java\" file. Paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Java",
+                        "FormatCode": "package com.springbackend.demo.services;\n\nimport com.springbackend.demo.models.User;\nimport com.springbackend.demo.repositories.UserRepository;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.stereotype.Service;\n\nimport java.util.Optional;\n\n@Service\npublic class UserService {\n\n    @Autowired\n    private UserRepository userRepository;\n\n    public User saveUser(User user) {\n\tif (userRepository.findByFirstname(user.getFirstname()) != null) {\n\t    throw new IllegalArgumentException(\"User with the name \" + user.getFirstname() + \" already exists\");\n\t}\n\n\treturn userRepository.save(user);\n    }\n\n    public Optional<User> getUserByFirstname(String firstname) {\n\treturn Optional.ofNullable(userRepository.findByFirstname(firstname));\n    }\n}",
+                        "CopyCode": "package com.springbackend.demo.services;\n\nimport com.springbackend.demo.models.User;\nimport com.springbackend.demo.repositories.UserRepository;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.stereotype.Service;\n\nimport java.util.Optional;\n\n@Service\npublic class UserService {\n\n\t@Autowired\n\tprivate UserRepository userRepository;\n\n\tpublic User saveUser(User user) {\n\t\tif (userRepository.findByFirstname(user.getFirstname()) != null) {\n\t\t\tthrow new IllegalArgumentException(\"User with the name \" + user.getFirstname() + \" already exists\");\n\t\t}\n\n\t\treturn userRepository.save(user);\n\t}\n\n\tpublic Optional<User> getUserByFirstname(String firstname) {\n\t\treturn Optional.ofNullable(userRepository.findByFirstname(firstname));\n\t}\n}"
+                    }
+                },
+                {
+                    "id": 13,
+                    "instruction": "Go to src -> main -> java/com/springbackend/demo -> controllers and then open the \"UserController.java\" file. Paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Java",
+                        "FormatCode": "package com.springbackend.demo.controllers;\n\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.*;\n\nimport com.springbackend.demo.models.User;\nimport com.springbackend.demo.services.UserService;\n\n@RestController\n@RequestMapping(\"/users\")\npublic class UserController {\n\n    @Autowired\n    private UserService userService;\n\n    @PostMapping\n    public ResponseEntity<?> createUser(@RequestBody User user) {\n\ttry {\n\t    User createdUser = userService.saveUser(user);\n\t    return ResponseEntity.status(201).body(createdUser);\n\t} catch (IllegalArgumentException e) {\n\t    return ResponseEntity.status(400).body(e.getMessage());\n\t}\n    }\n\n    @GetMapping(\"/{firstname}\")\n    public ResponseEntity<User> getUserByFirstname(@PathVariable String firstname) {\n\treturn userService.getUserByFirstname(firstname)\n\t    .map(user -> ResponseEntity.ok().body(user))\n\t    .orElseGet(() -> ResponseEntity.status(404).body(null));\n    }\n}",
+                        "CopyCode": "package com.springbackend.demo.controllers;\n\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.*;\n\nimport com.springbackend.demo.models.User;\nimport com.springbackend.demo.services.UserService;\n\n@RestController\n@RequestMapping(\"/users\")\npublic class UserController {\n\n\t@Autowired\n\tprivate UserService userService;\n\n\t@PostMapping\n\tpublic ResponseEntity<?> createUser(@RequestBody User user) {\n\t\ttry {\n\t\t\tUser createdUser = userService.saveUser(user);\n\t\t\treturn ResponseEntity.status(201).body(createdUser);\n\t\t} catch (IllegalArgumentException e) {\n\t\t\treturn ResponseEntity.status(400).body(e.getMessage());\n\t\t}\n\t}\n\n\t@GetMapping(\"/{firstname}\")\n\tpublic ResponseEntity<User> getUserByFirstname(@PathVariable String firstname) {\n\t\treturn userService.getUserByFirstname(firstname)\n\t\t\t.map(user -> ResponseEntity.ok().body(user))\n\t\t\t.orElseGet(() -> ResponseEntity.status(404).body(null));\n\t}\n}"
+                    }
+                },
+                {
+                    "id": 14,
+                    "instruction": "Go to src -> main -> java/com/springbackend/demo -> config and then open the \"WebConfig.java\" file. Paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Java",
+                        "FormatCode": "package com.springbackend.demo.config;\n\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\nimport org.springframework.web.servlet.config.annotation.CorsRegistry;\nimport org.springframework.web.servlet.config.annotation.WebMvcConfigurer;\n\n@Configuration\npublic class WebConfig {\n\n    @Bean\n    public WebMvcConfigurer corsConfigurer() {\n        return new WebMvcConfigurer() {\n\t    @Override\n\t    public void addCorsMappings(CorsRegistry registry){\n\t\tregistry.addMapping(\"/**\").allowedOrigins(\"*\");\n\t    }\n        };\n    }\n}",
+                        "CopyCode": "package com.springbackend.demo.config;\n\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\nimport org.springframework.web.servlet.config.annotation.CorsRegistry;\nimport org.springframework.web.servlet.config.annotation.WebMvcConfigurer;\n\n@Configuration\npublic class WebConfig {\n\n\t@Bean\n\tpublic WebMvcConfigurer corsConfigurer() {\n\t\treturn new WebMvcConfigurer() {\n\t\t\t@Override\n\t\t\tpublic void addCorsMappings(CorsRegistry registry){\n\t\t\t\tregistry.addMapping(\"/**\").allowedOrigins(\"*\");\n\t\t\t}\n\t\t};\n\t}\n}"
+                    }
+                },
+                {
+                    "id": 15,
+                    "instruction": "Go to src -> main -> java/com/springbackend/demo -> config and then open the \"H2ServerConfiguration.java\" file. Paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Java",
+                        "FormatCode": "package com.springbackend.demo.config;\n\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\nimport org.h2.tools.Server;\n\nimport java.sql.SQLException;\n\n@Configuration\npublic class H2ServerConfiguration {\n\n    @Bean(initMethod = \"start\", destroyMethod = \"stop\")\n    public Server h2Server() throws SQLException {\n\treturn Server.createTcpServer(\"-tcp\", \"-tcpAllowOthers\", \"-tcpPort\", \"9092\");\n    }\n}",
+                        "CopyCode": "package com.springbackend.demo.config;\n\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\nimport org.h2.tools.Server;\n\nimport java.sql.SQLException;\n\n@Configuration\npublic class H2ServerConfiguration {\n\n\t@Bean(initMethod = \"start\", destroyMethod = \"stop\")\n\tpublic Server h2Server() throws SQLException {\n\t\treturn Server.createTcpServer(\"-tcp\", \"-tcpAllowOthers\", \"-tcpPort\", \"9092\");\n\t}\n}"
+                    }
+                },
+                {
+                    "id": 16,
+                    "instruction": "In your terminal run the following commands. You could also change into \"spring-boot-h2\" then run \"npm init\" and fill in the prompts to create \"package.json\", but we'll do it the more straight forward way for now.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd ~\ncd spring-boot-h2\ntouch package.json\ntouch start.sh",
+                        "CopyCode": "cd ~\ncd spring-boot-h2\ntouch package.json\ntouch start.sh"
+                    }
+                },
+                {
+                    "id": 17,
+                    "instruction": "Now open your \"start.sh\" file in the top-most directory of your \"spring-boot-h2\" folder and paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "sh",
+                        "DisplayLang": "Shell Script",
+                        "FormatCode": "#!/bin/sh\nYELLOW='\\033[0;33m'\nBLUE='\\033[0;34m'\nNC='\\033[0m' # No Color\n\nstop_spring_boot() {\n  echo \"\\n\\n${YELLOW}Spring Boot application finished successfully!${NC}\"\n  kill \"$SPRING_BOOT_PID\"\n}\n\ntrap stop_spring_boot INT TERM\n\nmvn --quiet spring-boot:run &\nSPRING_BOOT_PID=$!\n\nsleep 0.1\n\necho \"* Running on ${BLUE}http://localhost:8080${NC}\\n\"\n\nwait \"$SPRING_BOOT_PID\"\n",
+                        "CopyCode": "#!/bin/sh\nYELLOW='\\033[0;33m'\nBLUE='\\033[0;34m'\nNC='\\033[0m' # No Color\n\nstop_spring_boot() {\n\techo \"\\n\\n${YELLOW}Spring Boot application finished successfully!${NC}\"\n\tkill \"$SPRING_BOOT_PID\"\n}\n\ntrap stop_spring_boot INT TERM\n\nmvn --quiet spring-boot:run &\nSPRING_BOOT_PID=$!\n\nsleep 0.1\n\necho \"* Running on ${BLUE}http://localhost:8080${NC}\\n\"\n\nwait \"$SPRING_BOOT_PID\"\n"
+                    }
+                },
+                {
+                    "id": 18,
+                    "instruction": "Now open the \"package.json\" file in the top-most directory. Paste in the following data. Change the value of the \"author\" attribute to be your name.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "JSON",
+                        "FormatCode": "{\n    \"name\": \"spring-boot-h2\",\n    \"version\": \"1.0.0\",\n    \"description\": \"Spring Boot API project\",\n    \"main\": \"index.js\",\n    \"scripts\": {\n\t\"start\": \"./start.sh\"\n    },\n    \"author\": \"Your Name\",\n    \"license\": \"ISC\",\n    \"dependencies\": {\n\n    }\n}",
+                        "CopyCode": "{\n\t\"name\": \"spring-boot-h2\",\n\t\"version\": \"1.0.0\",\n\t\"description\": \"Spring Boot API project\",\n\t\"main\": \"index.js\",\n\t\"scripts\": {\n\t\t\"start\": \"./start.sh\"\n\t},\n\t\"author\": \"Your Name\",\n\t\"license\": \"ISC\",\n\t\"dependencies\": {\n\n\t}\n}"
+                    }
+                },
+                {
+                    "id": 19,
+                    "instruction": "Go to your terminal and run the following commands. This will make your shell script an executable. You only have to do this one time.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd spring-boot-h2\nchmod +x start.sh",
+                        "CopyCode": "cd spring-boot-h2\nchmod +x start.sh"
+                    }
+                },
+                {
+                    "id": 20,
+                    "instruction": "Run your API using the following command. Note that in your project a new folder called \"data\" will automatically be created. This folder contains your database file. The folder allows the data in your table to be saved when you stop running your REST API. Note: you won't be able to view the contents of your \"demo_db.mv.db\" file in VSCode. You'll have to view them using SQL queries in the h2-console later on.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "npm run start",
+                        "CopyCode": "npm run start"
+                    }
+                },
+                {
+                    "id": 21,
+                    "instruction": "If you get an error saying port 8080 is already in use run the following. Replace \"&lt;PID&gt;\" with the PID from the first commands output.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "lsof -i :8080\nkill -9 <PID>",
+                        "CopyCode": "lsof -i :8080\nkill -9 <PID>"
+                    }
+                },
+                {
+                    "id": 22,
+                    "instruction": "Now open the following link in your browser. We're going to query the database in the h2-console. Give it a second to load and try refreshing the page if it says \"This site can't be reached\".",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Link",
+                        "FormatCode": "http://localhost:8080/h2-console",
+                        "CopyCode": "http://localhost:8080/h2-console"
+                    }
+                },
+                {
+                    "id": 23,
+                    "instruction": "Keep the link open in your browser, but go back to your folder in VSCode. Open the \".env\" file that you created earlier. Copy and record the values of \"DB_USERNAME\" and \"DB_PASSWORD\". Then go back to the h2-console in your browser and enter the values into the fields. Then press the \"connect\" button.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Values",
+                        "FormatCode": "JDBC URL: jdbc:h2:file:./data/demo_db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE\nUser Name: Value of DB_USERNAME\nPassword: Value of DB_PASSWORD",
+                        "CopyCode": "JDBC URL: jdbc:h2:file:./data/demo_db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE\nUser Name: Value of DB_USERNAME\nPassword: Value of DB_PASSWORD"
+                    }
+                },
+                {
+                    "id": 24,
+                    "instruction": "Keep both the h2-console and the terminal that's running your localhost open, but open a second terminal. In the second terminal run the following command.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Command/HTTP Request",
+                        "FormatCode": "curl -X POST http://localhost:8080/users \\\n-H \"Content-Type: application/json\" \\\n-d '{\"firstname\": \"Jimmy\", \"lastname\": \"Page\"}'",
+                        "CopyCode": "curl -X POST http://localhost:8080/users \\\n-H \"Content-Type: application/json\" \\\n-d '{\"firstname\": \"Jimmy\", \"lastname\": \"Page\"}'"
+                    }
+                },
+                {
+                    "id": 25,
+                    "instruction": "Now go back to your h2-console and run the following SQL query in the input box titled \"SQL statement:\". Then press the \"Run\" button above it. There should now be a user named \"Jimmy Page\" with an id of 1 in the table.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "fxml",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "SELECT * FROM Users",
+                        "CopyCode": "SELECT * FROM Users"
+                    }
+                },
+                {
+                    "id": 26,
+                    "instruction": "If it's working, you can close all of your terminals, h2-console, VSCode windows, etc."
+                },
+                {
+                    "id": 27,
+                    "instruction": "If you want to change your h2 database username and password you have two options. Steps 25-26 are the first option. Steps 27-29 are the second option. If you don't want to change your username and password, you can ignore these steps and move to the section."
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Change an H2 Users Credentials",
+                    "desc": "This section is optional and explains how to change a users username and password."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "If you don't want to change your H2 username and password skip to the section titled \"Setup React Frontend for this Project\"."
+                },
+                {
+                    "id": 2,
+                    "instruction": "If you want to change your h2 database username and password you have two options. Steps 3-4 are the first option. Steps 5-12 are the second option. Steps 5-7 also explain how to create and grant a new user access to your database."
+                },
+                {
+                    "id": 3,
+                    "instruction": "<u><b>This is the first option</b></u>. Delete your current database files from your Spring Boot application. WARNING: This will delete all your saved data.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd spring-boot-h2\nrm data/demo_db.mv.db\nrm data/demo_db.trace.db",
+                        "CopyCode": "cd spring-boot-h2\nrm data/demo_db.mv.db\nrm data/demo_db.trace.db"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "Go to your \".env\" file and change the values of DB_USERNAME and DB_PASSWORD to your new credentials. Then rerun your API."
+                },
+                {
+                    "id": 5,
+                    "instruction": "<u><b>This is the second option</b></u>. Run your Rest API, then open the h2-console link in your browser. It might take the h2-console site a second to load. Sign in using your current credentials. You can keep your old data using this method.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd spring-boot-h2\nnpm run start\n\nOpen this link: http://localhost:8080/h2-console",
+                        "CopyCode": "cd spring-boot-h2\nnpm run start\n\nOpen this link: http://localhost:8080/h2-console"
+                    }
+                },
+                {
+                    "id": 6,
+                    "instruction": "In the H2-console first create a new user using the following SQL command. <br><br> • Replace \"new_username\" with your new username.<br> • Replace the string 'new_password' with your new password.<br><br>Copy and record these values to put in the .env file later. Press the \"Run\" button to run your query.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "CREATE USER new_username PASSWORD 'new_password';",
+                        "CopyCode": "CREATE USER new_username PASSWORD 'new_password';"
+                    }
+                },
+                {
+                    "id": 7,
+                    "instruction": "Grant all privileges to the new user. Replace \"new_username\" with the new_username from the last step.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "GRANT ALL ON SCHEMA PUBLIC TO new_username;",
+                        "CopyCode": "GRANT ALL ON SCHEMA PUBLIC TO new_username;"
+                    }
+                },
+                {
+                    "id": 8,
+                    "instruction": "Revoke privileges from the old user. Replace \"old_username\" with your old username.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "REVOKE ALL ON SCHEMA PUBLIC FROM old_username;",
+                        "CopyCode": "REVOKE ALL ON SCHEMA PUBLIC FROM old_username;"
+                    }
+                },
+                {
+                    "id": 9,
+                    "instruction": "Grant the user admin rights so you can delete users. Replace \"new_username\" with your new username.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "ALTER USER new_username ADMIN TRUE;",
+                        "CopyCode": "ALTER USER new_username ADMIN TRUE;"
+                    }
+                },
+                {
+                    "id": 10,
+                    "instruction": "Now go back to your \".env\" file. Replace the DB_USERNAME and DB_PASSWORD with the new credentials from step 6."
+                },
+                {
+                    "id": 11,
+                    "instruction": "Run your Rest API, then open the h2-console link in your browser. Try signing in with your new credentials.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd spring-boot-h2\nnpm run start\n\nOpen this link: http://localhost:8080/h2-console",
+                        "CopyCode": "cd spring-boot-h2\nnpm run start\n\nOpen this link: http://localhost:8080/h2-console"
+                    }
+                },
+                {
+                    "id": 12,
+                    "instruction": "Drop the old user. Replace \"old_username\" with your old username. You're doing this now since you can't delete the user that's logged in.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "DROP USER old_username;",
+                        "CopyCode": "DROP USER old_username;"
+                    }
+                },
+                {
+                    "id": 13,
+                    "instruction": "Run the folowing SQL command to view all your H2 database users. You shouldn't see your old username in the table.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "SELECT * FROM INFORMATION_SCHEMA.USERS;",
+                        "CopyCode": "SELECT * FROM INFORMATION_SCHEMA.USERS;"
+                    }
+                },
+                {
+                    "id": 14,
+                    "instruction": "If you want to revoke a users admin rights, run the following command. Replace \"username\" with the username of the user you want to revoke the admin privilege of.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "ALTER USER username ADMIN FALSE;",
+                        "CopyCode": "ALTER USER username ADMIN FALSE;"
+                    }
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Setup React Frontend for this Project",
+                    "desc": "Explains how to write the React frontend and connect it to the backend REST API and database."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "In the very first step you created a folder called \"react-spring-frontend\". Change into that folder and download axios.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd react-spring-frontend\nnpm install axios",
+                        "CopyCode": "cd react-spring-frontend\nnpm install axios"
+                    }
+                },
+                {
+                    "id": 2,
+                    "instruction": "In the src folder create an axios instance file.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "touch src/axiosInstance.js",
+                        "CopyCode": "touch src/axiosInstance.js"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Now open your \"react-spring-frontend\" folder in VSCode. Paste the following code into the \"axiosInstance.js\" file in the \"src\" folder. Note that having a baseURL with an incorrect localhost link can lead to CORS issues. Keep this in mind for the future if you're not using port 8080 for your Rest API. If you've followed all the steps so far you shouldn't have to worry about CORS issues. The port was set to 8080 in the Shell Script.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "JavaScript",
+                        "FormatCode": "import axios from 'axios';\n\naxios.defaults.baseURL = 'http://localhost:8080';\naxios.defaults.headers.common['Content-Type'] = 'application/json';\n\nexport default axios;",
+                        "CopyCode": "import axios from 'axios';\n\naxios.defaults.baseURL = 'http://localhost:8080';\naxios.defaults.headers.common['Content-Type'] = 'application/json';\n\nexport default axios;"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "Got to src -> styles -> views and open \"Home.css\". Delete its contents and paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "CSS",
+                        "FormatCode": ".input-field {\n    border: 1px solid black;\n    padding: 5px;\n    margin: 5px;\n}\n\n.submit-btn {\n    background-color: blue;\n    padding: 5px;\n    color: white;\n}\n\n.submit-btn:hover {\n    background-color: darkblue;\n}\n\n.table-container {\n    display: flex;\n    justify-content: center;\n    margin-top: 20px;\n}\n\ntable {\n    border-collapse: collapse;\n    width: 50%;\n}\n\nth, td {\n    border: 1px solid black;\n    padding: 8px;\n    text-align: left;\n}\n\nth {\n    background-color: #f2f2f2;\n}\n",
+                        "CopyCode": ".input-field {\n\tborder: 1px solid black;\n\tpadding: 5px;\n\tmargin: 5px;\n}\n\n.submit-btn {\n\tbackground-color: blue;\n\tpadding: 5px;\n\tcolor: white;\n}\n\n.submit-btn:hover {\n\tbackground-color: darkblue;\n}\n\n.table-container {\n\tdisplay: flex;\n\tjustify-content: center;\n\tmargin-top: 20px;\n}\n\ntable {\n\tborder-collapse: collapse;\n\twidth: 50%;\n}\n\nth, td {\n\tborder: 1px solid black;\n\tpadding: 8px;\n\ttext-align: left;\n}\n\nth {\n\tbackground-color: #f2f2f2;\n}\n"
+                    }
+                },
+                {
+                    "id": 5,
+                    "instruction": "Now go to src -> views and open the \"Home.jsx\" file. Delete its contents and paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Javascript",
+                        "DisplayLang": "React",
+                        "FormatCode": "import React, { useState } from 'react';\nimport axios from '../axiosInstance.js';\nimport '../styles/views/Home.css';\n\nconst HomePage = () => {\n  const [firstName, setFirstName] = useState('');\n  const [lastName, setLastName] = useState('');\n  const [searchFirstName, setSearchFirstName] = useState('');\n  const [users, setUsers] = useState([]);\n\n  const createUser = async () => {\n    try {\n      if (!firstName || !lastName) {\n\talert('Please Fill In All Fields');\n\treturn;\n      }\n\n      const response = await axios.post('/users', {\n\tfirstname: firstName,\n\tlastname: lastName\n      });\n\n      alert(`User Created: ${response.data.firstname}`);\n    } catch (error) {\n      alert(`User '${firstName}' already in database!`);\n      console.error('There was an error!', error);\n    }\n  };\n\n  const searchUser = async () => {\n    try {\n      const response = await axios.get(`/users/${searchFirstName}`);\n      setUsers([response.data]);\n    } catch (error) {\n      alert(`Couldn't find user: '${searchFirstName}'`);\n      console.error('There was an error!', error);\n      setUsers([]);\n    }\n  };\n\n  return (\n    <div>\n      <div>\n\t<input\n\t  id=\"fName\"\n\t  className=\"input-field\"\n\t  value={firstName}\n\t  onChange={(e) => setFirstName(e.target.value)}\n\t  placeholder=\"Enter First Name\"\n\t/>\n\t<input\n\t  id=\"lName\"\n\t  className=\"input-field\"\n\t  value={lastName}\n\t  onChange={(e) => setLastName(e.target.value)}\n\t  placeholder=\"Enter Last Name\"\n\t/>\n\t<button\n\t  id=\"createUserBtn\"\n\t  className=\"submit-btn\"\n\t  onClick={createUser}\n\t>\n\t Create User\n\t</button>\n      </div>\n\n      {/* Search section */}\n      <div>\n\t<input\n\t  id=\"searchName\"\n\t  className=\"input-field\"\n\t  value={searchFirstName}\n\t  onChange={(e) => setSearchFirstName(e.target.value)}\n\t  placeholder=\"Search by First Name\"\n\t/>\n\t<button\n\t  id=\"searchUserBtn\"\n\t  className=\"submit-btn\"\n\t  onClick={searchUser}\n\t>\n\t Search\n\t</button>\n      </div>\n\n      {/* Display results in a table */}\n      {users.length > 0 && (\n\t<div className=\"table-container\">\n\t  <table>\n\t    <thead>\n\t      <tr>\n\t        <th>First Name</th>\n\t        <th>Last Name</th>\n\t      </tr>\n\t    </thead>\n\t    <tbody>\n\t      {users.map((user) => (\n\t        <tr key={user.firstname}>\n\t\t  <td>{user.firstname}</td>\n\t\t  <td>{user.lastname}</td>\n\t        </tr>\n\t      ))}\n\t    </tbody>\n\t  </table>\n\t</div>\n      )}\n    </div>\n  );\n};\n\nexport default HomePage;",
+                        "CopyCode": "import React, { useState } from 'react';\nimport axios from '../axiosInstance.js';\nimport '../styles/views/Home.css';\n\nconst HomePage = () => {\n  const [firstName, setFirstName] = useState('');\n  const [lastName, setLastName] = useState('');\n  const [searchFirstName, setSearchFirstName] = useState('');\n  const [users, setUsers] = useState([]);\n\n  const createUser = async () => {\n    try {\n      if (!firstName || !lastName) {\n\t\t\t\talert('Please Fill In All Fields');\n\t\t\t\treturn;\n      }\n\n      const response = await axios.post('/users', {\n\t\t\t\tfirstname: firstName,\n\t\t\t\tlastname: lastName\n      });\n\n      alert(`User Created: ${response.data.firstname}`);\n    } catch (error) {\n      alert(`User '${firstName}' already in database!`);\n      console.error('There was an error!', error);\n    }\n  };\n\n  const searchUser = async () => {\n    try {\n      const response = await axios.get(`/users/${searchFirstName}`);\n      setUsers([response.data]);\n    } catch (error) {\n      alert(`Couldn't find user: '${searchFirstName}'`);\n      console.error('There was an error!', error);\n      setUsers([]);\n    }\n  };\n\n  return (\n    <div>\n      <div>\n\t\t\t\t<input\n\t\t\t\t  id=\"fName\"\n\t\t\t\t  className=\"input-field\"\n\t\t\t\t  value={firstName}\n\t\t\t\t  onChange={(e) => setFirstName(e.target.value)}\n\t\t\t\t  placeholder=\"Enter First Name\"\n\t\t\t\t/>\n\t\t\t\t<input\n\t\t\t\t  id=\"lName\"\n\t\t\t\t  className=\"input-field\"\n\t\t\t\t  value={lastName}\n\t\t\t\t  onChange={(e) => setLastName(e.target.value)}\n\t\t\t\t  placeholder=\"Enter Last Name\"\n\t\t\t\t/>\n\t\t\t\t<button\n\t\t\t\t  id=\"createUserBtn\"\n\t\t\t\t  className=\"submit-btn\"\n\t\t\t\t  onClick={createUser}\n\t\t\t\t>\n\t\t\t\t Create User\n\t\t\t\t</button>\n      </div>\n\n      {/* Search section */}\n      <div>\n\t\t\t\t<input\n\t\t\t\t  id=\"searchName\"\n\t\t\t\t  className=\"input-field\"\n\t\t\t\t  value={searchFirstName}\n\t\t\t\t  onChange={(e) => setSearchFirstName(e.target.value)}\n\t\t\t\t  placeholder=\"Search by First Name\"\n\t\t\t\t/>\n\t\t\t\t\n\t\t\t\t<button\n\t\t\t\t  id=\"searchUserBtn\"\n\t\t\t\t  className=\"submit-btn\"\n\t\t\t\t  onClick={searchUser}\n\t\t\t\t>\n\t\t\t\t Search\n\t\t\t\t</button>\n      </div>\n\n      {/* Display results in a table */}\n      {users.length > 0 && (\n\t\t\t\t<div className=\"table-container\">\n\t\t\t\t  <table>\n\t\t\t\t    <thead>\n\t\t\t\t      <tr>\n\t\t\t\t        <th>First Name</th>\n\t\t\t\t        <th>Last Name</th>\n\t\t\t\t      </tr>\n\t\t\t\t    </thead>\n\t\t\t\t    <tbody>\n\t\t\t\t      {users.map((user) => (\n\t\t\t\t        <tr key={user.firstname}>\n\t\t\t\t\t\t\t\t  <td>{user.firstname}</td>\n\t\t\t\t\t\t\t\t  <td>{user.lastname}</td>\n\t\t\t\t        </tr>\n\t\t\t\t      ))}\n\t\t\t\t    </tbody>\n\t\t\t\t  </table>\n\t\t\t\t</div>\n      )}\n    </div>\n  );\n};\n\nexport default HomePage;"
+                    }
+                },
+                {
+                    "id": 6,
+                    "instruction": "Now open two new terminals. In the first terminal run the following commands to start your Rest API. Do not close this terminal.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd spring-boot-h2\nnpm run start",
+                        "CopyCode": "cd spring-boot-h2\nnpm run start"
+                    }
+                },
+                {
+                    "id": 7,
+                    "instruction": "Open the h2-console link in your browser. It might take a second to load. Sign in using the credentials from your \"application.properties\" file. This file can found in your \"spring-boot-h2\" folder in src -> main -> resources. The credentials are the values of the \"spring.datasource.username\" and \"spring.datasource.password\" attributes. Press the \"Connect\" button when you're done.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Link",
+                        "FormatCode": "http://localhost:8080/h2-console",
+                        "CopyCode": "http://localhost:8080/h2-console"
+                    }
+                },
+                {
+                    "id": 8,
+                    "instruction": "Now in your second terminal run the following command to start your development server.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd react-spring-frontend\nnpm run dev",
+                        "CopyCode": "cd react-spring-frontend\nnpm run dev"
+                    }
+                },
+                {
+                    "id": 9,
+                    "instruction": "Now open the link that was output from the \"npm run dev\" command in your broswer. It might be the following link.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Link",
+                        "FormatCode": "http://localhost:5173/",
+                        "CopyCode": "http://localhost:5173/"
+                    }
+                },
+                {
+                    "id": 10,
+                    "instruction": "Practice adding users to your database using your React frontend. Run the following SQL query in your h2-console to see the users you're adding.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "fxml",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "SELECT * FROM Users",
+                        "CopyCode": "SELECT * FROM Users"
+                    }
+                },
+                {
+                    "id": 11,
+                    "instruction": "Use the following command to delete a user from your table. You can change the WHERE condition to delete by lastname and id as well.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "DELETE FROM Users WHERE firstname = 'Jimmy';",
+                        "CopyCode": "DELETE FROM Users WHERE firstname = 'Jimmy';"
+                    }
+                },
+                {
+                    "id": 12,
+                    "instruction": "You've finished all the steps and should now have a functioning React app with a Spring Boot backend!"
+                }
+            ]
+        }
+    ]
+}

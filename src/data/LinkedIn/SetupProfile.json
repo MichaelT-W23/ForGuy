@@ -1,0 +1,94 @@
+{
+    "Text": [
+        {
+            "page": "Setup Job Alerts",
+            "desc": "These are tips on how to setup a profile on LinkedIn. It's pretty straight forward."
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1, 
+            "instruction": "Before you do anything else, change your profile viewing settings. LinkedIn will notify people that you viewed their profile if you don't change this setting. Go to this [link](https://www.linkedin.com/mypreferences/d/profile-viewing-options) and select \"private mode\". Press the back button when you're done."
+        },
+        {
+            "id": 2,
+            "instruction": "Go to the [LinkedIn](https://www.linkedin.com/feed/) home page, just to start from the beginning."
+        },
+        {
+            "id": 3,
+            "instruction": "In the upper right corner, click on your profile picture that says \"Me\" under it. Press the \"View Profile\" button."
+        },
+        {
+            "id": 4,
+            "instruction": "To the right of your profile picture. Click on the pencil icon and fill out all required fields for your intro."
+        },
+        {
+            "id": 5,
+            "instruction": "After that click the \"Add profile section\". Under the \"Core\" menu option press \"Add about\"."
+        },
+        {
+            "id": 6,
+            "instruction": "Once the \"Add About\" input box opens, write a description about yourself summarizing your experience, passions, skills, goals, etc."
+        },
+        {
+            "id": 7,
+            "instruction": "After that click the \"Add profile section\" again. Under the \"Core\" menu option press \"Add position\"."
+        },
+        {
+            "id": 8,
+            "instruction": "Once the \"Add Experience\" input box opens, fill out all fields for your position. Make sure to add skills used and a description, despite those fields being optional. Press \"Save\" when you're done."
+        },
+        {
+            "id": 9,
+            "instruction": "Now that you have one position added, you should see an \"Experience\" section now. Add more positions by pressing the plus symbol."
+        },
+        {
+            "id": 10,
+            "instruction": "Go back to the top of the page and press \"Add profile section\" again. Under \"Core\" select \"Add education\"."
+        },
+        {
+            "id": 11,
+            "instruction": "I'd recommend adding both Weddington High School and UNCW. Adding your high school will help you find people you went to high school with and show you went right to college after you graduated."
+        },
+        {
+            "id": 12,
+            "instruction": "Go back to the top of the page and press \"Add profile section\" again. Under \"Additional\" select \"Add volunteer experience\"."
+        },
+        {
+            "id": 13,
+            "instruction": "Fill out any Volunteering experience you've done."
+        },
+        {
+            "id": 14,
+            "instruction": "Go back to the top of the page and press \"Add profile section\" again. Under \"Additional\" select \"Add volunteer experience\"."
+        },
+        {
+            "id": 15, 
+            "instruction": "Add skills you're proficient in so people can see what you know how to do."
+        },
+        {
+            "id": 16, 
+            "instruction": "Go back to the top of the page and press \"Add profile section\" again. Under \"Recommended\" select \"Add courses\"."
+        },
+        {
+            "id": 17, 
+            "instruction": "Add relevant coursework you've taken."
+        },
+        {
+            "id": 18, 
+            "instruction": "Go back to the top of the page and press \"Add profile section\" again. Under \"Recommended\" select \"Add licenses & certifications\"."
+        },
+        {
+            "id": 19, 
+            "instruction": "Add any certifications you have. For example, if you're certified in Microsoft Excel you could add that."
+        },
+        {
+            "id": 20, 
+            "instruction": "After you've done all that, look up companies you're interested in working for and follow them. Also connect with people you know."
+        },
+        {
+            "id": 21, 
+            "instruction": "Go to the (Setup Job Alerts)[/LinkedIn/SetupJobAlerts] page, to learn how to get notified about job openings about certain companies."
+        }
+    ]
+}

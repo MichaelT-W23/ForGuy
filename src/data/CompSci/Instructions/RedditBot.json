@@ -1,0 +1,218 @@
+{
+    "MultiSet": [
+        {
+            "Info": [
+                {
+                    "title": "How to Create a Reddit Bot",
+                    "desc": "Explain how to create a Reddit Bot.",
+                    "ref": "reddit-bot"
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "BEFORE YOU DO ANY OF THIS, go to the &How to Setup a Reddit API Project&[RedditApiLink] link above and complete all the instructions if you haven't done so already."
+                },
+                {
+                    "id": 2,
+                    "instruction": "Create a new folder and name it \"reddit_bot\" using the following command",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "mkdir reddit_bot",
+                        "CopyCode": "mkdir reddit_bot"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Install the following library for your project.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "pip3 install smtplib\npip3 install python-dotenv\npip3 install flask\npip3 install requests",
+                        "CopyCode": "pip3 install smtplib\npip3 install python-dotenv\npip3 install flask\npip3 install requests"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "Change into your directory and create the following files.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd reddit_bot\ntouch reddit_bot.py\ntouch get_refresh_token.py\ntouch oauth_server.py\ntouch .env",
+                        "CopyCode": "cd reddit_bot\ntouch reddit_bot.py\ntouch get_refresh_token.py\ntouch oauth_server.py\ntouch .env"
+                    }
+                },
+                {
+                    "id": 5,
+                    "instruction": "Now we're going to setup Google app password so you can programmatically send yourself an email."
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Create a Google App Password",
+                    "desc": "Explains how to create a Google App Password you can use to send yourself an email."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Go to your [Google Account](https://myaccount.google.com). Then go click on \"Security\" in the left sidebar."
+                },
+                {
+                    "id": 2,
+                    "instruction": "You can skip this tep if you already have 2-Step authentication enabled. Under \"How you sign in to Google\" click \"2-Step Verification\" and follow the instructions to enable it."
+                },
+                {
+                    "id": 3,
+                    "instruction": "After enabling 2-Step Verification, go back to the \"Security\" section of your Google Account."
+                },
+                {
+                    "id": 4,
+                    "instruction": "Under \"How you sign in to Google\" click on \"2-Step Verification\"."
+                },
+                {
+                    "id": 5,
+                    "instruction": "Scroll to the bottom section titled \"App passwords\". Then click the arrow."
+                },
+                {
+                    "id": 5,
+                    "instruction": "In the \"App name\" text field type \"PythonEmail\". Then press \"Create\"."
+                },
+                {
+                    "id": 6,
+                    "instruction": "Copy and record the \"Generated app password\" from the pop-up box. Then click \"Done\"."
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Create and Locally Test the Reddit Bot",
+                    "desc": "How to create a Reddit bot that emails you every time someone posts in a subreddit."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Open your reddit_bot folder in an IDE."
+                },
+                {
+                    "id": 2,
+                    "instruction": "Open your \".env\" file and paste in the following code. Change all the credential placeholders to your actual credentials. Note if your Google App password has yellow highlighted spaces just delete them and replace them with regular spaces. Go [here](https://www.reddit.com/prefs/apps) to find your credentials. The CLIENT_ID is under \"Personal Use Script\". Do not change the value of \"REFRESH_TOKEN\" yet. We'll get that value later.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "fxml",
+                        "DisplayLang": "Env",
+                        "FormatCode": "CLIENT_ID=your_client_id\nCLIENT_SECRET=your_client_secret\nUSER_AGENT=script by u/your_reddit_username\nSENDER_EMAIL=your_gmail_address\nSENDER_PASSWORD=your_google_app_password\nEMAIL_RECIPIENT=your_gmail_address\nREFRESH_TOKEN=your_refresh_token",
+                        "CopyCode": "CLIENT_ID=your_client_id\nCLIENT_SECRET=your_client_secret\nUSER_AGENT=script by u/your_reddit_username\nSENDER_EMAIL=your_gmail_address\nSENDER_PASSWORD=your_google_app_password\nEMAIL_RECIPIENT=your_gmail_address\nREFRESH_TOKEN=your_refresh_token"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Again, make sure to fill in all your credentials in the \".env\" file before moving forward. They'll be necessary in the following steps."
+                },
+                {
+                    "id": 4,
+                    "instruction": "Open your \"oauth_server.py\" file and paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Python",
+                        "FormatCode": "from flask import Flask, request\n\napp = Flask(__name__)\n\n@app.route('/callback')\ndef callback():\n    code = request.args.get('code')\n    if code:\n\treturn f\"Authorization code: {code}\"\n    else:\n\treturn \"Authorization code not found!\"\n\nif __name__ == '__main__':\n    app.run(port=8080)",
+                        "CopyCode": "from flask import Flask, request\n\napp = Flask(__name__)\n\n@app.route('/callback')\ndef callback():\n\tcode = request.args.get('code')\n\tif code:\n\t\treturn f\"Authorization code: {code}\"\n\telse:\n\t\treturn \"Authorization code not found!\"\n\nif __name__ == '__main__':\n\tapp.run(port=8080)"
+                    }
+                },
+                {
+                    "id": 5,
+                    "instruction": "Open your \"get_refresh_token.py\" file and paste in the following code.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Python",
+                        "FormatCode": "import os\nimport requests\nimport webbrowser\nfrom urllib.parse import urlencode\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nCLIENT_ID = os.getenv('CLIENT_ID')\nCLIENT_SECRET = os.getenv('CLIENT_SECRET')\nREDIRECT_URI = 'http://localhost:8080/callback'\nDURATION = 'permanent'\nSCOPE = 'identity read'\n\ncreds = {\n    'client_id': CLIENT_ID,\n    'response_type': 'code',\n    'state': 'random_string',\n    'redirect_uri': REDIRECT_URI,\n    'duration': DURATION,\n    'scope': SCOPE\n}\n\nauth_url = f\"https://www.reddit.com/api/v1/authorize?{urlencode(creds)}\"\n\nprint(f\"Go to the following URL to authorize your bot: {auth_url}\")\nwebbrowser.open(auth_url)\n\nauth_code = input(\"Enter the authorization code: \")\n\nauth = requests.auth.HTTPBasicAuth(CLIENT_ID, CLIENT_SECRET)\n\ndata = {\n    'grant_type': 'authorization_code',\n    'code': auth_code,\n    'redirect_uri': REDIRECT_URI\n}\n\nheaders = {'User-Agent': 'MyBot/0.0.1'}\n\nres = requests.post('https://www.reddit.com/api/v1/access_token',\n\t\t     auth=auth, data=data, headers=headers)\n\nresponse_json = res.json()\nrefresh_token = response_json['refresh_token']\nprint(f\"\\033[94mYour refresh token is\\033[0m: {refresh_token}\")",
+                        "CopyCode": "import os\nimport requests\nimport webbrowser\nfrom urllib.parse import urlencode\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nCLIENT_ID = os.getenv('CLIENT_ID')\nCLIENT_SECRET = os.getenv('CLIENT_SECRET')\nREDIRECT_URI = 'http://localhost:8080/callback'\nDURATION = 'permanent'\nSCOPE = 'identity read'\n\ncreds = {\n\t'client_id': CLIENT_ID,\n\t'response_type': 'code',\n\t'state': 'random_string',\n\t'redirect_uri': REDIRECT_URI,\n\t'duration': DURATION,\n\t'scope': SCOPE\n}\n\nauth_url = f\"https://www.reddit.com/api/v1/authorize?{urlencode(creds)}\"\n\nprint(f\"Go to the following URL to authorize your bot: {auth_url}\")\nwebbrowser.open(auth_url)\n\nauth_code = input(\"Enter the authorization code: \")\n\nauth = requests.auth.HTTPBasicAuth(CLIENT_ID, CLIENT_SECRET)\n\ndata = {\n\t'grant_type': 'authorization_code',\n\t'code': auth_code,\n\t'redirect_uri': REDIRECT_URI\n}\n\nheaders = {'User-Agent': 'MyBot/0.0.1'}\n\nres = requests.post('https://www.reddit.com/api/v1/access_token',\n\t\t\t\t\t auth=auth, data=data, headers=headers)\n\nresponse_json = res.json()\nrefresh_token = response_json['refresh_token']\nprint(f\"\\033[94mYour refresh token is\\033[0m: {refresh_token}\")"
+                    }
+                },
+                {
+                    "id": 6,
+                    "instruction": "Now open two terminals. In the first terminal run the two following commands to start the server.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd reddit_bot\npython3 oauth_server.py",
+                        "CopyCode": "cd reddit_bot\npython3 oauth_server.py"
+                    }
+                },
+                {
+                    "id": 7,
+                    "instruction": "In the second server run the following commands to execute your script. A webpage will be opened.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd reddit_bot\npython3 get_refresh_token.py",
+                        "CopyCode": "cd reddit_bot\npython3 get_refresh_token.py"
+                    }
+                },
+                {
+                    "id": 8,
+                    "instruction": "Press the orange \"Allow\" button on the webpage. Then copy and record the authorization code."
+                },
+                {
+                    "id": 9,
+                    "instruction": "Go back to your second terminal and paste in the authorization code where it's asking for input. The refresh token will then be printed. COPY AND RECORD IT. Do not use the authorization token in the next step."
+                },
+                {
+                    "id": 10,
+                    "instruction": "Close all your open terminals. Then, open your \".env\" file and replace \"your_refresh_token\" with the value you just copied. This will allow OAuth2 to work without having to use a new 2FA code every time your run your script.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "fxml",
+                        "DisplayLang": "Env",
+                        "FormatCode": "REFRESH_TOKEN=your_refresh_token",
+                        "CopyCode": "REFRESH_TOKEN=your_refresh_token"
+                    }
+                },
+                {
+                    "id": 11,
+                    "instruction": "Paste the following code in the \"reddit_bot.py\" file. Make sure to change the value of the \"subreddit_name\" variable.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Python",
+                        "FormatCode": "import praw\nimport smtplib\nfrom email.mime.multipart import MIMEMultipart\nfrom email.mime.text import MIMEText\nimport os\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\n# Your Reddit credentials\nCLIENT_ID = os.getenv('CLIENT_ID')\nCLIENT_SECRET = os.getenv('CLIENT_SECRET')\nREFRESH_TOKEN = os.getenv('REFRESH_TOKEN')\nUSER_AGENT = os.getenv('USER_AGENT')\n\n# Your Email Credentials\nsender_email = os.getenv('SENDER_EMAIL')\nsender_password = os.getenv('SENDER_PASSWORD')\nemail_recipient = os.getenv('EMAIL_RECIPIENT')\n\n# Name of Subreddit you're working with. No \"r/\" in name. AskReddit is good for testing\nsubreddit_name = 'NAME_OF_SUBREDDIT'\n\n\nreddit = praw.Reddit(\n    client_id=CLIENT_ID,\n    client_secret=CLIENT_SECRET,\n    refresh_token=REFRESH_TOKEN,\n    user_agent=USER_AGENT\n)\n\n\nsubreddit = reddit.subreddit(subreddit_name)\n\ndef send_email(title):\n\n    subject = f\"Someone posted in r/{subreddit_name}!\"\n\n    body = (\n\tf'The title of the post is \"{title}\".\\n\\n\\n' + \n\t\"This was sent from you're deployed reddit bot.\"\n    )\n\n    message = MIMEMultipart()\n    message[\"From\"] = sender_email\n    message[\"To\"] = email_recipient\n    message[\"Subject\"] = subject\n\n    message.attach(MIMEText(body, \"plain\"))\n\n    try:\n\tserver = smtplib.SMTP(\"smtp.gmail.com\", 587)\n\tserver.starttls()\n\tserver.login(sender_email, sender_password)\n\ttext = message.as_string()\n\tserver.sendmail(sender_email, email_recipient, text)\n\tserver.quit()\n\tprint(\"Email sent successfully!\")\n    except Exception as e:\n\tprint(f\"Failed to send email. Error: {e}\")\n\ndef main():\n    print(f\"Monitoring new posts in r/{subreddit_name}...\")\n\n    for submission in subreddit.stream.submissions(skip_existing=True):\n\tprint(\"\\nSomeone made a post titled: \", end=\"\")\n\tprint(f\"\\033[94m{submission.title}\\033[0m\")\n\tsend_email(submission.title)\n\n\nif __name__ == \"__main__\":\n\n    if subreddit_name == 'NAME_OF_SUBREDDIT':\n\tprint('\\033[91mChange value of subreddit_name variable\\033[0m')\n\texit(0)\n\n    main()",
+                        "CopyCode": "import praw\nimport smtplib\nfrom email.mime.multipart import MIMEMultipart\nfrom email.mime.text import MIMEText\nimport os\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\n# Your Reddit credentials\nCLIENT_ID = os.getenv('CLIENT_ID')\nCLIENT_SECRET = os.getenv('CLIENT_SECRET')\nREFRESH_TOKEN = os.getenv('REFRESH_TOKEN')\nUSER_AGENT = os.getenv('USER_AGENT')\n\n# Your Email Credentials\nsender_email = os.getenv('SENDER_EMAIL')\nsender_password = os.getenv('SENDER_PASSWORD')\nemail_recipient = os.getenv('EMAIL_RECIPIENT')\n\n# Name of Subreddit you're working with. No \"r/\" in name. AskReddit is good for testing\nsubreddit_name = 'NAME_OF_SUBREDDIT'\n\n\nreddit = praw.Reddit(\n\tclient_id=CLIENT_ID,\n\tclient_secret=CLIENT_SECRET,\n\trefresh_token=REFRESH_TOKEN,\n\tuser_agent=USER_AGENT\n)\n\n\nsubreddit = reddit.subreddit(subreddit_name)\n\ndef send_email(title):\n\n\tsubject = f\"Someone posted in r/{subreddit_name}!\"\n\n\tbody = (\n\t\tf'The title of the post is \"{title}\".\\n\\n\\n' + \n\t\t\"This was sent from you're deployed reddit bot.\"\n\t)\n\n\tmessage = MIMEMultipart()\n\tmessage[\"From\"] = sender_email\n\tmessage[\"To\"] = email_recipient\n\tmessage[\"Subject\"] = subject\n\n\tmessage.attach(MIMEText(body, \"plain\"))\n\n\ttry:\n\t\tserver = smtplib.SMTP(\"smtp.gmail.com\", 587)\n\t\tserver.starttls()\n\t\tserver.login(sender_email, sender_password)\n\t\ttext = message.as_string()\n\t\tserver.sendmail(sender_email, email_recipient, text)\n\t\tserver.quit()\n\t\tprint(\"Email sent successfully!\")\n\texcept Exception as e:\n\t\tprint(f\"Failed to send email. Error: {e}\")\n\ndef main():\n\tprint(f\"Monitoring new posts in r/{subreddit_name}...\")\n\n\tfor submission in subreddit.stream.submissions(skip_existing=True):\n\t\tprint(f\"\\nSomeone made a post titled: \\033[94m{submission.title}\\033[0m\")\n\t\tsend_email(submission.title)\n\n\nif __name__ == \"__main__\":\n\n\tif subreddit_name == 'NAME_OF_SUBREDDIT':\n\t\tprint('\\033[91mChange value of subreddit_name variable\\033[0m')\n\t\texit(0)\n\n\tmain()"
+                    }
+                },
+                {
+                    "id": 12,
+                    "instruction": "Run the reddit bot using the following command. When someone posts on the subreddit it will be printed to the terminal. It might take a while until someone posts. Check your email to make the notification is being sent. Stop running the bot by pressing \"control + c\".",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "python3 reddit_bot.py",
+                        "CopyCode": "python3 reddit_bot.py"
+                    }
+                },
+                {
+                    "id": 13,
+                    "instruction": "You've successfully created a Reddit Bot!"
+                },
+                {
+                    "id": 14,
+                    "instruction": "You can deploy it to AWS using the \"How to Deploy a Reddit Bot on AWS\" instruction set."
+                }
+            ]
+        }
+    ]
+}

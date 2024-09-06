@@ -1,0 +1,128 @@
+# Name: Michael Totaro\n
+# Date: 10/24/2022\n
+# Purpose: Create and demonstrate CarList class (Not a real assignment).\n
+# collaborators/resources: None other than Dr. Pence\n\n
+
+class Car:\n\t
+    \"\"\" This class is a basic car object. \"\"\"\n\t
+    def __init__(self, car_id, company, year, color, miles):\n\t\t
+        \"\"\"\n\t\t
+        Initializer for a Car object.\n\t\t
+        :param id: Id of the car\n\t\t
+        :param company: Maker of the car\n\t\t
+        :param year: Year car was made\n\t\t
+        :param color: Color of the car\n\t\t
+        :param miles: Miles driven by the car\n\t\t
+        \"\"\"\n\t\t
+        self.id = car_id\n\t\t
+        self.company = company\n\t\t
+        self.year = year\n\t\t
+        self.color = color\n\t\t
+        self.miles = miles\n\n\t
+    
+    def __str__(self):\n\t\t
+        \"\"\"\n\t\t
+        Creates a string representation of a car object.\n\t\t
+        :return: string representation of a car object.\n\t\t
+        \"\"\"\n\t\t
+        car_str = (f\"\\nCar {self.id}\\n\"\n\t\t\t\t   
+                   f\"Company: {self.company}\\n\"\n\t\t\t\t   
+                   f\"Year: {self.year}\\n\"\n\t\t\t\t   
+                   f\"Color: {self.color}\\n\"\n\t\t\t\t   
+                   f\"Miles: {self.miles}\")\n\n\t\t
+        
+        return car_str + \"\\n\"\n\n\n
+
+
+class CarList:\n\t
+    \"\"\"\n\t
+    This class is data structure of car objects.\n\t
+    You can add, remove, and print the list.\n\t
+    \"\"\"\n\t
+    def __init__(self):\n\t\t
+        \"\"\"\n\t\t
+        Initializes an empty car list\n\t\t
+        \"\"\"\n\t\t
+        self.car_list = []\n\n\t
+    
+    def add_car(self, new_car):\n\t\t
+        \"\"\"\n\t\t
+        Adds a car to the car list if conditions are met.\n\t\t
+        :param new_car: Car object to be added to the list\n\t\t
+        :return: True if the car was added successfully else false.\n\t\t
+        :raises ValueError: If parameter is not an instance of a car object\n\t\t
+        \"\"\"\n\n\t\t
+
+        if not isinstance(new_car, Car):\n\t\t\t
+            raise ValueError(\"Parameter must be an instance of a car object.\")\n\n\t\t
+        
+        for car in self.car_list:\n\t\t\t
+            if car.id == new_car.id:\n\t\t\t\t
+                print(f\"A car in the list already has the id '{new_car.id}'!\")\n\t\t\t\t
+                return False\n\n\t\t
+            
+        self.car_list.append(new_car)\n\n\t\t
+
+        return True\n\n\t
+
+    def remove_car_by_id(self, car_id):\n\t\t
+        \"\"\"\n\t\t
+        Removes car in the list by id.\n\t\t
+        :param car_id: The id of the car to be removed.\n\t\t
+        :raises ValueError: If parameter is not an int.\n\t\t
+        \"\"\"\n\n\t\t
+
+        if not isinstance(car_id, int):\n\t\t\t
+            raise ValueError(\"car_id must be an integer.\")\n\n\t\t
+
+        for car in self.car_list:\n\t\t\t
+            if car.id == car_id:\n\t\t\t\t
+                self.car_list.remove(car)\n\t\t\t\t
+                print(f\"Car {car_id} removed successfully!\")\n\t\t\t\t
+                return\n\n\t\t
+            
+        print(f\"No car with the id {car_id} was found!\")\n\n\t
+
+    def __str__(self):\n\t\t
+        \"\"\"\n\t\t
+        Creates a string representation of a CarList object.\n\t\t
+        :return: The cars in the list as a string\n\t\t
+        \"\"\"\n\t\t
+        return \"\\n\" + \" \".join([str(car) for car in self.car_list])\n\n\t
+
+    def __len__(self):\n\t\t
+        \"\"\"\n\t\t
+        Get the length of the car_list\n\t\t
+        :return: The length of the car list\n\t\t
+        \"\"\"\n\t\t
+        return len(self.car_list)\n\n\n
+
+
+def main():\n\t
+    \"\"\"\n\t
+    The driver code to test the CarList class.\n\t
+    \"\"\"\n\t
+    car_list = CarList()\n\n\t
+
+    car_list.add_car(Car(1, \"Honda\", 2012, \"gray\", 12430))\n\t
+    car_list.add_car(Car(2, \"Toyota\", 2005, \"black\", 25430))\n\t
+    car_list.add_car(Car(3, \"Ford\", 1999, \"red\", 19430))\n\n\t
+
+    try:\n\t\t
+        car_list.add_car(\"This is a string object\")\n\t
+    except ValueError as e:\n\t\t
+        print(e)\n\n\t
+
+    car_list.add_car(Car(1, \"Used id\", 1999, \"red\", 19430))\n\n\t
+    
+    print(f\"Length of list before you remove a car {len(car_list)}\")\n\n\t
+
+    car_list.remove_car_by_id(1)\n\n\t
+
+    print(f\"Length of list after you remove a car {len(car_list)}\")\n\n\t
+
+    car_list.remove_car_by_id(100000)\n\n\t
+
+    print(car_list)\n\n
+
+main()

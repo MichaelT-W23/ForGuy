@@ -1,0 +1,141 @@
+{
+    "Text": [
+        {
+            "page": "Useful Certifications",
+            "desc1": "These are certifications that I think would be useful to get for various reasons. They would help to build your resume and teach you about important and useful skills in \"real-world\" software engineering. While I've never attained any of these certifications myself, I still think they could be very useful and teach you good information.",
+            "header2": "Cloud Certifications",
+            "desc2": "Cloud computing is a very popular, widely-used tool in software engineering these days. I think these certifications would greatly help you in basically any SWE job you get.",
+            "header3": "Certifications for Essential Skills",
+            "desc3": "These are certifications for very commonly used skills in software engineering jobs. I've been asked about my knowledge on these skills in basically every SWE interview I've done so far.",
+            "header4": "Machine Learning Certifications",
+            "desc4": "Artificial Intelligence and Machine Learning are all the rage these days so I thought I'd add a section on it. I also feel like UNCW's AI concentration isn't the best way to learn real-world application of these skills and that a certification might be easier and more useful to get.",
+            "header5": "Academic Certifications and Degrees",
+            "desc5": "These are certifications and degrees from Universities that you might find helpful. I think having some form of education from another University can make up for the lack of \"prestige\" UNCW has.",
+            "header6": "General Tips",
+            "desc6": "These are general tips I have a for attaining certifications to make the most out of the experience and get the most value out of the certification itself. These tips might also make the process easier."
+        }
+    ],
+    "Cloud Certifications": [
+        {
+            "Name": "Amazon Web Services",
+            "Certification": "AWS Certified Cloud Practitioner",
+            "Certifying Body": "Amazon Web Services",
+            "Cost": "$100 to take the test, free retake/preparation",
+            "Link": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+        },
+        {
+            "Name": "Google Cloud Platform",
+            "Certification": "Associate Cloud Engineer",
+            "Certifying Body": "Google",
+            "Cost": "$125 to take the test.",
+            "Link": "https://cloud.google.com/learn/certification/cloud-engineer"
+        },
+        {
+            "Name": "IBM Cloud",
+            "Certification": "IBM Cloud Developer",
+            "Certifying Body": "IBM",
+            "Cost": "Free to take the course. No final exam.",
+            "Link": "https://www.ibm.com/training/path/ibmcloudprofessionaldeveloper2023",
+            "Other Cloud Training Courses": "https://www.ibm.com/training/cloud"
+        },
+        {
+            "Name": "Microsoft Azure",
+            "Certification": "AZ-900: Microsoft Azure Fundamentals",
+            "Certifying Body": "Microsoft",
+            "Cost": "$99 to take the test",
+            "Link": "https://learn.microsoft.com/en-us/credentials/certifications/exams/az-900/"
+        }
+    ],
+    "Certifications for Essential Skills": [
+        {
+            "Name": "Kubernetes and Docker",
+            "Description": "This is a course, not a certification. However, you can still definitely put your completion of it on your resume.",
+            "Certification": "Docker and Kubernetes: The Complete Guide",
+            "Certifying Body": "Udemy",
+            "Cost": "$119.99 for the course",
+            "Link": "https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/"
+        },
+        {
+            "Name": "GitHub and Git",
+            "Description": "The only class at UNCW where we used GitHub was CSC 450. I think it would be very useful to learn about it beforehand as it's a MANDATORY skill to have as a software engineer. A certification will help show you actually know what you're doing and teach you important skills as well. I think using Git and GitHub for a personal project would also be a great way to learn it.",
+            "Certification": "GitHub Foundations",
+            "Certifying Body": "GitHub",
+            "Cost": "$99 to take the exam",
+            "Link": "https://examregistration.github.com/certification/GHF"
+        },
+        {
+            "Name": "JUnit and Mockito",
+            "Description": "UNCW doesn't really teach software testing. While you may not need to know these two specific frameworks for your job, they are commonly used and will help you learn the basics. Testing is also commonly asked about in interviews. Also note that this is a course, not a certification. However, you can still definitely put your completion of it on your resume.",
+            "Certification": "JUnit and Mockito Crash Course",
+            "Certifying Body": "Udemy",
+            "Cost": "$94.99",
+            "Link": "https://www.udemy.com/course/junitandmockitocrashcourse/"
+        },
+        {
+            "Name": "Google UX Design",
+            "Description": "This is Google's UX design certificate. If you had any interest in front-end development, this would probably be helpful.",
+            "Certification": "Google UX Design Certificate",
+            "Certifying Body": "Coursera",
+            "Cost": "Free",
+            "Link": "https://www.coursera.org/google-certificates/ux-design-certificate/"
+        }
+    ],
+    "Machine Learning Certifications": [
+        {
+            "Name": "Amazon Web Services",
+            "Certification": "AWS Certified Machine Learning - Specialty",
+            "Cost": "$300",
+            "Link": "https://aws.amazon.com/certification/certified-machine-learning-specialty/"
+        },
+        {
+            "Name": "Google",
+            "Certification": "Professional Machine Learning Engineer",
+            "Cost": "$200",
+            "Link": "https://cloud.google.com/learn/certification/machine-learning-engineer"
+        }
+    ],
+    "Academic Certifications and Degrees": [
+        {
+            "Name": "UNC Web Developer Boot Camp",
+            "Certifying Body": "UNC Chapel Hill",
+            "Cost": "They don't say. They just say \"Financial options are available. Contact us to discuss your options.\"",
+            "Link": "https://bootcamp.unc.edu/coding/#getinfo"
+        },
+        {
+            "Name": "Online Georgia Tech Masters Degree",
+            "Description": "I saw a guy who went to UNCW on LinkedIn get this degree. He said he had a 2.8 gpa so I don't think it's too difficult to get into.",
+            "Certifying Body": "Georgia Tech",
+            "Cost": "$5400 total ($180 per credit hour. 30 credit hours)",
+            "Link": "https://pe.gatech.edu/degrees/computer-science"
+        },
+        {
+            "Name": "Stanford AI Program",
+            "Certification": "Artificial Intelligence Professional Program",
+            "Certifying Body": "Stanford",
+            "Cost": "$1,750 per course. 8 courses to choose from.",
+            "Link": "https://online.stanford.edu/programs/artificial-intelligence-professional-program"
+        }
+    ],
+    "GeneralTips": [
+        {
+            "Name": "Get Certifications from a Company You Want to Work At",
+            "Description": "If you want to work at Cisco, IBM, etc. get certifications from those companies to show commitment."
+        },
+        {
+            "Name": "Some of These Courses Might Be Free at Your Job",
+            "Description": "I'm aware some of these certifications are pricey, but some of them might be free at your job. Like IBM offers a ton of free training courses, and USAA offered free Udemy courses."
+        },
+        {
+            "Name": "Focus on One Certification at a Time",
+            "Description": "If you decide to get more than one of these certifications, try to focus on one at a time and actually follow through with it."
+        },
+        {
+            "Name": "A Job Might Be Worth as Much as a Master's Degree",
+            "Description": "As you can tell some of these degrees and certifications are pricey. I feel like getting a job at a company can be worth just as much as a masters degree and you'll be getting paid instead of loosing money. I also think real-world experience with these skills can be just as valuable, if not more valuable than these certifications."
+        },
+        {
+            "Name": "Get an AWS Certification",
+            "Description": "If you do get any of these certifications, I recommend the AWS Certified Cloud Practitioner one. While I don't have it myself, it's reasonably priced, seems to teach good information, and is a sought after skill in the job market."
+        }
+    ]
+}

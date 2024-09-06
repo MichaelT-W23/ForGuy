@@ -1,0 +1,59 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup an Executable Python Script",
+            "desc": "Explains how to setup and run an executable Python script.",
+            "ref": "executable-python"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Before you start understand the purpose of an executable. Executables encapsulate your script, the interpreter, and any dependencies into a single file. This means your code can run independently, regardless of whether Python is installed on the user's system. This can be beneficial when trying to transfer files."
+        },
+        {
+            "id": 2,
+            "instruction": "Make a folder and python file within the folder.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd executable\ntouch execute_script.py",
+                "CopyCode": "cd executable\ntouch execute_script.py"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "In your \"execute_script.py\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "#!/usr/bin/env python3\nimport json\n\ndef main():\n    print(\"Hello World\")\n\nif __name__ == \"__main__\":\n    main()",
+                "CopyCode": "#!/usr/bin/env python3\nimport json\n\ndef main():\n\tprint(\"Hello World\")\n\nif __name__ == \"__main__\":\n\tmain()"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Change permissions for your script by running the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "chmod +x execute_script.py",
+                "CopyCode": "chmod +x execute_script.py"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Run your script.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "./execute_script.py",
+                "CopyCode": "./execute_script.py"
+            }
+        }
+    ]
+}

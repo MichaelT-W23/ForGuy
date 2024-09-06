@@ -1,0 +1,33 @@
+{
+    "Contact": [
+        {
+            "title": "Contact Me",
+            "desc": "Feel free to message me and I'll try to respond as soon as possible!"
+        },
+        {
+            "Header": "Your Name",
+            "Placeholder": "Enter your name"
+        },
+        {
+            "Header": "Your Email",
+            "Placeholder": "Enter your email"
+
+        },
+        {
+            "Header": "Message",
+            "Placeholder": "Enter your message"
+        },
+        {
+            "submit": "Submit", 
+            "sending": "Sending..."
+        },
+        {
+            "successMsg": "Sent!",
+            "successDesc": "Your message has been sent successfully!"
+        },
+        {
+            "errorMsg": "Error!",
+            "errorDesc": "Something went wrong when sending your message! See console."
+        }
+    ]
+}

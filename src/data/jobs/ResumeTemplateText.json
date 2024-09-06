@@ -1,0 +1,93 @@
+{
+    "information": [
+        {
+            "title": "Resume Template",
+            "description": "This is the resume template I use. The current information is inaccurate and needs to be updated."
+        },
+        {
+            "Name": "John Doe",
+            "Location": "Charlotte, North Carolina",
+            "Email": "jpd9054@gmail.com",
+            "Phone": "704-999-999",
+            "LinkedIn": "https://www.linkedin.com/in/john-doe-081m812aa/"
+        },
+        {
+            "Section": "Education",
+            "College": "University of North Carolina at Wilmington",
+            "Degree": "BS Computer Science GPA: 4.00",
+            "Location": "Wilmington, North Carolina",
+            "Date": "Aug 2022 - May 2026"
+        },
+        {
+            "Section": "Experience",
+            "Company": "Lifetime Fitness",
+            "Location": "Charlotte, North Carolina",
+            "Title": "Kids Camp Supervisor",
+            "Dates": "05/15/2023 - 08/15/2023",
+            "Hours": "40 hours a week",
+            "Description": "Supervised 50+ kids over an 10-week long summer camp program. I was responsible for planning activities, keeping records, providing first aid, etc."
+        },
+        {
+            "Section": "Skills",
+            "Skill 1": "Programming languages: Python and Java",
+            "Skill 2": "Environments/Frameworks: JavaFX, Visual Studio, Eclipse",
+            "Skill 3": "Software Tools: Git, GitHub, Excel/Sheets",
+            "Skill 4": "Programming Concepts: Algorithms, Data Structures, OOP"
+        },
+        {
+            "Section": "School Projects",
+            "Title": "Summer Camp Manager Java, JavaFx, FXML",
+            "Repo": "Repository: https://github.com/johndoe-uncw/CampKidManager.git",
+            "Description": "A UNCW programming project that allows the user to manage and update the information of campers at an imaginary summer camp called \"Seahawk Fitness\"."
+        },
+        {
+
+            "Section": "Personal Projects",
+            "Portfolio": "Portfolio Javascript, HTML, CSS",
+            "Repo": "Repository: https://github.com/johnedoe-uncw/PortfolioWebsite.git",
+            "Description": "This is a personal portfolio website I made to let people know more about me. It was written in vanilla javascript and contains my contact information."
+        },
+        {
+            "Section": "Certifications", 
+            "Title1": "Microsoft Office Specialist: Word 2013 Certified Microsoft",
+            "Description1": "Given for having a fundamental understanding of the Word environment and 2018 the ability to complete tasks independently.",
+            "Title2": "Microsoft Office Specialist: Excel 2013 Certified Microsoft",
+            "Description2": "Given for having a fundamental understanding of the Excel environment and 2019 the ability to complete tasks independently."
+        },
+        {
+            "Section": "Awards",
+            "Award1": "Ap Scholar Award",
+            "Description1": "College Board Awarded for receiving a score of 3 or higher on three or more AP Exams Jul 7, 2021",
+            "Award2": "Camp Supervisor of the Week Lifetime Fitness",
+            "Description2": "Awarded for providing world class supervision to campers. Jun 7, 2023",
+            "Award3": "DECA State Business Award DECA",
+            "Description3": "Won 1st Place in Deca State championships. Mar 14, 2021",
+            "Award4": "Dean's List, 3 Semesters",
+            "Description4": "UNCW I earned a 4.0 GPA for every semester in college so far May 10, 2022 Courses"
+        },
+        {
+            "Section": "Courses",
+            "Class1": "STT 215 UNCW",
+            "Description1": "Introduction to Statistics 2023",
+            "Class2": "MAT 161 UNCW",
+            "Description2": "Calculus with Analytical Geometry I 2023",
+            "Class3": "MAT 162 UNCW",
+            "Description3": "Calculus with Analytical Geometry II 2023",
+            "Class4": "CSC 131 UNCW",
+            "Description4": "Introduction to Computer Science - Python 2022",
+            "Class5": "CSC 133 UNCW",
+            "Description5": "Discrete Mathematical Structures 2023",
+            "Class6": "CSC 231 UNCW",
+            "Description6": "Introduction to Data Structures 2023",
+            "Class7": "CSC 242 UNCW",
+            "Description7": "Digital Logic and Computer Organization 2023",
+            "Class8": "CSC 331 UNCW",
+            "Description8": "Object-Oriented Programming and Design 2024"
+        },
+        {
+            "Section": "Hobbies",
+            "Header": "Fitness 2015 - Present",
+            "Description": "Exercise and fitness have been a passion of mine since I was in middle school. I find that exercise is a great way to improve your physique and challenge yourself."
+        }
+    ]
+}

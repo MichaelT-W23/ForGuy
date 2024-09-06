@@ -1,0 +1,157 @@
+{
+    "Text": [
+        {
+            "page": "VSCode Extensions",
+            "desc": "When you click on a link it will take you to a website. To download the extension just click the green \"install\" button and it will open in VSCode.",
+            "header2": "VSCode Extensions",
+            "desc2": "These are VSCode Extensions that I think would be worth downloading. ",
+            "email": "Email yourself all these download links."
+        }
+    ],
+    "Extensions": [
+        {
+            "Name": "Live Server",
+            "Author": "Ritwick Dey",
+            "Description": "Allows you to preview a website you're developing in real time. Updates automatically when you make changes.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+        },
+        {
+            "Name": "Atom One Dark Theme",
+            "Author": "Mahmoud Ali",
+            "Description": "This is my favorite color theme, and I added a lot to it in my VSCode settings.json file.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark"
+        },
+        {
+            "Name": "Vite",
+            "Author": "Anthony Fu",
+            "Description": "Good for Vite Support in your projects.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=antfu.vite"
+        },
+        {
+            "Name": "Vue - Official",
+            "Author": "Vue",
+            "Description": "Good for Vue Framework support.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=Vue.volar"
+        },
+        {
+            "Name": "SQLTools",
+            "Author": "Matheus Teixeira",
+            "Description": "This extension is super good for working with MySQL/Postgres databases.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools"
+        },
+        {
+            "Name": "SQLite Viewer",
+            "Author": "Florian Klampfer",
+            "Description": "Allows you to view SQLite databases as a table.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer"
+        },
+        {
+            "Name": "SQLite",
+            "Author": "alexcvzz",
+            "Description": "Allows you to query SQLite databases using SQL.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite"
+        },
+        {
+            "Name": "Docker",
+            "Author": "Microsoft",
+            "Description": "Makes it easy to create, manage, and debug containerized applications.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker"
+        },
+        {
+            "Name": "GitHub Copilot",
+            "Author": "GitHub",
+            "Description": "AI pair programmer tool for code generation. I personally prefer ChatGPT but this could probably be useful.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot"
+        },
+        {
+            "Name": "Excel Viewer",
+            "Author": "GrapeCity",
+            "Description": "Allows you to view excel files in VSCode.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer"
+        },
+        {
+            "Name": "Spring Boot Tools",
+            "Author": "VMware",
+            "Description": "Provides support for Spring Boot applications.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=vmware.vscode-spring-boot"
+        },
+        {
+            "Name": "Code Spell Checker",
+            "Author": "Street Side Software",
+            "Description": "Spell checks code, json files, etc.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker"
+        },
+        {
+            "Name": "Dev Containers",
+            "Author": "Microsoft",
+            "Description": "Open any folder or repository inside a Docker container and take advantage of Visual Studio Code's full feature set.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers"
+        },
+        {
+            "Name": "Rainbow CSV",
+            "Author": "mechatroner",
+            "Description": "Color codes comma-separated value files to make them more readable.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv"
+        },
+        {
+            "Name": "YAML",
+            "Author": "Red Hat",
+            "Description": "Comprehensive language support for YAML.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml"
+        },
+        {
+            "Name": "Prettier - Code formatter",
+            "Author": "Prettier",
+            "Description": "As the name implies, this is a code formatter extension meant to help with code styling.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+        },
+        {
+            "Name": "Inline fold",
+            "Author": "Mohammed Alamri",
+            "Description": "Allows you to minimize tailwind css code in your html for a less cluttered look.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold"
+        },
+        {
+            "Name": "Python",
+            "Author": "Microsoft",
+            "Description": "Python language support lets run, debug, etc. python code.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=ms-python.python"
+        },
+        {
+            "Name": "Pylance",
+            "Author": "Microsoft",
+            "Description": "Feature-rich python language support. Helps you do language specific things.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance"
+        },
+        {
+            "Name": "Python Debugger",
+            "Author": "Microsoft",
+            "Description": "Helps debug python code",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy"
+        },
+        {
+            "Name": "Python Debugger",
+            "Author": "Microsoft",
+            "Description": "Helps debug python code",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy"
+        },
+        {
+            "Name": "SML Environment",
+            "Author": "Vinicius Julião",
+            "Description": "Will help you to write and execute SML code when you take CSC 434.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=vrjuliao.sml-environment"
+        },
+        {
+            "Name": "Prolog",
+            "Author": "Peng Lv",
+            "Description": "Will help you to write and execute Prolog code when you take CSC 434.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=rebornix.prolog"
+        },
+        {
+            "Name": "Docx/ODT Viewer",
+            "Author": "Shahil Kumar",
+            "Description": "Allows you to view docx files in VSCode.",
+            "Link": "https://marketplace.visualstudio.com/items?itemName=ShahilKumar.docxreader"
+        }
+    ]
+}

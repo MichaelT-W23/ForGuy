@@ -1,0 +1,295 @@
+{
+    "Info": [
+        {
+            "title": "How to Make a Simple REST Api using Vue, Flask and SQLite3",
+            "desc": "How to make an extremely simple REST Api using Flask and SQLite3 in the backend.",
+            "ref": "flask-sqlite3"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "BEFORE YOU DO ANY OF THIS, go to the &Create a Project Templates Folder&[TemplatesLink] link above and complete all the instructions if you haven't done so already. After you do that, run the following command in your terminal to create new vue project. It will be named \"vue-sqlite-frontend\" and will be created in your top-most directory.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cp -R templates/vue-project vue-sqlite-frontend",
+                "CopyCode": "cp -R templates/vue-project vue-sqlite-frontend"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "Open a new terminal and create a directory for your Flask api using the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "mkdir flask_and_sqlite",
+                "CopyCode": "mkdir flask_and_sqlite"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Change into the directory",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd flask_and_sqlite",
+                "CopyCode": "cd flask_and_sqlite"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Install the following package to create a virtual environment.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "pip3 install virtualenv",
+                "CopyCode": "pip3 install virtualenv"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Create the virtual environment folder.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "virtualenv venv",
+                "CopyCode": "virtualenv venv"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Activate the virtual environment folder. Press \"command + k\" to clear your terminal after you're done.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "source venv/bin/activate",
+                "CopyCode": "source venv/bin/activate"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "While you're virtual environment is still activated, install the following packages.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "pip3 install Flask\npip3 install Flask-SQLAlchemy\npip3 install Flask-CORS\npip3 install python-dotenv",
+                "CopyCode": "pip3 install Flask\npip3 install Flask-SQLAlchemy\npip3 install Flask-CORS\npip3 install python-dotenv"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "Temporarily deactivate the virtual environment once the libraries are installed.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "deactivate",
+                "CopyCode": "deactivate"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "Create the following files in your folder.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "touch app.py\ntouch config.py\ntouch db.py\ntouch models.py\ntouch routes.py\ntouch .env ",
+                "CopyCode": "touch app.py\ntouch config.py\ntouch db.py\ntouch models.py\ntouch routes.py\ntouch .env"
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Now open your \"flask_and_sqlite\" folder in VSCode. Then paste the following code into the \"app.py\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from flask import Flask\nfrom db import init_db\nfrom routes import routes_blueprint\nfrom flask_cors import CORS\nfrom config import Config\n\ndef create_app():\n    app = Flask(__name__)\n    app.config.from_object(Config)\n\n    CORS(app, resources={r'/*': {'origins': '*'}})\n    init_db(app)\n\n    app.register_blueprint(routes_blueprint)\n    return app\n\nif __name__ == '__main__':\n    app = create_app()\n    app.run(debug=True)\n",
+                "CopyCode": "from flask import Flask\nfrom db import init_db\nfrom routes import routes_blueprint\nfrom flask_cors import CORS\nfrom config import Config\n\ndef create_app():\n\tapp = Flask(__name__)\n\tapp.config.from_object(Config)\n\n\tCORS(app, resources={r'/*': {'origins': '*'}})\n\tinit_db(app)\n\n\tapp.register_blueprint(routes_blueprint)\n\treturn app\n\nif __name__ == '__main__':\n\tapp = create_app()\n\tapp.run(debug=True)"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "Paste the following code into the \"config.py\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "import os\n\nbasedir = os.path.abspath(os.path.dirname(__file__))\n\nclass Config:\n    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \\\n      'sqlite:///' + os.path.join(basedir, 'app.db')\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n",
+                "CopyCode": "import os\n\nbasedir = os.path.abspath(os.path.dirname(__file__))\n\nclass Config:\n\tSQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \\\n\t  'sqlite:///' + os.path.join(basedir, 'app.db')\n\tSQLALCHEMY_TRACK_MODIFICATIONS = False\n"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "Paste the following code into the \"db.py\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from flask_sqlalchemy import SQLAlchemy\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\ndb = SQLAlchemy()\n\ndef init_db(app):\n    db.init_app(app)\n\n    with app.app_context():\n\tdb.create_all()\n",
+                "CopyCode": "from flask_sqlalchemy import SQLAlchemy\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\ndb = SQLAlchemy()\n\ndef init_db(app):\n\tdb.init_app(app)\n\n\twith app.app_context():\n\t\tdb.create_all()\n"
+            }
+        },
+        {
+            "id": 13,
+            "instruction": "Paste the following code into \"models.py\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from db import db\n\nclass User(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    firstname = db.Column(db.String(80), nullable=False)\n    lastname = db.Column(db.String(120), unique=True, nullable=False)\n\n    def __repr__(self):\n\treturn f'<User {self.username}>'",
+                "CopyCode": "from db import db\n\nclass User(db.Model):\n\tid = db.Column(db.Integer, primary_key=True)\n\tfirstname = db.Column(db.String(80), nullable=False)\n\tlastname = db.Column(db.String(120), unique=True, nullable=False)\n\n\tdef __repr__(self):\n\t\treturn f'<User {self.username}>'"
+            }
+        },
+        {
+            "id": 14,
+            "instruction": "Paste the following code into the \"routes.py\" file. This file is where all the endpoints you'll call in the frontend will be.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from flask import Blueprint, request, jsonify\nfrom models import User\nfrom db import db\n\nroutes_blueprint = Blueprint('routes', __name__)\n\n@routes_blueprint.route('/users', methods=['POST'])\ndef create_user():\n    firstname = request.json['firstname']\n    lastname = request.json['lastname']\n    user = User(firstname=firstname, lastname=lastname)\n    db.session.add(user)\n    db.session.commit()\n\n    response_data = {\n\t'firstname': user.firstname,\n\t'lastname': user.lastname\n    }\n\n    return jsonify(response_data), 201\n\n\n@routes_blueprint.route('/users/<firstname>', methods=['GET'])\ndef get_user_by_name(firstname):\n    user = User.query.filter_by(firstname=firstname).first()\n\n    if user:\n\tresponse_data = {\n\t    'firstname': user.firstname,\n\t    'lastname': user.lastname\n\t}\n\n\treturn jsonify(response_data), 200\n    else:\n\treturn jsonify({'error': 'User not found'}), 404\n",
+                "CopyCode": "from flask import Blueprint, request, jsonify\nfrom models import User\nfrom db import db\n\nroutes_blueprint = Blueprint('routes', __name__)\n\n@routes_blueprint.route('/users', methods=['POST'])\ndef create_user():\n\tfirstname = request.json['firstname']\n\tlastname = request.json['lastname']\n\tuser = User(firstname=firstname, lastname=lastname)\n\tdb.session.add(user)\n\tdb.session.commit()\n\treturn jsonify({'firstname': user.firstname, 'lastname': user.lastname}), 201\n\n\n@routes_blueprint.route('/users/<firstname>', methods=['GET'])\ndef get_user_by_name(firstname):\n\tuser = User.query.filter_by(firstname=firstname).first()\n\tif user:\n\t\treturn jsonify({'firstname': user.firstname, 'lastname': user.lastname}), 200\n\telse:\n\t\treturn jsonify({'error': 'User not found'}), 404\n"
+            }
+        },
+        {
+            "id": 15,
+            "instruction": "Paste the following code in the \".env\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "fxml",
+                "DisplayLang": "Env",
+                "FormatCode": "DATABASE_URL=sqlite:///mydatabase.db",
+                "CopyCode": "DATABASE_URL=sqlite:///mydatabase.db"
+            }
+        },
+        {
+            "id": 16,
+            "instruction": "Now open a new terminal and change into your \"vue-sqlite-frontend\" folder that you created in step 1. Install axios so you can so you can make HTTP requests to your REST Api.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd vue-sqlite-frontend\nnpm install axios",
+                "CopyCode": "cd vue-sqlite-frontend\nnpm install axios"
+            }
+        },
+        {
+            "id": 17,
+            "instruction": "In the src folder create an axios instance file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "touch src/axiosInstance.js",
+                "CopyCode": "touch src/axiosInstance.js"
+            }
+        },
+        {
+            "id": 18,
+            "instruction": "Open your \"vue-sqlite-frontend\" folder in VSCode. Paste the following code into the \"axiosInstance.js\" file in the \"src\" folder. Make sure the baseURL is the correct localhost link. If it's wrong it could lead to CORS issues.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "JavaScript",
+                "FormatCode": "import axios from 'axios';\n\naxios.defaults.baseURL = 'http://127.0.0.1:5000';\naxios.defaults.headers.common['Content-Type'] = 'application/json';\n\nexport default axios;",
+                "CopyCode": "import axios from 'axios';\n\naxios.defaults.baseURL = 'http://127.0.0.1:5000';\naxios.defaults.headers.common['Content-Type'] = 'application/json';\n\nexport default axios;"
+            }
+        },
+        {
+            "id": 19,
+            "instruction": "Now go to src -> views and open \"Home.vue\". Delete the files content and paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "JavaScript",
+                "DisplayLang": "Vue",
+                "FormatCode": "<template>\n    <div>\n      <input v-model=\"firstName\" placeholder=\"Enter First Name\">\n      <input v-model=\"lastName\" placeholder=\"Enter Last Name\">\n      <button @click=\"createUser\">Create User</button>\n\n      <div>\n        <input v-model=\"searchFName\" placeholder=\"Search First Name\">\n        <button @click=\"searchUser\">Search</button>\n      </div>\n\n      <table v-if=\"users.length\">\n        <thead>\n          <tr>\n\t    <th>First Name</th>\n\t    <th>Last Name</th>\n\t  </tr>\n\t</thead>\n\t<tbody>\n\t  <tr v-for=\"user in users\" :key=\"user.firstname\">\n\t    <td>{{ user.firstname }}</td>\n\t    <td>{{ user.lastname }}</td>\n\t  </tr>\n\t</tbody>\n      </table>\n\n    <div>\n</template>\n\n\n<script setup>\nimport { ref } from 'vue';\nimport axios from '../axiosInstance.js';\n\nconst firstName = ref('');\nconst lastName = ref('');\nconst searchFName = ref('');\nconst users = ref([]);\n\nconst createUser = async () => {\n    try {\n\tif (!firstName.value || !lastName.value) {\n\t    alert(\"Please Fill In All Fields\");\n\t    return;\n\t}\n\n\tconst response = await axios.post('/users', {\n\t    firstname: firstName.value,\n\t    lastname: lastName.value\n\t});\n\n\talert(`User Created: ${response.data.firstname}`);\n    } catch (error) {\n\talert(`User '${firstName.value}' already in database!`);\n\tconsole.error('There was an error!', error);\n    }\n}\n\nconst searchUser = async () => {\n    try {\n\tconst response = await axios.get(`/users/${searchFName.value}`);\n\tusers.value = [response.data];\n    } catch (error) {\n\talert(`Couldn't find user: '${searchFirstName.value}'`);\n\tconsole.error('There was an error!', error);\n\tusers.value = [];\n    }\n}\n\n</script>",
+                "CopyCode": "<template>\n\t<div>\n\t  <input v-model=\"firstName\" placeholder=\"Enter First Name\">\n\t  <input v-model=\"lastName\" placeholder=\"Enter Last Name\">\n\t  <button @click=\"createUser\">Create User</button>\n\n\t  <!-- Search section -->\n\t  <div>\n\t    <input v-model=\"searchFirstName\" placeholder=\"Search by First Name\">\n\t    <button @click=\"searchUser\">Search</button>\n\t  </div>\n\n\t  <!-- Display results in a table -->\n\t  <table v-if=\"users.length\">\n\t    <thead>\n\t      <tr>\n\t        <th>First Name</th>\n\t        <th>Last Name</th>\n\t      </tr>\n\t    </thead>\n\t    <tbody>\n\t      <tr v-for=\"user in users\" :key=\"user.firstname\">\n\t        <td>{{ user.firstname }}</td>\n\t        <td>{{ user.lastname }}</td>\n\t      </tr>\n\t    </tbody>\n\t  </table>\n\n\t</div>\n</template>\n\n\n<script setup>\nimport { ref } from 'vue';\nimport axios from '../axiosInstance.js';\n\nconst firstName = ref('');\nconst lastName = ref('');\nconst searchFirstName = ref('');\nconst users = ref([]);\n\nconst createUser = async () => {\n\ttry {\n\t\tif (!firstName.value || !lastName.value) {\n\t\t\talert(\"Please Fill In All Fields\");\n\t\t\treturn;\n\t\t}\n\n\t\tconst response = await axios.post('/users', {\n\t\t\tfirstname: firstName.value,\n\t\t\tlastname: lastName.value\n\t\t});\n\n\t\talert(`User Created: ${response.data.firstname}`);\n\t} catch (error) {\n\t\talert(`User '${firstName.value}' already in database!`);\n\t\tconsole.error('There was an error!', error);\n\t}\n}\n\nconst searchUser = async () => {\n\ttry {\n\t\tconst response = await axios.get(`/users/${searchFirstName.value}`);\n\t\tusers.value = [response.data];\n\t} catch (error) {\n\t\talert(`Couldn't find user: '${searchFirstName.value}'`);\n\t\tconsole.error('There was an error!', error);\n\t\tusers.value = [];\n\t}\n}\n\n</script>"
+            }
+        },
+        {
+            "id": 20,
+            "instruction": "Now close all your current terminals and open TWO new different terminals. In the first one, run your Flask api using the following commands. Do NOT close this terminal.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd flask_and_sqlite\nsource venv/bin/activate\nflask run",
+                "CopyCode": "cd flask_and_sqlite\nsource venv/bin/activate\nflask run "
+            }
+        },
+        {
+            "id": 21,
+            "instruction": "In your second terminal run the following commands. Open the link to see your frontend.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd vue-sqlite-frontend\nnpm run dev",
+                "CopyCode": "cd vue-sqlite-frontend\nnpm run dev"
+            }
+        },
+        {
+            "id": 22,
+            "instruction": "Open the link that was output from the \"npm run dev\" command in your browser. It might be the following link.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "",
+                "DisplayLang": "Local Host Link",
+                "FormatCode": "http://localhost:5173/",
+                "CopyCode": "http://localhost:5173/"
+            }
+        },
+        {
+            "id": 23,
+            "instruction": "In your flask_and_sqlite repository there should now be a folder called \"instance\". In this folder you should see a file named \"mydatabase.db\". When you click on the db file you should see your \"user\" table. Click the refresh button to see your updates as you input values via the frontend. The refresh button should be above your \"Tables\" on the left hand-side. It should look like a circle with an arrow at the end. If you can't see your database when you click on the db file, install the [SQLite Viewer](https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer) extension by Florian Klampfer."
+        },
+        {
+            "id": 24,
+            "instruction": "If you want to use your terminal to interact with your rest api open a new terminal and run the following commands. Note your rest api should still be running in a different terminal in order for these to work.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Command/HTTP Request",
+                "FormatCode": "curl -X POST http://127.0.0.1:5000/users \\\n-H \"Content-Type: application/json\" \\\n-d '{ \"firstname\": \"Hayden\", \"lastname\": \"Christensen\" }'\n\ncurl -X GET http://127.0.0.1:5000/users/Hayden",
+                "CopyCode": "curl -X POST http://127.0.0.1:5000/users \\\n-H \"Content-Type: application/json\" \\\n-d '{ \"firstname\": \"Hayden\", \"lastname\": \"Christensen\" }'\n\ncurl -X GET http://127.0.0.1:5000/users/Hayden"
+            }
+        },
+        {
+            "id": 25,
+            "instruction": "READ THIS CAREFULLY TO SEE IF YOU ACTUALLY NEED TO DO THESE STEPS. You should be done now unless you're seeing the following error in your console when you try to add or search a user. If you aren't getting this error you can ignore steps 24-25.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Error",
+                "FormatCode": "Access to XMLHttpRequest at 'http://127.0.0.1:5000/users' from origin\n'http://localhost:5173' has been blocked by CORS policy: Response to\npreflight request doesn't pass access control check:\nNo 'Access-Control-Allow-Origin' header is present on the requested\nresource.",
+                "CopyCode": "Access to XMLHttpRequest at 'http://127.0.0.1:5000/users' from origin 'http://localhost:5173' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+            }
+        },
+        {
+            "id": 26,
+            "instruction": "In your \"app.py\" file paste the following code. Make sure the HTTP links are the same ones being used by your computer. Try this code out and see if it works. Make sure to rerun your backend and frontend code after you make changes.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from flask import Flask\nfrom db import init_db\nfrom routes import routes_blueprint\nfrom flask_cors import CORS\nfrom config import Config\n\ndef create_app():\n    app = Flask(__name__)\n    app.config.from_object(Config)\n\n    CORS(app, resources={r'/*': {'origins': ['http://localhost:5173',\n\t\t\t\t\t     'http://127.0.0.1:5173']}})\n    init_db(app)\n\n    app.register_blueprint(routes_blueprint)\n    return app\n\nif __name__ == '__main__':\n    app = create_app()\n    app.run(debug=True)\n",
+                "CopyCode": "from flask import Flask\nfrom db import init_db\nfrom routes import routes_blueprint\nfrom flask_cors import CORS\nfrom config import Config\n\ndef create_app():\n\tapp = Flask(__name__)\n\tapp.config.from_object(Config)\n\n\tCORS(app, resources={r'/*': {'origins': '*'}})\n\tinit_db(app)\n\n\tapp.register_blueprint(routes_blueprint)\n\treturn app\n\nif __name__ == '__main__':\n\tapp = create_app()\n\tapp.run(debug=True)"
+            }
+        }
+    ]
+}

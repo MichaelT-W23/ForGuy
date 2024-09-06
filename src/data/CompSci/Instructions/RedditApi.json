@@ -1,0 +1,87 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup a Reddit API Project",
+            "desc": "Explains how to setup a a project that utilizes the Reddit API.",
+            "ref": "reddit-api"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Before you start make sure you have a normal reddit account. If you don't have one, sign up."
+        },
+        {
+            "id": 2,
+            "instruction": "Go [here](https://www.reddit.com/prefs/apps) to start registering your free app. Note that while the UI is old it's still the correct page."
+        },
+        {
+            "id": 3,
+            "instruction": "Click the grey \"are you a developer? create an app...\" button on the left-hand side."
+        },
+        {
+            "id": 4,
+            "instruction": "In the \"name\" field type \"GeneralScript\". Then select the \"script\" radio button. "
+        },
+        {
+            "id": 5,
+            "instruction": "In the \"redirect uri\" field paste the following link. Then select \"I'm not a robot\" and press \"create app\".",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Redirect Link",
+                "FormatCode": "http://localhost:8080/callback",
+                "CopyCode": "http://localhost:8080/callback"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "You're app should now be created. Copy and record the name, client ID, secret, and redirect URL. Note the client ID is at the top under \"personal use script\"."
+        },
+        {
+            "id": 7,
+            "instruction": "Now go to your terminal and run the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "pip3 install praw",
+                "CopyCode": "pip3 install praw"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "Setup your folder for your script.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "mkdir reddit_api_script;\ncd reddit_api_script;\ntouch script.py",
+                "CopyCode": "mkdir reddit_api_script;\ncd reddit_api_script;\ntouch script.py"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "Paste the following code in the \"script.py\" file. Replace the placeholders with your actual credentials. Note that you don't have to include the \":{2FA-Code}\" part in your password if you don't use two-factor authentication. The 2FA-code should be the 6 digit code from your authenticator app. Go [here](https://www.reddit.com/prefs/apps) to find your credentials. Your \"CLIENT_ID\" is under \"personal use script\".",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "import praw\n\nreddit = praw.Reddit(\n    client_id='YOUR_CLIENT_ID',\n    client_secret='YOUR_CLIENT_SECRET',\n    username='YOUR_REDDIT_USERNAME',\n    password=f'YOUR_REDDIT_PASSWORD:{2FA-Code}',\n    user_agent='script by u/YOUR_REDDIT_USERNAME',\n)\n\nprint(f'Authenticated as: {reddit.user.me()}\\n')\n\nfor submission in reddit.subreddit('sports').hot(limit=10):\n    print(submission.title)",
+                "CopyCode": "import praw\n\nreddit = praw.Reddit(\n\tclient_id='YOUR_CLIENT_ID',\n\tclient_secret='YOUR_CLIENT_SECRET',\n\tusername='YOUR_REDDIT_USERNAME',\n\tpassword=f'YOUR_REDDIT_PASSWORD:{2FA-Code}',\n\tuser_agent='script by u/YOUR_REDDIT_USERNAME',\n)\n\nprint(f'Authenticated as: {reddit.user.me()}\\n')\n\nfor submission in reddit.subreddit('sports').hot(limit=10):\n\tprint(submission.title)"
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Run your script to test it out. Note every time you run your script you'll have to update the 2FA-code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "python3 script.py",
+                "CopyCode": "python3 script.py"
+            }
+        }
+    ]
+}

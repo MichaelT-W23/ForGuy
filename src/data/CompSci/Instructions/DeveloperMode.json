@@ -1,0 +1,51 @@
+{
+    "Info": [
+        {
+            "title": "How to Run an iOS app in Developer Mode",
+            "desc": "How to run an iOS app your currently developing on your phone.",
+            "ref": "developer-mode"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Go to Xcode and open your project. When you press the run button in the top bar it should say what IOS simulator your app will run on. Press the name of the simulator and a drop-down menu will appear. Under \"iOS Device\" there will (probably) be a message that says something like \"No eligible devices connected to 'My Mac'\". Click on this and go from there, most of the steps should be fairly intuitive."
+        },
+        {
+            "id": 2,
+            "instruction": "For your team select \"John Smith (Personal Team)\" or whatever your name is."
+        },
+        {
+            "id": 3,
+            "instruction": "To enable \"Developer mode\" on your iphone do the following sequence.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Sequence",
+                "FormatCode": "Settings > Privacy & Security > Scroll to the bottom > Developer Mode ->\nToggle On",
+                "CopyCode": "Settings > Privacy & Security > Scroll to the bottom > Developer Mode -> Toggle On"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Your login keychain password is (usually) the same password you use to logon to your mac. It's (probably) not your apple iD."
+        },
+        {
+            "id": 5,
+            "instruction": "If you get the error \"Untrusted Developer, Your device management settings does not allow using an app from…\" when the app is loaded on your phone, do the following.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Sequence",
+                "FormatCode": "Settings > General > Device Management > select the profile to trust",
+                "CopyCode": "Settings > General > Device Management > select the profile to trust"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "After you trust the developer, you should be good to go."
+        }
+    ]
+}

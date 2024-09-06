@@ -1,0 +1,55 @@
+
+import json
+import re
+import subprocess
+
+
+def write_to_clipboard(output: str):
+    process = subprocess.Popen('pbcopy', env={'LANG': 'en_US.UTF-8'}, stdin=subprocess.PIPE)
+    process.communicate(output.encode('utf-8'))
+
+with open("test2.txt", "r") as file:
+
+    t = ""
+
+    for line in file:
+        t += line.strip()
+
+    print(t)
+    write_to_clipboard(t)
+    
+# Function to update the "FormatCode" field in the component data
+def update_format_code(formatCode):
+    # Definitions for the replacements
+    tab = " " * 6
+    two_tab = " " * 10  # or whatever your definition of two_tab is
+    three_tab = " " * 14  # or your definition of three_tab
+    four_tab = " " * 18 # or your definition of four_tab
+
+    # py = data['ComponentData'][2]
+    # formatCode = py['FormatCode']
+    
+    # Replacing four {tab} occurrences first to avoid conflicts with fewer {tab} patterns
+    formatCode = re.sub(r'\{tab\}\{tab\}\{tab\}\{tab\}', four_tab, formatCode)
+    # Then replace three {tab} occurrences
+    formatCode = re.sub(r'\{tab\}\{tab\}\{tab\}', three_tab, formatCode)
+    # Then two {tab} occurrences
+    formatCode = re.sub(r'\{tab\}\{tab\}', two_tab, formatCode)
+    # Finally, replace single {tab} occurrences
+    formatCode = formatCode.replace('{tab}', tab)
+
+    print(formatCode)
+    return repr(formatCode).replace('\"', '\\"')
+
+
+
+
+thing = "# Name: Michael Totaro\n# Date: 10/24/2022\n# Purpose: Create and demonstrate CarList class (Not a real assignment).\n# collaborators/resources: None other than Dr. Pence\n\nclass Car:\n{tab}\"\"\" This class is a basic car object. \"\"\"\n{tab}def __init__(self, car_id, company, year, color, miles):\n{tab}{tab}\"\"\"\n{tab}{tab}Initializer for a Car object.\n{tab}{tab}:param id: Id of the car\n{tab}{tab}:param company: Maker of the car\n{tab}{tab}:param year: Year car was made\n{tab}{tab}:param color: Color of the car\n{tab}{tab}:param miles: Miles driven by the car\n{tab}{tab}\"\"\"\n{tab}{tab}self.id = car_id\n{tab}{tab}self.company = company\n{tab}{tab}self.year = year\n{tab}{tab}self.color = color\n{tab}{tab}self.miles = miles\n\n{tab}def __str__(self):\n{tab}{tab}\"\"\"\n{tab}{tab}Creates a string representation of a car object.\n{tab}{tab}:return: string representation of a car object.\n{tab}{tab}\"\"\"\n{tab}{tab}car_str = (f\"\\nCar {self.id}\\n\"\n{tab}{tab}{tab}{tab}f\"Company: {self.company}\\n\"\n{tab}{tab}{tab}{tab}f\"Year: {self.year}\\n\"\n{tab}{tab}{tab}{tab}f\"Color: {self.color}\\n\"\n{tab}{tab}{tab}{tab}f\"Miles: {self.miles}\")\n\n{tab}{tab}return car_str + \"\\n\"\n\n\nclass CarList:\n{tab}\"\"\"\n{tab}This class is data structure of car objects.\n{tab}You can add, remove, and print the list.\n{tab}\"\"\"\n{tab}def __init__(self):\n{tab}{tab}\"\"\"\n{tab}{tab}Initializes an empty car list\n{tab}{tab}\"\"\"\n{tab}{tab}self.car_list = []\n\n{tab}def add_car(self, new_car):\n{tab}{tab}\"\"\"\n{tab}{tab}Adds a car to the car list if conditions are met.\n{tab}{tab}:param new_car: Car object to be added to the list\n{tab}{tab}:return: True if the car was added successfully else false.\n{tab}{tab}:raises ValueError: If parameter is not an instance of a car object\n{tab}{tab}\"\"\"\n\n{tab}{tab}if not isinstance(new_car, Car):\n{tab}{tab}{tab}raise ValueError(\"Parameter must be an instance of a car object.\")\n\n{tab}{tab}for car in self.car_list:\n{tab}{tab}{tab}if car.id == new_car.id:\n{tab}{tab}{tab}{tab}print(f\"A car in the list already has the id '{new_car.id}'!\")\n{tab}{tab}{tab}{tab}return False\n\n{tab}{tab}self.car_list.append(new_car)\n\n{tab}{tab}return True\n\n{tab}def remove_car_by_id(self, car_id):\n{tab}{tab}\"\"\"\n{tab}{tab}Removes car in the list by id.\n{tab}{tab}:param car_id: The id of the car to be removed.\n{tab}{tab}:raises ValueError: If parameter is not an int.\n{tab}{tab}\"\"\"\n\n{tab}{tab}if not isinstance(car_id, int):\n{tab}{tab}{tab}raise ValueError(\"car_id must be an integer.\")\n\n{tab}{tab}for car in self.car_list:\n{tab}{tab}{tab}if car.id == car_id:\n{tab}{tab}{tab}{tab}self.car_list.remove(car)\n{tab}{tab}{tab}{tab}print(f\"Car {car_id} removed successfully!\")\n{tab}{tab}{tab}{tab}return\n\n{tab}{tab}print(f\"No car with the id {car_id} was found!\")\n\n{tab}def __str__(self):\n{tab}{tab}\"\"\"\n{tab}{tab}Creates a string representation of a CarList object.\n{tab}{tab}:return: The cars in the list as a string\n{tab}{tab}\"\"\"\n{tab}{tab}return \"\\n\" + \" \".join([str(car) for car in self.car_list])\n\n{tab}def __len__(self):\n{tab}{tab}\"\"\"\n{tab}{tab}Get the length of the car_list\n{tab}{tab}:return: The length of the car list\n{tab}{tab}\"\"\"\n{tab}{tab}return len(self.car_list)\n\n\ndef main():\n{tab}\"\"\"\n{tab}The driver code to test the CarList class.\n{tab}\"\"\"\n{tab}car_list = CarList()\n\n{tab}car_list.add_car(Car(1, \"Honda\", 2012, \"gray\", 12430))\n{tab}car_list.add_car(Car(2, \"Toyota\", 2005, \"black\", 25430))\n{tab}car_list.add_car(Car(3, \"Ford\", 1999, \"red\", 19430))\n\n{tab}try:\n{tab}{tab}car_list.add_car(\"This is a string object\")\n{tab}except ValueError as e:\n{tab}{tab}print(e)\n\n{tab}car_list.add_car(Car(1, \"Used id\", 1999, \"red\", 19430))\n\n{tab}print(f\"Length of list before you remove a car {len(car_list)}\")\n\n{tab}car_list.remove_car_by_id(1)\n\n{tab}print(f\"Length of list after you remove a car {len(car_list)}\")\n\n{tab}car_list.remove_car_by_id(100000)\n\n{tab}print(car_list)\n\nmain()"
+
+# file_path = '../src/data/CompSci/CompSciTips.json'
+
+# with open(file_path, 'r') as file:
+#     data = json.load(file)
+
+
+write_to_clipboard(update_format_code(thing))

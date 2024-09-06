@@ -1,0 +1,198 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup a Python Server",
+            "desc": "How to setup a Python server that interacts with an html frontend.",
+            "ref": "python-server"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "This is how you run a webpage with a Python Server backend. This was inspired by Dr. Layman's examples in CSC 351. I would strongly recommend using Flask over this approach, but I was curious what he was doing in class and if it had good use cases. The only real difference between what he did and what I did, is that he used SQLite3 and I used a more SQLAlchemy based approach. If you kept your old CSC 351 assignments, you can see more in-depth examples of a Python Server in \"security-deposit-web-yourgithubusername\". If you have questions hmu."
+        },
+        {
+            "id": 2,
+            "instruction": "First open your terminal and run the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "pip3 install sqlalchemy",
+                "CopyCode": "pip3 install sqlalchemy"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Create a folder for your server.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "mkdir server",
+                "CopyCode": "mkdir server"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Change into your \"server\" directory.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd server",
+                "CopyCode": "cd server"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Create the following files in your \"server\" folder.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "touch server.py\ntouch database.py\ntouch models.py\ntouch handler.py",
+                "CopyCode": "touch server.py\ntouch database.py\ntouch models.py\ntouch handler.py"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "In the \"server.py\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "import socketserver\nfrom handler import CustomHandler\nimport os\n\nos.system('clear')\n\nPORT = 8080\n\nwith socketserver.TCPServer((\"\", PORT), CustomHandler) as httpd:\n    print(f\"Serving at port \", end=\"\")\n    print(f\"\\033[94mhttp://localhost:{PORT}/\\033[0m\")\n\n    httpd.serve_forever()",
+                "CopyCode": "import socketserver\nfrom handler import CustomHandler\nimport os\n\nos.system('clear')\n\nPORT = 8080\n\nwith socketserver.TCPServer((\"\", PORT), CustomHandler) as httpd:\n\tprint(f\"Serving at port \", end=\"\")\n\tprint(f\"\\033[94mhttp://localhost:{PORT}/\\033[0m\")\n\n\thttpd.serve_forever()"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "In the \"database.py\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from sqlalchemy import create_engine\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\n\nDATABASE_URL = 'sqlite:///items.db'\nengine = create_engine(DATABASE_URL, echo=True)\nBase = declarative_base()\nSession = sessionmaker(bind=engine)\nsession = Session()\n\ndef init_db():\n    from models import Item\n    Base.metadata.create_all(engine)",
+                "CopyCode": "from sqlalchemy import create_engine\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\n\nDATABASE_URL = 'sqlite:///items.db'\nengine = create_engine(DATABASE_URL, echo=True)\nBase = declarative_base()\nSession = sessionmaker(bind=engine)\nsession = Session()\n\ndef init_db():\n\tfrom models import Item\n\tBase.metadata.create_all(engine)"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "In the \"models.py\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from sqlalchemy import Column, Integer, String, Sequence\nfrom database import Base\n\nclass Item(Base):\n    __tablename__ = 'items'\n    id = Column(Integer, Sequence('item_id_seq'), primary_key=True)\n    name = Column(String(50))",
+                "CopyCode": "from sqlalchemy import Column, Integer, String, Sequence\nfrom database import Base\n\nclass Item(Base):\n\t__tablename__ = 'items'\n\tid = Column(Integer, Sequence('item_id_seq'), primary_key=True)\n\tname = Column(String(50))"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "In the \"handler.py\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "import http.server\nimport json\nfrom database import session, init_db\nfrom models import Item\n\nclass CustomHandler(http.server.SimpleHTTPRequestHandler):\n    def do_GET(self):\n\tif self.path == '/items':\n\t    self.send_response(200)\n\t    self.send_header(\"Content-type\", \"application/json\")\n\t    self.end_headers()\n\n\t    items = session.query(Item).all()\n\t    items_list = [{ \"id\": item.id, \"name\": item.name } for item in items]\n\n            self.wfile.write(json.dumps(items_list).encode('utf-8'))\n\telse:\n\t    super().do_GET()\n\n    def do_POST(self):\n\tif self.path == '/add-item':\n\t    content_length = int(self.headers['Content-Length'])\n\t    post_data = self.rfile.read(content_length)\n\t    data = json.loads(post_data.decode('utf-8'))\n\n\t    new_item = Item(name=data['name'])\n\t    session.add(new_item)\n\t    session.commit()\n\t    self.send_response(200)\n\t    self.send_header(\"Content-type\", \"application/json\")\n\t    self.end_headers()\n\n\t    response = {\n\t\t\"message\": \"Item added successfully\",\n\t\t\"id\": new_item.id\n\t    }\n\n\t    self.wfile.write(json.dumps(response).encode('utf-8'))\n\telse:\n\t    self.send_response(404)\n\t    self.end_headers()\n\ninit_db()",
+                "CopyCode": "import http.server\nimport json\nfrom database import session, init_db\nfrom models import Item\n\nclass CustomHandler(http.server.SimpleHTTPRequestHandler):\n\tdef do_GET(self):\n\t\tif self.path == '/items':\n\t\t\tself.send_response(200)\n\t\t\tself.send_header(\"Content-type\", \"application/json\")\n\t\t\tself.end_headers()\n\n\t\t\titems = session.query(Item).all()\n\t\t\titems_list = [{\"id\": item.id, \"name\": item.name} for item in items]\n\t\t\tself.wfile.write(json.dumps(items_list).encode('utf-8'))\n\t\telse:\n\t\t\tsuper().do_GET()\n\n\tdef do_POST(self):\n\t\tif self.path == '/add-item':\n\t\t\tcontent_length = int(self.headers['Content-Length'])\n\t\t\tpost_data = self.rfile.read(content_length)\n\t\t\tdata = json.loads(post_data.decode('utf-8'))\n\n\t\t\tnew_item = Item(name=data['name'])\n\t\t\tsession.add(new_item)\n\t\t\tsession.commit()\n\t\t\tself.send_response(200)\n\t\t\tself.send_header(\"Content-type\", \"application/json\")\n\t\t\tself.end_headers()\n\t\t\tresponse = {\"message\": \"Item added successfully\", \"id\": new_item.id}\n\t\t\tself.wfile.write(json.dumps(response).encode('utf-8'))\n\t\telse:\n\t\t\tself.send_response(404)\n\t\t\tself.end_headers()\n\ninit_db()"
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Now we're going to create an html file to interact with our server.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd server\ntouch index.html",
+                "CopyCode": "cd server\ntouch index.html"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "In the \"index.html\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "HTML",
+                "FormatCode": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Item Manager</title>\n</head>\n<body>\n    <h1>Item Manager</h1>\n\n    <h2>Add New Item</h2>\n    <form id=\"addItemForm\">\n        <label for=\"itemName\">Item Name:</label>\n        <input type=\"text\" id=\"itemName\" name=\"itemName\" required>\n        <button type=\"submit\">Add Item</button>\n    </form>\n\n    <h2>All Items</h2>\n    <button onclick=\"getAllItems()\">Fetch Items</button>\n    <ul id=\"itemsList\"></ul>\n\n    <script>\n    document.getElementById(\"addItemForm\").onsubmit = async (event) => {\n\tevent.preventDefault();\n\tconst itemName = document.getElementById('itemName').value;\n\n\tconst response = await fetch('/add-item', {\n\t    method: 'POST',\n\t    headers: {\n\t\t'Content-Type': 'application/json',\n\t    },\n\t    body: JSON.stringify({ name: itemName }),\n\t});\n\n\tconst result = await response.json();\n\talert(result.message);\n\tdocument.getElementById('addItemForm').reset();\n\tgetAllItems();\n    };\n\n    async function getAllItems() {\n\tconst response = await fetch('/items');\n\tconst items = await response.json();\n\tconst itemsList = document.getElementById('itemsList');\n\titemsList.innerHTML = '';\n\n\titems.forEach(item => {\n            const listItem = document.createElement('li');\n            listItem.textContent = `${item.name} (ID: ${item.id})`;\n            itemsList.appendChild(listItem);\n\t});\n    }\n    </script>\n</body>\n</html>",
+                "CopyCode": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t<title>Item Manager</title>\n</head>\n<body>\n\t<h1>Item Manager</h1>\n\n\t<h2>Add New Item</h2>\n\t<form id=\"addItemForm\">\n\t\t<label for=\"itemName\">Item Name:</label>\n\t\t<input type=\"text\" id=\"itemName\" name=\"itemName\" required>\n\t\t<button type=\"submit\">Add Item</button>\n\t</form>\n\n\t<h2>All Items</h2>\n\t<button onclick=\"getAllItems()\">Fetch Items</button>\n\t<ul id=\"itemsList\"></ul>\n\n\t<script>\n\tdocument.getElementById(\"addItemForm\").onsubmit = async (event) => {\n\t\tevent.preventDefault();\n\t\tconst itemName = document.getElementById('itemName').value;\n\n\t\tconst response = await fetch('/add-item', {\n\t\t\tmethod: 'POST',\n\t\t\theaders: {\n\t\t\t\t'Content-Type': 'application/json',\n\t\t\t},\n\t\t\tbody: JSON.stringify({ name: itemName }),\n\t\t});\n\n\t\tconst result = await response.json();\n\t\talert(result.message);\n\t\tdocument.getElementById('addItemForm').reset();\n\t\tgetAllItems();\n\t};\n\n\tasync function getAllItems() {\n\t\tconst response = await fetch('/items');\n\t\tconst items = await response.json();\n\t\tconst itemsList = document.getElementById('itemsList');\n\t\titemsList.innerHTML = '';\n\n\t\titems.forEach(item => {\n\t\t\tconst listItem = document.createElement('li');\n\t\t\tlistItem.textContent = `${item.name} (ID: ${item.id})`;\n\t\t\titemsList.appendChild(listItem);\n\t\t});\n\t}\n\t</script>\n</body>\n</html>"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "Run your server using the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "python3 server.py",
+                "CopyCode": "python3 server.py"
+            }
+        },
+        {
+            "id": 13,
+            "instruction": "Open the port in your browser. You should see webpage titled \"Item Manager\" that you can use to interact with your backend.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "LocalHost",
+                "FormatCode": "http://localhost:8080/",
+                "CopyCode": "http://localhost:8080/"
+            }
+        },
+        {
+            "id": 14,
+            "instruction": "If you go back to your code you should now see a \"items.db\" file there. Open it and you can see the items being added to your database."
+        },
+        {
+            "id": 15,
+            "instruction": "If you rerun your server you might run into an error that ends with the following line. If you have another terminal running the server, close it. If that doesn't work, try steps 16-18.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Error",
+                "FormatCode": "OSError: [Errno 48] Address already in use",
+                "CopyCode": "OSError: [Errno 48] Address already in use"
+            }
+        },
+        {
+            "id": 16,
+            "instruction": "If you get that error you can it fix by running the following command. I found this solution [here](https://stackoverflow.com/a/19071568).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "ps -fA | grep python3",
+                "CopyCode": "ps -fA | grep python3"
+            }
+        },
+        {
+            "id": 17,
+            "instruction": "That command should output something like the following.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Output",
+                "FormatCode": "501 81651 12648   0  9:53PM ttys000    0:00.16 python -m SimpleHTTPServer",
+                "CopyCode": "501 81651 12648   0  9:53PM ttys000    0:00.16 python -m SimpleHTTPServer"
+            }
+        },
+        {
+            "id": 18,
+            "instruction": "The second number is the process number; stop the server by sending it a signal. Replace \"81651\" with your actual process number.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "kill 81651",
+                "CopyCode": "kill 81651"
+            }
+        }
+    ]
+}

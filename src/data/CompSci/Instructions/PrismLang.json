@@ -1,0 +1,127 @@
+{
+    "Info": [
+        {
+            "title": "How to Add a Language to the Prism Library",
+            "desc": "How to add syntax highlighting for a new language in the Prism library.",
+            "ref": "prism"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Fork the Prism library from GitHub so you can modify it. Go to this [link](https://github.com/PrismJS/prism) to fork the repo. Simply click the \"Fork\" drop-down menu in the top-right and press \"Create a new fork\". Then change the description if you want and press the green \"Create fork\" button. Keep the \"Copy the multi branch only\" button selected."
+        },
+        {
+            "id": 2,
+            "instruction": "Now you should be in your forked repository. Click the green \"Code\" button and copy the https link. Then create a local clone of your repository using the \"git clone\" command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git clone <https-link>",
+                "CopyCode": "git clone <https-link>"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Open your prism library code. In the components folder add a file named \"prism-your-language.js\". For this example lets do custom yaml highlighting.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd prism\ntouch components/prism-customyaml.js",
+                "CopyCode": "cd prism\ntouch components/prism-customyaml.js"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Open the \"prism-customyaml.js\" file and paste the following code in it.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "JavaScript",
+                "FormatCode": "Prism.languages.customyaml = {\n    \"yaml-red\": {\n\tpattern: /.*:/,\n\tlookbehind: true,\n\talias: 'red',\n\tgreedy: true\n    },\n    \"yaml-gray\": {\n\tpattern: /[:\\-]/,\n\tlookbehind: true,\n\talias: 'gray',\n\tgreedy: true\n    },\n    \"yaml-green\": {\n\tpattern: /: (?!true|false\\\b)(.*)/,\n\tlookbehind: true,\n\talias: 'green',\n\tgreedy: true\n    },\n    \"yaml-orange\": {\n\tpattern: /: (true|false)/,\n\tlookbehind: true,\n\talias: 'orange',\n\tgreedy: true\n    }\n}",
+                "CopyCode": "Prism.languages.customyaml = {\n\t\"yaml-red\": {\n\t\tpattern: /.*:/,\n\t\tlookbehind: true,\n\t\talias: 'red',\n\t\tgreedy: true\n\t},\n\t\"yaml-gray\": {\n\t\tpattern: /[:\\-]/,\n\t\tlookbehind: true,\n\t\talias: 'gray',\n\t\tgreedy: true\n\t},\n\t\"yaml-green\": {\n\t\tpattern: /: (?!true|false\\\b)(.*)/,\n\t\tlookbehind: true,\n\t\talias: 'green',\n\t\tgreedy: true\n\t},\n\t\"yaml-orange\": {\n\t\tpattern: /: (true|false)/,\n\t\tlookbehind: true,\n\t\talias: 'orange',\n\t\tgreedy: true\n\t}\n}"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Paste the following code in the \"components.js\" file. In the code below replace \"YOUR-GITHUB-USERNAME\" with your GitHub username.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "JSON",
+                "FormatCode": "\"custom-yaml\":{\"title\": \"Custom Yaml\", \"owner\": \"YOUR-GITHUB-USERNAME\"},",
+                "CopyCode": "\"custom-yaml\":{\"title\": \"Custom Yaml\", \"owner\": \"YOUR-GITHUB-USERNAME\"},"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Paste the following code in the \"components.json\" file. In the code below replace \"YOUR-GITHUB-USERNAME\" with your GitHub username.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "JSON",
+                "FormatCode": "\"custom-yaml\": {\n    \"title\": \"Custom YAML\",\n    \"owner\": \"YOUR-GITHUB-USERNAME\"\n},",
+                "CopyCode": "\"custom-yaml\": {\n\t\"title\": \"Custom YAML\",\n\t\"owner\": \"YOUR-GITHUB-USERNAME\"\n},"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Add your changes to your forked repository.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "git add .\ngit commit -m \"Added custom yaml highlighting\"\ngit push",
+                "CopyCode": "git add .\ngit commit -m \"Added custom yaml highlighting\"\ngit push"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "Now run the following commands to update your frontend repository. Change the name \"your-frontend-code\" to your actual folder name. Give it like 20 seconds to update. NOTE: replace the \"&lthttps-link&gt\" to be your forked repositories https link that you copied in step 2. Do NOT include the angle brackets < >.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd your-frontend-code\nrm -rf node_modules/prismjs\nnpm install prismjs@<https-link>\n\nExample link (Don't copy)\nnpm install prismjs@https://github.com/MichaelT-178/prism.git",
+                "CopyCode": "cd your-frontend-code\nrm -rf node_modules/prismjs\nnpm install prismjs@<https-link>"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "Add CSS styling for your language in a file called \"custom.css\". The css file should be on the same path where you're going to import the language.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "fxml",
+                "DisplayLang": "CSS",
+                "FormatCode": ".yaml-red {\n    color: #E06C75\n}\n\n.yaml-gray {\n    color: #ABB2BF\n}\n\n.yaml-green {\n    color: #98C379;\n}\n\n.yaml-orange {\n    color: #D19A66;\n}",
+                "CopyCode": ".yaml-red {\n\tcolor: #E06C75\n}\n\n.yaml-gray {\n\tcolor: #ABB2BF\n}\n\n.yaml-green {\n\tcolor: #98C379;\n}\n\n.yaml-orange {\n\tcolor: #D19A66;\n}"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "In your main file paste the following imports. Note that the \"-\" character was not included in customyaml.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "JavaScript",
+                "FormatCode": "import Prism from 'prismjs';\nimport 'prismjs/components/prism-customyaml';\nimport 'prismjs/themes/prism-coy.css';\nimport './custom.css';\n",
+                "CopyCode": "import Prism from 'prismjs';\nimport 'prismjs/components/prism-customyaml';\nimport 'prismjs/themes/prism-coy.css';\nimport './custom.css';\n"
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Run your frontend code to see the changes.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm run dev",
+                "CopyCode": "npm run dev"
+            }
+        }
+    ]
+}

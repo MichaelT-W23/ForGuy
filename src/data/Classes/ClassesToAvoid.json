@@ -1,0 +1,45 @@
+{
+    "Text": [
+        {
+            "page": "Classes To Avoid",
+            "desc": "These are classes and professors I would recommend avoiding if possible. I'm not trying to be mean with this page, just help you avoid difficult situations and classes.",
+            "header2": "Classes To Avoid",
+            "desc2": "These are classes I would not recommend taking for various reasons.",
+            "header3": "Professor To Avoid",
+            "desc3": "These are Professors I would not recommend taking if possible."
+        }
+    ],
+    "Classes": [
+        {
+            "Name": "CSC 302: Introduction to Artificial Intelligence",
+            "Number": "CSC 302",
+            "Title": "Introduction to Artificial Intelligence",
+            "Professor": "Yang Song",
+            "Format": "In-Person",
+            "Description": "This class is pretty difficult for an elective. "
+        },
+        {
+            "Name": "PHY 201: General Physics I",
+            "Number": "PHY 201",
+            "Title": "General Physics I",
+            "Professor": "Timothy Daniels",
+            "Format": "In-Person",
+            "Description": "Obviously don't take physics if you don't have to. Dr. Daniels is cool though."
+        }
+    ],
+    "Professors": [
+        {
+            "Name": "Dr. Yang Song",
+            "Professor": "Dr. Yang Song",
+            "Class": "CSC 302: Introduction to Artificial Intelligence",
+            "Description": "I really like Dr. Song as a person and I had a good relationship with him while I was in college. However, I found his teaching style and class excessively difficult. He talks super fast in class and a lot of material on the test isn't like what's covered in class. Also a pretty work-heavy class for an elective. However, if you really want to get into AI I wouldn't let this class stop you."
+        },
+        {
+            "Name": "Dr. Sridhar Narayan",
+            "Professor": "Dr. Sridhar Narayan",
+            "Class": "CSC 434: Programming Languages",
+            "Description": "Dr. Narayan is kind of infamous at UNCW for his sheer cruelty. While I think the accusations are somewhat over exaggerated, I still would recommend taking another professor for this class. His tests are excessively difficult and don't really contain material that he covered in class. If you ask questions he's not super helpful and will sometimes just get angry at you. Just try and take the other professor if possible."
+        }
+    ]
+}
+

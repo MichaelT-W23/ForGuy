@@ -1,0 +1,27 @@
+{
+    "Text": [
+        {
+            "Header": "What is Visual Studio Code?",
+            "Body": "Visual Studio Code is the text editor I use for basically all my projects. It's very popular and I've used it for all my jobs and in many college classes. It's very versatile and can be used for (basically) any programming language. It has a lot of useful extensions and has a really good git version control system. I'd strongly recommend downloading VSCode and learning the basics of it. I've provided links below to help you setup and learn how to use it. If you have any questions hmu.",
+            "Links": "Links"
+        }
+    ],
+    "Links": [
+        {
+            "Name": "Download Visual Studio Code",
+            "WebLink": "https://code.visualstudio.com/download"
+        },
+        {
+            "Name": "Settings File",
+            "Link": "/CompSci/VSCodeSettings"
+        },
+        {
+            "Name": "Useful Shortcuts",
+            "Link": "/CompSci/VSCodeShortcuts"
+        },
+        {
+            "Name": "Helpful Extensions",
+            "Link": "/CompSci/VSCodeExtensions"
+        }
+    ]
+}

@@ -1,0 +1,182 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup an OpenAI API Project",
+            "desc": "Explains how to setup and use OpenAI's API in your Vue app",
+            "ref": "openai-api"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Before doing anything else, go [here](https://platform.openai.com/settings/organization/billing/overview) to setup a payment method. Your API calls won't work if you don't do this."
+        },
+        {
+            "id": 2,
+            "instruction": "Click the green \"Add payment details\" button. Then click the \"Individual\" option. After that fill in your credit card information. When you're done press \"Continue\""
+        },
+        {
+            "id": 3,
+            "instruction": "In the \"Configure payment\" page I'd recommend doing the following. Set your \"Initial credit purchase\" amount to $5. Then toggle off the \"Would you like to set up automatic recharge?\" button. Then press \"Continue\"."
+        },
+        {
+            "id": 4,
+            "instruction": "On the \"Payment summary\" view, review your information, then press \"Confirm payment\"."
+        },
+        {
+            "id": 5,
+            "instruction": "I'd recommend making sure \"Auto recharge is off\" so that when you're credit balance reaches $0 your API requests will stop working, instead of you being charged extra. There should be an information card under the amount you just added. You can use this [link](https://platform.openai.com/usage) to see information about your usage."
+        },
+        {
+            "id": 6,
+            "instruction": "Go to this [link](https://platform.openai.com/api-keys) and sign in. We're going to generate an API key."
+        },
+        {
+            "id": 7,
+            "instruction": "Once you're on the page titled \"API keys\" click on the green button in the top-right that says \"Create new secret key\"."
+        },
+        {
+            "id": 8,
+            "instruction": "In the \"Create new secret key\" dialog box input the following values. Then click \"Create secret key\".",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Values",
+                "FormatCode": "Owned by: You\nName: My Test Key\nProject: Default Project\nPermissions: All",
+                "CopyCode": "Owned by: You\nName: My Test Key\nProject: Default Project\nPermissions: All"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "When the \"Save your key\" box pops-up, copy and record the new key."
+        },
+        {
+            "id": 10,
+            "instruction": "Now open your terminal and run the following command. It will install the libraries needed in this project.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "pip3 install openai python-dotenv flask",
+                "CopyCode": "pip3 install openai python-dotenv flask"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "Now make the folder for your code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "mkdir ChatgptAPI\ncd ChatgptAPI\ntouch app.py\ntouch config.py\ntouch script.py\ntouch routes.py\ntouch .env\nmkdir templates;\ncd templates;\ntouch index.html\ncd ..",
+                "CopyCode": "mkdir ChatgptAPI\ncd ChatgptAPI\ntouch app.py\ntouch config.py\ntouch script.py\ntouch routes.py\ntouch .env\nmkdir templates;\ncd templates;\ntouch index.html\ncd .."
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "You can find the documentation for the OpenAI library [here](https://platform.openai.com/docs/api-reference/streaming). It would probably be helpful if you wanted to modify the code below. It has the most up-to-date information."
+        },
+        {
+            "id": 13,
+            "instruction": "Open \".env\" and paste in the following code. Replace \"your_openai_api_key\" with the key you recorded in step 9.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "fxml",
+                "DisplayLang": "Env",
+                "FormatCode": "OPENAI_API_KEY=your_openai_api_key",
+                "CopyCode": "OPENAI_API_KEY=your_openai_api_key"
+            }
+        },
+        {
+            "id": 14,
+            "instruction": "Open \"config.py\" and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "import os\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nOPENAI_API_KEY = os.getenv('OPENAI_API_KEY')",
+                "CopyCode": "import os\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nOPENAI_API_KEY = os.getenv('OPENAI_API_KEY')"
+            }
+        },
+        {
+            "id": 15,
+            "instruction": "Open \"script.py\" and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from openai import OpenAI\nfrom config import OPENAI_API_KEY\n\nclient = OpenAI(api_key=OPENAI_API_KEY)\n\nwhile True:\n\n    prompt = input(\"Q: \")\n\n    stream = client.chat.completions.create(\n\tmodel=\"gpt-3.5-turbo\",\n\tmessages=[{\"role\": \"user\", \"content\": prompt}],\n\tstream=True,\n    )\n\n    print(\"A: \", end=\"\")\n\n    for chunk in stream:\n\tif chunk.choices[0].delta.content is not None:\n\t    print(chunk.choices[0].delta.content, end=\"\")\n\n    print(\"\\n\")",
+                "CopyCode": "from openai import OpenAI\nfrom config import OPENAI_API_KEY\n\nclient = OpenAI(api_key=OPENAI_API_KEY)\n\nwhile True:\n\n\tprompt = input(\"Q: \")\n\n\tstream = client.chat.completions.create(\n\t\tmodel=\"gpt-3.5-turbo\",\n\t\tmessages=[{\"role\": \"user\", \"content\": prompt}],\n\t\tstream=True,\n\t)\n\n\tprint(\"A: \", end=\"\")\n\n\tfor chunk in stream:\n\t\tif chunk.choices[0].delta.content is not None:\n\t\t\tprint(chunk.choices[0].delta.content, end=\"\")\n\n\tprint(\"\\n\")"
+            }
+        },
+        {
+            "id": 16,
+            "instruction": "Open \"app.py\" and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from flask import Flask, render_template\nfrom routes import routes_blueprint\n\napp = Flask(__name__)\n\napp.register_blueprint(routes_blueprint)\n\n@app.route('/', methods=['GET'])\ndef index():\n    return render_template('index.html')\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+                "CopyCode": "from flask import Flask, render_template\nfrom routes import routes_blueprint\n\napp = Flask(__name__)\n\napp.register_blueprint(routes_blueprint)\n\n@app.route('/', methods=['GET'])\ndef index():\n\treturn render_template('index.html')\n\nif __name__ == '__main__':\n\tapp.run(debug=True)"
+            }
+        },
+        {
+            "id": 17,
+            "instruction": "Open \"routes.py\" and paste in the following code. You can change the \"model\" parameter in the \"response\" object to be \"gpt-4\" if you want.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "from flask import Blueprint, jsonify, request\nfrom config import OPENAI_API_KEY\nfrom openai import OpenAI\n\nroutes_blueprint = Blueprint('routes', __name__)\n\nclient = OpenAI(api_key=OPENAI_API_KEY)\n\ndef chat_gpt(prompt):\n    response = client.chat.completions.create(\n\tmodel=\"gpt-3.5-turbo\",\n\tmessages=[{\"role\": \"user\", \"content\": prompt}]\n    )\n    return response.choices[0].message.content.strip()\n\n@routes_blueprint.route('/generate', methods=['POST'])\ndef generate_text():\n    data = request.get_json()\n    prompt = data.get('prompt', '')\n\n    if not prompt:\n\treturn jsonify({'error': 'Prompt is required'}), 400\n\n    try:\n\tgenerated_text = chat_gpt(prompt)\n\treturn jsonify({'response': generated_text})\n    except Exception as e:\n\treturn jsonify({'error': str(e)}), 500",
+                "CopyCode": "from flask import Blueprint, jsonify, request\nfrom config import OPENAI_API_KEY\nfrom openai import OpenAI\n\nroutes_blueprint = Blueprint('routes', __name__)\n\nclient = OpenAI(api_key=OPENAI_API_KEY)\n\ndef chat_gpt(prompt):\n\tresponse = client.chat.completions.create(\n\t\tmodel=\"gpt-3.5-turbo\",\n\t\tmessages=[{\"role\": \"user\", \"content\": prompt}]\n\t)\n\treturn response.choices[0].message.content.strip()\n\n@routes_blueprint.route('/generate', methods=['POST'])\ndef generate_text():\n\tdata = request.get_json()\n\tprompt = data.get('prompt', '')\n\n\tif not prompt:\n\t\treturn jsonify({'error': 'Prompt is required'}), 400\n\n\ttry:\n\t\tgenerated_text = chat_gpt(prompt)\n\t\treturn jsonify({'response': generated_text})\n\texcept Exception as e:\n\t\treturn jsonify({'error': str(e)}), 500"
+            }
+        },
+        {
+            "id": 18,
+            "instruction": "Open \"index.html\" in the \"templates\" folder and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "HTML",
+                "FormatCode": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>OpenAI Text Generator</title>\n</head>\n<body>\n  <h1>OpenAI Text Generator</h1>\n  <input type=\"text\" id=\"prompt\" placeholder=\"Enter your prompt here\">\n  <button onclick=\"generateText()\">Generate</button>\n  <div class=\"response\" id=\"response\"></div>\n\n  <script>\n  async function generateText() {\n      const prompt = document.getElementById('prompt').value;\n      const responseDiv = document.getElementById('response');\n\n      const response = await fetch('/generate', {\n\t    method: 'POST',\n\t    headers: {\n                'Content-Type': 'application/json'\n\t    },\n\t    body: JSON.stringify({ prompt: prompt })\n\t});\n\n\tconst data = await response.json();\n\n\tif (response.ok) {\n\t    responseDiv.innerText = data.response;\n\t} else {\n\t    responseDiv.innerText = 'Error: ' + data.error;\n\t}\n    }\n    </script>\n</body>\n<style>\n\nbody {\n    font-family: Arial, sans-serif;\n    margin: 50px;\n    text-align: center;\n}\n\ninput[type=\"text\"] {\n    width: 300px;\n    padding: 10px;\n    margin-bottom: 20px;\n}\n\nbutton {\n    padding: 10px 20px;\n    background-color: #007BFF;\n    color: white;\n    border: none;\n    cursor: pointer;\n}\n\nbutton:hover {\n    background-color: #0056b3;\n}\n\n.response {\n    margin-top: 20px;\n    font-weight: bold;\n}\n\n</style>\n</html>",
+                "CopyCode": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t<title>OpenAI Text Generator</title>\n</head>\n<body>\n\t<h1>OpenAI Text Generator</h1>\n\t<input type=\"text\" id=\"prompt\" placeholder=\"Enter your prompt here\">\n\t<button onclick=\"generateText()\">Generate</button>\n\t<div class=\"response\" id=\"response\"></div>\n\n\t<script>\n\tasync function generateText() {\n\t\tconst prompt = document.getElementById('prompt').value;\n\t\tconst responseDiv = document.getElementById('response');\n\n\t\tconst response = await fetch('/generate', {\n\t\t\tmethod: 'POST',\n\t\t\theaders: {\n\t\t\t\t'Content-Type': 'application/json'\n\t\t\t},\n\t\t\tbody: JSON.stringify({ prompt: prompt })\n\t\t});\n\n\t\tconst data = await response.json();\n\n\t\tif (response.ok) {\n\t\t\tresponseDiv.innerText = data.response;\n\t\t} else {\n\t\t\tresponseDiv.innerText = 'Error: ' + data.error;\n\t\t}\n\t}\n\t</script>\n</body>\n<style>\n\nbody {\n\tfont-family: Arial, sans-serif;\n\tmargin: 50px;\n\ttext-align: center;\n}\n\ninput[type=\"text\"] {\n\twidth: 300px;\n\tpadding: 10px;\n\tmargin-bottom: 20px;\n}\n\nbutton {\n\tpadding: 10px 20px;\n\tbackground-color: #007BFF;\n\tcolor: white;\n\tborder: none;\n\tcursor: pointer;\n}\n\nbutton:hover {\n\tbackground-color: #0056b3;\n}\n\n.response {\n\tmargin-top: 20px;\n\tfont-weight: bold;\n}\n\n</style>\n</html>"
+            }
+        },
+        {
+            "id": 19,
+            "instruction": "To run the front-end Flask app, open your terminal and run the following commands.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd ChatgptAPI\npython3 app.py",
+                "CopyCode": "cd ChatgptAPI\npython3 app.py"
+            }
+        },
+        {
+            "id": 21,
+            "instruction": "Open the flask app using this link (or whatever link was output in the previous command).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Link",
+                "FormatCode": "http://localhost:5173/",
+                "CopyCode": "http://localhost:5173/"
+            }
+        },
+        {
+            "id": 22,
+            "instruction": "To run the CLI tool to interact with ChatGPT, use the following commands.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd ChatgptAPI\npython3 script.py",
+                "CopyCode": "cd ChatgptAPI\npython3 script.py"
+            }
+        }
+    ]
+}

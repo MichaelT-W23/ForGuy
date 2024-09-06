@@ -1,0 +1,39 @@
+{
+    "Info": [
+        {
+            "title": "Deploy a Vanilla JS Project to GitHub Pages",
+            "desc": "How to deploy a project that doesn't use Vite or a JS framework to GitHub pages. This is a good reference [video](https://youtu.be/XGcuxuhV-Jg?si=pRZydG5hC_oyluSn).",
+            "ref": "gh-pages"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Write your non-vite html, css, and javascript code, then push it to github. Make sure there's a file named \"index.html\" in the top-most directory of your folder."
+        },
+        {
+            "id": 2,
+            "instruction": "When you're ready to deploy do the following steps."
+        },
+        {
+            "id": 3,
+            "instruction": "Go to your repository. In the top-right click on \"Settings\" with the gear icon next to it."
+        },
+        {
+            "id": 4,
+            "instruction": "On the left-hand side under \"Code and automation\" select \"Pages\"."
+        },
+        {
+            "id": 5,
+            "instruction": "Under \"Build and Deployment\" you should see a section titled \"Branch\". Under it select the \"None\" button and decide what branch you want to deploy. You likely want to deploy the \"main\" branch. You also likely don't want to change the \"(root)\" button."
+        },
+        {
+            "id": 6,
+            "instruction": "Once done, press \"Save\"."
+        },
+        {
+            "id": 7,
+            "instruction": "Wait about 1-2 minutes, then refresh the page. You should now see the link to your GitHub pages website."
+        }
+    ]
+}

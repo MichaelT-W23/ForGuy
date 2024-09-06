@@ -1,0 +1,103 @@
+{
+    "Info": [
+        {
+            "title": "How to Install Node.js",
+            "desc": "How to install Node.js and npm to use in your projects.",
+            "ref": "node"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Check if you already have node installed by running the following command in your terminal. It should print the version if it's installed.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "node -v",
+                "CopyCode": "node -v"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "If you don't already have Node.js installed, you can download it using this [link](https://nodejs.org/en). Simply click the green \"Download Node.js (LTS)\" button, then follow the installation prompts once it's downloaded."
+        },
+        {
+            "id": 3,
+            "instruction": "You should now have Node.js and npm installed on your computer. Run the following commands in your terminal to make sure they're installed correctly. If they output a version number, you're good.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "node -v\nnpm -v",
+                "CopyCode": "node -v\nnpm -v"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Install nvm so you can easily upgrade node.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash",
+                "CopyCode": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Load nvm into your terminal session",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "source ~/.nvm/nvm.sh",
+                "CopyCode": "source ~/.nvm/nvm.sh"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "List all the available Node.js versions. Scroll down and copy and record the latest version.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "nvm ls-remote",
+                "CopyCode": "nvm ls-remote"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "Install the latest version. Replace \"22.2.0\" with the actual latest version.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "nvm install 22.2.0",
+                "CopyCode": "nvm install 22.2.0"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "Set the new version as the default using the following commands. Replace \"22.2.0\" with the actual latest version.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "nvm use 22.2.0\nnvm alias default 22.2.0",
+                "CopyCode": "nvm use 22.2.0\nnvm alias default 22.2.0"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "Verify the new version has been set as the default.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "node -v",
+                "CopyCode": "node -v"
+            }
+        }
+    ]
+}

@@ -1,0 +1,241 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup an Angular Project",
+            "desc": "How to setup an Angular project that uses Vite",
+            "ref": "angular"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Download the Angular CLI tool using npm. Then verify it's installed using the version command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm install -g @angular/cli\nng version",
+                "CopyCode": "npm install -g @angular/cli\nng version"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "If you get an error that says your node version is out of date and doesn't work with Angular, run the following commands. Then rerun the two commands in step 1. If \"ng version\" outputs the version it means you're good.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash\nsource ~/.nvm/nvm.sh\nnvm install --lts\nnvm use --lts\nnvm alias default lts/*\n\nnpm install -g @angular/cli\nng version",
+                "CopyCode": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash\nsource ~/.nvm/nvm.sh\nnvm install --lts\nnvm use --lts\nnvm alias default lts/*\n\nnpm install -g @angular/cli\nng version"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Once you have ng installed, let's start our project. Note that \"my-angular-project\" will be the name of your project and you can change it to be whatever you want.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "ng new my-angular-project",
+                "CopyCode": "ng new my-angular-project"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "You will be prompted to answer question after you run the command above. I'd recommend answering them the following way. Press 'y' for yes and 'n' for no. Press return/enter to submit your answer. After you're done give it a minute or two to install all the necessary packages. You can use \"command + k\" to clear your terminal after you're done.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Questions",
+                "FormatCode": "Would you like to enable autocompletion...? yes\nWould you like to share pseudonymous usage data...? no\nWhich stylesheet format would you like to use...? css\nDo you want to enable Server-Side Rendering (SSR) and...? yes",
+                "CopyCode": "Would you like to enable autocompletion...? yes\nWould you like to share pseudonymous usage data...? no\nWhich stylesheet format would you like to use...? css\nDo you want to enable Server-Side Rendering (SSR) and...? yes"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Now create your folders and files via the command line.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd my-angular-project/src/app\nmkdir -p views components utils assets models\nng generate component components/RouterBtn\nng generate component views/Home\nng generate component views/SecondPage",
+                "CopyCode": "cd my-angular-project/src/app\nmkdir -p views components utils assets models\nng generate component components/RouterBtn\nng generate component views/Home\nng generate component views/SecondPage"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Open your code folder in VSCode. Go to \"app.routes.ts\" in src -> app. Delete it's contents and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "Angular",
+                "FormatCode": "import { Routes } from '@angular/router'\nimport { HomeComponent } from './views/home/home.component';\nimport { SecondPageComponent } from './views/second-page/second-page.component';\n\nexport const routes: Routes = [\n  { path: '', component: HomeComponent },\n  { path: 'second-page', component: SecondPageComponent },\n];",
+                "CopyCode": "import { Routes } from '@angular/router'\nimport { HomeComponent } from './views/home/home.component';\nimport { SecondPageComponent } from './views/second-page/second-page.component';\n\nexport const routes: Routes = [\n\t{ path: '', component: HomeComponent },\n\t{ path: 'second-page', component: SecondPageComponent },\n];"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "Now go to \"router-btn.component.ts\" in src -> app -> components -> router-btn folder. Delete it's contents and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "Angular",
+                "FormatCode": "import { Component, Input } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@Component({\n  selector: 'app-router-btn',\n  standalone: true,\n  imports: [RouterModule],\n  templateUrl: './router-btn.component.html',\n  styleUrl: './router-btn.component.css'\n})\nexport class RouterBtnComponent {\n  @Input() path!: string;\n  @Input() buttonText!: string;\n}",
+                "CopyCode": "import { Component, Input } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@Component({\n\tselector: 'app-router-btn',\n\tstandalone: true,\n\timports: [RouterModule],\n\ttemplateUrl: './router-btn.component.html',\n\tstyleUrl: './router-btn.component.css'\n})\nexport class RouterBtnComponent {\n\t@Input() path!: string;\n\t@Input() buttonText!: string;\n}"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "In the same directory delete the contents of the \"router-btn.component.html\" file and then paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "html",
+                "DisplayLang": "Angular",
+                "FormatCode": "<a [routerLink]=\"path\" class=\"button\">\n    {{ buttonText }}\n</a>",
+                "CopyCode": "<a [routerLink]=\"path\" class=\"button\">\n\t{{ buttonText }}\n</a>"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "In the same directory paste the following code into the \"router-btn.component.css\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "CSS",
+                "FormatCode": ".button {\n  display: inline-block;\n  padding: 10px 20px;\n  color: white;\n  background-color: #007bff;\n  border: none;\n  border-radius: 4px;\n  text-align: center;\n  text-decoration: none;\n  font-size: 16px;\n}\n\n.button:hover {\n  background-color: #0056b3;\n}",
+                "CopyCode": ".button {\n\tdisplay: inline-block;\n\tpadding: 10px 20px;\n\tcolor: white;\n\tbackground-color: #007bff;\n\tborder: none;\n\tborder-radius: 4px;\n\ttext-align: center;\n\ttext-decoration: none;\n\tfont-size: 16px;\n}\n\n.button:hover {\n\tbackground-color: #0056b3;\n}"
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Now go to \"home.component.ts\" in src -> app -> views -> home folder. Delete it's contents and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "Angular",
+                "FormatCode": "import { Component } from '@angular/core';\nimport { RouterBtnComponent } from '../../components/router-btn/router-btn.component';\n\n@Component({\n  selector: 'app-home',\n  standalone: true,\n  imports: [RouterBtnComponent],\n  templateUrl: './home.component.html',\n  styleUrl: './home.component.css'\n})\nexport class HomeComponent {\n\n}",
+                "CopyCode": "import { Component } from '@angular/core';\nimport { RouterBtnComponent } from '../../components/router-btn/router-btn.component';\n\n@Component({\n\tselector: 'app-home',\n\tstandalone: true,\n\timports: [RouterBtnComponent],\n\ttemplateUrl: './home.component.html',\n\tstyleUrl: './home.component.css'\n})\nexport class HomeComponent {\n\n}"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "Now go to \"home.component.html\" in src -> app -> views -> home folder. Delete it's contents and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "html",
+                "DisplayLang": "Angular",
+                "FormatCode": "<p class=\"title\">HOME PAGE</p>\n<app-router-btn [path]=\"'/second-page'\" [buttonText]=\"'Go to 2nd page'\"></app-router-btn>",
+                "CopyCode": "<p class=\"title\">HOME PAGE</p>\n<app-router-btn [path]=\"'/second-page'\" [buttonText]=\"'Go to 2nd page'\"></app-router-btn>"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "Now go to \"home.component.css\" in src -> app -> views -> home folder. Delete it's contents and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "CSS",
+                "FormatCode": ".title {\n  color: red;\n  font-family: Arial, sans-serif;\n}",
+                "CopyCode": ".title {\n\tcolor: red;\n\tfont-family: Arial, sans-serif;\n}"
+            }
+        },
+        {
+            "id": 13,
+            "instruction": "Now go to \"second-page.component.ts\" in src -> app -> views -> second-page folder. Delete it's contents and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "Angular",
+                "FormatCode": "import { Component } from '@angular/core';\nimport { RouterBtnComponent } from '../../components/router-btn/router-btn.component';\n\n@Component({\n  selector: 'app-second-page',\n  standalone: true,\n  imports: [RouterBtnComponent],\n  templateUrl: './second-page.component.html',\n  styleUrls: ['./second-page.component.css']\n})\nexport class SecondPageComponent {\n\n}",
+                "CopyCode": "import { Component } from '@angular/core';\nimport { RouterBtnComponent } from '../../components/router-btn/router-btn.component';\n\n@Component({\n\tselector: 'app-second-page',\n\tstandalone: true,\n\timports: [RouterBtnComponent],\n\ttemplateUrl: './second-page.component.html',\n\tstyleUrls: ['./second-page.component.css']\n})\nexport class SecondPageComponent {\n\n}"
+            }
+        },
+        {
+            "id": 14,
+            "instruction": "Now go to \"second-page.component.html\" in src -> app -> views -> second-page folder. Delete it's contents and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "html",
+                "DisplayLang": "Angular",
+                "FormatCode": "<p class=\"title\">Second Page</p>\n<app-router-btn [path]=\"'/'\" [buttonText]=\"'Go to Home page'\"></app-router-btn>",
+                "CopyCode": "<p class=\"title\">Second Page</p>\n<app-router-btn [path]=\"'/'\" [buttonText]=\"'Go to Home page'\"></app-router-btn>"
+            }
+        },
+        {
+            "id": 15,
+            "instruction": "Now go to \"second-page.component.css\" in src -> app -> views -> second-page folder. Delete it's contents and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "CSS",
+                "FormatCode": ".title {\n  color: red;\n  font-family: Arial, sans-serif;\n}",
+                "CopyCode": ".title {\n\tcolor: red;\n\tfont-family: Arial, sans-serif;\n}"
+            }
+        },
+        {
+            "id": 16,
+            "instruction": "In src -> app open the \"app.component.html\" file. Delete its contents and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "html",
+                "DisplayLang": "Angular",
+                "FormatCode": "<p class=\"test-header\">TEST WEBSITE</p>\n<router-outlet></router-outlet>",
+                "CopyCode": "<p class=\"test-header\">TEST WEBSITE</p>\n<router-outlet></router-outlet>"
+            }
+        },
+        {
+            "id": 17,
+            "instruction": "In src -> app open the \"app.component.css\" file and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "CSS",
+                "FormatCode": ".test-header {\n  font-size: 25px;\n}",
+                "CopyCode": ".test-header {\n\tfont-size: 25px;\n}"
+            }
+        },
+        {
+            "id": 18,
+            "instruction": "I'd recommend deleting the \".git\" folder. You can use the \"Add Existing Folder To GitHub\" instructiosn from the (\"GitHub\")[/CompSci/GitHub] page.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd my-angular-project\nrm -rf .git",
+                "CopyCode": "cd my-angular-project\nrm -rf .git"
+            }
+        },
+        {
+            "id": 19,
+            "instruction": "Run your website server using the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "ng serve",
+                "CopyCode": "ng serve"
+            }
+        },
+        {
+            "id": 20,
+            "instruction": "After you run \"ng serve\", open the localhost link that was printed in the output. Press \"control + c\" to stop running your server.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Link",
+                "FormatCode": "http://localhost:4200",
+                "CopyCode": "http://localhost:4200"
+            }
+        }
+    ]
+}

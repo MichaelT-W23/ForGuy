@@ -1,0 +1,101 @@
+{
+    "Info": [
+        {
+            "title": "How to Use Excel with Python",
+            "desc": "Simple instruction list of how to setup Python to work with Excel.",
+            "ref": "excel"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Python can be very helpful with reading and writing to Excel files and automating processes. The steps below explain how to create a basic program that does that.<br><br>I also have multiple files on my GitHub that I think would be a good reference.<br><br>Example 1: [sort_excel.py](https://github.com/MichaelT-178/Modern-Python-Files/blob/main/sort_excel.py)<br>Example 2: [analyze_excel.py](https://github.com/MichaelT-178/Modern-Python-Files/blob/main/analyze_excel.py)<br>Example 3: [read_excel.py](https://github.com/MichaelT-178/Modern-Python-Files/blob/main/read_excel.py)<br><br>"
+        },
+        {
+            "id": 2,
+            "instruction": "First off we're going to create our project folder and files.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "mkdir ExcelExample;\ncd ExcelExample;\ntouch data.csv;\ntouch convert.py;\ntouch read_excel.py",
+                "CopyCode": "mkdir ExcelExample;\ncd ExcelExample;\ntouch data.csv;\ntouch convert.py;\ntouch read_excel.py"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Install the following three libraries in your project.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "pip3 install pandas openpyxl XlsxWriter",
+                "CopyCode": "pip3 install pandas openpyxl XlsxWriter"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Open the \"data.csv\" and paste the following values",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "CSV",
+                "FormatCode": "Maker,Model,Year,Color,Engine,Fuel,Mileage\nToyota,Camry,2021,Red,V6,Gasoline,15000\nHonda,Civic,2019,Blue,I4,Gasoline,22000\nFord,Mustang,2018,Black,V8,Gasoline,27000\nNissan,Altima,2020,White,I4,Gasoline,12000\nChevrolet,Impala,2022,Grey,V6,Gasoline,5000\nBMW,325i,2021,Maroon,I6,Gasoline,13000\nTesla,Model S,2022,Black,Electric,Electric,10000\nHyundai,Sonata,2019,Silver,I4,Gasoline,18000\nSubaru,Outback,2018,Green,H4,Gasoline,25000\nAudi,A4,2020,Blue,I4,Gasoline,15000",
+                "CopyCode": "Maker,Model,Year,Color,Engine,Fuel,Mileage\nToyota,Camry,2021,Red,V6,Gasoline,15000\nHonda,Civic,2019,Blue,I4,Gasoline,22000\nFord,Mustang,2018,Black,V8,Gasoline,27000\nNissan,Altima,2020,White,I4,Gasoline,12000\nChevrolet,Impala,2022,Grey,V6,Gasoline,5000\nBMW,325i,2021,Maroon,I6,Gasoline,13000\nTesla,Model S,2022,Black,Electric,Electric,10000\nHyundai,Sonata,2019,Silver,I4,Gasoline,18000\nSubaru,Outback,2018,Green,H4,Gasoline,25000\nAudi,A4,2020,Blue,I4,Gasoline,15000"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Open the \"convert.py\" file and paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\nwith pd.ExcelWriter('output.xlsx', engine='xlsxwriter') as writer:\n    df.to_excel(writer, index=False, sheet_name='Cars')\n\n    workbook = writer.book\n    worksheet = writer.sheets['Cars']\n\n    date_format = workbook.add_format({'num_format': '0'})\n\n    worksheet.set_column('C:C', None, date_format)",
+                "CopyCode": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\n\nwith pd.ExcelWriter('output.xlsx', engine='xlsxwriter') as writer:\n\tdf.to_excel(writer, index=False, sheet_name='Cars')\n\n\tworkbook = writer.book\n\tworksheet = writer.sheets['Cars']\n\n\tdate_format = workbook.add_format({'num_format': '0'})\n\n\tworksheet.set_column('C:C', None, date_format)"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Run the \"convert.py\" file. Give it a second to finish.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "python3 convert.py",
+                "CopyCode": "python3 convert.py"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "You can download the [Excel Viewer](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer) extension if you want to view the output.xlsx file in VSCode. It's pretty cool, I'd recommend it."
+        },
+        {
+            "id": 8,
+            "instruction": "If you downloaded the Excel Viewer you should now be able to see your \"Cars\" table in \"output.xlsx\". Note, to see changes you might have to close and reopen your xlsx file."
+        },
+        {
+            "id": 9,
+            "instruction": "Now go to the \"read_excel.py\" file and paste the following code into it.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "import pandas as pd\n\nexcel_path = \"output.xlsx\"\n\ndf = pd.read_excel(excel_path, engine=\"openpyxl\")\n\n# Print the table\nprint(df.head())\n\ncount = 0\n\nfor mileage in df['Mileage']:\n    if mileage >= 15000:\n\tcount += 1\n\nprint(f\"\\n{count} cars have a mileage of 15,000 miles or more.\\n\")",
+                "CopyCode": "import pandas as pd\n\nexcel_path = \"output.xlsx\"\n\ndf = pd.read_excel(excel_path, engine=\"openpyxl\")\n\n# Print the table\nprint(df.head())\n\ncount = 0\n\nfor mileage in df['Mileage']:\n\tif mileage >= 15000:\n\t\tcount += 1\n\nprint(f\"\\n{count} cars have a mileage of 15,000 miles or more.\\n\")"
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Run your read_excel.py file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "python3 read_excel.py",
+                "CopyCode": "python3 read_excel.py"
+            }
+        }
+    ]
+}

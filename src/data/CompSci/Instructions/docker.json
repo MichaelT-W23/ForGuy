@@ -1,0 +1,64 @@
+{
+    "Info": [
+        {
+            "title": "How to Install and Setup Docker",
+            "desc": "How to install and setup Docker on your computer.",
+            "ref": "docker"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Run the following command in your terminal to determine what chip you have. If it says \"x86_64\" you have an intel chip. If it says \"arm64\" you have an Apple chip.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "uname -m",
+                "CopyCode": "uname -m"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "Go to Dockers [website](https://www.docker.com/products/docker-hub/) and click on the \"Get Started\" button."
+        },
+        {
+            "id": 3,
+            "instruction": "Click on the drop-down menu of the blue button that says \"Download for Mac - Apple Chip\". Select the chip or operating system output in step 1."
+        },
+        {
+            "id": 4,
+            "instruction": "Follow the installation prompts, it should be pretty intuitive."
+        },
+        {
+            "id": 5,
+            "instruction": "Open the \"Docker\" app. Accept the agreement and recommended settings."
+        },
+        {
+            "id": 6,
+            "instruction": "Sign up for a Docker account and complete the welcome survey afterwards."
+        },
+        {
+            "id": 7,
+            "instruction": "Go to your terminal and run the following command. It it outputs something like \"Docker version 26.0.0, build 2ae903e\" you should be good.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "docker --version",
+                "CopyCode": "docker --version"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "You should be good after that! You can test it further by running the following command. This command will download a test image and run it in a container.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "docker run hello-world",
+                "CopyCode": "docker run hello-world"
+            }
+        }
+    ]
+}

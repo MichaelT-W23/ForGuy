@@ -1,0 +1,975 @@
+{
+    "MultiSet": [
+        {
+            "Info": [
+                {
+                    "title": "Deploy the Vue, Flask and PostgreSQL app to Amazon Web Services",
+                    "desc": "Explains how to deploy the Notes app using various AWS services.",
+                    "ref": "deploy-PostgreSQL"
+                }
+            ],
+            "Instructions": [
+				{
+                    "id": 1,
+                    "instruction": "Before doing any of this make sure you've completed the &How to Setup an Amazon Web Services Account&[AWSLink] instruction set."
+                },
+                {
+                    "id": 2,
+                    "instruction": "Before doing any of this make sure you've completed the &How to Setup an Amazon Web Services Account&[AWSLink] instruction set."
+                },
+				{
+                    "id": 3,
+                    "instruction": "You'll also need to complete the &How to Make a Complex Rest API using Vue, Flask and PostgreSQL&[FlaskPostLink] instruction set."
+                },
+				{
+                    "id": 4,
+                    "instruction": "After you've completed those two instruction sets, you'll be ready to start this one."
+                },
+				{
+                    "id": 5,
+                    "instruction": "Let's get started!"
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Services We'll Use",
+                    "desc": "These are the AWS services and technologies we'll use to deploy our app."
+                }
+            ],
+            "Instructions": [
+                {
+					"id": 1,
+					"instruction": "<u><b>RDS</b></u> - How we'll deploy our Postgres database. Stands for Relational Database Service. The service can be used to set up, operate, and scale relational databases in the cloud."
+				},
+				{
+					"id": 2,
+					"instruction": "<u><b>Lambda</b></u> - How we'll deploy our Rest API. It allows you to execute your code in response to specific events or triggers."
+				},
+				{
+					"id": 3,
+					"instruction": "<u><b>API Gateway</b></u> - How we'll create a link that be can used in the frontend to communicate with our backend on Lambda."
+				},
+				{
+					"id": 4,
+					"instruction": "<u><b>S3</b></u> - Where we'll store our Flask rest api code and frontend code. It will be used to create the http link for our application. S3 stands for simple storage service."
+				},
+				{
+					"id": 5,
+					"instruction": "<u><b>CloudFront</b></u> - How we'll create the HTTPS link for our website. CloudFront is a content delivery network."
+				},
+				{
+					"id": 6,
+					"instruction": "<u><b>sqlectron</b></u> - This isn't an AWS service, it's a tool we'll use to connect and work with our database."
+				},
+				{
+					"id": 7,
+					"instruction": "<u><b>Zappa</b></u> - A python library we'll use to help deploy our Flask app to AWS lambda. It makes deploying the Flask code very simple, fast and easy."
+				}
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Download sqlectron",
+                    "desc": "Explains how to download and setup sqlectron before doing anything else."
+                }
+            ],
+            "Instructions": [
+                {
+					"id": 1,
+					"instruction": "Go [here](https://sqlectron.github.io/) to install it. Press the \"Download GUI\" button. You'll be taken to Github."
+				},
+				{
+					"id": 2,
+					"instruction": "On Github scroll down to \"Assets\". If you're on mac press \"sqlectron-1.38.0.dmg\" to install it."
+				},
+				{
+					"id": 3,
+					"instruction": "Now go to \"Downloads\" in Finder. Press on the \"sqlectron-1.38.0.dmg\" file. Then drag the icon to the \"Applications\" folder."
+				},
+				{
+					"id": 4,
+					"instruction": "Now in Finder go to \"Applications\". Find \"sqlectron\" and press on it. When asked \"Are you sure you want to open it\" press the \"Open\" button."
+				},
+				{
+					"id": 5,
+					"instruction": "If it opens successfully you should be good."
+				}
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Setup the RDS DB Instance",
+                    "desc": "Explains how to setup an RDS DB instance for PostgreSQL."
+                }
+            ],
+            "Instructions": [
+                {
+					"id": 1,
+					"instruction": "Most of this information comes from this [video](https://youtu.be/I_fTQTsz2nQ?si=kQkplyTGndT9_w8-) and this [video](https://youtu.be/0A-5ITILrMA?si=TfzDqNBls635t-ZT)."
+				},
+				{
+					"id": 2,
+					"instruction": "Go to your [AWS Console](https://aws.amazon.com/console/). Press the \"Sign In to the Console\" button in the top-right."
+				},
+				{
+					"id": 3,
+					"instruction": "You'll be taken to a new screen. Press the \"Sign in using root user email\" button. Then log in using your credentials, then press \"Next\"."
+				},
+				{
+					"id": 4,
+					"instruction": "You should now be on the \"Console Home\" page. Go the search bar and type \"RDS\" click on the result that says \"RDS\"."
+				},
+				{
+					"id": 5,
+					"instruction": "Scroll down a little to the \"Create database\" section. Press the orange \"Create database\" button."
+				},
+				{
+					"id": 6,
+					"instruction": "On the \"Create database\" page select the following options.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "DisplayLang": "AWS Config Values",
+                        "FormatCode": "Choose a database creation method \n - Standard create\n\n\nEngine Options \n\n - Engine type: PostgreSQL \n - Leave everything else default\n\n\nTemplates\n  - Free tier\n\nSettings \n  - DB instance identifier: notes-db-instance\n  - Master username: create a username (remember it)\n  - Credentials management: Self managed\n  - Master password: Create a password (remember it)\n  - Confirm master password: Same as master password\n\n\nInstance configuration\n  - Leave everything default\n  - DB instance class: Burstable classes (includes t classes)\n  - db.t3.micro\n\n\nStorage \n   - Storage type: General Purpose SSD (gp2)\n   - Allocated storage: 20\n   - Open \"Storage autoscaling\" \n   - Uncheck \"Enable storage autoscaling\"\n\nConnectivity\n   - Leave everything default except \"Public access\"\n   - Compute resource: Don't connect to an EC2 compute resource \n   - Virtual private cloud (VPC): Default VPC (vpc-131498791374)\n   - DB subnet group: default \n   - Public access: Yes\n   - VPC security group (firewall): Choose existing\n   - Existing VPC security groups: default\n   - Availability Zone: No preference \n   - Additional configuration: 5432\n\n\nDatabase authentication\n   - Password authentication \n\nMonitoring\n   - Leave everything default\n   - Retention period for Performance Insights: 7 days (free tier)\n   - AWS KMS key: (default) aws/rds\n\n\nAdditional configuration\n   - Initial database name: initial_db\n   - DB parameter group: default.postgres16\n   - Uncheck \"Enable automated backups\"\n   - Keep \"Enable encryption\" checked.\n   - Keep \"Enable auto minor version upgrade\" checked\n   - Keep \"Maintenance window\" selected as \"No preference\"\n\n\nEstimated Monthly costs\n   - Look at the estimated monthly costs it should be around $15 dollars\n   - Note it should NOT cost you nearly that much. It will probably be basically free if you don't use it.\n\n\n*Do NOT Press the \"Create database\" button yet*\n\n",
+                        "CopyCode": "Choose a database creation method \n - Standard create\n\n\nEngine Options \n\n - Engine type: PostgreSQL \n - Leave everything else default\n\n\nTemplates\n  - Free tier\n\nSettings \n  - DB instance identifier: notes-db-instance\n  - Master username: create a username (remember it)\n  - Credentials management: Self managed\n  - Master password: Create a password (remember it)\n  - Confirm master password: Same as master password\n\n\nInstance configuration\n  - Leave everything default\n  - DB instance class: Burstable classes (includes t classes)\n  - db.t3.micro\n\n\nStorage \n   - Storage type: General Purpose SSD (gp2)\n   - Allocated storage: 20\n   - Open \"Storage autoscaling\" \n   - Uncheck \"Enable storage autoscaling\"\n\nConnectivity\n   - Leave everything default except \"Public access\"\n   - Compute resource: Don't connect to an EC2 compute resource \n   - Virtual private cloud (VPC): Default VPC (vpc-131498791374)\n   - DB subnet group: default \n   - Public access: Yes\n   - VPC security group (firewall): Choose existing\n   - Existing VPC security groups: default\n   - Availability Zone: No preference \n   - Additional configuration: 5432\n\n\nDatabase authentication\n   - Password authentication \n\nMonitoring\n   - Leave everything default\n   - Retention period for Performance Insights: 7 days (free tier)\n   - AWS KMS key: (default) aws/rds\n\n\nAdditional configuration\n   - Initial database name: initial_db\n   - DB parameter group: default.postgres16\n   - Uncheck \"Enable automated backups\"\n   - Keep \"Enable encryption\" checked.\n   - Keep \"Enable auto minor version upgrade\" checked\n   - Keep \"Maintenance window\" selected as \"No preference\"\n\n\nEstimated Monthly costs\n   - Look at the estimated monthly costs it should be around $15 dollars\n   - Note it should NOT cost you nearly that much. It will probably be basically free if you don't use it.\n\n\n*Do NOT Press the \"Create database\" button yet*\n\n"
+					}
+				},
+				{
+					"id": 7,
+					"instruction": "Copy and record the values of \"Master username\" and \"Master password\" in settings. Also copy and record the value of \"Initial database name\" in the \"Additional configuration\" section. After you've copied the values press the \"Create database\" button."
+				},
+				{
+					"id": 8,
+					"instruction": "If you get a pop-up saying \"Suggested add-ons for notes-db-instance\" look at your options, then close it."
+				},
+				{
+					"id": 9,
+					"instruction": "It will take your database a few minutes to be created. You should see a blue section that says \"Creating database notes-db-instance\" at the top. When it's done it will become green and say \"Successfully created database notes-db-instance\"."
+				},
+				{
+					"id": 10,
+					"instruction": "Once your database has been successfully created. Click on the blue \"notes-db-instance\" link in the \"DB identifier\" column of the table."
+				},
+				{
+					"id": 11,
+					"instruction": "You should be taken to a page titled \"notes-db-instance\". Scroll down a little to the \"Connectivity & security\" section. In the section you should see the left column titled \"Endpoint & port\". Copy and record the value of \"Endpoint\". Also copy and record the value of \"Port\"."
+				},
+				{
+					"id": 12,
+					"instruction": "Now in the right column called \"Security\" in the same \"Connectivity & security\" section click on the blue link under \"VPC security groups\"."
+				},
+				{
+					"id": 13,
+					"instruction": "Select the check box for the one item in the table. It should be on the left."
+				},
+				{
+					"id": 14,
+					"instruction": "Underneath the table you should now see 4 tabs. Click the \"Inbound rules\" tab."
+				},
+				{
+					"id": 15,
+					"instruction": "Select the check box in the \"Inbound rules\" table. Then click \"Edit inbound rules\" on the right."
+				},
+				{
+					"id": 16,
+					"instruction": "In the \"Edit inbound rules\" page, press the \"Add rule\" button. Below are the rules values.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "",
+                        "DisplayLang": "AWS Config Values",
+                        "FormatCode": "Type: Custom TCP\nProtocol: TCP\nPort Range: Port value you copied in step 10\nSource: Anywhere-IPv4. Search and select 0.0.0.0/0",
+                        "CopyCode": "Type: Custom TCP\nProtocol: TCP\nPort Range: Port value you copied in step 10\nSource: Anywhere-IPv4. Search and select 0.0.0.0/0"
+					}
+				},
+				{
+					"id": 17,
+					"instruction": "Press the \"Add rule\" button again. Below are the rules values.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "DisplayLang": "AWS Config Values",
+                        "FormatCode": "Type: Custom TCP\nProtocol: TCP\nPort Range: Port value you copied in step 10\nSource: Anywhere-IPv6. Search and select ::/0",
+                        "CopyCode": "Type: Custom TCP\nProtocol: TCP\nPort Range: Port value you copied in step 10\nSource: Anywhere-IPv6. Search and select ::/0"
+					}
+				},
+				{
+					"id": 18,
+					"instruction": "Scroll down and press \"Save rules\"."
+				},
+				{
+					"id": 19,
+					"instruction": "Now in the search bar search \"RDS\" and press on the \"RDS\" option."
+				},
+				{
+					"id": 20,
+					"instruction": "On the left-hand side press \"Databases\". Click your DB identifier in the table. You should now be back on the right page."
+				},
+				{
+					"id": 21,
+					"instruction": "Now open the \"sqlectron\" app you downloaded earlier. Press the green \"Add\" button in the top-right."
+				},
+				{
+					"id": 22,
+					"instruction": "In the \"Server Information\" form enter the following values.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "DisplayLang": "AWS Config Values",
+                        "FormatCode": "Name: notes-db (Can be anything you want)\nDatabase Type: PostgreSQL\n\n* Make sure to toggle SSL on *\n\nServer Address: The \"Endpoint\" address you copied in step 11\nPort: The \"Port\" address you copied in step 11\nUser: The master username you created in step 7\nPassword: The master password you created in step 7\nInitial Database/Keyspace: The Initial database name you created in step 7\n\n\n* Press the blue \\\"Test\\\" button *\n",
+                        "CopyCode": "Name: notes-db (Can be anything you want)\nDatabase Type: PostgreSQL\n\n* Make sure to toggle SSL on *\n\nServer Address: The \"Endpoint\" address you copied in step 11\nPort: The \"Port\" address you copied in step 11\nUser: The master username you created in step 7\nPassword: The master password you created in step 7\nInitial Database/Keyspace: The Initial database name you created in step 7\n\n\n* Press the blue \\\"Test\\\" button *\n"
+					}
+				},
+				{
+					"id": 23,
+					"instruction": "If the test was successful, press the eye button in the password field to make the whole URI visible. Then copy and record the URI. Store it somewhere for later."
+				},
+				{
+					"id": 24,
+					"instruction": "Press \"Save\". Then press the \"Connect\" button on your database."
+				},
+				{
+					"id": 25,
+					"instruction": "You should now be taken to an input box where you can run SQL commands. We'll create our database. First create your tables by running the following commands. Then press the green \"Execute\" button.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "CREATE TABLE Users (\n    user_id SERIAL PRIMARY KEY,\n    username VARCHAR(50) UNIQUE NOT NULL,\n    email VARCHAR(100) UNIQUE NOT NULL,\n    password_hash TEXT NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\nCREATE TABLE Notes (\n    note_id SERIAL PRIMARY KEY,\n    title VARCHAR(200),\n    content TEXT,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    user_id INT REFERENCES Users(user_id) ON DELETE CASCADE\n);\n\nCREATE TABLE Tags (\n    tag_id SERIAL PRIMARY KEY,\n    name VARCHAR(50) UNIQUE NOT NULL\n);\n\nCREATE TABLE Note_Tags (\n    note_id INT REFERENCES Notes(note_id) ON DELETE CASCADE,\n    tag_id INT REFERENCES Tags(tag_id) ON DELETE CASCADE,\n    PRIMARY KEY (note_id, tag_id)\n);\n",
+                        "CopyCode": "CREATE TABLE Users (\n    user_id SERIAL PRIMARY KEY,\n    username VARCHAR(50) UNIQUE NOT NULL,\n    email VARCHAR(100) UNIQUE NOT NULL,\n    password_hash TEXT NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\nCREATE TABLE Notes (\n    note_id SERIAL PRIMARY KEY,\n    title VARCHAR(200),\n    content TEXT,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    user_id INT REFERENCES Users(user_id) ON DELETE CASCADE\n);\n\nCREATE TABLE Tags (\n    tag_id SERIAL PRIMARY KEY,\n    name VARCHAR(50) UNIQUE NOT NULL\n);\n\nCREATE TABLE Note_Tags (\n    note_id INT REFERENCES Notes(note_id) ON DELETE CASCADE,\n    tag_id INT REFERENCES Tags(tag_id) ON DELETE CASCADE,\n    PRIMARY KEY (note_id, tag_id)\n);\n"
+					}
+				},
+				{
+					"id": 26,
+					"instruction": "Now populate your Users table using the SQL statements.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "INSERT INTO Users (username, email, password_hash) \nVALUES \n('john_doe', 'john.doe@example.com', 'scrypt:32768:8:1$zuQhyeNXzf7H365N$3bc7b087d3d68d33b8ac72823cbe5fbb19f046c405177fa036d8cf0e691fe400e37222e3a55474d4b3fbcd10c6b9f30dc441c2656f24034c44a3734544bae22a'),\n('jane_smith', 'jane.smith@example.com', 'scrypt:32768:8:1$5yu7lFgr2igBvpQu$2142e8af9464b0b84a66b056fe5e99096694857bdaccceb58b1a0e6dbfe18efc2aac2bdd2410d6af14992e279810e32cab32b2a560e3a6e42cee836081a42ce8'), \n('alice_jones', 'alice.jones@example.com', 'scrypt:32768:8:1$EmSwLgvWpdRTmb4A$6a5490351c01147afe2fd860557e954c8aefee97850044d1066e3b4b2da8f14ee47217bb3fbfca778e4633f287c2e2d7b4d4f6b83ec433fce3b450a6d924084b'),\n('michael_jordan', 'michael.jordan@example.com', 'scrypt:32768:8:1$WPQ2jPm3lqRktjL9$64d9153e8fe7d3d415a509fa0faf8c09a09ee1cfea81dc186d3cca9f6461e64d2718bfc0b6af863ebbee4d4edbfdab0d94cefd0760e86132d019816fcec40ff2'), \n('tony_stark', 'tony.stark@example.com', 'scrypt:32768:8:1$61OfDa7X1yqcVC37$c9da94064c61c46a71cea1d1ebd161cd63150f6668e26c54e6f3de02a197841501620419d97219cc2a6087279cf6ff17483ab5e9a62999901953d86ca4a40f0d'), \n('chris_evans', 'chris.evans@example.com', 'scrypt:32768:8:1$jJarcDRVZ9BB0drh$dce199c34ac2166e5ef61fcb94887d4550472f9925c3b2886cadfee6c866dd9b3b11780101c0e6d394f7ac665dab51df80fd97b317ced71494b01c03f5533eed'), \n('harry_potter', 'harry.potter@example.com', 'scrypt:32768:8:1$DJ6tmu41VcIdAjKW$e11bbdb13a51a1521eb0d5835d750f9d8feced451f7e32b717c772ae5d4e8723a2ab6a055a94251fd9e40f9ec961e8d9faecf148d964926ad431cbcb77352c6e'), \n('james_bond', 'james.bond@example.com', 'scrypt:32768:8:1$mqLUxyWbp87cchHA$6189059f6be8add9161250a758509f36064f91222b3a0f86d1a656cf9f8492ef4df4e582f480d7905e06bf8295c4c4a3ef08e5fb7587c79b3b3ff43bf91ac594'),\n('bruce_wayne', 'bruce.wayne@example.com', 'scrypt:32768:8:1$J29dRaN2PfG8vL1b$1d4e8eab946f012c1a1f728d5dfc7a1c891d3ecdf8481e9d3a28e5a5e2f5b6f2301b5f7cd19e0efc6b4457c6f6845f20e2a63b6d91462dbf1bb456b78362b6c5');",
+                        "CopyCode": "INSERT INTO Users (username, email, password_hash) \nVALUES \n('john_doe', 'john.doe@example.com', 'scrypt:32768:8:1$zuQhyeNXzf7H365N$3bc7b087d3d68d33b8ac72823cbe5fbb19f046c405177fa036d8cf0e691fe400e37222e3a55474d4b3fbcd10c6b9f30dc441c2656f24034c44a3734544bae22a'),\n('jane_smith', 'jane.smith@example.com', 'scrypt:32768:8:1$5yu7lFgr2igBvpQu$2142e8af9464b0b84a66b056fe5e99096694857bdaccceb58b1a0e6dbfe18efc2aac2bdd2410d6af14992e279810e32cab32b2a560e3a6e42cee836081a42ce8'), \n('alice_jones', 'alice.jones@example.com', 'scrypt:32768:8:1$EmSwLgvWpdRTmb4A$6a5490351c01147afe2fd860557e954c8aefee97850044d1066e3b4b2da8f14ee47217bb3fbfca778e4633f287c2e2d7b4d4f6b83ec433fce3b450a6d924084b'),\n('michael_jordan', 'michael.jordan@example.com', 'scrypt:32768:8:1$WPQ2jPm3lqRktjL9$64d9153e8fe7d3d415a509fa0faf8c09a09ee1cfea81dc186d3cca9f6461e64d2718bfc0b6af863ebbee4d4edbfdab0d94cefd0760e86132d019816fcec40ff2'), \n('tony_stark', 'tony.stark@example.com', 'scrypt:32768:8:1$61OfDa7X1yqcVC37$c9da94064c61c46a71cea1d1ebd161cd63150f6668e26c54e6f3de02a197841501620419d97219cc2a6087279cf6ff17483ab5e9a62999901953d86ca4a40f0d'), \n('chris_evans', 'chris.evans@example.com', 'scrypt:32768:8:1$jJarcDRVZ9BB0drh$dce199c34ac2166e5ef61fcb94887d4550472f9925c3b2886cadfee6c866dd9b3b11780101c0e6d394f7ac665dab51df80fd97b317ced71494b01c03f5533eed'), \n('harry_potter', 'harry.potter@example.com', 'scrypt:32768:8:1$DJ6tmu41VcIdAjKW$e11bbdb13a51a1521eb0d5835d750f9d8feced451f7e32b717c772ae5d4e8723a2ab6a055a94251fd9e40f9ec961e8d9faecf148d964926ad431cbcb77352c6e'), \n('james_bond', 'james.bond@example.com', 'scrypt:32768:8:1$mqLUxyWbp87cchHA$6189059f6be8add9161250a758509f36064f91222b3a0f86d1a656cf9f8492ef4df4e582f480d7905e06bf8295c4c4a3ef08e5fb7587c79b3b3ff43bf91ac594'),\n('bruce_wayne', 'bruce.wayne@example.com', 'scrypt:32768:8:1$J29dRaN2PfG8vL1b$1d4e8eab946f012c1a1f728d5dfc7a1c891d3ecdf8481e9d3a28e5a5e2f5b6f2301b5f7cd19e0efc6b4457c6f6845f20e2a63b6d91462dbf1bb456b78362b6c5');"
+					}
+				},
+				{
+					"id": 27,
+					"instruction": "Now your Tags table.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+                        "Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "INSERT INTO Tags (name)\nVALUES \n('Work'),\n('Personal'),\n('Travel'),\n('Food'),\n('Books');",
+                        "CopyCode": "INSERT INTO Tags (name)\nVALUES \n('Work'),\n('Personal'),\n('Travel'),\n('Food'),\n('Books');"
+					}
+				},
+				{
+					"id": 28,
+					"instruction": "Now your Notes table.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+                        "Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "INSERT INTO Notes (title, content, user_id)\nVALUES \n('Meeting Notes', 'Discussed project milestones and deadlines.', 1),\n('Shopping List', 'Eggs, Milk, Bread, Butter', 1),\n('Daily Journal', 'Today I worked on my project and had a great lunch.', 1),\n('Recipe Ideas', 'Spaghetti Carbonara, Grilled Chicken, Caesar Salad', 1),\n('Books to Read', 'The Great Gatsby, 1984, To Kill a Mockingbird', 1),\n('Travel Plans', 'Flight to NYC on Monday, Hotel reservation at Grand Hotel.', 2);",
+                        "CopyCode": "INSERT INTO Notes (title, content, user_id)\nVALUES \n('Meeting Notes', 'Discussed project milestones and deadlines.', 1),\n('Shopping List', 'Eggs, Milk, Bread, Butter', 1),\n('Daily Journal', 'Today I worked on my project and had a great lunch.', 1),\n('Recipe Ideas', 'Spaghetti Carbonara, Grilled Chicken, Caesar Salad', 1),\n('Books to Read', 'The Great Gatsby, 1984, To Kill a Mockingbird', 1),\n('Travel Plans', 'Flight to NYC on Monday, Hotel reservation at Grand Hotel.', 2);"
+					}
+				},
+				{
+					"id": 29,
+					"instruction": "Now your Note_tags table.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+                        "Language": "customsql",
+                        "DisplayLang": "SQL",
+                        "FormatCode": "INSERT INTO Note_Tags (note_id, tag_id)\nVALUES \n(1, 1),\n(2, 2),\n(3, 2),\n(4, 4),\n(5, 5),\n(6, 3);",
+                        "CopyCode": "INSERT INTO Note_Tags (note_id, tag_id)\nVALUES \n(1, 1),\n(2, 2),\n(3, 2),\n(4, 4),\n(5, 5),\n(6, 3);"
+					}
+				},
+				{
+					"id": 30,
+					"instruction": "Open a terminal and try connecting to your database. Replace \"SERVER_ADDRESS\" with the \"Endpoint\" address you copied in step 11. Replace \"INITIAL_DATABASE\" with the master username you created in step 7. Replace \"MASTER_USERNAME\" with the master username you created in step 7. When prompted to enter a password after you run the command enter the master password you created in step 7.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "psql -h SERVER_ADDRESS -d INITIAL_DATABASE -U MASTER_USERNAME",
+						"CopyCode": "psql -h SERVER_ADDRESS -d INITIAL_DATABASE -U MASTER_USERNAME"
+					}
+				},
+				{
+					"id": 31,
+					"instruction": "Run the following command to see your table.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "\\dt",
+						"CopyCode": "\\dt"
+					}
+				},
+				{
+					"id": 32,
+					"instruction": "Run the following SQL command to see all users in your Users table. Then quit, then type exit.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "customsql",
+                        "DisplayLang": "SQL and Command",
+                        "FormatCode": "SELECT * FROM Users;\n\n* Press the 'q' key* \n\nexit",
+                        "CopyCode": "SELECT * FROM Users;\n\n* Press the 'q' key* \n\nexit"
+					}
+				},
+                {
+					"id": 33,
+					"instruction": "For some reason my sqlectron app has issues opening and closing. You can use the following commands to open and close it more effectively.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "FormatCode": "pgrep sqlectron | xargs kill\nopen -a sqlectron",
+                        "CopyCode": "pgrep sqlectron | xargs kill\nopen -a sqlectron"
+					}
+				},
+				{
+					"id": 34,
+					"instruction": "Make sure you have the full visible AWS database URI copied and recorded somewhere."
+				},
+				{
+					"id": 35,
+					"instruction": "You should now have successfully set up your RDS database instance."
+				}
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Deploy your Flask App to AWS Lambda",
+                    "desc": "Explains how to deploy your Flask app to AWS Lambda and an API Gateway."
+                }
+            ],
+            "Instructions": [
+                {
+					"id": 1,
+					"instruction": "Open your \"Notes-Rest-Api\" in VSCode. Open the .env file in the top-most directory. Set the value of \"PROD_DATABASE_URI\" to be the full visible URI from step 35. MAKE SURE THE URI SAYS \"postgresql\" AT THE BEGINNING NOT just \"postgres\". Change it to \"postgresql\" if it doesn't already say it. Also change \"FLASK_ENV\" to be \"production\".",
+					"Code": {
+						"Name": "",
+						"Description": "",
+                        "Language": "fxml",
+                        "DisplayLang": "Env",
+                        "FormatCode": "FLASK_ENV=production\nPROD_DATABASE_URI=YOUR-FULL-VISIBLE-RDS-URI",
+                        "CopyCode": "FLASK_ENV=production\nPROD_DATABASE_URI=YOUR-FULL-VISIBLE-RDS-URI"
+					}
+				},
+				{
+					"id": 2,
+					"instruction": "Now open a terminal and test that your new database URI works.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "FormatCode": "cd Notes-Rest-Api\nsource venv/bin/activate\nflask run",
+                        "CopyCode": "cd Notes-Rest-Api\nsource venv/bin/activate\nflask run"
+					}
+				},
+				{
+					"id": 3,
+					"instruction": "Now open the following link in your browser. If \"bruce_wayne\" is the last user in the list, you should be good.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "DisplayLang": "Rest Api URI",
+						"FormatCode": "http://127.0.0.1:5000/get_users",
+						"CopyCode": "http://127.0.0.1:5000/get_users"
+					}
+				},
+				{
+					"id": 4,
+					"instruction": "After confirming that it works, go back to your terminal and press \"control + c\" to stop running your Rest api. Then deactivate it using the following command.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "deactivate",
+						"CopyCode": "deactivate"
+					}
+				},
+				{
+					"id": 5,
+					"instruction": "Open your \"Notes-Rest-Api\" and open the \"app.py\" file. Delete the \"if __name__ == '__main__':\" block. Replace it with just create_app. Also just the config to \"production\" for deployment.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Python",
+                        "FormatCode": "from flask import Flask\nfrom flask_cors import CORS\nfrom api.routes.endpoints import routes_blueprint\nfrom db import db, init_app\n\ndef create_app(config = \"production\"):\n    app = Flask(__name__)\n\n    if config == \"development\":\n        app.config.from_object(\"config.DevelopmentConfig\")\n    elif config == \"testing\":\n        app.config.from_object(\"config.TestingConfig\")\n    else:\n        app.config.from_object(\"config.ProductionConfig\")\n\n    CORS(app, resources={r'/*': {'origins': '*'}})\n\n    db.init_app(app)\n\n    app.register_blueprint(routes_blueprint)\n    return app\n\napp = create_app()",
+                        "CopyCode": "from flask import Flask\nfrom flask_cors import CORS\nfrom api.routes.endpoints import routes_blueprint\nfrom db import db, init_app\n\ndef create_app(config = \"production\"):\n    app = Flask(__name__)\n\n    if config == \"development\":\n        app.config.from_object(\"config.DevelopmentConfig\")\n    elif config == \"testing\":\n        app.config.from_object(\"config.TestingConfig\")\n    else:\n        app.config.from_object(\"config.ProductionConfig\")\n\n    CORS(app, resources={r'/*': {'origins': '*'}})\n\n    db.init_app(app)\n\n    app.register_blueprint(routes_blueprint)\n    return app\n\napp = create_app()"
+					}
+				},
+				{
+					"id": 6,
+					"instruction": "In a real deployment delete any endpoints that the end user isn't supposed to have "
+				},
+				{
+					"id": 7,
+					"instruction": "Open your .env file. Copy and record the contents and store them somewhere. We're about to delete the file."
+				},
+				{
+					"id": 8,
+					"instruction": "We'll start deploying the app by downloading the \"zappa\" python library. First activate your virtual environment. Then delete your .env file.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "FormatCode": "cd Notes-Rest-Api\nsource venv/bin/activate\npip3 install zappa\nrm .env",
+                        "CopyCode": "cd Notes-Rest-Api\nsource venv/bin/activate\npip3 install zappa\nrm .env"
+					}
+				},
+				{
+					"id": 9,
+					"instruction": "While your virtual environment is still activated, create a \"requirements.txt\" file that will contain all the projects dependencies.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "pip3 freeze > requirements.txt",
+						"CopyCode": "pip3 freeze > requirements.txt"
+					}
+				},
+				{
+					"id": 10,
+					"instruction": "Run the following command to initialize zappa in your project.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "zappa init",
+						"CopyCode": "zappa init"
+					}
+				},
+				{
+					"id": 11,
+					"instruction": "After you run that command you'll get prompted to answer questions. Just press the \"return\" key for all of them. At the end press the \"y\" key. It will generate a \"zappa_settings.json\" file."
+				},
+				{
+					"id": 12,
+					"instruction": "Go to your \"zappa_settings.json\" file and ensure everything was created correctly. Leave your terminal running and the virtual environment activated. Below the \"s3_bucket\" attribute in the \"dev\" attribute add the following data. Replace \"OUR-RDS-URI\" with your actual RDS uri from step 35. Make sure it starts with \"postgresql\" and not just \"postgres\".",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "JSON",
+                        "FormatCode": "\"environment_variables\": {\n    \"PROD_DATABASE_URI\": \"YOUR-RDS-DATABASE-URI\"\n}",
+                        "CopyCode": "\"environment_variables\": {\n    \"PROD_DATABASE_URI\": \"YOUR-RDS-DATABASE-URI\"\n}"
+					}
+				},
+				{
+					"id": 13,
+					"instruction": "Go back to your terminal and run the following command to deploy your app as an AWS Lambda function. This make take a minute.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "zappa deploy dev",
+						"CopyCode": "zappa deploy dev"
+					}
+				},
+				{
+					"id": 14,
+					"instruction": "If you run into any errors you can use the following command to see your logs.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "zappa tail",
+						"CopyCode": "zappa tail"
+					}
+				},
+				{
+					"id": 15,
+					"instruction": "If your API deploys successfully it should say \"Deployment complete\" and output an api gateway url link. This will be the new URI for your database. Open it in a browser with \"/get_users\" at the end. If you see the list of users from your database, you should be good.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "DisplayLang": "API Gateway URL",
+						"FormatCode": "YOUR-API-GATEWAY-URL/get_users",
+						"CopyCode": "YOUR-API-GATEWAY-URL/get_users"
+					}
+				},
+				{
+					"id": 16,
+					"instruction": "Copy and record your new Rest api URL. Store in somewhere you'll remember. You can also see it by running the commands in your terminal. It will be the value of the green \"API Gateway URL\" key.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "FormatCode": "cd Notes-Rest-Api\nsource venv/bin/activate\nzappa status",
+                        "CopyCode": "cd Notes-Rest-Api\nsource venv/bin/activate\nzappa status"
+					}
+				},
+                {
+					"id": 17,
+					"instruction": "Congratulations! You've successfully deployed your Flask app on AWS Lambda and an API Gateway."
+				},
+                {
+					"id": 18,
+					"instruction": "NOTE: Make sure not to push your RDS Database URI to Github. Add the zappa_settings.json file to your .gitignore."
+				}
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Deploy your Frontend on S3 and CloudFront",
+                    "desc": "Explains how to deploy your frontend on S3 and CloudFront"
+                }
+            ],
+            "Instructions": [
+                {
+					"id": 1,
+					"instruction": "Open your \"Notes-Frontend\" folder in VSCode and then go to src -> lib and open the \"axios.js\" file. Change the baseURL value to be your API Gateway URL from the previous instructions. Don't change anything else.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "JavaScript",
+						"FormatCode": "baseURL: 'YOUR-API-GATEWAY-URL',",
+						"CopyCode": "baseURL: 'YOUR-API-GATEWAY-URL',"
+					}
+				},
+				{
+					"id": 2,
+					"instruction": "Now run your frontend app in your browser. Try signing in as the user \"john_doe\". Press \"control + c\" to stop running your localhost.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "FormatCode": "cd Notes-Frontend\nnpm run dev\n\n*Sign in using the following credentials*\n\nusername: john_doe\npassword: password1",
+                        "CopyCode": "cd Notes-Frontend\nnpm run dev\n\n*Sign in using the following credentials*\n\nusername: john_doe\npassword: password1"
+					}
+				},
+				{
+					"id": 3,
+					"instruction": "Now build your project. This will create a 'dist' folder we'll use later. Make sure you're still in your \"Notes-Frontend\" directory using \"pwd\".",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "FormatCode": "pwd\nnpm run build",
+                        "CopyCode": "pwd\nnpm run build"
+					}
+				},
+				{
+					"id": 4,
+					"instruction": "Sign into the AWS console using this [link](https://aws.amazon.com/console/). Then in the search bar look up \"S3\". Click the result titled \"S3\"."
+				},
+				{
+					"id": 5,
+					"instruction": "Now in the S3 console click the \"Create bucket\" button. In the General Configuration page, select the following options. Leave everything else default. When you're done press \"Create bucket\" button at the bottom.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "DisplayLang": "AWS Config Values",
+                        "FormatCode": "Bucket type: General Purpose\nBucket name: notes-frontend-123\n\n*Scroll down*\n\nBlock Public Access settings for this bucket: UNCHECK \\\"Block all public access\\\"\n\nThen check the \\\"I acknowledge that the current settings...public\\\" box\n\n*Scroll down* \n\n*Press the \\\"Create bucket\\\" button*",
+                        "CopyCode": "Bucket type: General Purpose\nBucket name: notes-frontend-123\n\n*Scroll down*\n\nBlock Public Access settings for this bucket: UNCHECK \\\"Block all public access\\\"\n\nThen check the \\\"I acknowledge that the current settings...public\\\" box\n\n*Scroll down* \n\n*Press the \\\"Create bucket\\\" button*"
+					}
+				},
+				{
+					"id": 6,
+					"instruction": "In the \"General purpose bucket\" table click the name link of the bucket \"notes-frontend-123\"."
+				},
+				{
+					"id": 7,
+					"instruction": "In the \"Objects\" section click the orange \"Upload\" button. Then when you're in the \"Files and folders\" section click the \"Add files\" button. Search for your \"Notes-Frontend\" code in Finder. Then individually upload the 2 files in the dist folder. Then click \"Add folder\" and upload the assets folder. Then scroll to the bottom and click the \"Upload\" button. You might get a 404 error if this step is done incorrectly."
+				},
+				{
+					"id": 8,
+					"instruction": "On the new page with the green success banner scroll up and click the orange \"Close\" button in the top-right."
+				},
+				{
+					"id": 9,
+					"instruction": "Then click on the \"Permissions\" tab and scroll down a little to the section titled \"Bucket policy\". Click the \"Edit\" button and paste the following JSON in the Bucket Policy text area. Then click \"Save changes\" at the bottom. For future reference make sure the \"Resource\" attribute has the correct bucket name.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "JSON",
+                        "FormatCode": "{\n    \"Version\": \"2012-10-17\",\n    \"Statement\": [\n        {\n            \"Sid\": \"PublicReadGetObject\",\n            \"Effect\": \"Allow\",\n            \"Principal\": \"*\",\n            \"Action\": \"s3:GetObject\",\n            \"Resource\": \"arn:aws:s3:::notes-frontend-123/*\"\n        }\n    ]\n}",
+                        "CopyCode": "{\n    \"Version\": \"2012-10-17\",\n    \"Statement\": [\n        {\n            \"Sid\": \"PublicReadGetObject\",\n            \"Effect\": \"Allow\",\n            \"Principal\": \"*\",\n            \"Action\": \"s3:GetObject\",\n            \"Resource\": \"arn:aws:s3:::notes-frontend-123/*\"\n        }\n    ]\n}"
+					}
+				},
+				{
+					"id": 10,
+					"instruction": "Click on the \"Properties\" tab. Then scroll all the way to the bottom where it says \"Static website hosting\". Click the \"Edit\" button."
+				},
+				{
+					"id": 11,
+					"instruction": "On the \"Edit static website hosting\" page enter the following values. Press the \"Save changes\" button at the bottom when you're done.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "DisplayLang": "AWS Config Values",
+                        "FormatCode": "Static website hosting: Enable\nHosting type: Host a static website\nIndex document: index.html\n\n*Scroll down*\n\n* Press \\\"Save changes\\\" *",
+                        "CopyCode": "Static website hosting: Enable\nHosting type: Host a static website\nIndex document: index.html\n\n*Scroll down*\n\n* Press \\\"Save changes\\\" *"
+					}
+				},
+				{
+					"id": 12,
+					"instruction": "Wait a second and then a link should appear in the \"Static website hosting\" section. Click on it. You're website should now be fully functional. Copy and record the link."
+				},
+				{
+					"id": 13,
+					"instruction": "Congratulations you've deployed your site using an S3 bucket!"
+				},
+				{
+					"id": 14,
+					"instruction": "Now we'll setup a CloudFront distribution to serve the content of our S3 bucket using HTTPS."
+				},
+				{
+					"id": 15,
+					"instruction": "Go to the AWS console search bar and lookup \"CloudFront\". Press the option that says \"CloudFront\"."
+				},
+				{
+					"id": 16,
+					"instruction": "Press the orange \"Create a CloudFront distribution\" button."
+				},
+				{
+					"id": 17,
+					"instruction": "In the \"Create distribution\" form enter the following values.",
+					"Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "DisplayLang": "AWS Config Values",
+                        "FormatCode": "Origin\n\nOrigin domain: Lookup \\\"notes-frontend-123\\\" and press on the first option which is your S3 bucket link.\n\n* Press the \\\"Use website endpoint\\\" button *\nProtocol: HTTP only\nHTTP port: Leave as default (80)\n\nOrigin path - optional: Leave blank \nName: Don't change\nEnable Origin Shield: No\n\n\n\nDefault cache behavior\nPath pattern: Default (*)\nCompress objects automatically: Yes\nViewer protocol policy: Redirect HTTP to HTTPS\n\nAllowed HTTP methods: GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE\nCheck the \\\"Options\\\" box\n\nRestrict viewer access: No\nCache key and origin requests: Cache policy and origin request policy (recommended)\n\n\nFunction associations - optional\nDo nothing \n\n\nWeb Application Firewall (WAF)\nSelect \\\"Do not enable security protections\\\"\n\n\nSettings \nLeave everything default except the following thing\n\nDefault root object - optional: index.html\n\n\n*Press the orange \\\"Create distribution\\\" button*\n\n",
+                        "CopyCode": "Origin\n\nOrigin domain: Lookup \\\"notes-frontend-123\\\" and press on the first option which is your S3 bucket link.\n\n* Press the \\\"Use website endpoint\\\" button *\nProtocol: HTTP only\nHTTP port: Leave as default (80)\n\nOrigin path - optional: Leave blank \nName: Don't change\nEnable Origin Shield: No\n\n\n\nDefault cache behavior\nPath pattern: Default (*)\nCompress objects automatically: Yes\nViewer protocol policy: Redirect HTTP to HTTPS\n\nAllowed HTTP methods: GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE\nCheck the \\\"Options\\\" box\n\nRestrict viewer access: No\nCache key and origin requests: Cache policy and origin request policy (recommended)\n\n\nFunction associations - optional\nDo nothing \n\n\nWeb Application Firewall (WAF)\nSelect \\\"Do not enable security protections\\\"\n\n\nSettings \nLeave everything default except the following thing\n\nDefault root object - optional: index.html\n\n\n*Press the orange \\\"Create distribution\\\" button*\n\n"
+					}
+				},
+				{
+					"id": 18,
+					"instruction": "Now in the new page, in the \"Details\" section on the right look at the value of \"Last modified\". If it says \"Deploying\" that means your distribution is still being deployed. Wait like 5 minutes until it says something like \"September 2, 2024 at 5:01:35 PM UTC\". Refresh the page to see if updated."
+				},
+				{
+					"id": 19,
+					"instruction": "Once \"Last Modified\" says something like \"September 2, 2024 at 5:01:35 PM UTC\" it means your website is ready. on the left side of the same \"Details\" section, copy the value of \"Distribution domain name\". Open the link in your browser."
+				},
+				{
+					"id": 20,
+					"instruction": "If your website is displaying correctly, it means that you've successfully served your S3 bucket files on CloudFront. Congratulations!"
+				}
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Delete Your AWS Services",
+                    "desc": "Explains how to undeploy your project once you're done. "
+                }
+            ],
+            "Instructions": [
+                {
+					"id": 1,
+					"instruction": "I'd strongly recommend getting the AWS Console iOS [app](https://apps.apple.com/us/app/aws-console/id580990573). It's great for monitoring your costs."
+				},
+				{
+					"id": 2,
+					"instruction": "First we'll delete the our AWS Services, then we'll delete our local PostgreSQL database."
+				},
+				{
+					"id": 3,
+					"instruction": "We'll start by deleting our RDS database instance. First go to the RDS dashboard using this [link](https://console.aws.amazon.com/rds)."
+				},
+				{
+					"id": 4,
+					"instruction": "In the left-hand sidebar press \"Database\"."
+				},
+				{
+					"id": 5,
+					"instruction": "In the \"Databases\" table select the circle next to your DB identifier. Then press \"Actions\". In the menu press \"Delete\"."
+				},
+				{
+					"id": 6,
+					"instruction": "If you want to keep snapshot of your data keep the \"Create final snapshot\" box checked. If you don't uncheck it and the check the \"I acknowledge\" box. After that type \"delete me\" into the textfield. Then press \"Delete\"."
+				},
+				{
+					"id": 7,
+					"instruction": "It will probably like 5 minutes for your DB instance to be deleted. The blue loading banner at the top should green."
+				},
+				{
+					"id": 8,
+					"instruction": "Now we'll delete our S3 Buckets. Make sure that your database instance was successfully deleted first though."
+				},
+				{
+					"id": 9,
+					"instruction": "Go to the S3 dashboard using this [link](https://console.aws.amazon.com/s3)."
+				},
+				{
+					"id": 10,
+					"instruction": "In the \"General purpose buckets\" table select the circle to the Name that contains \"zappa\" in it. Then press \"Delete\" to the left of \"Create bucket\"."
+				},
+				{
+					"id": 11,
+					"instruction": "You should be taken to a new page. Copy and paste the name of your bucket into the textfield. Then press the \"Delete bucket\" button."
+				},
+				{
+					"id": 12,
+					"instruction": "After you do that you should see a green success message that says \"Successfully deleted bucket \"your-bucket-name\"\"."
+				},
+				{
+					"id": 13,
+					"instruction": "Before we can delete the bucket that contains your frontend code, we'll need to delete some of it's contents. Click on the blue name link in the table."
+				},
+				{
+					"id": 14,
+					"instruction": "You should be taken to a new page with an \"Objects\" table. Select every file and folder in the table. Then press \"Delete\". You'll be taken to a new page."
+				},
+				{
+					"id": 15,
+					"instruction": "Scroll down to the \"Permanently delete objects?\" section and type \"permanently delete\" in the textfield. Then press \"Delete objects\"."
+				},
+				{
+					"id": 16,
+					"instruction": "You should see a green \"Successfully deleted objects\" banner message. Scroll up and press the orange \"Close\" button in the top-right. Confirm there's nothing in the \"Objects\" table. The bucket hasn't been deleted yet."
+				},
+				{
+					"id": 17,
+					"instruction": "Go back to the S3 console using this [link](https://console.aws.amazon.com/s3)."
+				},
+				{
+					"id": 18,
+					"instruction": "In the \"General purpose buckets\" section, select the circle next to the name of your frontend code bucket. Then press \"Delete\"."
+				},
+				{
+					"id": 19,
+					"instruction": "You should be taken to a new page. Copy and paste the name of your bucket into the textfield. Then press the \"Delete bucket\" button."
+				},
+				{
+					"id": 20,
+					"instruction": "You should now see a green banner message that says \"Successfully deleted bucket \"your-bucket-name\"\"."
+				},
+				{
+					"id": 21,
+					"instruction": "Congratulations! You should now have successfully deleted all your S3 buckets."
+				},
+				{
+					"id": 22,
+					"instruction": "Now we'll delete our API Gateway."
+				},
+				{
+					"id": 23,
+					"instruction": "Go to the API Gateway dashboard using this [link](https://console.aws.amazon.com/apigateway)."
+				},
+				{
+					"id": 24,
+					"instruction": "In the \"APIs\" section select the circle of your api gateway in the table. Then press \"Delete\"."
+				},
+				{
+					"id": 25,
+					"instruction": "Type \"confirm\" when prompted and then press \"Delete\". You should see a green banner message that it was successfully deleted."
+				},
+				{
+					"id": 26,
+					"instruction": "Now we'll delete our Lambda instance."
+				},
+				{
+					"id": 27,
+					"instruction": "Go to the API Gateway dashboard using this [link](https://console.aws.amazon.com/lambda)."
+				},
+				{
+					"id": 28,
+					"instruction": "In the \"Functions\" section check the box next to your function name. Then press \"Actions\" and press \"Delete\" in the menu."
+				},
+				{
+					"id": 29,
+					"instruction": "In the pop-up type \"delete\" in the textfield, then press the \"Delete\" button. You should see the name of your function in green if it deleted successfully. Then press \"Close\". You should no longer see your function in the table."
+				},
+				{
+					"id": 30,
+					"instruction": "Now we'll delete our CloudFront distribution."
+				},
+				{
+					"id": 31,
+					"instruction": "Go to the CloudFront dashboard using this [link](https://console.aws.amazon.com/cloudfront)."
+				},
+				{
+					"id": 32,
+					"instruction": "In the \"Distributions\" table press the box next to your distribution ID. Then press \"Disable\". When prompted again in the pop-up, press \"Disable\"."
+				},
+				{
+					"id": 33,
+					"instruction": "Now wait like 5 minutes for your distribution to be disabled. Then after 5 minutes, check the box next to your ID again. The \"Delete\" button should now be enabled, press it to delete your distribution."
+				},
+				{
+					"id": 34,
+					"instruction": "If you a green banner it means you have successfully deleted your distribution."
+				},
+				{
+					"id": 35,
+					"instruction": "Congratulations! You should now have successfully deleted all your AWS Services for this project."
+				},
+				{
+					"id": 36,
+					"instruction": "Now we'll delete our Postgres tabes locally. Open a terminal and run the following commands. You'll login to postgres and then list all your databases.",
+                    "Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "FormatCode": "psql -U postgres\n\\l",
+                        "CopyCode": "psql -U postgres\n\\l"
+					}
+				},
+				{
+					"id": 37,
+					"instruction": "After running that command press \"return\" like twice. Now we'll delete our databases using the following commands. Then confirm they were deleted by listing databases and then clear the screen using command + k or the command.",
+                    "Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "FormatCode": "DROP DATABASE notesapp_db;\nDROP DATABASE notesapp_test_db;\n\\l\n\\! clear",
+                        "CopyCode": "DROP DATABASE notesapp_db;\nDROP DATABASE notesapp_test_db;\n\\l\n\\! clear"
+					}
+				},
+				{
+					"id": 38,
+					"instruction": "Now run the following command to see all your users.",
+                    "Code": {
+                        "Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "\\du",
+						"CopyCode": "\\du"
+					}
+				},
+				{
+					"id": 39,
+					"instruction": "Now delete all your users for this project. Then confirm they were deleted.",
+                    "Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "FormatCode": "DROP ROLE notes_app_user;\nDROP ROLE notes_app_test_user;\n\\du",
+                        "CopyCode": "DROP ROLE notes_app_user;\nDROP ROLE notes_app_test_user;\n\\du"
+					}
+				},
+				{
+					"id": 40,
+					"instruction": "Now exit postgres using the following command.",
+                    "Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "exit",
+						"CopyCode": "exit"
+					}
+				},
+				{
+					"id": 41,
+					"instruction": "Now stop running postgres using the following command.",
+                    "Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "brew services stop postgresql@15",
+						"CopyCode": "brew services stop postgresql@15"
+					}
+				},
+				{
+					"id": 42,
+					"instruction": "Now run the following command to ensure it stopped correctly. It's \"Status\" should be \"none\".",
+                    "Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "brew services list",
+						"CopyCode": "brew services list"
+					}
+				},
+				{
+					"id": 43,
+					"instruction": "If you want to delete your folders from Github do the following."
+				},
+				{
+					"id": 44,
+					"instruction": "Go to [github.com](https://github.com/) and on the left-hand side click the name of your project."
+				},
+				{
+					"id": 45,
+					"instruction": "In your repository press the \"Settings\" tab on the right with the gear icon next to it."
+				},
+				{
+					"id": 46,
+					"instruction": "Then scroll all the way down to the bottom and press \"Delete this repository\". Then follow the prompts."
+				},
+				{
+					"id": 47,
+					"instruction": "You can do this for both your frontend and Rest Api repositories."
+				},
+				{
+					"id": 48,
+					"instruction": "I do <b>NOT</b> recommend doing steps 49 - 52. The steps explain how to completely remove all files."
+				},
+				{
+					"id": 49,
+					"instruction": "To delete postgres from homebrew run the following commands. When you uninstall it, it might tell you that you can manually remove certain files. I would NOT recommend doing this.",
+                    "Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "FormatCode": "brew services stop postgresql@15\nbrew uninstall postgresql@15",
+                        "CopyCode": "brew services stop postgresql@15\nbrew uninstall postgresql@15"
+					}
+				},
+				{
+					"id": 50,
+					"instruction": "Now confirm postgres is no longer installed by listing your programs and making sure it's not in the list anymore.",
+                    "Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "brew list",
+						"CopyCode": "brew list"
+					}
+				},
+				{
+					"id": 51,
+					"instruction": "Remove configuration and data files using the following command. Make sure you want to delete all postgres data before running this command.",
+                    "Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+						"FormatCode": "rm -rf /usr/local/var/postgresql@15",
+						"CopyCode": "rm -rf /usr/local/var/postgresql@15"
+					}
+				},
+				{
+					"id": 52,
+					"instruction": "You should now have successfully uninstalled postgres!"
+				},
+				{
+					"id": 53,
+					"instruction": "If you want to delete your folders from your computer entirely, do the following. I <b>SERIOUSLY</b> do <u>NOT</u> recommend doing this.",
+                    "Code": {
+						"Name": "",
+						"Description": "",
+						"Language": "Command",
+                        "FormatCode": "rm -rf Notes-Frontend\nrm -rf Notes-Rest-Api",
+                        "CopyCode": "rm -rf Notes-Frontend\nrm -rf Notes-Rest-Api"
+					}
+				},
+                {
+					"id": 54,
+					"instruction": "After that you should have removed all files! Congratulations!"
+				}
+            ]
+        }
+    ]
+}

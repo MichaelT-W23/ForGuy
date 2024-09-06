@@ -1,0 +1,151 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup SwiftData in a SwiftUI project",
+            "desc": "Explains how to setup and use SwiftData in your Swift application. SwiftData is a really good alternative to regular core data in my opinion.",
+            "ref": "swift-data"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Open Xcode. Note basically all of these instructions come from this [playlist](https://youtube.com/playlist?list=PLuoeXyslFTuZ9Nag8qTVz5wQ7zRprxMxN&si=GFBTAuUUcqRBzkcW)."
+        },
+        {
+            "id": 2,
+            "instruction": "Press the \"Create New Project...\" button."
+        },
+        {
+            "id": 3,
+            "instruction": "Make sure \"App\" is selected, then press the blue \"Next\" button."
+        },
+        {
+            "id": 4,
+            "instruction": "In the \"Choose options for your new project:\" pop-up box enter the following values. Then press the blue \"Next\" button.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Values",
+                "FormatCode": "Product Name: SwiftDataDemo\nTeam: None\nOrganization Identifier: I dont have one\nBundle Identifier: I-dont-have-one.ProductName\nInterface: SwiftUI\nLanguage: Swift\nStorage: None\n\nLeave \"Include Tests\" unchecked\n",
+                "CopyCode": "Product Name: SwiftDataDemo\nTeam: None\nOrganization Identifier: I dont have one\nBundle Identifier: I-dont-have-one.ProductName\nInterface: SwiftUI\nLanguage: Swift\nStorage: None\n\nLeave \"Include Tests\" unchecked\n"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Finder will open. Press the blue \"Create\" button in the bottom right if you're in the folder where you want to save your project."
+        },
+        {
+            "id": 6,
+            "instruction": "Wait for it to open in XCode. Then press \"command + n\" this will open a new pop-up window."
+        },
+        {
+            "id": 7,
+            "instruction": "In the \"Choose a template for your new file:\" pop-up box click on \"Swift File\". Then click the blue \"Next\" button."
+        },
+        {
+            "id": 8,
+            "instruction": "In the new pop up box in the \"Save As:\" filed enter the name \"Destination\". Then press the blue \"Create\" button."
+        },
+        {
+            "id": 9,
+            "instruction": "You should now have a new file named \"Destination\"."
+        },
+        {
+            "id": 10,
+            "instruction": "Now open your \"Destination.swift\" file and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "customswift",
+                "DisplayLang": "Swift",
+                "FormatCode": "//\n//  Destination.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/24/24.\n//\n\nimport Foundation\nimport SwiftData\n\n@Model\nclass Destination {\n    var name: String\n    var details: String\n    var date: Date\n    var priority: Int\n    @Relationship(deleteRule: .cascade) var sights = [Sight]()\n\n    init(name: String = \"\", details: String = \"\", date: Date = .now, priority: Int = 2) {\n        self.name = name\n        self.details = details\n        self.date = date\n        self.priority = priority\n    }\n}",
+                "CopyCode": "//\n//  Destination.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/24/24.\n//\n\nimport Foundation\nimport SwiftData\n\n@Model\nclass Destination {\n    var name: String\n    var details: String\n    var date: Date\n    var priority: Int\n    @Relationship(deleteRule: .cascade) var sights = [Sight]()\n\n    init(name: String = \"\", details: String = \"\", date: Date = .now, priority: Int = 2) {\n        self.name = name\n        self.details = details\n        self.date = date\n        self.priority = priority\n    }\n}"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "Open the \"SwiftDataDemoApp.swift\" file and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "customswift",
+                "DisplayLang": "Swift",
+                "FormatCode": "//\n//  SwiftDataDemoApp.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/23/24.\n//\n\nimport SwiftUI\nimport SwiftData\n\n@main\nstruct SwiftDataDemoApp: App {\n    var body: some Scene {\n        WindowGroup {\n            ContentView()\n        }\n        .modelContainer(for: Destination.self)\n    }\n}",
+                "CopyCode": "//\n//  SwiftDataDemoApp.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/23/24.\n//\n\nimport SwiftUI\nimport SwiftData\n\n@main\nstruct SwiftDataDemoApp: App {\n    var body: some Scene {\n        WindowGroup {\n            ContentView()\n        }\n        .modelContainer(for: Destination.self)\n    }\n}"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "Open the \"ContentView.swift\" file and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "customswift",
+                "DisplayLang": "Swift",
+                "FormatCode": "//\n//  ContentView.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/23/24.\n//\n\nimport SwiftUI\nimport SwiftData\n\nstruct ContentView: View {\n    @Environment(\\.modelContext) var modelContext\n\n    @State private var path = [Destination]()\n    @State private var sortOrder = SortDescriptor(\\Destination.name)\n    @State private var searchText = \"\"\n\n    var body: some View {\n        NavigationStack(path: $path) {\n            DestinationListingView(sort: sortOrder, searchString: searchText)\n                .navigationTitle(\"iTour\")\n                .navigationDestination(for: Destination.self, destination: EditDestinationView.init)\n                .searchable(text: $searchText)\n                .toolbar {\n                    Button(\"Add Destination\", systemImage: \"plus\", action: addDestination)\n\n                    Menu(\"Sort\", systemImage: \"arrow.up.arrow.down\") {\n                        Picker(\"Sort\", selection: $sortOrder) {\n                            Text(\"Name\")\n                                .tag(SortDescriptor(\\Destination.name))\n\n                            Text(\"Priority\")\n                                .tag(SortDescriptor(\\Destination.priority, order: .reverse))\n\n                            Text(\"Date\")\n                                .tag(SortDescriptor(\\Destination.date))\n                        }\n                        .pickerStyle(.inline)\n                    }\n                }\n        }\n    }\n\n    func addDestination() {\n        let destination = Destination()\n        modelContext.insert(destination)\n        path = [destination]\n    }\n\n}\n\n#Preview {\n    ContentView()\n}",
+                "CopyCode": "//\n//  ContentView.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/23/24.\n//\n\nimport SwiftUI\nimport SwiftData\n\nstruct ContentView: View {\n    @Environment(\\.modelContext) var modelContext\n\n    @State private var path = [Destination]()\n    @State private var sortOrder = SortDescriptor(\\Destination.name)\n    @State private var searchText = \"\"\n\n    var body: some View {\n        NavigationStack(path: $path) {\n            DestinationListingView(sort: sortOrder, searchString: searchText)\n                .navigationTitle(\"iTour\")\n                .navigationDestination(for: Destination.self, destination: EditDestinationView.init)\n                .searchable(text: $searchText)\n                .toolbar {\n                    Button(\"Add Destination\", systemImage: \"plus\", action: addDestination)\n\n                    Menu(\"Sort\", systemImage: \"arrow.up.arrow.down\") {\n                        Picker(\"Sort\", selection: $sortOrder) {\n                            Text(\"Name\")\n                                .tag(SortDescriptor(\\Destination.name))\n\n                            Text(\"Priority\")\n                                .tag(SortDescriptor(\\Destination.priority, order: .reverse))\n\n                            Text(\"Date\")\n                                .tag(SortDescriptor(\\Destination.date))\n                        }\n                        .pickerStyle(.inline)\n                    }\n                }\n        }\n    }\n\n    func addDestination() {\n        let destination = Destination()\n        modelContext.insert(destination)\n        path = [destination]\n    }\n\n}\n\n#Preview {\n    ContentView()\n}"
+            }
+        },
+        {
+            "id": 13,
+            "instruction": "Press \"command + n\". Select \"SwiftUI View\" and press \"Next\". Save as \"EditDestinationView\" and press \"Create\"."
+        },
+        {
+            "id": 14,
+            "instruction": "Open the \"EditDestinationView\" file and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "customswift",
+                "DisplayLang": "Swift",
+                "FormatCode": "//\n//  EditDestinationView.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/24/24.\n//\n\nimport SwiftUI\nimport SwiftData\n\nstruct EditDestinationView: View {\n    @Bindable var destination: Destination\n    @State private var newSightName = \"\"\n\n    var body: some View {\n        Form {\n            TextField(\"Name\", text: $destination.name)\n            TextField(\"Details\", text: $destination.details, axis: .vertical)\n            DatePicker(\"Date\", selection: $destination.date)\n\n            Section(\"Priority\") {\n                Picker(\"Priority\", selection: $destination.priority) {\n                    Text(\"Meh\").tag(1)\n                    Text(\"Maybe\").tag(2)\n                    Text(\"Must\").tag(3)\n                }\n                .pickerStyle(.segmented)\n            }\n\n            Section(\"Sights\") {\n                ForEach(destination.sights) { sight in\n                    Text(sight.name)\n                }\n\n                HStack {\n                    TextField(\"Add a new sight in \\(destination.name)\", text: $newSightName)\n\n                    Button(\"Add\", action: addSight)\n                }\n            }\n        }\n        .navigationTitle(\"Edit Destination\")\n        .navigationBarTitleDisplayMode(.inline)\n    }\n\n    func addSight() {\n        guard newSightName.isEmpty == false else { return }\n\n        withAnimation {\n            let sight = Sight(name: newSightName)\n            destination.sights.append(sight)\n            newSightName = \"\"\n        }\n    }\n}\n\n#Preview {\n    do {\n        let config = ModelConfiguration(isStoredInMemoryOnly: true)\n        let container = try ModelContainer(for: Destination.self, configurations: config)\n\n        let example = Destination(name: \"Example Destination\", details: \"Example details go here and will automatically expand vertically as they are edited\")\n\n        return EditDestinationView(destination: example)\n            .modelContainer(container)\n    } catch {\n        fatalError(\"Failed to create model container.\")\n    }\n}",
+                "CopyCode": "//\n//  EditDestinationView.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/24/24.\n//\n\nimport SwiftUI\nimport SwiftData\n\nstruct EditDestinationView: View {\n    @Bindable var destination: Destination\n    @State private var newSightName = \"\"\n\n    var body: some View {\n        Form {\n            TextField(\"Name\", text: $destination.name)\n            TextField(\"Details\", text: $destination.details, axis: .vertical)\n            DatePicker(\"Date\", selection: $destination.date)\n\n            Section(\"Priority\") {\n                Picker(\"Priority\", selection: $destination.priority) {\n                    Text(\"Meh\").tag(1)\n                    Text(\"Maybe\").tag(2)\n                    Text(\"Must\").tag(3)\n                }\n                .pickerStyle(.segmented)\n            }\n\n            Section(\"Sights\") {\n                ForEach(destination.sights) { sight in\n                    Text(sight.name)\n                }\n\n                HStack {\n                    TextField(\"Add a new sight in \\(destination.name)\", text: $newSightName)\n\n                    Button(\"Add\", action: addSight)\n                }\n            }\n        }\n        .navigationTitle(\"Edit Destination\")\n        .navigationBarTitleDisplayMode(.inline)\n    }\n\n    func addSight() {\n        guard newSightName.isEmpty == false else { return }\n\n        withAnimation {\n            let sight = Sight(name: newSightName)\n            destination.sights.append(sight)\n            newSightName = \"\"\n        }\n    }\n}\n\n#Preview {\n    do {\n        let config = ModelConfiguration(isStoredInMemoryOnly: true)\n        let container = try ModelContainer(for: Destination.self, configurations: config)\n\n        let example = Destination(name: \"Example Destination\", details: \"Example details go here and will automatically expand vertically as they are edited\")\n\n        return EditDestinationView(destination: example)\n            .modelContainer(container)\n    } catch {\n        fatalError(\"Failed to create model container.\")\n    }\n}"
+            }
+        },
+        {
+            "id": 15,
+            "instruction": "Press \"command + n\". Select \"SwiftUI View\" and press \"Next\". Save as \"DestinationListingView\" and press \"Create\"."
+        },
+        {
+            "id": 16,
+            "instruction": "Open the \"DestinationListingView\" file and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "customswift",
+                "DisplayLang": "Swift",
+                "FormatCode": "//\n//  DestinationListingView.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/24/24.\n//\n\nimport SwiftUI\nimport SwiftData\n\nstruct DestinationListingView: View {\n    @Environment(\\.modelContext) var modelContext\n    @Query(sort: [SortDescriptor(\\Destination.priority, order: .reverse),\n\tSortDescriptor(\\Destination.name)]) var destinations: [Destination]\n\n    var body: some View {\n        List {\n            ForEach(destinations) { destination in\n                NavigationLink(value: destination) {\n                    VStack(alignment: .leading) {\n                        Text(destination.name)\n                            .font(.headline)\n\n                        Text(destination.date.formatted(date: .long, time: .shortened))\n                    }\n                }\n            }\n            .onDelete(perform: deleteDestinations)\n        }\n    }\n\n    init(sort: SortDescriptor<Destination>, searchString: String) {\n        _destinations = Query(filter: #Predicate {\n            if searchString.isEmpty {\n                return true\n            } else {\n                return $0.name.localizedStandardContains(searchString)\n            }\n        }, sort: [sort])\n    }\n\n    func deleteDestinations(_ indexSet: IndexSet) {\n        for index in indexSet {\n            let destination = destinations[index]\n            modelContext.delete(destination)\n        }\n    }\n}\n\n#Preview {\n    DestinationListingView(sort: SortDescriptor(\\Destination.name), searchString: \"\")\n}",
+                "CopyCode": "//\n//  DestinationListingView.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/24/24.\n//\n\nimport SwiftUI\nimport SwiftData\n\nstruct DestinationListingView: View {\n    @Environment(\\.modelContext) var modelContext\n    @Query(sort: [SortDescriptor(\\Destination.priority, order: .reverse), SortDescriptor(\\Destination.name)]) var destinations: [Destination]\n\n    var body: some View {\n        List {\n            ForEach(destinations) { destination in\n                NavigationLink(value: destination) {\n                    VStack(alignment: .leading) {\n                        Text(destination.name)\n                            .font(.headline)\n\n                        Text(destination.date.formatted(date: .long, time: .shortened))\n                    }\n                }\n            }\n            .onDelete(perform: deleteDestinations)\n        }\n    }\n\n    init(sort: SortDescriptor<Destination>, searchString: String) {\n        _destinations = Query(filter: #Predicate {\n            if searchString.isEmpty {\n                return true\n            } else {\n                return $0.name.localizedStandardContains(searchString)\n            }\n        }, sort: [sort])\n    }\n\n    func deleteDestinations(_ indexSet: IndexSet) {\n        for index in indexSet {\n            let destination = destinations[index]\n            modelContext.delete(destination)\n        }\n    }\n}\n\n#Preview {\n    DestinationListingView(sort: SortDescriptor(\\Destination.name), searchString: \"\")\n}"
+            }
+        },
+        {
+            "id": 17,
+            "instruction": "Press \"command + n\". Select \"Swift File\" and press \"Next\". Save as \"Sight\" and press \"Create\"."
+        },
+        {
+            "id": 18,
+            "instruction": "Open the \"Sight\" file and paste in the following code. Destination will have a one-to-many relationship with sight.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "customswift",
+                "DisplayLang": "Swift",
+                "FormatCode": "//\n//  Sight.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/24/24.\n//\n\nimport Foundation\nimport SwiftData\n\n@Model\nclass Sight {\n    var name: String\n\n    init(name: String) {\n        self.name = name\n    }\n}",
+                "CopyCode": "//\n//  Sight.swift\n//  SwiftDataDemo\n//\n//  Created by Michael Totaro on 6/24/24.\n//\n\nimport Foundation\nimport SwiftData\n\n@Model\nclass Sight {\n    var name: String\n\n        init(name: String) {\n        self.name = name\n    }\n}"
+            }
+        },
+        {
+            "id": 19,
+            "instruction": "Use \"command + r\" to build your app."
+        },
+        {
+            "id": 20,
+            "instruction": "Use the blue \"+\" button in the top right to add destinations."
+        },
+        {
+            "id": 21,
+            "instruction": "You can exit out of your app and refresh to demonstrate that it's working."
+        }
+    ]
+}

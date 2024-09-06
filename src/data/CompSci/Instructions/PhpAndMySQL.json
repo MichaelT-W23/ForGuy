@@ -1,0 +1,58 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup a PHP and MySQL Project for UNCW",
+            "desc": "How to Setup a PHP and MySQL Project for UNCW for CSC 455/355 using FileZilla and phpMyAdmin.",
+            "ref": "php"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "If you're not on UNCW wifi you'll need a VPN connection. Go to the \"How to Setup Cisco Secure Client and a VPN\" instruction set if you need one. If you're on UNCW wifi you can skip this step. It's not a difficult process."
+        },
+        {
+            "id": 2,
+            "instruction": "Go to this [link](https://filezilla-project.org/download.php?platform=osx) to download FileZilla. Make sure you download the correct version for your operating system. You can check your architecture by running the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "uname -m",
+                "CopyCode": "uname -m"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "In the top bar where it has the input fields put the following values. Just the values not the field labels. Note these values might've changed. Press the blue \"QuickConnect\" button when you finish.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Values",
+                "FormatCode": "Host: ada.cis.uncw.edu\nUsername: Your uncw email without @uncw.edu\nPassword: Your uncw password\nPort: 22",
+                "CopyCode": "Host: ada.cis.uncw.edu\nUsername: Your uncw email without @uncw.edu\nPassword: Your uncw password\nPort: 22"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "You should see a folder in the bottom-right corner named your uncw username. Go inside it and open the \"public_html\" folder. If you don't see this folder, create it."
+        },
+        {
+            "id": 4,
+            "instruction": "Drag all your PHP files and your index.html file into the \"public_html\" folder."
+        },
+        {
+            "id": 5,
+            "instruction": "Use this link to see the website after you're done. Note: Replace “mst5084” with your UNCW username and keep the \"~\" character. ",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Link",
+                "FormatCode": "http://ada.cis.uncw.edu/~mst5084/index.html",
+                "CopyCode": "http://ada.cis.uncw.edu/~mst5084/index.html"
+            }
+        }
+    ]
+}

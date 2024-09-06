@@ -1,0 +1,199 @@
+{
+    "MultiSet": [
+        {
+            "Info": [
+                {
+                    "title": "How to Setup a Google/Youtube API Project",
+                    "desc": "Explains how to setup a a project that utilizes the Google and Youtube APIs.",
+                    "ref": "google-api"
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Go to the [Google Cloud Console](https://console.cloud.google.com/projectselector2/apis/dashboard?supportedpurview=project)."
+                },
+                {
+                    "id": 2,
+                    "instruction": "Click \"Create Project\" on the right-hand side of the page under the \"Enabled APIs & services\" header. It should be blue text in the gray bar."
+                },
+                {
+                    "id": 3,
+                    "instruction": "In the \"Project name\" field type \"GetYoutubePlaylist\". For \"Organization\" just leave it at \"No Organization\". Then press the \"Create\" button."
+                },
+                {
+                    "id": 4,
+                    "instruction": "You'll now be taken back to the console and should see the name of your project next to \"Google Cloud\"."
+                },
+                {
+                    "id": 5,
+                    "instruction": "In the left-hand bar click on \"Enabled APIs & services\". Then click the blue \"ENABLE APIS AND SERVICES\" text with the plus-sign next to it. Then Search for \"YouTube Data API v3\"."
+                },
+                {
+                    "id": 6,
+                    "instruction": "Click on the result that says \"YouTube Data API v3\". Then click the \"Enable\" button. You'll be taken back to the main console."
+                },
+                {
+                    "id": 7,
+                    "instruction": "On the left-hand bar click \"Credentials\". Then click the blue \"Create Credentials\" text with the plus next to it. Press \"API Key\" in the drop-down and copy and record the value."
+                },
+                {
+                    "id": 8,
+                    "instruction": "Now repeat step 7 but choose \"OAuth client ID\" this time instead of \"API key\". You'll be taken to a new screen. Click \"Configure Consent screen\" and then choose \"External\" as the \"User Type\". Then click \"Create\"."
+                },
+                {
+                    "id": 9,
+                    "instruction": "You'll be taken \"Edit app registration\" screen. Fill in all the fields. App name should be \"GetYoutubePlaylist\". The support email should just be your regular gmail address. Developer contact information email address should also just be your regular gmail address. You can leave the other fields blank. When you're done press \"Save and continue\" at the bottom.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Values",
+                        "FormatCode": "App name: GetYoutubePlaylist\nUser support email: your_gmail_address\nEmail addresses: your_gmail_address",
+                        "CopyCode": "App name: GetYoutubePlaylist\nUser support email: your_gmail_address\nEmail addresses: your_gmail_address"
+                    }
+                },
+                {
+                    "id": 10,
+                    "instruction": "In \"Scopes\" just leave everything blank and press \"Save and Continue\"."
+                },
+                {
+                    "id": 11,
+                    "instruction": "In \"Test users\" just click \"Add Users\". Enter your gmail address in the text field, then click \"Add\". Then click \"Save and Continue\"."
+                },
+                {
+                    "id": 12,
+                    "instruction": "In \"Summary\" check your information and then press \"Back to Dashboard\" at the bottom."
+                },
+                {
+                    "id": 13,
+                    "instruction": "On the left-hand bar click \"Credentials\". Then click the blue \"Create Credentials\" text with the plus next to it. Press \"OAuth client ID\" in the drop-down."
+                },
+                {
+                    "id": 14,
+                    "instruction": "In the \"Application type\" field click on \"Desktop app\" in the drop-down. You don't have to change the value of the \"Name\" filed. then click \"Create\"."
+                },
+                {
+                    "id": 15,
+                    "instruction": "In the \"OAuth client created\" pop-up window. Press \"Download JSON\". Then will download a json file that starts with \"client_secret\"."
+                },
+                {
+                    "id": 16,
+                    "instruction": "Go to your downloads folder and rename the file to simply be \"client_secret.json\"."
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Get Your Youtube Channel Id",
+                    "desc": "Explains how to retrieve your Youtube Channel Id."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Now we're going to find your channel id. First go to [youtube.com](https://www.youtube.com/)."
+                },
+                {
+                    "id": 2,
+                    "instruction": "Next click on your profile picture in the top-right. Then click \"View your channel\" in the pop-up menu."
+                },
+                {
+                    "id": 3,
+                    "instruction": "You should be taken to a link that looks like the following. Everything after your \"channel/\" is your channel id. Copy and record it for later use.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "DisplayLang": "Link",
+                        "FormatCode": "https://www.youtube.com/channel/xxxxxxxxxxxxxxxxxxxxxxxx",
+                        "CopyCode": "https://www.youtube.com/channel/xxxxxxxxxxxxxxxxxxxxxxxx"
+                    }
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Create your Project",
+                    "desc": "Explains how to create and run your project."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Now we'll start creating our script. First, go to your terminal and run the following command to download the necessary libraries.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "pip3 install google-api-python-client\npip3 install google-auth\npip3 install google-auth-oauthlib\npip3 install google-auth-httplib2\npip3 install python-dotenv\npip3 install termcolor",
+                        "CopyCode": "pip3 install google-api-python-client\npip3 install google-auth\npip3 install google-auth-oauthlib\npip3 install google-auth-httplib2\npip3 install python-dotenv\npip3 install termcolor"
+                    }
+                },
+                {
+                    "id": 2,
+                    "instruction": "Make your folder and files using the following commands. If the \"mv\" command isn't working check the name of your client_secret json file in your downloads. Change the name to \"client_secret.json\" if it isn't already.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "mkdir GetYoutubePlaylist\nmv Downloads/client_secret.json GetYoutubePlaylist\ncd GetYoutubePlaylist\ntouch script.py\ntouch .env",
+                        "CopyCode": "mkdir GetYoutubePlaylist\nmv Downloads/client_secret.json GetYoutubePlaylist\ncd GetYoutubePlaylist\ntouch script.py\ntouch .env"
+                    }
+                },
+                {
+                    "id": 3,
+                    "instruction": "Open your folder in VSCode. In the \".env\" file paste the following code. Replace \"your_youtube_api_key\" with your actual key that you copied and recorded in step 7. Replace \"your_channel_id\" with the value you copied in step 3.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "fxml",
+                        "DisplayLang": "Env",
+                        "FormatCode": "YOUTUBE_API_KEY=your_youtube_api_key\nCHANNEL_ID=your_channel_id",
+                        "CopyCode": "YOUTUBE_API_KEY=your_youtube_api_key\nCHANNEL_ID=your_channel_id"
+                    }
+                },
+                {
+                    "id": 4,
+                    "instruction": "Paste the following code in the \"script.py\" file.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Python",
+                        "FormatCode": "import os\nimport json\nimport webbrowser\nimport googleapiclient.discovery\nimport google_auth_oauthlib.flow\nimport google.auth.transport.requests\nimport google.oauth2.credentials\nfrom googleapiclient.discovery import build\nfrom termcolor import colored as c\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nCLIENT_SECRETS_FILE = \"client_secret.json\"\n\nSCOPES = ['https://www.googleapis.com/auth/youtube.force-ssl']\n\ndef get_authenticated_service():\n    credentials = None\n\n    if os.path.exists('token.json'):\n\twith open('token.json', 'r') as token:\n\t    credentials = google.oauth2.credentials.Credentials.from_authorized_user_file('token.json', SCOPES)\n\n    if not credentials or not credentials.valid:\n\tif credentials and credentials.expired and credentials.refresh_token:\n\t    credentials.refresh(google.auth.transport.requests.Request())\n\telse:\n\t    flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(CLIENT_SECRETS_FILE, SCOPES)\n\t    credentials = flow.run_local_server(port=0)\n\n\twith open('token.json', 'w') as token:\n\t    token.write(credentials.to_json())\n\n    return build('youtube', 'v3', credentials=credentials)\n\n\nyoutube = get_authenticated_service()\n\ndef get_playlist_videos(playlist_id):\n    videos = []\n    next_page_token = None\n\n    while True:\n\trequest = youtube.playlistItems().list(\n\t    part=\"snippet\",\n\t    playlistId=playlist_id,\n\t    maxResults=50,\n\t    pageToken=next_page_token\n\t)\n\n\tresponse = request.execute()\n\n\tfor item in response['items']:\n\t    video_id = item['snippet']['resourceId']['videoId']\n\t    video_title = item['snippet']['title']\n\n\t    video_info = {\n\t\t'video_id': video_id,\n\t\t'video_title': video_title\n\t    }\n\n\t    videos.append(video_info)\n\n\tnext_page_token = response.get('nextPageToken')\n\n\tif not next_page_token:\n\t    break\n\n    return videos\n\n\ndef save_playlist_to_account(videos, new_playlist_title):\n\n    create_playlist_request = youtube.playlists().insert(\n\tpart=\"snippet,status\",\n\tbody={\n\t    \"snippet\": {\n\t\t\"title\": new_playlist_title,\n\t\t\"description\": \"Playlist created using YouTube API\",\n\t\t\"tags\": [\"sample playlist\", \"API call\"],\n\t\t\"defaultLanguage\": \"en\"\n\t    },\n\t    \"status\": {\n\t\t\"privacyStatus\": \"private\"\n\t    }\n        }\n    )\n\n    create_playlist_response = create_playlist_request.execute()\n    playlist_id = create_playlist_response['id']\n\n    count = 0\n\n    for video in videos:\n\tif count < 5:\n\t    youtube.playlistItems().insert(\n\t\tpart=\"snippet\",\n\t\tbody={\n\t\t    \"snippet\": {\n\t\t\t\"playlistId\": playlist_id,\n\t\t\t\"resourceId\": {\n\t\t\t    \"kind\": \"youtube#video\",\n\t\t\t    \"videoId\": video['video_id']\n\t\t        }\n\t\t    }\n\t        }\n\t    ).execute()\n\tcount += 1\n\n    print(c(f\"Playlist '{new_playlist_title}' created and videos added.\", 'green'))\n\n    return playlist_id\n\n\ndef delete_playlist_from_account(playlist_id):\n    youtube.playlists().delete(id=playlist_id).execute()\n    print(c(f\"Playlist with id: '{playlist_id}' successfully deleted.\", 'red'))\n\nplaylist_link = \"https://www.youtube.com/playlist?list=PLDIoUOhQQPlXr63I_vwF9GD8sAKh77dWU\"\nplaylist_id = playlist_link.split(\"playlist?list=\")[1]\n\nvideos = get_playlist_videos(playlist_id)\n\nfor video in videos:\n    print(f\"Video ID: {video['video_id']}, Video Title: {video['video_title']}\")\n\nprint(c('\\nCreating \\\"Top 5 Songs\\\" playlist...\\n', 'blue'))\n\nnew_playlist_id = save_playlist_to_account(videos, \"Top 5 Songs\")\n\nprint(f\"\\nGo here -> {c('https://www.youtube.com/feed/playlists', 'cyan')} to see your \\\"Top 5 Songs\\\" playlist.\\n\")\n\nopen_link = input(\"Do you want to open the link? (y/n): \")\n\nif open_link.lower().strip() in ['yes', 'y']:\n    webbrowser.open('https://www.youtube.com/feed/playlists')\n\ndelete_playlist = input(f\"\\nDo you want to {c('delete', 'red')} the \\\"Top 5 Songs\\\" playlist from your channel? (y/n): \")\n\nif delete_playlist.lower().strip() in ['yes', 'y']:\n    delete_playlist_from_account(new_playlist_id)\n    print(c('Playlist successfully deleted!', 'green'))\nelse:\n    print(c('Playlist was NOT deleted correctly!', 'red'))\n",
+                        "CopyCode": "import os\nimport json\nimport webbrowser\nimport googleapiclient.discovery\nimport google_auth_oauthlib.flow\nimport google.auth.transport.requests\nimport google.oauth2.credentials\nfrom googleapiclient.discovery import build\nfrom termcolor import colored as c\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nCLIENT_SECRETS_FILE = \"client_secret.json\"\n\nSCOPES = ['https://www.googleapis.com/auth/youtube.force-ssl']\n\ndef get_authenticated_service():\n\tcredentials = None\n\n\tif os.path.exists('token.json'):\n\t\twith open('token.json', 'r') as token:\n\t\t\tcredentials = google.oauth2.credentials.Credentials.from_authorized_user_file('token.json', SCOPES)\n\n\tif not credentials or not credentials.valid:\n\t\tif credentials and credentials.expired and credentials.refresh_token:\n\t\t\tcredentials.refresh(google.auth.transport.requests.Request())\n\t\telse:\n\t\t\tflow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(CLIENT_SECRETS_FILE, SCOPES)\n\t\t\tcredentials = flow.run_local_server(port=0)\n\n\t\twith open('token.json', 'w') as token:\n\t\t\ttoken.write(credentials.to_json())\n\n\treturn build('youtube', 'v3', credentials=credentials)\n\n\nyoutube = get_authenticated_service()\n\ndef get_playlist_videos(playlist_id):\n\tvideos = []\n\tnext_page_token = None\n\n\twhile True:\n\t\trequest = youtube.playlistItems().list(\n\t\t\tpart=\"snippet\",\n\t\t\tplaylistId=playlist_id,\n\t\t\tmaxResults=50,\n\t\t\tpageToken=next_page_token\n\t\t)\n\n\t\tresponse = request.execute()\n\n\t\tfor item in response['items']:\n\t\t\tvideo_id = item['snippet']['resourceId']['videoId']\n\t\t\tvideo_title = item['snippet']['title']\n\n\t\t\tvideo_info = {\n\t\t\t\t'video_id': video_id,\n\t\t\t\t'video_title': video_title\n\t\t\t}\n\n\t\t\tvideos.append(video_info)\n\n\t\tnext_page_token = response.get('nextPageToken')\n\n\t\tif not next_page_token:\n\t\t\tbreak\n\n\treturn videos\n\n\ndef save_playlist_to_account(videos, new_playlist_title):\n\n\tcreate_playlist_request = youtube.playlists().insert(\n\t\tpart=\"snippet,status\",\n\t\tbody={\n\t\t\t\"snippet\": {\n\t\t\t\t\"title\": new_playlist_title,\n\t\t\t\t\"description\": \"Playlist created using YouTube API\",\n\t\t\t\t\"tags\": [\"sample playlist\", \"API call\"],\n\t\t\t\t\"defaultLanguage\": \"en\"\n\t\t\t},\n\t\t\t\"status\": {\n\t\t\t\t\"privacyStatus\": \"private\"\n\t\t\t}\n\t\t}\n\t)\n\n\tcreate_playlist_response = create_playlist_request.execute()\n\tplaylist_id = create_playlist_response['id']\n\n\tcount = 0\n\n\tfor video in videos:\n\t\tif count < 5:\n\t\t\tyoutube.playlistItems().insert(\n\t\t\t\tpart=\"snippet\",\n\t\t\t\tbody={\n\t\t\t\t\t\"snippet\": {\n\t\t\t\t\t\t\"playlistId\": playlist_id,\n\t\t\t\t\t\t\"resourceId\": {\n\t\t\t\t\t\t\t\"kind\": \"youtube#video\",\n\t\t\t\t\t\t\t\"videoId\": video['video_id']\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t).execute()\n\t\tcount += 1\n\n\tprint(c(f\"Playlist '{new_playlist_title}' created and videos added.\", 'green'))\n\n\treturn playlist_id\n\n\ndef delete_playlist_from_account(playlist_id):\n\tyoutube.playlists().delete(id=playlist_id).execute()\n\tprint(c(f\"Playlist with id: '{playlist_id}' successfully deleted.\", 'red'))\n\nplaylist_link = \"https://www.youtube.com/playlist?list=PLDIoUOhQQPlXr63I_vwF9GD8sAKh77dWU\"\nplaylist_id = playlist_link.split(\"playlist?list=\")[1]\n\nvideos = get_playlist_videos(playlist_id)\n\nfor video in videos:\n\tprint(f\"Video ID: {video['video_id']}, Video Title: {video['video_title']}\")\n\nprint(c('\\nCreating \\\"Top 5 Songs\\\" playlist...\\n', 'blue'))\n\nnew_playlist_id = save_playlist_to_account(videos, \"Top 5 Songs\")\n\nprint(f\"\\nGo here -> {c('https://www.youtube.com/feed/playlists', 'cyan')} to see your \\\"Top 5 Songs\\\" playlist.\\n\")\n\nopen_link = input(\"Do you want to open the link? (y/n): \")\n\nif open_link.lower().strip() in ['yes', 'y']:\n\twebbrowser.open('https://www.youtube.com/feed/playlists')\n\ndelete_playlist = input(f\"\\nDo you want to {c('delete', 'red')} the \\\"Top 5 Songs\\\" playlist from your channel? (y/n): \")\n\nif delete_playlist.lower().strip() in ['yes', 'y']:\n\tdelete_playlist_from_account(new_playlist_id)\n\tprint(c('Playlist successfully deleted!', 'green'))\nelse:\n\tprint(c('Playlist was NOT deleted correctly!', 'red'))\n"
+                    }
+                },
+                {
+                    "id": 5,
+                    "instruction": "Open a new terminal and run your script.",
+                    "Code": {
+                        "Name": "",
+                        "Description": "",
+                        "Language": "Command",
+                        "FormatCode": "cd GetYoutubePlaylist\npython3 script.py",
+                        "CopyCode": "cd GetYoutubePlaylist\npython3 script.py"
+                    }
+                },
+                {
+                    "id": 6,
+                    "instruction": "You'll be taken to a webpage that says \"Choose an account\". Chose the gmail account you added as a test user. Then on the \"Google hasn't verified this app\" page, press \"Continue\"."
+                },
+                {
+                    "id": 7,
+                    "instruction": "On the \"GetYoutubePlaylist wants access to your Google Account\" press \"Continue\". Close the window once you're on the page that says \"The authentication flow has completed. You may close this window.\". You should now see a \"token.json\" file in your project folder."
+                },
+                {
+                    "id": 8,
+                    "instruction": "Go back to your terminal it should still be running and answer the questions when prompted. You won't have to reauthenticate now that you have a \"token.json\" file."
+                },
+                {
+                    "id": 9,
+                    "instruction": "You can now modify the script to do what you want. You can programmatically change the titles of your YouTube videos, make playlists, etc. This was just to help get you started."
+                }
+            ]
+        }
+    ]
+}

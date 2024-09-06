@@ -1,0 +1,188 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup YouTube Downloader",
+            "desc": "How to install YouTube Downloader and use it with my CLI tool.",
+            "ref": "youtube"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Check if you have Homebrew installed. If it outputs information about the version it should be good.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "brew --version",
+                "CopyCode": "brew --version"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "Install Homebrew using the following command if the last one said it wasn't installed. Skip this step if it's already installed.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "xcode-select --install\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\nbrew --version",
+                "CopyCode": "xcode-select --install\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\nbrew --version"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Upgrade Homebrew to make sure everything's up to date.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "brew upgrade",
+                "CopyCode": "brew upgrade"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Start installing yt-downloader by running the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl",
+                "CopyCode": "sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Finish installing yt-downloader with the following command",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "sudo chmod a+rx /usr/local/bin/youtube-dl",
+                "CopyCode": "sudo chmod a+rx /usr/local/bin/youtube-dl"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Install the \"ffmpeg\" library via Homebrew.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "brew install ffmpeg",
+                "CopyCode": "brew install ffmpeg"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "Install \"yt-dlp\" via homebrew.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "brew install yt-dlp",
+                "CopyCode": "brew install yt-dlp"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "Ensure that \"yt-dlp\" installed correctly.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "which yt-dlp",
+                "CopyCode": "which yt-dlp"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "Upgrade the following brew packages.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "brew upgrade librist\nbrew upgrade mbedtls",
+                "CopyCode": "brew upgrade librist\nbrew upgrade mbedtls"
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Now yt-dlp should be properly installed. In the next steps we'll setup my CLI tool."
+        },
+        {
+            "id": 11,
+            "instruction": "Install the following 3 Python libraries. You'll need these installed for the script.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "pip3 install pytube termcolor inquirer",
+                "CopyCode": "pip3 install pytube termcolor inquirer"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "Create the following directories.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "mkdir YouTubeDownloader Videos",
+                "CopyCode": "mkdir YouTubeDownloader Videos"
+            }
+        },
+        {
+            "id": 13,
+            "instruction": "Change into the directory and create new python file named \"yt_downloader.py\".",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd YouTubeDownloader\ntouch yt_downloader.py",
+                "CopyCode": "cd YouTubeDownloader\ntouch yt_downloader.py"
+            }
+        },
+        {
+            "id": 14,
+            "instruction": "Past the following code into the \"yt_downloader.py\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Python",
+                "FormatCode": "\"\"\"\nThis program is a command line interface tool for the\n\"yt-dlp\" library. It allows you to download entire\nyoutube videos, download specific intervals of the\nvideo and rename the mp4 file you're downloading.\n\"\"\"\n\nimport os; os.system('clear')\nimport re\nimport subprocess\nfrom pytube import YouTube\nfrom termcolor import colored as c\nimport inquirer\n\nsave_dir = \"a_songs_folder\"\n# save_dir = \"Youtube_videos\"\n#save_dir = \"Other_Youtube\"\n\nCURRENT_DOWNLOAD_PATH = f\"../{save_dir}/\"\n\nif os.path.exists(CURRENT_DOWNLOAD_PATH):\n    os.system(f\"open -a Finder '{CURRENT_DOWNLOAD_PATH}'\")\n    print(f\"{c('CURRENT DOWNLOAD PATH', 'magenta')}: {os.path.abspath(CURRENT_DOWNLOAD_PATH)}/\")\n    print(\"Finder has been opened to current download path. See updates in real time.\")\nelse:\n    print(c(f\"\\nPath does not exist: \\\"{CURRENT_DOWNLOAD_PATH}\\\"\", 'red'))\n    print(f\"Go and create \\\"{CURRENT_DOWNLOAD_PATH}\\\" folder\\n\")\n    exit(0)\n\ndef time_to_seconds(time) -> int:\n    \"\"\" Converts int seconds to formatted time. \"\"\"\n    t = [int(x) for x in time.split(\":\")]\n    return t[1] + (t[0] * 60) if (len(t) == 2) else t[2] + (t[1] * 60) + (t[0] * 3600)\n\ndef seconds_to_time(seconds) -> str:\n    \"\"\" Converts seconds to minutes \"\"\"\n    if seconds < 60:\n        return f\"0:{seconds:02}\"\n    elif seconds < 3600:\n        minutes = seconds // 60\n        seconds %= 60\n        return f\"{minutes}:{seconds:02}\"\n    else:\n        hours = seconds // 3600\n        seconds %= 3600\n        minutes = seconds // 60\n        seconds %= 60\n        return f\"{hours}:{minutes:02}:{seconds:02}\"\n\ndef get_choice(the_message):\n    green_yes = c(\"Yes\", 'green')\n    red_no = c('No', 'red')\n\n    print()\n    questions = [\n        inquirer.List('choice',\n                    message=the_message,\n                    choices=[green_yes, red_no]\n                    ),\n    ]\n\n    answers = inquirer.prompt(questions)\n    return answers\n\nurl = input(f\"\\nEnter {c('youtube link', 'red')} : \")\n\nvideo_len = YouTube(url).length\n\nprint(f\"Video length is {c(seconds_to_time(video_len), 'cyan')}\")\n\nmessage = f\"Do you want to download a {c('specific time interval', 'blue')} (y/n) ? \"\nis_time_interval = get_choice(message)\n\n#'\\x1b[32mYes\\x1b[0m' the color made the string weird\nif \"Yes\" in is_time_interval['choice']:\n    print(\"\\nThe format has to be (00:00:00) or (00:00). Ex: 3:12:11 or 8:07 or 21:32\")\n\n    start_time = input(\"\\nEnter a start time: \").strip()\n\n    while time_to_seconds(start_time) > video_len:\n        print(\"\\nInvalid start time\")\n        start_time = input(\"Enter a start time: \").strip()\n\n    end_time = input(\"Enter an end time: \").strip()\n\n    while time_to_seconds(start_time) > video_len:\n        print(\"\\nInvalid end time\")\n        end_time = input(\"Enter an end time: \").strip()\n\n    download_length = seconds_to_time(time_to_seconds(end_time) - time_to_seconds(start_time))\n\n    print(f\"\\nLength of download will be -> {c(download_length, 'blue')}\\n\")\n\n    new_name = \"\"\n\n    rename_message = f\"Do you want to rename the file? {c('(y/n)', 'red')} \"\n    do_rename = get_choice(rename_message)\n\n    if \"Yes\" in do_rename['choice']:\n        name = input(\"\\nNew name of file (without extension): \")\n        new_name = f'-o \"{name}.%(ext)s\"'\n        print(f\"File's new name is {c(name, 'blue')}{c('.webm', 'blue')}\")\n\n    print()\n    download_with_time = get_choice(\"Ready to download? \")\n\n    if \"Yes\" in download_with_time['choice']:\n\n        os.chdir(CURRENT_DOWNLOAD_PATH)\n\n        print()\n        os.system(f'yt-dlp {new_name.strip()} \"{url.strip()}\" --download-sections \"*{start_time}-{end_time}\"')\n        print(c(\"VIDEO SUCCESSFULLY DOWNLOADED\", 'green'))\n\n        get_file_name = subprocess.check_output(\"ls -t | head -n 1\", shell=True)\n        name_of_file = get_file_name.decode('utf-8').strip()\n\n        if \".webm\" not in name_of_file:\n            os.system(f\"mv {name_of_file} {re.sub(r'\\.[^.]+$', '.webm', name_of_file)}\")\n\n        name_of_file_wo_extension = name_of_file.rsplit('.', 1)[0]\n\n    print()\n    convert_video_message = f\"Do you want to convert the video to {c('mp4', 'blue')}? \"\n    convert_video = get_choice(convert_video_message)\n\n    if \"Yes\" in convert_video['choice']:\n        os.system(f\"ffmpeg -i \\\"{name_of_file_wo_extension}\\\".webm \\\"{name_of_file_wo_extension}\\\".mp4\")\n        os.remove(f\"{name_of_file_wo_extension}.webm\")\n        print(c(\"Successfully deleted the webm file and converted to mp4\", 'green'))\n\n    print(c(\"Done\", 'green'))\n\n    exit(0)\n\n\nnew_name = \"\"\n\nprint()\nrename_message = f\"Do you want to rename the file? {c('(y/n)', 'red')} \"\nrename_vid = get_choice(rename_message)\n\nif \"Yes\" in rename_vid['choice']:\n    name = input(\"\\nNew name of file (without extension): \")\n    new_name = f'-o \"{name.strip()}.%(ext)s\"'\n    print(f\"File's new name is {c(name, 'blue')}{c('.webm', 'blue')}\")\n\nprint()\ndownload_vid = get_choice(\"Ready to download? \")\n\nif \"Yes\" in download_vid['choice']:\n    os.chdir(CURRENT_DOWNLOAD_PATH)\n\n    print()\n\n    #--no-mtime sets the date created to now\n    os.system(f'yt-dlp --no-mtime {new_name} \"{url.strip()}\"')\n\n    print(c(\"VIDEO SUCCESSFULLY DOWNLOADED\", 'green'))\n\n    # Run the shell command and capture its output\n    get_file_name = subprocess.check_output(\"ls -t | head -n 1\", shell=True)\n\n    # Convert the byte string to a regular string\n    name_of_file = get_file_name.decode('utf-8').strip()\n\n    if \".webm\" not in name_of_file:\n        os.system(f\"mv {name_of_file} {re.sub(r'\\.[^.]+$', '.webm', name_of_file)}\")\n        \n    name_of_file_wo_extension = name_of_file.rsplit('.', 1)[0]\n\n    print()\n    convert_vid_message = f\"Do you want to convert the video to {c('mp4', 'blue')}? \"\n    convert_vid = get_choice(convert_vid_message)\n\n    if \"Yes\" in convert_vid['choice']:\n        os.system(f\"ffmpeg -i \\\"{name_of_file_wo_extension}\\\".webm \\\"{name_of_file_wo_extension}\\\".mp4\")\n        os.remove(f\"{name_of_file_wo_extension}.webm\")\n        print(c(\"Successfully deleted the webm file and converted to mp4\", 'green'))\n\n    print(c(\"Done\", 'green'))\n",
+                "CopyCode": "\"\"\"\nThis program is a command line interface tool for the\n\"yt-dlp\" library. It allows you to download entire\nyoutube videos, download specific intervals of the\nvideo and rename the mp4 file you're downloading.\n\"\"\"\n\nimport os; os.system('clear')\nimport re\nimport subprocess\nfrom pytube import YouTube\nfrom termcolor import colored as c\nimport inquirer\n\nsave_dir = \"a_songs_folder\"\n# save_dir = \"Youtube_videos\"\n#save_dir = \"Other_Youtube\"\n\nCURRENT_DOWNLOAD_PATH = f\"../{save_dir}/\"\n\nif os.path.exists(CURRENT_DOWNLOAD_PATH):\n\tos.system(f\"open -a Finder '{CURRENT_DOWNLOAD_PATH}'\")\n\tprint(f\"{c('CURRENT DOWNLOAD PATH', 'magenta')}: {os.path.abspath(CURRENT_DOWNLOAD_PATH)}/\")\n\tprint(\"Finder has been opened to current download path. See updates in real time.\")\nelse:\n\tprint(c(f\"\\nPath does not exist: \\\"{CURRENT_DOWNLOAD_PATH}\\\"\", 'red'))\n\tprint(f\"Go and create \\\"{CURRENT_DOWNLOAD_PATH}\\\" folder\\n\")\n\texit(0)\n\ndef time_to_seconds(time) -> int:\n\t\"\"\" Converts int seconds to formatted time. \"\"\"\n\tt = [int(x) for x in time.split(\":\")]\n\treturn t[1] + (t[0] * 60) if (len(t) == 2) else t[2] + (t[1] * 60) + (t[0] * 3600)\n\ndef seconds_to_time(seconds) -> str:\n\t\"\"\" Converts seconds to minutes \"\"\"\n\tif seconds < 60:\n\t\treturn f\"0:{seconds:02}\"\n\telif seconds < 3600:\n\t\tminutes = seconds // 60\n\t\tseconds %= 60\n\t\treturn f\"{minutes}:{seconds:02}\"\n\telse:\n\t\thours = seconds // 3600\n\t\tseconds %= 3600\n\t\tminutes = seconds // 60\n\t\tseconds %= 60\n\t\treturn f\"{hours}:{minutes:02}:{seconds:02}\"\n\ndef get_choice(the_message):\n\tgreen_yes = c(\"Yes\", 'green')\n\tred_no = c('No', 'red')\n\n\tprint()\n\tquestions = [\n\t\tinquirer.List('choice',\n\t\t\t\t\tmessage=the_message,\n\t\t\t\t\tchoices=[green_yes, red_no]\n\t\t\t\t\t),\n\t]\n\n\tanswers = inquirer.prompt(questions)\n\treturn answers\n\nurl = input(f\"\\nEnter {c('youtube link', 'red')} : \")\n\nvideo_len = YouTube(url).length\n\nprint(f\"Video length is {c(seconds_to_time(video_len), 'cyan')}\")\n\nmessage = f\"Do you want to download a {c('specific time interval', 'blue')} (y/n) ? \"\nis_time_interval = get_choice(message)\n\n#'\\x1b[32mYes\\x1b[0m' the color made the string weird\nif \"Yes\" in is_time_interval['choice']:\n\tprint(\"\\nThe format has to be (00:00:00) or (00:00). Ex: 3:12:11 or 8:07 or 21:32\")\n\n\tstart_time = input(\"\\nEnter a start time: \").strip()\n\n\twhile time_to_seconds(start_time) > video_len:\n\t\tprint(\"\\nInvalid start time\")\n\t\tstart_time = input(\"Enter a start time: \").strip()\n\n\tend_time = input(\"Enter an end time: \").strip()\n\n\twhile time_to_seconds(start_time) > video_len:\n\t\tprint(\"\\nInvalid end time\")\n\t\tend_time = input(\"Enter an end time: \").strip()\n\n\tdownload_length = seconds_to_time(time_to_seconds(end_time) - time_to_seconds(start_time))\n\n\tprint(f\"\\nLength of download will be -> {c(download_length, 'blue')}\\n\")\n\n\tnew_name = \"\"\n\n\trename_message = f\"Do you want to rename the file? {c('(y/n)', 'red')} \"\n\tdo_rename = get_choice(rename_message)\n\n\tif \"Yes\" in do_rename['choice']:\n\t\tname = input(\"\\nNew name of file (without extension): \")\n\t\tnew_name = f'-o \"{name}.%(ext)s\"'\n\t\tprint(f\"File's new name is {c(name, 'blue')}{c('.webm', 'blue')}\")\n\n\tprint()\n\tdownload_with_time = get_choice(\"Ready to download? \")\n\n\tif \"Yes\" in download_with_time['choice']:\n\n\t\tos.chdir(CURRENT_DOWNLOAD_PATH)\n\n\t\tprint()\n\t\tos.system(f'yt-dlp {new_name.strip()} \"{url.strip()}\" --download-sections \"*{start_time}-{end_time}\"')\n\t\tprint(c(\"VIDEO SUCCESSFULLY DOWNLOADED\", 'green'))\n\n\t\tget_file_name = subprocess.check_output(\"ls -t | head -n 1\", shell=True)\n\t\tname_of_file = get_file_name.decode('utf-8').strip()\n\n\t\tif \".webm\" not in name_of_file:\n\t\t\tos.system(f\"mv {name_of_file} {re.sub(r'\\.[^.]+$', '.webm', name_of_file)}\")\n\n\t\tname_of_file_wo_extension = name_of_file.rsplit('.', 1)[0]\n\n\tprint()\n\tconvert_video_message = f\"Do you want to convert the video to {c('mp4', 'blue')}? \"\n\tconvert_video = get_choice(convert_video_message)\n\n\tif \"Yes\" in convert_video['choice']:\n\t\tos.system(f\"ffmpeg -i \\\"{name_of_file_wo_extension}\\\".webm \\\"{name_of_file_wo_extension}\\\".mp4\")\n\t\tos.remove(f\"{name_of_file_wo_extension}.webm\")\n\t\tprint(c(\"Successfully deleted the webm file and converted to mp4\", 'green'))\n\n\tprint(c(\"Done\", 'green'))\n\n\texit(0)\n\n\nnew_name = \"\"\n\nprint()\nrename_message = f\"Do you want to rename the file? {c('(y/n)', 'red')} \"\nrename_vid = get_choice(rename_message)\n\nif \"Yes\" in rename_vid['choice']:\n\tname = input(\"\\nNew name of file (without extension): \")\n\tnew_name = f'-o \"{name.strip()}.%(ext)s\"'\n\tprint(f\"File's new name is {c(name, 'blue')}{c('.webm', 'blue')}\")\n\nprint()\ndownload_vid = get_choice(\"Ready to download? \")\n\nif \"Yes\" in download_vid['choice']:\n\tos.chdir(CURRENT_DOWNLOAD_PATH)\n\n\tprint()\n\n\t#--no-mtime sets the date created to now\n\tos.system(f'yt-dlp --no-mtime {new_name} \"{url.strip()}\"')\n\n\tprint(c(\"VIDEO SUCCESSFULLY DOWNLOADED\", 'green'))\n\n\t# Run the shell command and capture its output\n\tget_file_name = subprocess.check_output(\"ls -t | head -n 1\", shell=True)\n\n\t# Convert the byte string to a regular string\n\tname_of_file = get_file_name.decode('utf-8').strip()\n\n\tif \".webm\" not in name_of_file:\n\t\tos.system(f\"mv {name_of_file} {re.sub(r'\\.[^.]+$', '.webm', name_of_file)}\")\n\t\t\n\tname_of_file_wo_extension = name_of_file.rsplit('.', 1)[0]\n\n\tprint()\n\tconvert_vid_message = f\"Do you want to convert the video to {c('mp4', 'blue')}? \"\n\tconvert_vid = get_choice(convert_vid_message)\n\n\tif \"Yes\" in convert_vid['choice']:\n\t\tos.system(f\"ffmpeg -i \\\"{name_of_file_wo_extension}\\\".webm \\\"{name_of_file_wo_extension}\\\".mp4\")\n\t\tos.remove(f\"{name_of_file_wo_extension}.webm\")\n\t\tprint(c(\"Successfully deleted the webm file and converted to mp4\", 'green'))\n\n\tprint(c(\"Done\", 'green'))\n"
+            }
+        },
+        {
+            "id": 15,
+            "instruction": "Now copy to [Youtube](https://www.youtube.com/) and copy the link of the video you want to download. Keep your terminal open."
+        },
+        {
+            "id": 16,
+            "instruction": "Now in your terminal use the following command to run the \"yt_downloader.py\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "python3 yt_downloader.py",
+                "CopyCode": "python3 yt_downloader.py"
+            }
+        },
+        {
+            "id": 17,
+            "instruction": "Follow the prompts in the python file to download the YouTube video."
+        },
+        {
+            "id": 18,
+            "instruction": "When you're done, use the following two commands to see your downloaded video.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd ~\nopen Videos",
+                "CopyCode": "cd ~\nopen Videos"
+            }
+        }
+    ]
+}

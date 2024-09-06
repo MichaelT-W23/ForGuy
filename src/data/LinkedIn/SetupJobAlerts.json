@@ -1,0 +1,82 @@
+{
+    "Text": [
+        {
+            "page": "Setup Job Alerts",
+            "desc": "This is how to Setup Job Alerts on LinkedIn. It's pretty simple."
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Before you do anything, make sure you have notifications set up for job alerts using this [link](https://www.linkedin.com/mypreferences/d/notification-subcategories/job-alerts). I'd recommend enabling In-app, push, and email notifications for job alerts. Once you done, press the back button."
+        },
+        {
+            "id": 2,
+            "instruction": "For this example, lets create a job alert for \"Software Engineer\" at nCino in Wilmington, North Carolina."
+        },
+        {
+            "id": 3,
+            "instruction": "Go to the [LinkedIn](https://www.linkedin.com/feed/) home page."
+        },
+        {
+            "id": 4,
+            "instruction": "Go the search bar and type \"nCino\". Click on \"nCino, inc\" company in the suggested results. Then click the name again."
+        },
+        {
+            "id": 5,
+            "instruction": "You should now be on nCino's LinkedIn page. The \"Home\" tab should be highlighted green under the Follow and Learn more buttons."
+        },
+        {
+            "id": 6,
+            "instruction": "In the same tab bar as the \"Home\" tab, click the \"Jobs\" tab."
+        },
+        {
+            "id": 7,
+            "instruction": "Right under the tabs you should see a card that says \"Create job alert for nCino, Inc.\". Click the \"Create job alert\" button on the right."
+        },
+        {
+            "id": 8,
+            "instruction": "In the \"Job title\" field type \"Software Engineer\". In the \"Job location\" field type \"Wilmington\" and select \"Wilmington, North Carolina, United States\" from the suggested menu."
+        },
+        {
+            "id": 9,
+            "instruction": "Select the workplace formats you want to work in. You can choose between On-Site, Hybrid, Remote, or a combination of all three."
+        },
+        {
+            "id": 10,
+            "instruction": "After you do that press the \"Create job alert\" button. You should now have a job alert for Software Engineering positions at nCino, Inc. in Wilmington, NC."
+        },
+        {
+            "id": 11,
+            "instruction": "Continue to do this for other companies you like"
+        },
+        {
+            "id": 12,
+            "instruction": "You can also do this for locations. Lets create another alert for \"Software Engineer\" in Atlanta."
+        },
+        {
+            "id": 13,
+            "instruction": "Go to the [LinkedIn](https://www.linkedin.com/feed/) home page."
+        },
+        {
+            "id": 14,
+            "instruction": "At the top click the \"Jobs\". Then go to the search bar and type \"Software Engineer\". In the filed next to it that says \"United States\" type \"Atlanta\" and select it from the suggestion menu. Then click enter."
+        },
+        {
+            "id": 15,
+            "instruction": "You should now be at the result screen. Above the results you should see a blue bar that says \"Software Engineer in Atlanta, Georgia, United States\" in white text"
+        },
+        {
+            "id": 16,
+            "instruction": "Next to the white text, toggle the \"Set Alert\" button. The title bar should turn from blue to white and you should get a pop up saying you're alert has been created."
+        },
+        {
+            "id": 17,
+            "instruction": "You have now created a job alert for Software Engineering positions in Atlanta, Georgia."
+        },
+        {
+            "id": 18,
+            "instruction": "You can create job alerts for any position, company, location, etc."
+        }
+    ]
+}

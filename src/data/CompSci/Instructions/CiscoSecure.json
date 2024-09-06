@@ -1,0 +1,39 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup Cisco Secure Client and a VPN",
+            "desc": "How to Setup Cisco Secure Client and a VPN connection for UNCW.",
+            "ref": "cisco"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Sign up for a Cisco account using this [link](https://id.cisco.com/oauth2/default/v1/authorize?response_type=code&client_id=sdsprodoktaclient&redirect_uri=https%3A%2F%2Fsoftware.cisco.com%2Fdownload%2Fauthorization-code%2Fcallback&scope=openid%20profile%20offline_access&state=3DJfxJPz8MAs82IVUuPrRkaK)."
+        },
+        {
+            "id": 2,
+            "instruction": "Go to this [link](https://software.cisco.com/download/home/283000185) and sign in using the credentials you just created."
+        },
+        {
+            "id": 3,
+            "instruction": "Under “Most Popular” click on the link that says something like \"Secure Client 5 :5.1.2.42\". Go back to this [link](https://software.cisco.com/download/home/283000185) if you clicked out of it."
+        },
+        {
+            "id": 4,
+            "instruction": "Download the version that matches your operating system."
+        },
+        {
+            "id": 5,
+            "instruction": "Follow the prompts from here, it should be pretty straight forward. "
+        },
+        {
+            "id": 6,
+            "instruction": "Here's a good UNCW link on how to setup a VPN. [Here](https://uncw.teamdynamix.com/TDClient/1875/Portal/KB/ArticleDet?ID=12377)."
+        },
+        {
+            "id": 7,
+            "instruction": "Here are the CSC 455 instructions on how to setup a VPN. Note that this is a &download link&(/download/Practice.docx)."
+        }
+    ]
+}

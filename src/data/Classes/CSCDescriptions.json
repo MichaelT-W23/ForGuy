@@ -1,0 +1,296 @@
+{
+    "Text": [
+        {
+            "page": "CSC Descriptions",
+            "desc": "What information does this page contain?",
+            "pageDescription": "This page contains information only about the computer science courses I took at UNCW. Not non-cs courses.",
+            "searchText": "Search Courses By Name or Description..."
+        }
+    ],
+    "Courses": [
+        {
+            "Name": "CSC 131: Introduction to Computer Science",
+            "Number": "CSC 131",
+            "Title": "Introduction to Computer Science - Python",
+            "Format": "Asynchronous Remote",
+            "Credit Hours": "3",
+            "Professor": "Gulustan Dogan",
+            "Description": "I took this class online during Covid, so it's probably changed a lot. Basic python coding questions and syntax.",
+            "Grading": "",
+            "Tips": "",
+            "Skills": "Python",
+            "Text Editor": "Idle"
+        },
+        {
+            "Name": "CSC 133: Discrete Mathematical Structures",
+            "Number": "CSC 133",
+            "Title": "Discrete Mathematical Structures",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Professor": "Kevin Carlin",
+            "Description": "Overall I remember this being a pretty easy class. It's like fun easy puzzles. 2 tests, a final exam, and like 10 short easy homeworks. Take notes during class and study the homework and the tests should be easy.",
+            "Skills": "A very small amount of Python",
+            "Tips": "Study the homework before tests and take good notes in class.",
+            "Grading": [
+                "Homework - 10%",
+                "Quizzes - 15%",
+                "3 Tests - 60%",
+                "Final Exam - 15%"
+            ]
+        },
+        {
+            "Name": "CSC 231: Introduction to Data Structures",
+            "Number": "CSC 231",
+            "Title": "Introduction to Data Structures",
+            "Format": "In-Person",
+            "Credit Hours": "4",
+            "Professor": "Toni Pence",
+            "Description": "You learn about important data structures such as stacks, queues, linked-lists, binary search trees, etc. You also learn about algorithms like Binary Search, Merge sort, etc. and their time complexities. The tests are easy as long as you study, the labs are typically a bit more difficult.",
+            "Skills": "Python, Data structures, algorithms",
+            "Tips": "Learn how to use debug mode in PyCharm. It can very helpful when debugging data structures.",
+            "Text Editor": "PyCharm",
+            "Grading": [
+                "Quizzes - 15%",
+                "Labs - 10% (Like 10 labs)",
+                "Take Home Programming Assignments - 15% (Like 3 assignments)",
+                "Test 1 - 20%",
+                "Test 2 - 20%",
+                "Final Exam - 20%"
+            ]
+        },
+        {
+            "Name": "CSC 242: Computer Organization",
+            "Number": "CSC 242",
+            "Title": "Computer Organization",
+            "Format": "Asynchronous Remote",
+            "Credit Hours": "3",
+            "Professor": "Gulustan Dogan",
+            "Description": "This was definitely one of my least favorite classes taken at UNCW. It's like converting hexadecimal and binary numbers in the beginning and then assembly code. Like 10 homeworks, 3 exams, and a final exam. She replaced our lowest test grade with the final exam grade. The final exam is pulled straight from the homework. For the tests study the homework and know how everything works.",
+            "Skills": "Assembly",
+            "Grading": [
+                "NOTE: I couldn't find the syllabus. This is from memory.",
+                "3 tests",
+                "Like 8 homeworks",
+                "Final Exam"
+            ],
+            "Tips": ""
+        },
+        {
+            "Name": "CSC 302: Introduction to Artificial Intelligence",
+            "Number": "CSC 302",
+            "Title": "Introduction to Artificial Intelligence",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Professor": "Yang Song",
+            "Description": "I wouldn't recommend taking this class unless you really want to have an Artificial Intelligence concentration. The class is mostly just graphs other than the 5 python coding assignments. The professor talks extremely fast and it can be difficult to get all the necessary information. The tests are also very hard and don't have much information from the slides, but you can use a cheat sheet. Overall the amount of work and difficulty of this class isn't worth it for an elective class. This class is mostly just graphs and python search algorithms. If you want to learn more about actual artificial intelligence, I'd recommend you get a certification. Also, he made us use Python version 3.6 or below in this class and it was kind of a hassle switching between the newer and older versions.",
+            "Skills": "Python and algorithms",
+            "Text Editor": "PyCharm",
+            "Tips": "Go to his office hours",
+            "Grading": [
+                "Midterm Exam - 20%",
+                "Final Exam - 35%",
+                "Programming assignments - 25% (5 assignments total)",
+                "Written assignments - 20% (5 assignments total)"
+            ]
+        },
+        {
+            "Name": "CSC 331: Object-Oriented Programming and Design",
+            "Number": "CSC 331",
+            "Title": "Object-Oriented Programming and Design",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Professor": "Shauna White",
+            "Description": "This class is easy if you have any experience whatsoever with Java. It's like CSC 131 for Java instead of python. The labs are pretty easy as well as the tests. She lets you have a cheat sheet for the tests. For one lab you work in a group of 3. At the end you work in a group of 5 for a 10-minute long project presentation. The project is a JavaFx project written using Java, JavaFx, FXML, and SceneBuilder. JavaFx is a framework for building GUI's for Java. It adds logic to your FXML code, and you can use it to build UI components programmatically in your project, I did both in ours. I personally really like the framework and the end project was definitely my favorite programming project I did for UNCW.",
+            "Skills": "Java, JavaFx, SceneBuilder",
+            "Text Editor": "Intellij IDEA or PyCharm",
+            "Tips": "",
+            "Grading": [
+                "Homework - 10%",
+                "Test 1 - 10%",
+                "Test 2 - 10%",
+                "Final Project - 10%",
+                "Labs - 25%",
+                "Final Exam - 25%",
+                "Attendance - 5%"
+            ]
+        },
+        {
+            "Name": "CSC 340: Scientific Computing",
+            "Number": "CSC 340",
+            "Title": "Scientific Computing",
+            "Format": "Asynchronous Remote",
+            "Credit Hours": "3",
+            "Professor": "Brittany Morago",
+            "Description": "I feel like this class varies a lot, based on what professor you take. I talked to people who took it with other professors and it sounded like a different class entirely. However, I took it online with Dr. Brittany Morago, so that's what I'll describe. There are no tests or quizzes in this class which I really liked. It's just programming assignments and math assignments. The math is like more simple calculus concepts and written mathematical computing problems. It typically explains how to do the problems in the videos so definitely watch them. The programming assignments can be challenging at times. I basically lived in her office hours that semester to ensure that I got a good grade in this class. The programming assignments are in Python and involve most image analysis algorithms using opencv and numpy. If you're struggling definitely watch her videos and go to her office hours. She helps you a lot if you go to her virtual office hours.",
+            "Skills": "Python and Algorithms",
+            "Text Editor": "Visual Studio Code or PyCharm",
+            "Tips": "Go to her office hours and watch the videos she posts.",
+            "Grading": [
+                "Homework - 40% (Roughly 16, but they're pretty short)",
+                "Programming assignments - 60% (6, but they're pretty big)"
+            ]
+        },
+        {
+            "Name": "CSC 342: Operating Systems",
+            "Number": "CSC 342",
+            "Title": "Operating Systems",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Professor": "Clayton Ferner",
+            "Description": "This class is decent overall. The programming assignments are building various parts of python operating systems simulator. The labs are practice problems for the tests and a review of what you learned in class. While they're just graded as completion, definitely still try on them to prepare yourself for the tests and have something to study beforehand.",
+            "Skills": "Python",
+            "Text Editor": "PyCharm",
+            "Tips": "The tests problems draw heavily from the labs, so make sure to study the labs beforehand and not just focus on the slides.",
+            "Grading": [
+                "Programming assignments - 30% (5 assignments total)",
+                "Exam 1 - 10%",
+                "Exam 2 - 10%",
+                "Exam 3 - 10%",
+                "Labs - 10%",
+                "Final Exam - 30%"
+            ]
+        },
+        {
+            "Name": "CSC 351: Applied Software Security",
+            "Number": "CSC 351",
+            "Title": "Applied Software Security",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Professor": "Lucas Layman",
+            "Description": "This class teaches a lot of helpful information. A lot of these topics came up in job interviews and is just helpful to know for coding. The class itself is very easy and I found it's content interesting. You do 4 easy python programming assignments throughout and a couple easy multiple-choice online quizzes. The final-exam is an online taken-home coding assessment. In class Layman, shows many real life examples of things, and demonstrates concepts using JavaScript, html, C, Python, SQL, etc. While you don't have to write in these languages (except Python) just seeing them in use would probably be helpful in learning the basics of them. Overall an extremely easy class without that much work. Would highly recommend.",
+            "Skills": "Python and SQLite3",
+            "Text Editor": "Visual Studio Code and PyCharm",
+            "Tips": "Dr. Layman offers very generous extra credit, take advantage of it.",
+            "Grading": [
+                "Assignments - 40% (4 coding assignments)",
+                "Quizzes - 45% (7 total)",
+                "Final Exam - 15%"
+            ]
+        },
+        {
+            "Name": "CSC 360: Formal Languages and Computability",
+            "Number": "CSC 360",
+            "Title": "Formal Languages and Computability",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Professor": "Curry Guinn",
+            "Description": "I found this class somewhat difficult. It's like a harder a version of discrete math/history of modern computing class. Topics include finite-state machines, regex, turing machines, etc. It's like mathematical puzzles and graphs. You do basically no coding in this class except briefly using python to test regex. I also liked when the professor would discuss the history of computing, future of artificial intelligence, and other stuff like that. I would HIGHLY recommend taking this class with Dr. Curry Guinn. He's more then happy to help you with stuff and is a good teacher/nice person. Also at the end you do a writing assignment on a book about [Alan Turing's life](https://www.amazon.com/Alan-Turing-Enigma-Inspired-Imitation/dp/069116472X/ref=asc_df_069116472X/?tag=hyprod-20&linkCode=df0&hvadid=312045876164&hvpos=&hvnetw=g&hvrand=9784359152110339481&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009703&hvtargid=pla-395340046790&psc=1&mcid=37fdbb254d6e30e4ba9d009104adadde&gclid=CjwKCAiAi6uvBhADEiwAWiyRdiagAK0FsLs-0VK2R8ZZGxNhy7EJ4UCefSRx319-5tF1r6TzVZME3xoCN58QAvD_BwE). While I would always do my work in college, I didn't read a single page of the book and still got a 100% on the assignment. I just skimmed parts of it online and used chatGPT. It's not a difficult writing assignment. Also, you take the quizzes online at home.",
+            "Skills": "A very small amount of Python",
+            "Tips": "Study the homework a lot before the tests and take good notes during class. Don't rely on the slides",
+            "Grading": [
+                "Quizzes - 10% (Roughly 8)",
+                "Homework Assignments - 25% (Roughly 8 assignments)",
+                "Test 1 - 15%",
+                "Test 2 - 15%",
+                "Final Exam - 35%"
+            ]
+        },
+        {
+            "Name": "CSC 380: Design and Analysis of Algorithms",
+            "Number": "CSC 380",
+            "Title": "Design and Analysis of Algorithms",
+            "Format": "Synchronous Remote",
+            "Credit Hours": "3",
+            "Professor": "Gur Adhar",
+            "Description": "You don't code at all in this class. It's just graph problems related to algorithms. While this class is technically synchronous, attendance to the lectures isn't required and he records them. The homeworks draw heavily from the lectures, so make sure to watch the recordings. The tests also draw heavily from the homework so make sure you know what you're doing in that regard. Unfortunately, the tests are worth a lot, so if you get something wrong on the test it will have a somewhat large impact on your grade.",
+            "Skills": "You don't code at all this class",
+            "Tips": "Take this class with Dr. Guinn if possible. Also try and understand the homeworks and watch the lecture recordings.",
+            "Grading": [
+                "Homework - 30% (6 Assignments)",
+                "Midterm 1 - 20%",
+                "Midterm 2 - 20%",
+                "Final Exam - 30%"
+            ]
+        },
+        {
+            "Name": "CSC 385: Professional and Ethical Issues in Computing",
+            "Number": "CSC 385",
+            "Title": "Professional and Ethical Issues in Computing",
+            "Format": "Synchronous Remote",
+            "Credit Hours": "3",
+            "Professor": "Jasmine Gaston",
+            "Description": "This class is overall extremely easy until the end. You do basically nothing but listen to her lecture the entire semester. You have two short exams which contain questions basically directly from the slides. At the end you have a 5-10 minute (I think, mine was 6 minutes) long solo presentation about an ethical issue in computing. You also have a 5 page single spaced paper due on an ethical issue. But other than those two last assignments I found the class super easy. If you do the work you'll probably get an A with no issues.",
+            "Skills": "You don't code at all this class",
+            "Tips": "Start early on the presentation and Research Paper. Don't wait.",
+            "Grading": [
+                "Attendance & Participation - 20%",
+                "Presentations - 20%",
+                "Writing Assignments - 20%",
+                "Exams - 20%",
+                "Research Paper - 20%"
+            ]
+        },
+        {
+            "Name": "CSC 434: Programming Languages",
+            "Number": "CSC 434",
+            "Title": "Programming Languages",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Professor": "Sridhar Narayan",
+            "Description": "This was definitely one of my least favorite classes in the UNCW comp sci curriculum. At the beginning of the class you write parts of made-up UNCW programming language called \"Jiffy\" using Java. After that you work with mostly [SML](https://cs.lmu.edu/~ray/notes/introml/) and [Prolog](https://www.tutorialspoint.com/prolog/prolog_basic_programs.htm). I don't think there's any real reason to know these languages and found that large part of the class kind of pointless. The more useful parts of the class include learning about memory-management, compilers, and other programming language concepts. There are 3 tests throughout each worth 17% of your final grade. The tests are infamously difficult and I'd recommend studying your notes from class, slides, and homeworks. At the end there is a 20-minute long group presentation on a programming language. Most groups have 3 members and my group was assigned Kotlin. We got a 100 on the project and he basically said it was a \"give me\" completion grade. However, I consider us lucky as Kotlin was one of the more well-known languages he assigned. Some obscure ones I saw included Erlang, Clojure, F#, Groovy, etc. More well-known ones included C#, Kotlin, and Ruby.",
+            "Skills": "SML, Prolog, Java, Skippy",
+            "Text Editor": "Eclipse and Visual Studio Code",
+            "Tips": "He sometimes asks obscure questions about stuff you only learned in class on tests, so take notes.",
+            "Grading": [
+                "Assignments - 39%",
+                "Programming Language Presentation - 10%",
+                "Test 1 - 17%",
+                "Test 2 - 17%",
+                "Final Exam - 17%"
+            ]
+        },
+        {
+            "Name": "CSC 450: Software Engineering",
+            "Number": "CSC 450",
+            "Title": "Software Engineering",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Professor": "Lucas Layman",
+            "Description": "This class is pretty straight forward. You're basically assigned to a group of 5 people at the beginning and work on a software engineering project the entire time. The project must have a backend and frontend. There are like 3 quizzes you take online at home. The rest of the grade is just milestones and attendance. Milestones are basically progress points in the project. At the end you have a 20 minute presentation. Note that for the presentation not everyone has to speak.",
+            "Skills": "Whatever tech-stack your team decides to use.",
+            "Text Editor": "Visual Studio Code",            
+            "Tips": "I'd recommend using the following tech stack: Vue.js (Composition Api/Script Setup), python and flask for the backend. It's just the most beginner friendly and easiest to work with for a small project. Also definitely take advantage of the extra credit opportunities.",
+            "Grading": [
+                "Attendance and Completing Peer Evaluations - 30%",
+                "Term Project Deliverables (Milestones/Presentation) - 55%",
+                "Quizzes - 15% (Like 3 quizzes)"
+            ]
+        },
+        {
+            "Name": "CSC 455: Database Design and Implementation",
+            "Number": "CSC 455",
+            "Title": "Database Design and Implementation",
+            "Note": "This class in now called \"CSC 355\". Which I think is appropriate. It's an easy class and I thinks it's good preparation CSC 450.",
+            "Format": "In-Person",
+            "Credit Hours": "3",
+            "Professor": "Marni Ferner",
+            "Description": "Overall I liked this class. I've always been curious about how database work and how SQL is tied into their functionality. The first part of this class is just like databases graphs and showing how the keys are connected to each other or whatever. The second part is SQL and writing queries for a database. The last part is php and a group project. I enjoyed the group project and you don't present it. You don't present it because everyone basically does the same thing. It's also not that hard. Also, the labs you do throughout are completion grades and the Final Exam is the same format as the first two tests.",
+            "Skills": "SQL, PHP, Html",
+            "Text Editor": "Visual Studio Code",      
+            "Grading": [
+                "Labs - 20% (lowest two dropped)",
+                "Quizzes and homework - 20%",
+                "Group project - 24%",
+                "Test 1 - 12%",
+                "Test 2 - 12%",
+                "Final Exam - 12%"
+            ],
+            "Tips": ""
+        },
+        {
+            "Name": "CSC 498: Internship in Computer Science",
+            "Number": "CSC 498",
+            "Title": "Internship in Computer Science",
+            "Format": "Mostly Remote",
+            "Credit Hours": "3",
+            "Professor": "Shauna White",
+            "Description": "This is a 3 credit hour class that's pass/fail. All you do is write 1 paragraph a week summarizing what you did at your internship and at the end you create a poster presentation demonstrating what you did during your internship. Note that you don't present the poster in-front of a group. You just hang it up in Congdon Hall and stand by it the entire time. I only had like 2 people come up to ask me about it during the 2-hour showcase. Also, it's just a completion grade, so it's pretty low-stress. The computing showcase is a great place to meet and talk to employers in the Wilmington area. @This was my poster@[{ 'name': 'ImageView', 'params': { 'Name': 'Amotions Poster', 'Description': 'This was my CSC 498 poster for the computing showcase. I got a 100 on it.', 'Pic': 'AmotionsPoster.png'} }]. I got a 100 on it.",
+            "Skills": "Whatever skills your internship uses.",
+            "Tips": "You can't sign up for this class via Seanet. Contact Shauna White (turners@uncw.edu) if you're interested.",
+            "Grading": [
+                "Weekly Paragraphs - 50%",
+                "Poster presentation - 50%"
+            ]
+        }
+    ]
+}

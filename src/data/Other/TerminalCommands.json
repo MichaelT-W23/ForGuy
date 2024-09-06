@@ -1,0 +1,312 @@
+{
+    "Text": [
+        {
+            "page": "Terminal Commands",
+            "desc": "This is the Terminal Commands page. There's a",
+            "desc2": "practice sequence",
+            "desc3": "table at the bottom."
+        }
+    ],
+    "Creation": [
+        {
+            "Command": "mkdir",
+            "Description": "Make a directory",
+            "Example": "mkdir NewFolder"
+        },
+        {
+            "Command": "touch",
+            "Description": "Create a file",
+            "Example": "touch hello_world.py"
+        }
+    ],
+    "Navigation": [
+        {
+            "Command": "cd",
+            "Description": "Change into a directory",
+            "Example": "cd NewFolder"
+        },
+        {
+            "Command": "cd ~",
+            "Description": "Change back to the topmost directory",
+            "Example": "cd ~"
+        },
+        {
+            "Command": "cd ..",
+            "Description": "Change back to the parent directory of the current directory.",
+            "Example": "cd NewFolder"
+        },
+        {
+            "Command": "cd .",
+            "Description": "Stay at the current directory/do nothing. The single dot is sometimes necessary for file paths.",
+            "Example": "cd ."
+        },
+        {
+            "Command": "mv pathToFile pathToNewFolder",
+            "Description": "Move a file to a new location",
+            "Example": "mv OldFolder/hello_world.py NewFolder/PythonFiles/"
+        },
+        {
+            "Command": "mv pathToFile pathToFile",
+            "Description": "Rename a file",
+            "Example": "mv NewFolder/hello_world.py NewFolder/hello_world.py"
+        }
+    ],
+    "Display": [
+        {
+            "Command": "pwd",
+            "Description": "Print/Display Working Directory",
+            "Example": "pwd"
+        },
+        {
+            "Command": "ls",
+            "Description": "Print/Display all files and directories in the current path",
+            "Example": "ls"
+        },
+        {
+            "Command": "ls",
+            "Description": "Print/Display all files and directories in the current path",
+            "Example": "ls"
+        },
+        {
+            "Command": "<Program> --version",
+            "Description": "Typing \"--version\" after the name of your program can help you see if it's installed and what version it is",
+            "Example": "Python3 --version"
+        },
+        {
+            "Command": "env",
+            "Description": "Print all environment variables.",
+            "Example": "env"
+        }
+    ],
+    "Delete": [
+        {
+            "Command": "rm",
+            "Description": "Remove a file",
+            "Example": "rm hello_world.py"
+        },
+        {
+            "Command": "rm -r",
+            "Description": "Remove a folder and its contents",
+            "Example": "rm -r hello_world.py"
+        },
+        {
+            "Command": "clear",
+            "Description": "Clear a terminal of its contents",
+            "Example": "clear"
+        }
+    ],
+    "Programming": [
+        {
+            "Command": "python3",
+            "Description": "Start a python session. control + d to exit.",
+            "Example": "python3"
+        },
+        {
+            "Command": "python3 file_name.py",
+            "Description": "Run a python file via terminal",
+            "Example": "python3 hello_world.py"
+        },
+        {
+            "Command": "javac FileName.java",
+            "Description": "Compile a java file before running. It will create a \"class\" file",
+            "Example": "javac HelloWorld.java"
+        },
+        {
+            "Command": "java FileName",
+            "Description": "Run a java file.",
+            "Example": "java HelloWorld"
+        },
+        {
+            "Command": "jshell",
+            "Description": "Run a java session. control + d to exit.",
+            "Example": "jshell"
+        }
+    ],
+    "Practice": [
+        {
+            "Command": "mkdir",
+            "Description": "Create Folder1",
+            "Example": "mkdir Folder1"
+        },
+        {
+            "Command": "mkdir",
+            "Description": "Create Folder2",
+            "Example": "mkdir Folder2"
+        },
+        {
+            "Command": "cd",
+            "Description": "Change into the Folder1 directory",
+            "Example": "cd Folder1 "
+        },
+        {
+            "Command": "touch",
+            "Description": "Create a python file",
+            "Example": "touch hello_world.py"
+        },
+        {
+            "Command": "mkdir",
+            "Description": "Create a directory within Folder1",
+            "Example": "mkdir InnerFolder "
+        },
+        {
+            "Command": "ls",
+            "Description": "See all files and folders in Folder1's top directory. Should show hello_world.py and InnerFolder.",
+            "Example": "ls"
+        },
+        {
+            "Command": "cd",
+            "Description": "Change into the InnerFolder",
+            "Example": "cd InnerFolder "
+        },
+        {
+            "Command": "touch",
+            "Description": "Create a python file in the inner folder of Folder1",
+            "Example": "touch cool.py"
+        },
+        {
+            "Command": "touch",
+            "Description": "Create another python file in the inner folder of Folder1",
+            "Example": "touch hello.py "
+        },
+        {
+            "Command": "ls",
+            "Description": "Show all files in the InnerFolder directory. Should show cool.py and hello.py",
+            "Example": "ls"
+        },
+        {
+            "Command": "pwd",
+            "Description": "Show path you're currently on. Should end in /Folder1/InnerFolder",
+            "Example": "pwd"
+        },
+        {
+            "Command": "cd ..",
+            "Description": "Go back to previous directory",
+            "Example": "cd .."
+        },
+        {
+            "Command": "pwd",
+            "Description": "Show path you're currently on. Should end in /Folder1",
+            "Example": "pwd"
+        },
+        {
+            "Command": "ls",
+            "Description": "Show files and folders in current directory. Should show hello_world.py and InnerFolder",
+            "Example": "ls"
+        },
+        {
+            "Command": "rm",
+            "Description": "Delete hello_world.py",
+            "Example": "rm hello_world.py"
+        },
+        {
+            "Command": "ls",
+            "Description": "Show files and folders in current directory. Should only see InnerFolder",
+            "Example": "ls"
+        },
+        {
+            "Command": "mv pathToFile pathToFile",
+            "Description": "Rename cool.py in InnerFolder to new_name.py",
+            "Example": "mv InnerFolder/cool.py InnerFolder/new_name.py"
+        },
+        {
+            "Command": "cd",
+            "Description": "Change into the InnerFolder",
+            "Example": "cd InnerFolder "
+        },
+        {
+            "Command": "pwd",
+            "Description": "Print working directory. Should end in /Folder1/InnerFolder",
+            "Example": "pwd"
+        },
+        {
+            "Command": "ls",
+            "Description": "Show files and folders in current directory. Should show hello.py and new_name.py now.",
+            "Example": "ls"
+        },
+        {
+            "Command": "cd .",
+            "Description": "This shouldn't do anything. Change into same directory",
+            "Example": "cd . "
+        },
+        {
+            "Command": "pwd",
+            "Description": "Print working directory. Should end in /Folder1/InnerFolder. Same as last time.",
+            "Example": "pwd"
+        },
+        {
+            "Command": "cd ~",
+            "Description": "Change out of Folder1 into the topmost parent directory.",
+            "Example": "cd ~"
+        },
+        {
+            "Command": "pwd",
+            "Description": "Print working directory. Should NOT have /Folder1 at the end. Should be the topmost parent directory.",
+            "Example": "pwd"
+        },
+        {
+            "Command": "cd",
+            "Description": "Change into Folder2",
+            "Example": "cd Folder2"
+        },
+        {
+            "Command": "touch",
+            "Description": "Create a python file in Folder2",
+            "Example": "touch pewdi.py"
+        },
+        {
+            "Command": "mv pathToFile pathToNewFolder",
+            "Description": "Move the new_name.py file from the InnerFolder in Folder1 to the current directory in Folder2.",
+            "Example": "mv ../Folder1/InnerFolder/new_name.py ./"
+        },
+        {
+            "Command": "ls",
+            "Description": "See all files in the Folder2 directory. Should show pewdi.py and new_name.py.",
+            "Example": "ls"
+        },
+        {
+            "Command": "cd ~",
+            "Description": "Change out of Folder2 into the topmost parent directory.",
+            "Example": "cd ~"
+        },
+        {
+            "Command": "cd",
+            "Description": "Change into Folder1",
+            "Example": "cd Folder1"
+        },
+        {
+            "Command": "cd",
+            "Description": "Change into InnerFolder",
+            "Example": "cd InnerFolder"
+        },
+        {
+            "Command": "ls",
+            "Description": "See all files in the InnerFolder directory. Should only show hello.py. The new_name.py file has been moved.",
+            "Example": "ls"
+        },
+        {
+            "Command": "cd ~",
+            "Description": "Change out of Folder1 into the topmost parent directory.",
+            "Example": "cd ~"
+        },
+        {
+            "Command": "rm -r",
+            "Description": "Delete the Folder1 directory.",
+            "Example": "rm -r Folder1"
+        },
+        {
+            "Command": "rm -r",
+            "Description": "Delete the Folder2 directory.",
+            "Example": "rm -r Folder2"
+        },
+        {
+            "Command": "clear",
+            "Description": "clear the terminal",
+            "Example": "clear"
+        },
+        {
+            "Command": "ls",
+            "Description": "Display all files and folders in the topmost parent directory. Folder1 and Folder2 should no longer appear.",
+            "Example": "ls"
+        }
+    ]
+}

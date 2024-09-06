@@ -1,0 +1,317 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup a React.js Project",
+            "desc": "How to setup a React.js project that uses Vite and Tailwind.css.",
+            "ref": "react"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Make sure you have node installed by running the following command. If it's installed it should output the version.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "node -v",
+                "CopyCode": "node -v"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "Install Vite.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm install -g create-vite",
+                "CopyCode": "npm install -g create-vite"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Note: You can skip this step if you want to setup your project manually. Go to Create a &Project Templates Folder&[TemplatesLink] and complete the instructions. It will give you a folder you can use to download this Vue project structure. After you're done, copy that folder structure using the following command.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cp -R templates/vue-project /path/to/destination/projects-new-name",
+                "CopyCode": "cp -R templates/vue-project /path/to/destination/projects-new-name"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Create a React project using Vite. Note that \"react-project\" will be the name of your project and you can change it to be whatever you want.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm create vite@latest react-project -- --template react",
+                "CopyCode": "npm create vite@latest react-project -- --template react"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Change into your project directory.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd react-project",
+                "CopyCode": "cd react-project"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Install dependencies.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm install",
+                "CopyCode": "npm install"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "Install Tailwind CSS. Note you can clear your terminal when you're by doing \"command + k\".",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm install -D tailwindcss postcss autoprefixer\nnpx tailwindcss init -p",
+                "CopyCode": "npm install -D tailwindcss postcss autoprefixer\nnpx tailwindcss init -p"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "Install the React router.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm install react-router-dom@6",
+                "CopyCode": "npm install react-router-dom@6"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "Now open your repository in VSCode. You can use the \"code .\" command if you have it installed.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "code .",
+                "CopyCode": "code ."
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Open the \"tailwind.config.js\" file in the topmost directory. Delete its current contents and paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "FormatCode": "/** @type {import('tailwindcss').Config} */\nexport default {\n  content: [\n    \"./index.html\",\n    \"./src/**/*.{js,jsx,ts,tsx}\",\n  ],\n  theme: {\n    extend: {\n      fontFamily: {\n        sans: ['Arial', 'sans-serif']\n      }\n    }\n  },\n  plugins: [],\n}",
+                "CopyCode": "/** @type {import('tailwindcss').Config} */\nexport default {\n  content: [\n    \"./index.html\",\n    \"./src/**/*.{js,jsx,ts,tsx}\",\n  ],\n  theme: {\n    extend: {\n      fontFamily: {\n        sans: ['Arial', 'sans-serif']\n      }\n    }\n  },\n  plugins: [],\n}"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "Run the server locally just to make sure the project is running currently. The site should currently say \"Vite  + React\" if installed correctly. After confirming it's installed correctly, stop running the server and go back to your code. You can stop the server by doing \"control + c\".",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm run dev",
+                "CopyCode": "npm run dev"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "Go to the \"src\" repository of your project and open the file called \"index.css\". Delete its current contents and paste the following code. Save the file when you're done (command + s).",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "CSS",
+                "FormatCode": "@tailwind base;\n@tailwind components;\n@tailwind utilities;",
+                "CopyCode": "@tailwind base;\n@tailwind components;\n@tailwind utilities;"
+            }
+        },
+        {
+            "id": 13,
+            "instruction": "THIS IS AN OPTIONAL STEP. If the \"@tailwind\" keyword is being underlined yellow with a message saying \"Unknown word\", paste the following JSON data into your VSCode Settings file. See this [link](https://flaviocopes.com/fix-unknown-at-rule-tailwind/) for additional details. If there's no error or if you don't mind the error, you can skip this step. It should work either way it will just be underlined..",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "JSON",
+                "FormatCode": "\"files.associations\": {\n    \"*.css\": \"tailwindcss\"\n},",
+                "CopyCode": "\"files.associations\": {\n\t\"*.css\": \"tailwindcss\"\n},"
+            }
+        },
+        {
+            "id": 14,
+            "instruction": "Now remove unused assets. Press \"command + k\" to clear your terminal after you're done.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "rm src/assets/react.svg\nrm public/vite.svg",
+                "CopyCode": "rm src/assets/react.svg\nrm public/vite.svg"
+            }
+        },
+        {
+            "id": 15,
+            "instruction": "Change into the src directory and make the components, styles, utils, views, and router folders. You can run \"ls\" at the end to confirm it worked.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd src\nmkdir -p components styles utils views router\nls",
+                "CopyCode": "cd src\nmkdir -p components styles utils views router\nls"
+            }
+        },
+        {
+            "id": 16,
+            "instruction": "Create the following folders in the \"styles\" directory.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd styles\nmkdir -p components views",
+                "CopyCode": "cd styles\nmkdir -p components views"
+            }
+        },
+        {
+            "id": 17,
+            "instruction": "Create the following files in the components and views directory.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "touch components/RouterBtn.css\ntouch views/Home.css",
+                "CopyCode": "touch components/RouterBtn.css\ntouch views/Home.css"
+            }
+        },
+        {
+            "id": 18,
+            "instruction": "In the styles/components directory in the \"RouterBtn.css\" file paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "CSS",
+                "FormatCode": ".button {\n    display: inline-block;\n    padding: 10px 20px;\n    color: white;\n    background-color: #007bff;\n    border: none;\n    border-radius: 4px;\n    text-align: center;\n    text-decoration: none;\n    font-size: 16px;\n}\n\n.button:hover {\n    background-color: #0056b3;\n}\n",
+                "CopyCode": ".button {\n\tdisplay: inline-block;\n\tpadding: 10px 20px;\n\tcolor: white;\n\tbackground-color: #007bff;\n\tborder: none;\n\tborder-radius: 4px;\n\ttext-align: center;\n\ttext-decoration: none;\n\tfont-size: 16px;\n}\n\n.button:hover {\n\tbackground-color: #0056b3;\n}\n"
+            }
+        },
+        {
+            "id": 19,
+            "instruction": "In the styles/views directory in the \"Home.css\" file paste the following code",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "CSS",
+                "FormatCode": ".title {\n    color: pink;\n    font-family: Arial, sans-serif;\n}\n",
+                "CopyCode": ".title {\n\tcolor: pink;\n\tfont-family: Arial, sans-serif;\n}\n"
+            }
+        },
+        {
+            "id": 20,
+            "instruction": "Change back into the main src directory and create the following files in the various folders.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd ..\ntouch components/RouterBtn.jsx\ntouch views/Home.jsx\ntouch views/SecondPage.jsx\ntouch router/index.jsx",
+                "CopyCode": "cd ..\ntouch components/RouterBtn.jsx\ntouch views/Home.jsx\ntouch views/SecondPage.jsx\ntouch router/index.jsx"
+            }
+        },
+        {
+            "id": 21,
+            "instruction": "In the src/router directory Open the \"index.jsx\" file and paste and save the following code in it.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "React",
+                "FormatCode": "import React from 'react'\nimport { BrowserRouter as Router, Routes, Route } from 'react-router-dom'\nimport HomePage from '../views/Home'\nimport SecondPage from '../views/SecondPage'\n\nexport function AppRouter() {\n  return (\n    <Router>\n      <Routes>\n        <Route path=\"/\" element={<HomePage />} />\n        <Route path=\"/second-page\" element={<SecondPage />} />\n      </Routes>\n    </Router>\n  );\n}",
+                "CopyCode": "import React from 'react';\nimport { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\nimport HomePage from '../views/Home';\nimport SecondPage from '../views/SecondPage';\n\nexport function AppRouter() {\n  return (\n    <Router>\n      <Routes>\n        <Route path=\"/\" element={<HomePage />} />\n        <Route path=\"/second-page\" element={<SecondPage />} />\n      </Routes>\n    </Router>\n  );\n}"
+            }
+        },
+        {
+            "id": 22,
+            "instruction": "In the src/components directory open the \"RouterBtn.jsx\" file and paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "React",
+                "FormatCode": "import React from 'react'\nimport { Link } from 'react-router-dom'\nimport '../styles/components/RouterBtn.css'\n\nfunction RouterBtn({ path, buttonText }) {\n  return (\n    <Link to={path} className=\"button\">\n      {buttonText}\n    </Link>\n  );\n}\n\nexport default RouterBtn;",
+                "CopyCode": "import React from 'react'\nimport { Link } from 'react-router-dom'\nimport '../styles/components/RouterBtn.css'\n\nfunction RouterBtn({ path, buttonText }) {\n  return (\n    <Link to={path} className=\"button\">\n      {buttonText}\n    </Link>\n  );\n}\n\nexport default RouterBtn;"
+            }
+        },
+        {
+            "id": 23,
+            "instruction": "In the src/views directory open the \"Home.jsx\" file and paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "React",
+                "FormatCode": "import React from 'react'\nimport RouterBtn from '../components/RouterBtn'\nimport '../styles/views/Home.css'\n\nfunction HomePage() {\n  return (\n    <div>\n      <p className=\"title\">HOME PAGE</p>\n      <RouterBtn path=\"/second-page\" buttonText=\"Go to 2nd page\" />\n    </div>\n  );\n}\n\nexport default HomePage;",
+                "CopyCode": "import React from 'react'\nimport RouterBtn from '../components/RouterBtn'\nimport '../styles/views/Home.css'\n\nfunction HomePage() {\n  return (\n    <div>\n      <p className=\"title\">HOME PAGE</p>\n      <RouterBtn path=\"/second-page\" buttonText=\"Go to 2nd page\" />\n    </div>\n  );\n}\n\nexport default HomePage;"
+            }
+        },
+        {
+            "id": 24,
+            "instruction": "In the src/views directory open the \"SecondPage.jsx\" file and paste the following code. This incorporates tailwind.css and state variables.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "React",
+                "FormatCode": "import { React, useState } from 'react'\nimport RouterBtn from '../components/RouterBtn'\n\nfunction SecondPage() {\n  const [count, setCount] = useState(0);\n\n  const incrementCount = () => {\n    setCount(count + 1);\n  };\n\n  return (\n    <div>\n      <p className=\"text-purple-500 font-sans\">SECOND PAGE</p>\n      <RouterBtn path=\"/\" buttonText=\"Go to Home Page\" />\n      <div>\n        <button onClick={incrementCount}\n        className=\"mt-2 px-4 py-2 text-white bg-gray-500\">\n          Count {count}\n        </button>\n      </div>\n    </div>\n  );\n}\n\nexport default SecondPage;\n",
+                "CopyCode": "import { React, useState } from 'react'\nimport RouterBtn from '../components/RouterBtn'\n\nfunction SecondPage() {\n  const [count, setCount] = useState(0);\n\n  const incrementCount = () => {\n    setCount(count + 1);\n  };\n\n  return (\n    <div>\n      <p className=\"text-purple-500 font-sans\">SECOND PAGE</p>\n      <RouterBtn path=\"/\" buttonText=\"Go to Home Page\" />\n      <div>\n        <button onClick={incrementCount}\n        className=\"mt-2 px-4 py-2 text-white bg-gray-500 hover:bg-gray-700\">\n          Count {count}\n        </button>\n      </div>\n    </div>\n  );\n}\n\nexport default SecondPage;\n"
+            }
+        },
+        {
+            "id": 25,
+            "instruction": "Now in \"App.jsx\" in the top-most directory of src, delete the contents of the file, and paste the following.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "React",
+                "FormatCode": "import { AppRouter } from './router'\nimport './App.css'\n\nfunction App() {\n  return (\n    <>\n      <p class=\"text-2xl\">TEST WEBSITE</p>\n      <AppRouter />\n    </>\n  );\n}\n\nexport default App",
+                "CopyCode": "import { AppRouter } from './router'\nimport './App.css'\n\nfunction App() {\n  return (\n    <>\n      <p class=\"text-2xl\">TEST WEBSITE</p>\n      <AppRouter />\n    </>\n  );\n}\n\nexport default App"
+            }
+        },
+        {
+            "id": 26,
+            "instruction": "In the top-most directory of the src file, open \"App.css\". Remove the contents of the file and paste the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Javascript",
+                "DisplayLang": "CSS",
+                "FormatCode": "#root {\n  max-width: 1280px;\n  margin: 0 auto;\n  padding: 2rem;\n  text-align: center;\n}",
+                "CopyCode": "#root {\n\tmax-width: 1280px;\n\tmargin: 0 auto;\n\tpadding: 2rem;\n\ttext-align: center;\n}"
+            }
+        },
+        {
+            "id": 27,
+            "instruction": "Run your project to assure everything's working correctly.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm run dev",
+                "CopyCode": "npm run dev"
+            }
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "Text": [
+        {
+            "page": "UI/UX Design Tips",
+            "desc": "These are UI/UX Design Tips."
+        }
+    ],
+    "UIDesignTips": [
+        {
+            "id": 1,
+            "Underlined": "Have a \"Center\" of the page that contains all necessary components and information",
+            "Tip": "The sides could contain components that disappear when the screen shrinks to a different width. You could also change the components being displayed and have a component with identical functionality."
+        },
+        {
+            "id": 2,
+            "Underlined": "Think of your UI as a vertical stack",
+            "Tip": "Code and design your UI starting from the top to bottom. Add side components after you design the center. Not that a \"div\" element in HTML vertically stacks elements on the page. Think about components like stacking bricks on top of each other."
+        },
+        {
+            "id": 3,
+            "Underlined": "Use padding and relative positioning instead of absolute positioning",
+            "Tip": "This will help your UI components collapse and expand synchronously with different screen sizes."
+        },
+        {
+            "id": 4,
+            "Underlined": "Use fonts, logos, and colors to make your UI look unique, not designs",
+            "Tip": "Many UI designs and components are very similar, but you probably haven't really noticed due to the different fonts, logos, and colors. For example, the YouTube subscription page and the instagram main scroll page and basically the exact same, but look completely different due to their different fonts, colors, and overall \"vibe\". Try not to make excessively weird/confusing UI designs. Try for the for the most part to use vertically stacked rectangles, squares, and circles were appropriate."
+        },
+        {
+            "id": 5,
+            "Underlined": "Provide \"responsive\" feedback to the user",
+            "Tip": "Whenever the user hovers over something or clicks something, have the UI respond to it in someway. For example, when the user hovers over a button, change its color or make it bigger to indicate that it does something when clicked. Whenever a button is clicked always indicate through either button text changes, color changes, alerts, etc. whether the action was performed successfully or not. "
+        },
+        {
+            "id": 6,
+            "Underlined": "Don't use flashy colors excessively",
+            "Tip": "Most popular UI's such as YouTube, TikTok, Instagram, etc. use mostly muted colors such as grey, white, and black with a small \"splash\" of colors like blue, red, purple, etc. A completely bright neon red UI probably won't look good, and a completely grey UI might come across as dull or bland. Try to find a good mixture of both, I'd say like 85-90% muted, and 10% colorful. Also try to spread the color throughout the UI and not have it all be in one place."
+        },
+        {
+            "id": 7,
+            "Underlined": "Take Inspiration from other UI's",
+            "Tip": "Kind of elaborating on point 4, be observant when you're using apps and look out for UI designs you like and try to take inspiration from them. "
+        },
+        {
+            "id": 8,
+            "Underlined": "Collapse horizontally stacked elements into vertically stacked elements when the screen's width decreases",
+            "Tip": "For example, say you have a row of horizontally aligned cards. When the user shrinks the width of the screen the cards could go underneath one another in a vertical stack."
+        },
+        {
+            "id": 9,
+            "Underlined": "Include \"whitespace\" in your UI",
+            "Tip": "What I mean by \"whitespace\" in this context is part of the screen that contains just color and no UI components. The main benefit of this is that will help your design adapt to different screen sizes better. Since the size of the colored background isn't essential it can expand and shrink as necessary. It also helps keep your UI look \"Clean\" and not overly cluttered."
+        },
+        {
+            "id": 10,
+            "Underlined": "For mobile development, use cards that take up the entire width of the screen",
+            "Tip": "A common UI design for apps is to make white cards that take the entire width of the screen. These cards could contain information and components like buttons."
+        },
+        {
+            "id": 11,
+            "Underlined": "Make an intuitive user interface",
+            "Tip": "Try to make a somewhat simple, easy to understand user interface. Make buttons that perform intuitive actions, place views in places that makes sense, create obvious navigation, etc."
+        },
+        {
+            "id": 12,
+            "Underlined": "Don't make \"deceptive\" components",
+            "Tip": "What I mean by this is don't use icons and buttons that perform non-intuitive actions. An example of this would be a search magnifying glass icon that leads into a different screen where you select items. That's not what you'd expect that icon to do when clicked."
+        },
+        {
+            "id": 13,
+            "Underlined": "Draw your UI on paper",
+            "Tip": "Drawing designs on paper is a great way to save time and plan what you're going to do."
+        },
+        {
+            "id": 14,
+            "Underlined": "Include functionality to \"undo\" an action",
+            "Tip": "Make sure you app has easy, intuitive ways to undo an action. An example of this would be the ability to unsend or edit a text in a messaging app."
+        },
+        {
+            "id": 15,
+            "Underlined": "Read \"8 Golden Rules of Interface Design\" by Ben Schneiderman",
+            "Tip": "This is a relatively short article that Dr. Layman shared with us in CSC 450. It has some really good advice and you can check it out [here](https://www.cs.umd.edu/users/ben/goldenrules.html)."
+        }
+    ],
+    "IBMDesignTips": [
+        {
+            "Underlined": "Top Prompts and hints for Front end code Maintenance from a random IBM repository",
+            "tips": [
+                "Use CSS media queries to make the dashboard responsive for different screen sizes.",
+                "Add ARIA roles and attributes to improve accessibility for users with disabilities.",
+                "Implement error boundaries to handle errors gracefully within the component.",
+                "Improve error handling for fetching CSV data.",
+                "Generate code to implement focus management using the tabIndex property."
+            ]
+        }
+    ],
+    "Other": [
+        "UI/UX Designs I like ",
+        "Uber ",
+        "Waze",
+        "Alarmy "
+    ]
+}

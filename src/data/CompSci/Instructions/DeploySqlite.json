@@ -1,0 +1,41 @@
+{
+    "MultiSet": [
+        {
+            "Info": [
+                {
+                    "title": "Deploy the Vue, Flask and SQLite3 app to PythonAnywhere",
+                    "desc": "Deploy the app you created in instruction set 9 to Amazon Web Services.",
+                    "ref": "deploy-sqlite"
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Description of step 1 for Set 1."
+                },
+                {
+                    "id": 2,
+                    "instruction": "Description of step 2 for Set 1."
+                }
+            ]
+        },
+        {
+            "Info": [
+                {
+                    "title": "Set 2: How to Setup Node.js Environment",
+                    "desc": "Guide on setting up a Node.js environment."
+                }
+            ],
+            "Instructions": [
+                {
+                    "id": 1,
+                    "instruction": "Description of step 1 for Set 2."
+                },
+                {
+                    "id": 2,
+                    "instruction": "Description of step 2 for Set 2."
+                }
+            ]
+        }
+    ]
+}

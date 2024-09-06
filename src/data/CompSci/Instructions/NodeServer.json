@@ -1,0 +1,167 @@
+{
+    "Info": [
+        {
+            "title": "How to Setup a Node Server",
+            "desc": "How to setup a Node server that interacts with an html frontend. Node.js is a good framework to know and is popular at IBM.",
+            "ref": "node-server"
+        }
+    ],
+    "Instructions": [
+        {
+            "id": 1,
+            "instruction": "Make sure you have npm and node installed. If one of these doesn't return the version see the &How to Setup Node.js&[NodeLink] instruction page to set it up.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "node -v\nnpm -v",
+                "CopyCode": "node -v\nnpm -v"
+            }
+        },
+        {
+            "id": 2,
+            "instruction": "Create a node_server folder and initialize a node project. It will output the data of the package.json file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "mkdir node_server\ncd node_server\nnpm init -y",
+                "CopyCode": "mkdir node_server\ncd node_server\nnpm init -y"
+            }
+        },
+        {
+            "id": 3,
+            "instruction": "Install the node dependencies.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "npm install express sqlite3 sequelize portfinder",
+                "CopyCode": "npm install express sqlite3 sequelize portfinder"
+            }
+        },
+        {
+            "id": 4,
+            "instruction": "Create a server.js file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "touch server.js",
+                "CopyCode": "touch server.js"
+            }
+        },
+        {
+            "id": 5,
+            "instruction": "Open your \"node_server\" folder in VSCode and paste the following code into the \"server.js\" file.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "JavaScript",
+                "DisplayLang": "Node.js",
+                "FormatCode": "const express = require('express');\nconst bodyParser = require('body-parser');\nconst { Sequelize, DataTypes } = require('sequelize');\nconst path = require('path');\nconst portfinder = require('portfinder');\n\nconst app = express();\nconst BASE_PORT = 3000;\n\n// Middleware\napp.use(bodyParser.json());\n\n// Database setup\nconst sequelize = new Sequelize({\n  dialect: 'sqlite',\n  storage: path.join(__dirname, 'items.db'),\n});\n\nconst Item = sequelize.define('Item', {\n  name: {\n    type: DataTypes.STRING,\n    allowNull: false,\n  }\n}, {\n  timestamps: false\n});\n\n// Initialize the database\nasync function initDb() {\n  await sequelize.sync();\n  console.log(\"Database initialized\");\n}\n\n// Serve the index.html file at the root URL\napp.get('/', (req, res) => {\n  res.sendFile(path.join(__dirname, 'public', 'index.html'));\n});\n\n// Routes\napp.get('/items', async (req, res) => {\n  const items = await Item.findAll();\n  res.json(items);\n});\n\napp.post('/add-item', async (req, res) => {\n  const { name } = req.body;\n  const newItem = await Item.create({ name });\n  res.json({ message: \"Item added successfully\", id: newItem.id });\n});\n\n// Start the server\nportfinder.basePort = BASE_PORT;\n\nportfinder.getPortPromise()\n  .then((PORT) => {\n    app.listen(PORT, async () => {\n      await initDb();\n      console.log(`\\nServing at port \\x1b[94mhttp://localhost:${PORT}/\\x1b[0m`);\n    });\n  })\n  .catch((err) => {\n    console.error(err);\n  });\n",
+                "CopyCode": "const express = require('express');\nconst bodyParser = require('body-parser');\nconst { Sequelize, DataTypes } = require('sequelize');\nconst path = require('path');\nconst portfinder = require('portfinder');\n\nconst app = express();\nconst BASE_PORT = 3000;\n\n// Middleware\napp.use(bodyParser.json());\n\n// Database setup\nconst sequelize = new Sequelize({\n  dialect: 'sqlite',\n  storage: path.join(__dirname, 'items.db'),\n});\n\nconst Item = sequelize.define('Item', {\n  name: {\n    type: DataTypes.STRING,\n    allowNull: false,\n  }\n}, {\n  timestamps: false\n});\n\n// Initialize the database\nasync function initDb() {\n  await sequelize.sync();\n  console.log(\"Database initialized\");\n}\n\n// Serve the index.html file at the root URL\napp.get('/', (req, res) => {\n  res.sendFile(path.join(__dirname, 'public', 'index.html'));\n});\n\n// Routes\napp.get('/items', async (req, res) => {\n  const items = await Item.findAll();\n  res.json(items);\n});\n\napp.post('/add-item', async (req, res) => {\n  const { name } = req.body;\n  const newItem = await Item.create({ name });\n  res.json({ message: \"Item added successfully\", id: newItem.id });\n});\n\n// Start the server\nportfinder.basePort = BASE_PORT;\n\nportfinder.getPortPromise()\n  .then((PORT) => {\n    app.listen(PORT, async () => {\n      await initDb();\n      console.log(`\\nServing at port \\x1b[94mhttp://localhost:${PORT}/\\x1b[0m`);\n    });\n  })\n  .catch((err) => {\n    console.error(err);\n  });\n"
+            }
+        },
+        {
+            "id": 6,
+            "instruction": "Open a new terminal, change back into your folder and run the server.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd node_server\nnode server.js",
+                "CopyCode": "cd node_server\nnode server.js"
+            }
+        },
+        {
+            "id": 7,
+            "instruction": "Keep your server running, but open a new terminal. Run the following commands to make POST and GET requests to your server.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Command/HTTP Request",
+                "FormatCode": "curl -X POST http://localhost:3000/add-item \\\n-H \"Content-Type: application/json\" \\\n-d '{\"name\": \"Shirt\"}'\n\ncurl -X POST http://localhost:3000/add-item \\\n-H \"Content-Type: application/json\" \\\n-d '{\"name\": \"Pants\"}'\n\ncurl http://localhost:3000/items",
+                "CopyCode": "curl -X POST http://localhost:3000/add-item \\\n-H \"Content-Type: application/json\" \\\n-d '{\"name\": \"Shirt\"}'\n\ncurl -X POST http://localhost:3000/add-item \\\n-H \"Content-Type: application/json\" \\\n-d '{\"name\": \"Pants\"}'\n\ncurl http://localhost:3000/items"
+            }
+        },
+        {
+            "id": 8,
+            "instruction": "You can create an index.html file to create frontend for your server.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "cd node_server\nmkdir public\ntouch public/index.html",
+                "CopyCode": "cd node_server\nmkdir public\ntouch public/index.html"
+            }
+        },
+        {
+            "id": 9,
+            "instruction": "Now open the \"index.html\" file in the \"public\" folder. Paste in the following code.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "HTML",
+                "FormatCode": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Item Manager</title>\n</head>\n<body>\n    <h1>Item Manager</h1>\n\n    <h2>Add New Item</h2>\n    <form id=\"addItemForm\">\n        <label for=\"itemName\">Item Name:</label>\n        <input type=\"text\" id=\"itemName\" name=\"itemName\" required>\n        <button type=\"submit\">Add Item</button>\n    </form>\n\n    <h2>All Items</h2>\n    <button onclick=\"getAllItems()\">Fetch Items</button>\n    <ul id=\"itemsList\"></ul>\n\n    <script>\n    document.getElementById(\"addItemForm\").onsubmit = async (event) => {\n\tevent.preventDefault();\n\tconst itemName = document.getElementById('itemName').value;\n\n\tconst response = await fetch('/add-item', {\n\t    method: 'POST',\n\t    headers: {\n\t\t'Content-Type': 'application/json',\n\t    },\n\t    body: JSON.stringify({ name: itemName }),\n\t});\n\n\tconst result = await response.json();\n\talert(result.message);\n\tdocument.getElementById('addItemForm').reset();\n\tgetAllItems();\n    };\n\n    async function getAllItems() {\n\tconst response = await fetch('/items');\n\tconst items = await response.json();\n\tconst itemsList = document.getElementById('itemsList');\n\titemsList.innerHTML = '';\n\n\titems.forEach(item => {\n            const listItem = document.createElement('li');\n            listItem.textContent = `${item.name} (ID: ${item.id})`;\n            itemsList.appendChild(listItem);\n\t});\n    }\n    </script>\n</body>\n</html>",
+                "CopyCode": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t<title>Item Manager</title>\n</head>\n<body>\n\t<h1>Item Manager</h1>\n\n\t<h2>Add New Item</h2>\n\t<form id=\"addItemForm\">\n\t\t<label for=\"itemName\">Item Name:</label>\n\t\t<input type=\"text\" id=\"itemName\" name=\"itemName\" required>\n\t\t<button type=\"submit\">Add Item</button>\n\t</form>\n\n\t<h2>All Items</h2>\n\t<button onclick=\"getAllItems()\">Fetch Items</button>\n\t<ul id=\"itemsList\"></ul>\n\n\t<script>\n\tdocument.getElementById(\"addItemForm\").onsubmit = async (event) => {\n\t\tevent.preventDefault();\n\t\tconst itemName = document.getElementById('itemName').value;\n\n\t\tconst response = await fetch('/add-item', {\n\t\t\tmethod: 'POST',\n\t\t\theaders: {\n\t\t\t\t'Content-Type': 'application/json',\n\t\t\t},\n\t\t\tbody: JSON.stringify({ name: itemName }),\n\t\t});\n\n\t\tconst result = await response.json();\n\t\talert(result.message);\n\t\tdocument.getElementById('addItemForm').reset();\n\t\tgetAllItems();\n\t};\n\n\tasync function getAllItems() {\n\t\tconst response = await fetch('/items');\n\t\tconst items = await response.json();\n\t\tconst itemsList = document.getElementById('itemsList');\n\t\titemsList.innerHTML = '';\n\n\t\titems.forEach(item => {\n\t\t\tconst listItem = document.createElement('li');\n\t\t\tlistItem.textContent = `${item.name} (ID: ${item.id})`;\n\t\t\titemsList.appendChild(listItem);\n\t\t});\n\t}\n\t</script>\n</body>\n</html>"
+            }
+        },
+        {
+            "id": 10,
+            "instruction": "Now rerun your server.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "FormatCode": "node server.js",
+                "CopyCode": "node server.js"
+            }
+        },
+        {
+            "id": 11,
+            "instruction": "Open the localhost link in a browser. You should now see your html frontend.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "Command",
+                "DisplayLang": "Link",
+                "FormatCode": "http://localhost:3000/",
+                "CopyCode": "http://localhost:3000/"
+            }
+        },
+        {
+            "id": 12,
+            "instruction": "You can add items to your database using the frontend. Refresh the \".db\" file to see changes."
+        },
+        {
+            "id": 13,
+            "instruction": "If you want to query the database do step 14 - 17."
+        },
+        {
+            "id": 14,
+            "instruction": "Open your \"items.db\" file and press \"command + shift + p\" to open the command palette. Type \"SQLite: New Query\" in the search bar and click on it."
+        },
+        {
+            "id": 15,
+            "instruction": "In the --SQLite file. Paste the following SQL query.",
+            "Code": {
+                "Name": "",
+                "Description": "",
+                "Language": "fxml",
+                "DisplayLang": "SQL",
+                "FormatCode": "SELECT * FROM items;",
+                "CopyCode": "SELECT * FROM items;"
+            }
+        },
+        {
+            "id": 16,
+            "instruction": "Run the SQL query by right-clicking in the --SQLite file and pressing \"Run query\". Choose the \"items.db\" file in the results."
+        },
+        {
+            "id": 17,
+            "instruction": "You should now see the result table of your query."
+        }
+    ]
+}
