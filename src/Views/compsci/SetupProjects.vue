@@ -298,7 +298,7 @@ onUnmounted(() => {
 .cmd-table {
     margin-top: -40px;
     margin-bottom: 40px;
-    max-width: 400px; 
+    max-width: 600px; 
     margin-left: auto;
     margin-right: auto;
 }
