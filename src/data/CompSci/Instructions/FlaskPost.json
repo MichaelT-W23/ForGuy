@@ -1289,7 +1289,7 @@
                 },
                 {
                     "id": 2,
-                    "instruction": "<u><b>src/assets</u></b> - Where you'll put things like your pictures, "
+                    "instruction": "<u><b>src/assets</u></b> - Where you'll put things like your pictures, data, etc."
                 },
                 {
                     "id": 3,
@@ -1297,7 +1297,7 @@
                 },
                 {
                     "id": 4,
-                    "instruction": "<u><b>src/lib</u></b> - Where you'll put the link to where your backend Rest API is being hosted. For this project it should probably be something like \"http://127.0.0.1:5000\" in Development."
+                    "instruction": "<u><b>src/lib</u></b> - Where you'll put the link to where your backend Rest API is being hosted. For this project it should probably be something like \"http://127.0.0.1:5000\" in development."
                 },
                 {
                     "id": 5,
