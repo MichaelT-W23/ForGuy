@@ -1335,7 +1335,7 @@
             "Instructions": [
                 {
                     "id": 1,
-                    "instruction": "The Github Repoistory for this code can be found [here](git@github.com:MichaelT-W23/Notes-Frontend.git).",
+                    "instruction": "The Github Repoistory for this code can be found [here](The Github Repoistory for this code can be found [here](https://github.com/MichaelT-W23/Notes-Frontend).",
                     "Code": {
                         "Name": "",
                         "Description": "",
